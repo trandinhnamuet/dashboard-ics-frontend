@@ -32,10 +32,6 @@ const formSchema = z.object({
   email: z.string().email('Email không hợp lệ'),
   phoneNumber: z.string().min(10, 'Số điện thoại phải có ít nhất 10 số').max(20, 'Số điện thoại không được quá 20 số'),
   company: z.string().optional(),
-    cpu: z.string().min(1, 'Vui lòng nhập thông tin CPU'),
-    ram: z.string().min(1, 'Vui lòng nhập thông tin RAM'),
-    storage: z.string().optional(),
-    bandwidth: z.string().optional(),
   additionalNotes: z.string().optional(),
 })
 
@@ -58,10 +54,6 @@ export default function CustomRegistrationForm({ open, onOpenChange }: CustomReg
       email: '',
       phoneNumber: '',
       company: '',
-      cpu: '',
-      ram: '',
-      storage: '',
-      bandwidth: '',
       additionalNotes: '',
     },
   })
@@ -75,10 +67,6 @@ export default function CustomRegistrationForm({ open, onOpenChange }: CustomReg
         email: user.email || '',
         phoneNumber: user.phoneNumber || '',
         company: user.company || '',
-        cpu: '',
-        ram: '',
-        storage: '',
-        bandwidth: '',
         additionalNotes: '',
       })
     }
@@ -86,28 +74,13 @@ export default function CustomRegistrationForm({ open, onOpenChange }: CustomReg
 
   const onSubmit = async (values: FormValues) => {
     setIsLoading(true)
+    
+    // Giả lập thời gian xử lý
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    
     try {
-
-      // Gộp thông tin detail thành JSON
-      const detail = {
-        cpu: values.cpu,
-        ram: values.ram,
-        storage: values.storage || '',
-        bandwidth: values.bandwidth || '',
-        additionalNotes: values.additionalNotes || ''
-      }
-
-      const payload = {
-        userId: user?.id ? parseInt(user.id) : undefined,
-        phoneNumber: values.phoneNumber,
-        email: values.email,
-        company: values.company || '',
-  detail: JSON.stringify(detail),
-        createdBy: values.userName,
-      }
-
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3003'
-      await axios.post(`${API_URL}/custom-package-registrations`, payload)
+      // TODO: Sẽ gọi API thật ở đây sau
+      console.log('Form values:', values)
 
       toast({
         title: 'Đăng ký thành công!',
@@ -135,7 +108,7 @@ export default function CustomRegistrationForm({ open, onOpenChange }: CustomReg
         <DialogHeader>
           <DialogTitle>Đăng ký gói tùy chỉnh</DialogTitle>
           <DialogDescription>
-            Vui lòng điền thông tin chi tiết để chúng tôi tư vấn gói dịch vụ phù hợp nhất cho bạn.
+            Chúng tôi sẽ liên hệ với bạn ngay để cung cấp giải pháp.
           </DialogDescription>
         </DialogHeader>
 
@@ -201,87 +174,23 @@ export default function CustomRegistrationForm({ open, onOpenChange }: CustomReg
               />
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Yêu cầu cấu hình</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <FormField
-                  control={form.control}
-                  name="cpu"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>CPU *</FormLabel>
-                      <FormControl>
-                        <Input placeholder="VD: 4 cores, Intel Xeon" {...field} className="placeholder:text-gray-400" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="ram"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>RAM *</FormLabel>
-                      <FormControl>
-                        <Input placeholder="VD: 16GB, 32GB" {...field} className="placeholder:text-gray-400" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <FormField
-                  control={form.control}
-                  name="storage"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Bộ nhớ *</FormLabel>
-                      <FormControl>
-                        <Input placeholder="VD: 500GB SSD, 1TB HDD" {...field} className="placeholder:text-gray-400" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="bandwidth"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Đường truyền *</FormLabel>
-                      <FormControl>
-                        <Input placeholder="VD: 100Mbps, 1Gbps" {...field} className="placeholder:text-gray-400" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <FormField
-                control={form.control}
-                name="additionalNotes"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Ghi chú thêm</FormLabel>
-                    <FormControl>
-                      <Textarea 
-                        placeholder="Mô tả thêm về yêu cầu đặc biệt, thời gian triển khai, ngân sách dự kiến..."
-                        className="min-h-[100px] placeholder:text-gray-400"
-                        {...field} 
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
+            <FormField
+              control={form.control}
+              name="additionalNotes"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Ghi chú thêm</FormLabel>
+                  <FormControl>
+                    <Textarea 
+                      placeholder="Mô tả thêm về yêu cầu đặc biệt, thời gian triển khai, ngân sách dự kiến..."
+                      className="min-h-[100px] placeholder:text-gray-400"
+                      {...field} 
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
             <div className="flex justify-end space-x-2 pt-4">
               <Button 

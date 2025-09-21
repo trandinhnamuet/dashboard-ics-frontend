@@ -1,3 +1,4 @@
+import React from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Cloud, Mail, Phone, MapPin, Facebook, Linkedin, Youtube } from "lucide-react"
@@ -14,13 +15,12 @@ export function Footer() {
                 <Cloud className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">Oracle Cloud Vietnam</h3>
-                <p className="text-sm opacity-80">Đối tác chính thức</p>
+                <h3 className="text-xl font-bold"> ICS Smart Dashboard</h3>
+                <p className="text-sm opacity-80">Giái pháp tòa nhà thông minh</p>
               </div>
             </div>
             <p className="text-sm opacity-80 leading-relaxed">
-              Đối tác chính thức của Oracle tại Việt Nam, cung cấp giải pháp cloud computing hàng đầu cho doanh nghiệp
-              với hơn 10 năm kinh nghiệm.
+              Giải pháp Smart Dashboard hàng đầu tại Việt Nam, cung cấp hệ thống tòa nhà thông minh cho doanh nghiệp của bạn.
             </p>
             <div className="flex space-x-4">
                     <a href="https://www.facebook.com/ICS.OracleCloud/" target="_blank" rel="noopener noreferrer">
@@ -45,32 +45,32 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Oracle Database Cloud
+                  Smart Dashboard cho tòa nhà
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Compute Cloud
+                  Quản lý thiết bị IoT
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Storage Solutions
+                  Giải pháp chuyển đổi số tòa nhà
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Networking
+                  Giám sát & phân tích dữ liệu vận hành
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Security & Identity
+                  Quản lý năng lượng thông minh
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Analytics & AI
+                  An ninh & kiểm soát truy cập
                 </a>
               </li>
             </ul>
@@ -172,7 +172,7 @@ export function Footer() {
               Sitemap
             </a>
           </div>
-          <p className="text-sm opacity-80">© 2024 Oracle Cloud Vietnam. Tất cả quyền được bảo lưu.</p>
+          <p className="text-sm opacity-80">© 2025 CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS. Tất cả quyền được bảo lưu.</p>
         </div>
       </div>
     </footer>

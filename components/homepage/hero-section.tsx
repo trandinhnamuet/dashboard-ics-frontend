@@ -41,8 +41,8 @@ export function HeroSection() {
                   <Shield className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-sm text-foreground">Bảo mật tuyệt đối</p>
-                  <p className="text-xs text-muted-foreground">99.9% uptime</p>
+                  <p className="font-semibold text-sm text-foreground">Trực quan hóa dữ liệu</p>
+                  <p className="text-xs text-muted-foreground">2D/3D Dashboard interface</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3 p-4 rounded-lg bg-card border border-border">
@@ -50,7 +50,7 @@ export function HeroSection() {
                   <Zap className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-sm text-foreground">Hiệu suất cao</p>
+                  <p className="font-semibold text-sm text-foreground">Tối ưu vận hành</p>
                   <p className="text-xs text-muted-foreground">Tốc độ vượt trội</p>
                 </div>
               </div>
@@ -59,8 +59,8 @@ export function HeroSection() {
                   <Globe className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-sm text-foreground">Toàn cầu</p>
-                  <p className="text-xs text-muted-foreground">36+ data centers</p>
+                  <p className="font-semibold text-sm text-foreground">Tích hợp đa nền tảng</p>
+                  <p className="text-xs text-muted-foreground">Hỗ trợ tích hợp các hệ thống</p>
                 </div>
               </div>
             </div>
@@ -106,12 +106,12 @@ export function HeroSection() {
             {/* Trust Indicators */}
             <div className="flex items-center space-x-6 pt-4">
               <div className="text-center">
-                <p className="text-2xl font-bold text-primary">500+</p>
+                <p className="text-2xl font-bold text-primary">400+</p>
                 <p className="text-sm text-muted-foreground">Khách hàng</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-bold text-primary">99.9%</p>
-                <p className="text-sm text-muted-foreground">Uptime</p>
+                <p className="text-2xl font-bold text-primary">100%</p>
+                <p className="text-sm text-muted-foreground">Real time</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-bold text-primary">24/7</p>
@@ -122,20 +122,24 @@ export function HeroSection() {
 
           {/* Visual */}
           <div className="relative">
-            <div className="relative z-10">
-              <img
-                src="/modern-cloud-infrastructure-dashboard-with-charts-.jpg"
-                alt="Oracle Cloud Dashboard"    
-                className="w-full h-auto rounded-2xl shadow-2xl border border-border"
-              />
-            </div>
+              <div className="relative z-10">
+                <iframe
+                  src="https://www.youtube.com/embed/4k1np1NXZdI"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-auto min-h-[350px] lg:min-h-[500px] rounded-2xl shadow-2xl border border-border"
+                  style={{ aspectRatio: '16/9' }}
+                />
+              </div>
             {/* Floating Elements */}
-            <div className="absolute -top-6 -right-6 bg-primary text-primary-foreground p-4 rounded-xl shadow-lg animate-bounce z-20">
+            {/* <div className="absolute -top-20 -right-6 bg-primary text-primary-foreground p-4 rounded-xl shadow-lg animate-bounce z-20">
               <p className="text-sm font-semibold">Tiết kiệm 40% chi phí</p>
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground p-4 rounded-xl shadow-lg animate-bounce z-20">
+            <div className="absolute -bottom-20 -left-6 bg-accent text-accent-foreground p-4 rounded-xl shadow-lg animate-bounce z-20">
               <p className="text-sm font-semibold">Triển khai trong 24h</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

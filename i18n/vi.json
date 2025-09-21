@@ -1,16 +1,16 @@
 {
   "homepage": {
     "hero": {
-      "title": "Giải pháp Oracle Cloud hàng đầu tại Việt Nam",
-      "subtitle": "Đối tác chính thức Oracle tại Việt Nam",
-      "description": "Chúng tôi cung cấp giải pháp cloud computing toàn diện với Oracle Cloud Infrastructure (OCI), giúp doanh nghiệp tối ưu hóa chi phí và nâng cao hiệu suất.",
+      "title": "Giải pháp Smart Dashboard hàng đầu tại Việt Nam",
+      "subtitle": "Giải pháp cho thông tư 20/2021/TT-BXD của chính phủ",
+      "description": "Chúng tôi cung cấp giải pháp bảng điều khiển thông minh toàn diện, hỗ trợ doanh nghiệp và tổ chức tối ưu hóa quy trình vận hành, đồng thời nâng cao hiệu suất làm việc.",
       "getStarted": "Bắt đầu ngay",
       "dashboard": "Xem Dashboard",
       "contact": "Liên hệ tư vấn"
     },
     "services": {
       "title": "Dịch vụ",
-      "subtitle": "Giải pháp Cloud toàn diện"
+      "subtitle": "Giải pháp Smart Dashboard toàn diện"
     },
     "pricing": {
       "title": "Bảng giá",
@@ -26,7 +26,7 @@
   "header": {
     "home": "Trang chủ",
     "services": "Dịch vụ", 
-    "pricing": "Bảng giá",
+    "pricing": "Gói đăng ký",
     "support": "Hỗ trợ",
     "contact": "Liên hệ",
     "login": "Đăng nhập",

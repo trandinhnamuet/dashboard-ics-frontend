@@ -38,7 +38,7 @@ export default function ContactPage() {
               Liên hệ với chúng tôi
             </h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Đối tác chính thức của Oracle tại Việt Nam, sẵn sàng hỗ trợ bạn 24/7
+              Giải pháp Smart Dashboard hàng đầu tại Việt Nam, sẵn sàng hỗ trợ bạn 24/7
             </p>
           </div>
         </div>

@@ -8,39 +8,39 @@ import { useTranslation } from "react-i18next"
 const services = [
   {
     icon: Database,
-    title: "Oracle Database Cloud",
-    description: "Cơ sở dữ liệu Oracle tự quản lý với hiệu suất cao và bảo mật tuyệt đối",
-    features: ["Autonomous Database", "Real Application Clusters", "Data Guard", "Advanced Security"],
+    title: "Data Intergration",
+    description: "Kết nối và thu thập dữ liệu từ nhiều hệ thống khác nhau của doanh nghiệp",
+    features: ["Kết nối dữ liệu thời gian thực từ nhiều nguồn", "Hỗ trợ cả dữ liệu truyền thống (SQL, Excel) và dữ liệu IOT/SCADA", "Làm sạch, chuẩn hóa và đồng bộ dữ liệu", "API mở, dễ dàng tích hợp mở rộng"],
   },
   {
     icon: Cpu,
-    title: "Compute Cloud",
-    description: "Máy chủ ảo linh hoạt với cấu hình tùy chỉnh theo nhu cầu doanh nghiệp",
-    features: ["Bare Metal", "Virtual Machines", "Container Engine", "Functions"],
+    title: "Visual & Reporting",
+    description: "Cung cấp bảng điều khiển trực quan với các biểu đồ, báo cáo động giúp người dùng nắm bắt nhanh tình hình hoạt động",
+    features: ["Biểu đồ KPI, heatmap, gauge chart, bảng phân tích đa chiều", "Dashboard tùy biến theo nhu cầu", "Xuất báo cáo tự động", "Chi tiết đến từng bộ phận"],
   },
   {
     icon: HardDrive,
-    title: "Storage Solutions",
-    description: "Giải pháp lưu trữ đa dạng từ block storage đến object storage",
-    features: ["Block Volume", "Object Storage", "File Storage", "Archive Storage"],
+    title: "Mornitoring & Alerts",
+    description: "Theo dõi dữ liệu theo thời gian thực, đưa ra cảnh báo tức thì khi phát hiện bất thường hoặc vượt ngưỡng",
+    features: ["Giám sát tiến độ", "Hệ thống cảnh báo qua Email, SMS,...", "Thiết lập ngưỡng linh hoạt", "Nhật ký theo dõi để truy vết sự cố"],
   },
   {
     icon: Network,
-    title: "Networking",
-    description: "Hạ tầng mạng toàn cầu với độ trễ thấp và băng thông cao",
-    features: ["Virtual Cloud Network", "Load Balancer", "VPN Connect", "FastConnect"],
+    title: "Collaboration & Remote Access",
+    description: "Cho phép các phòng ban phối hợp trên cùng một nền tảng và truy cập dữ liệu mọi lúc, mọi nơi",
+    features: ["Truy cập từ xa", "Chia sẻ dashboard theo vai trò, phòng ban", "Dữ liệu real time", "FastConnect"],
   },
   {
     icon: Shield,
-    title: "Security & Identity",
-    description: "Bảo mật đa lớp với quản lý danh tính và truy cập tiên tiến",
-    features: ["Identity Management", "Key Management", "Web Application Firewall", "Security Zones"],
+    title: "Security & Governance",
+    description: "Đảm bảo an toàn, phân quyền và tuân thủ quy định trong toàn bộ quá trình quản trị dữ liệu",
+    features: ["Phân quyền theo vai trò", "Mã hóa dữ liệu và truyền thông an toàn", "Quản lý truy cập, lưu vết hoạt động", "Tuân thủ các chuẩn bảo mật"],
   },
   {
     icon: BarChart3,
     title: "Analytics & AI",
-    description: "Phân tích dữ liệu thông minh với machine learning tích hợp",
-    features: ["Analytics Cloud", "Data Science", "Machine Learning", "Big Data Service"],
+    description: "Ứng dụng phân tích dữ liệu thông minh và AI để dự báo xu hướng, gợi ý quyết định chiến lược",
+    features: ["Phân tích xu hướng kinh doanh, sản xuất", "Machine Learning phát hiện bất thường", "Dự báo nhu cầu (nhân sự, nguyên liệu, năng lượng) ", "Đưa ra khuyến nghị hành động dựa trên dữ liệu"],
   },
 ]
 
@@ -55,8 +55,7 @@ export function ServicesSection() {
             {t('homepage.services.subtitle')}
           </h2>
           <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
-            Từ cơ sở dữ liệu đến AI, chúng tôi cung cấp đầy đủ các dịch vụ cloud để đáp ứng mọi nhu cầu chuyển đổi số
-            của doanh nghiệp.
+            Từ dữ liệu vận hành đến phân tích thông minh, chúng tôi mang đến giải pháp Smart Dashboard giúp doanh nghiệp quản trị tập trung, giám sát trực quan và ra quyết định nhanh chóng.
           </p>
         </div>
 
@@ -108,20 +107,20 @@ export function ServicesSection() {
               <Zap className="h-6 w-6 text-primary" />
             </div>
             <h3 className="font-semibold mb-2 text-foreground">Triển khai nhanh</h3>
-            <p className="text-sm text-muted-foreground">Khởi tạo trong vài phút</p>
+            <p className="text-sm text-muted-foreground">Phù hợp mọi đối tượng</p>
           </div>
           <div className="text-center p-6 rounded-xl bg-card border border-border">
             <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
               <Globe className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-semibold mb-2 text-foreground">Phủ sóng toàn cầu</h3>
-            <p className="text-sm text-muted-foreground">36+ data centers</p>
+            <h3 className="font-semibold mb-2 text-foreground">Tích hợp đa dữ liệu</h3>
+            <p className="text-sm text-muted-foreground">Hỗ trợ mọi định dạng dữ liệu</p>
           </div>
           <div className="text-center p-6 rounded-xl bg-card border border-border">
             <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
               <Lock className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-semibold mb-2 text-foreground">Bảo mật enterprise</h3>
+            <h3 className="font-semibold mb-2 text-foreground">Bảo mật an toàn</h3>
             <p className="text-sm text-muted-foreground">Tuân thủ quốc tế</p>
           </div>
           <div className="text-center p-6 rounded-xl bg-card border border-border">

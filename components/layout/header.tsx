@@ -4,6 +4,7 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image"
 import { useTranslation } from "react-i18next"
 
 import { Button } from "@/components/ui/button"
@@ -79,17 +80,16 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            {/* Oracle SVG Logo */}
-            <span className="h-10 w-10 block">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 20">
-                <g fill="#E55844">
-                  <path d="M9.9,20.1c-5.5,0-9.9-4.4-9.9-9.9c0-5.5,4.4-9.9,9.9-9.9h11.6c5.5,0,9.9,4.4,9.9,9.9c0,5.5-4.4,9.9-9.9,9.9H9.9 M21.2,16.6c3.6,0,6.4-2.9,6.4-6.4c0-3.6-2.9-6.4-6.4-6.4h-11c-3.6,0-6.4,2.9-6.4,6.4s2.9,6.4,6.4,6.4H21.2"/>
-                </g>
-              </svg>
-            </span>
+            <Image
+              src="/SMART DASHBOARD.png"
+              alt="Smart Dashboard Logo"
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain"
+            />
             <div>
-              <h1 className="text-xl font-bold text-foreground">Oracle Cloud Vietnam</h1>
-              <p className="text-xs text-muted-foreground">Đối tác chính thức</p>
+              <h1 className="text-xl font-bold text-foreground">ICS Smart Dashboard</h1>
+              <p className="text-xs text-muted-foreground">Tòa nhà thông minh </p>
             </div>
           </Link>
 
@@ -119,6 +119,13 @@ export function Header() {
             <button
               type="button"
               className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
+              onClick={() => handleSmoothScroll('industries')}
+            >
+              Khách hàng
+            </button>
+            <button
+              type="button"
+              className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
               onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}
             >
               {t('header.support')}
@@ -134,28 +141,8 @@ export function Header() {
 
           {/* Auth Section */}
           <div className="hidden md:flex items-center space-x-4">
-            {isAuthenticated && user ? (
-              <div className="flex items-center space-x-2">
-                <SimpleDropdown 
-                  user={user}
-                  onProfileClick={handleProfileClick}
-                  onLogout={handleLogout}
-                />
-                <LanguageSelector />
-                <ThemeToggle />
-              </div>
-            ) : (
-              <div className="flex items-center space-x-2">
-                <Button variant="outline" onClick={handleLoginClick}>
-                  {t('header.login')}
-                </Button>
-                <Button asChild>
-                  <Link href="/register">{t('header.register')}</Link>
-                </Button>
-                <LanguageSelector />
-                <ThemeToggle />
-              </div>
-            )}
+            <LanguageSelector />
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -192,6 +179,13 @@ export function Header() {
               <button
                 type="button"
                 className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0 text-left"
+                onClick={() => { setIsMenuOpen(false); handleSmoothScroll('industries') }}
+              >
+                Khách hàng
+              </button>
+              <button
+                type="button"
+                className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0 text-left"
                 onClick={() => { setIsMenuOpen(false); window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" }) }}
               >
                 {t('header.support')}
@@ -205,44 +199,13 @@ export function Header() {
               </button>
             </nav>
             <div className="mt-4 pt-4 border-t border-border space-y-3">
-              {isAuthenticated && user ? (
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2 text-sm text-foreground">
-                      <User className="h-4 w-4" />
-                      <span>{t('header.hello')}, {user.firstName || user.email}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <LanguageSelector />
-                      <ThemeToggle />
-                    </div>
-                  </div>
-                  <Button variant="outline" onClick={handleProfileClick} className="w-full bg-transparent">
-                    <User className="h-4 w-4 mr-2" />
-                    {t('header.profile')}
-                  </Button>
-                  <Button variant="outline" onClick={handleLogout} className="w-full bg-transparent">
-                    <LogOut className="h-4 w-4 mr-2" />
-                    {t('header.logout')}
-                  </Button>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-muted-foreground">Ngôn ngữ</span>
+                <div className="flex items-center space-x-2">
+                  <LanguageSelector />
+                  <ThemeToggle />
                 </div>
-              ) : (
-                <div className="flex flex-col space-y-2">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-muted-foreground">Ngôn ngữ</span>
-                    <div className="flex items-center space-x-2">
-                      <LanguageSelector />
-                      <ThemeToggle />
-                    </div>
-                  </div>
-                  <Button variant="outline" onClick={handleLoginClick} className="w-full bg-transparent">
-                    {t('header.login')}
-                  </Button>
-                  <Button asChild className="w-full">
-                    <Link href="/register">{t('header.register')}</Link>
-                  </Button>
-                </div>
-              )}
+              </div>
             </div>
           </div>
         )}

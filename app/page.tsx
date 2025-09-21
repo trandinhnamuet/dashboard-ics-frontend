@@ -3,6 +3,7 @@
 import { Header } from "@/components/layout/header"
 import { HeroSection } from "@/components/homepage/hero-section"
 import { ServicesSection } from "@/components/homepage/services-section"
+import { IndustriesSection } from "@/components/homepage/industries-section"
 import { PricingSection } from "@/components/homepage/pricing-section"
 import { Footer } from "@/components/layout/footer"
 import { ChatbotButton } from "@/components/homepage/chatbot"
@@ -35,7 +36,10 @@ export default function HomePage() {
         <AnimatedSection delay={0.2}>
           <ServicesSection />
         </AnimatedSection>
-        <AnimatedSection delay={0.2}>
+        <AnimatedSection delay={0.3}>
+          <IndustriesSection />
+        </AnimatedSection>
+        <AnimatedSection delay={0.4}>
           <PricingSection />
         </AnimatedSection>
       </main>

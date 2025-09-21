@@ -11,8 +11,8 @@ import { Toaster } from '@/components/ui/toaster'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Oracle Cloud Vietnam',
-  description: 'Giải pháp Oracle Cloud hàng đầu tại Việt Nam',
+  title: 'Smart Dashboard Vietnam',
+  description: 'Giải pháp Smart Dashboard hàng đầu tại Việt Nam',
   generator: 'Next.js',
 }
 
