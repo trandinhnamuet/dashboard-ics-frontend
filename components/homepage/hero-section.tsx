@@ -67,30 +67,21 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              {isAuthenticated ? (
-                <Button
-                  size="lg"
-                  className="text-lg px-8 py-6"
-                  onClick={() => {
-                    const el = document.getElementById('pricing')
-                    if (el) {
-                      el.scrollIntoView({ behavior: 'smooth' })
-                    } else {
-                      window.location.href = '/#pricing'
-                    }
-                  }}
-                >
-                  Xem cấu hình và giá
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              ) : (
-                <Button asChild size="lg" className="text-lg px-8 py-6">
-                  <Link href="/login">
-                    {t('homepage.hero.getStarted')}
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-              )}
+              <Button
+                size="lg"
+                className="text-lg px-8 py-6"
+                onClick={() => {
+                  const el = document.getElementById('pricing')
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' })
+                  } else {
+                    window.location.href = '/#pricing'
+                  }
+                }}
+              >
+                {t('homepage.hero.getStarted')}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
                 <Button
                   asChild
                   variant="outline"

@@ -23,7 +23,7 @@ export function Footer() {
               Giải pháp Smart Dashboard hàng đầu tại Việt Nam, cung cấp hệ thống tòa nhà thông minh cho doanh nghiệp của bạn.
             </p>
             <div className="flex space-x-4">
-                    <a href="https://www.facebook.com/ICS.OracleCloud/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/ICS.anninhmangquocte/" target="_blank" rel="noopener noreferrer">
                       <Button variant="ghost" size="sm" className="bg-white hover:bg-primary border border-primary">
                         <Facebook className="h-4 w-4 text-[#1877F3]" />
                       </Button>
