@@ -4,11 +4,9 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "powershell -ExecutionPolicy Bypass -File dev-start.ps1",
-    "dev:direct": "next dev -p ${PORT:-3000}",
+    "dev": "next dev",
     "lint": "next lint",
-    "start": "powershell -ExecutionPolicy Bypass -File start.ps1",
-    "start:direct": "next start -p ${PORT:-3000}"
+    "start": "next start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
