@@ -89,7 +89,7 @@ export function Header() {
             />
             <div>
               <h1 className="text-xl font-bold text-foreground">ICS Smart Dashboard</h1>
-              <p className="text-xs text-muted-foreground">Tòa nhà thông minh </p>
+              <p className="text-xs text-muted-foreground">Bảng điều khiển thông minh </p>
             </div>
           </Link>
 

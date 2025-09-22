@@ -114,15 +114,17 @@ export function HeroSection() {
           {/* Visual */}
           <div className="relative">
               <div className="relative z-10">
-                <iframe
-                  src="https://www.youtube.com/embed/4k1np1NXZdI"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="w-full h-auto min-h-[350px] lg:min-h-[500px] rounded-2xl shadow-2xl border border-border"
+                <video
+                  src="/Smart-dashboard-overview.mp4"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  className="min-w-[925px] h-auto min-h-[350px] lg:min-h-[500px] rounded-2xl shadow-2xl border border-border"
                   style={{ aspectRatio: '16/9' }}
-                />
+                >
+                  <p>Trình duyệt của bạn không hỗ trợ phát video.</p>
+                </video>
               </div>
             {/* Floating Elements */}
             {/* <div className="absolute -top-20 -right-6 bg-primary text-primary-foreground p-4 rounded-xl shadow-lg animate-bounce z-20">

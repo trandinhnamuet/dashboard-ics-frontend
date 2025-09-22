@@ -16,11 +16,11 @@ export function Footer() {
               </div>
               <div>
                 <h3 className="text-xl font-bold"> ICS Smart Dashboard</h3>
-                <p className="text-sm opacity-80">Giái pháp tòa nhà thông minh</p>
+                <p className="text-sm opacity-80">Giái pháp bảng điều khiển thông minh</p>
               </div>
             </div>
             <p className="text-sm opacity-80 leading-relaxed">
-              Giải pháp Smart Dashboard hàng đầu tại Việt Nam, cung cấp hệ thống tòa nhà thông minh cho doanh nghiệp của bạn.
+              Giải pháp Smart Dashboard hàng đầu tại Việt Nam, cung cấp hệ thống bảng điều khiển thông minh cho doanh nghiệp của bạn.
             </p>
             <div className="flex space-x-4">
                     <a href="https://www.facebook.com/ICS.anninhmangquocte/" target="_blank" rel="noopener noreferrer">
