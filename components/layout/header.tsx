@@ -32,6 +32,17 @@ export function Header() {
     initAuth()
   }, [initAuth])
 
+  // Xử lý scroll khi có hash trong URL
+  useEffect(() => {
+    const hash = window.location.hash
+    if (hash) {
+      const sectionId = hash.substring(1) // Bỏ ký tự '#'
+      setTimeout(() => {
+        handleSmoothScroll(sectionId)
+      }, 100) // Delay nhỏ để đảm bảo page đã load
+    }
+  }, [])
+
   const handleLogout = async () => {
     try {
       setLoading(true)
@@ -62,6 +73,17 @@ export function Header() {
     const el = document.getElementById(sectionId)
     if (el) {
       el.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  // Scroll đến section, nếu không ở trang chủ thì quay về trang chủ trước
+  const handleNavigateToSection = (sectionId: string) => {
+    if (window.location.pathname !== "/") {
+      // Nếu không ở trang chủ, chuyển về trang chủ với hash
+      router.push(`/#${sectionId}`)
+    } else {
+      // Nếu đã ở trang chủ, scroll trực tiếp
+      handleSmoothScroll(sectionId)
     }
   }
 
@@ -105,21 +127,21 @@ export function Header() {
             <button
               type="button"
               className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
-              onClick={() => handleSmoothScroll('services')}
+              onClick={() => handleNavigateToSection('services')}
             >
               {t('header.services')}
             </button>
             <button
               type="button"
               className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
-              onClick={() => handleSmoothScroll('pricing')}
+              onClick={() => handleNavigateToSection('pricing')}
             >
               {t('header.pricing')}
             </button>
             <button
               type="button"
               className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
-              onClick={() => handleSmoothScroll('industries')}
+              onClick={() => handleNavigateToSection('industries')}
             >
               Khách hàng
             </button>
@@ -165,21 +187,21 @@ export function Header() {
               <button
                 type="button"
                 className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0 text-left"
-                onClick={() => { setIsMenuOpen(false); handleSmoothScroll('services') }}
+                onClick={() => { setIsMenuOpen(false); handleNavigateToSection('services') }}
               >
                 {t('header.services')}
               </button>
               <button
                 type="button"
                 className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0 text-left"
-                onClick={() => { setIsMenuOpen(false); handleSmoothScroll('pricing') }}
+                onClick={() => { setIsMenuOpen(false); handleNavigateToSection('pricing') }}
               >
                 {t('header.pricing')}
               </button>
               <button
                 type="button"
                 className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0 text-left"
-                onClick={() => { setIsMenuOpen(false); handleSmoothScroll('industries') }}
+                onClick={() => { setIsMenuOpen(false); handleNavigateToSection('industries') }}
               >
                 Khách hàng
               </button>

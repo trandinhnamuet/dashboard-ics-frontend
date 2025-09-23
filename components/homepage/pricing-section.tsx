@@ -144,9 +144,11 @@ export function PricingSection() {
           <p className="text-sm text-muted-foreground mb-4">
             Cần tư vấn để chọn gói phù hợp? Liên hệ với chúng tôi để được hỗ trợ miễn phí
           </p>
-          <Button variant="outline" size="lg" onClick={() => setFormOpen(true)}>
-            Tư vấn miễn phí
-          </Button>
+            <div className="pt-4">
+              <span className="inline-block px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold text-lg tracking-wide">
+                Hotline hỗ trợ: <a href="tel:0987654321" className="underline hover:text-primary/80">0987 654 321</a>
+              </span>
+            </div>
         </div>
         <CustomRegistrationForm open={formOpen} onOpenChange={setFormOpen} />
       </div>

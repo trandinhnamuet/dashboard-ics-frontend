@@ -65,7 +65,7 @@ export default function ContactPage() {
                   </div>
                 </CardHeader>
               <CardContent className="space-y-6">
-                <div className="p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg">
+                {/* <div className="p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg">
                   <div className="flex items-start space-x-3">
                     <MapPin className="h-5 w-5 mt-1 text-blue-600" />
                     <div>
@@ -73,12 +73,12 @@ export default function ContactPage() {
                       <p className="text-gray-700">Đường Vũ Văn Cẩn, Phường Bần Yên Nhân, Thị Xã Mỹ Hào, Hưng Yên</p>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <div className="p-4 bg-gradient-to-r from-green-50 to-green-100 rounded-lg">
                   <div className="flex items-start space-x-3">
                     <MapPin className="h-5 w-5 mt-1 text-green-600" />
                     <div>
-                      <p className="font-semibold text-gray-900 mb-1">Văn phòng Hà Nội</p>
+                      <p className="font-semibold text-gray-900 mb-1">Văn phòng tại Hà Nội</p>
                       <p className="text-gray-700">TT3-5 Khu đô thị Đại Kim mới, Định Công, Hà Nội</p>
                     </div>
                   </div>

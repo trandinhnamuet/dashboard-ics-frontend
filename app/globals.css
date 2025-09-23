@@ -5,9 +5,9 @@
 
 :root {
   /* Tech Blue theme colors */
-  --tech-blue: #1e40af; /* Deep tech blue */
-  --tech-blue-light: #3b82f6; /* Lighter blue for hover states */
-  --tech-blue-dark: #1d4ed8; /* Darker blue for active states */
+  --tech-blue: #222f5c; /* Deep tech blue */
+  --tech-blue-light: #04bcef; /* Lighter blue for hover states */
+  --tech-blue-dark: #020527; /* Darker blue for active states */
   
   /* Updated color tokens to match Tech Blue enterprise design */
   --background: oklch(1 0 0); /* #ffffff */
