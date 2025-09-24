@@ -126,15 +126,15 @@ export function ServicesSection() {
         </div>
 
         {/* Additional Benefits */}
-        <div id="additional-benefits" className="mt-16 grid md:grid-cols-4 gap-4">
-          <div className="text-center p-3 rounded-lg bg-card border border-border">
-            <div className="bg-primary/10 p-2 rounded-lg w-fit mx-auto mb-2">
-              <Zap className="h-5 w-5 text-primary" />
+        <div id="additional-benefits" className="mt-16 grid md:grid-cols-4 gap-6">
+          <div className="text-center p-6 rounded-xl bg-card border border-border">
+            <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
+              <Zap className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-bold text-xl text-primary mb-1 flex items-center justify-center">
+            <h3 className="font-bold text-3xl text-primary mb-2 flex items-center justify-center">
               <FlipNumbers
-                height={22}
-                width={14}
+                height={36}
+                width={22}
                 color="hsl(var(--primary))"
                 play={isVisible}
                 duration={2}
@@ -142,21 +142,21 @@ export function ServicesSection() {
                 numberStyle={{
                   fontFamily: 'inherit',
                   fontWeight: 'bold',
-                  letterSpacing: '1px'
+                  letterSpacing: '2px'
                 }}
               />
               <span className="ml-1">ngày</span>
             </h3>
-            <p className="text-xs text-muted-foreground">Thời gian triển khai trung bình</p>
+            <p className="text-sm text-muted-foreground">Thời gian triển khai trung bình</p>
           </div>
-          <div className="text-center p-3 rounded-lg bg-card border border-border">
-            <div className="bg-primary/10 p-2 rounded-lg w-fit mx-auto mb-2">
-              <Globe className="h-5 w-5 text-primary" />
+          <div className="text-center p-6 rounded-xl bg-card border border-border">
+            <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
+              <Globe className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-bold text-xl text-primary mb-1 flex items-center justify-center">
+            <h3 className="font-bold text-3xl text-primary mb-2 flex items-center justify-center">
               <FlipNumbers
-                height={22}
-                width={14}
+                height={36}
+                width={22}
                 color="hsl(var(--primary))"
                 play={isVisible}
                 duration={2}
@@ -164,21 +164,21 @@ export function ServicesSection() {
                 numberStyle={{
                   fontFamily: 'inherit',
                   fontWeight: 'bold',
-                  letterSpacing: '1px'
+                  letterSpacing: '2px'
                 }}
               />
               <span className="ml-1">+</span>
             </h3>
-            <p className="text-xs text-muted-foreground">Nguồn dữ liệu hỗ trợ tích hợp</p>
+            <p className="text-sm text-muted-foreground">Nguồn dữ liệu hỗ trợ tích hợp</p>
           </div>
-          <div className="text-center p-3 rounded-lg bg-card border border-border">
-            <div className="bg-primary/10 p-2 rounded-lg w-fit mx-auto mb-2">
-              <Lock className="h-5 w-5 text-primary" />
+          <div className="text-center p-6 rounded-xl bg-card border border-border">
+            <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
+              <Lock className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-bold text-xl text-primary mb-1 flex items-center justify-center">
+            <h3 className="font-bold text-3xl text-primary mb-2 flex items-center justify-center">
               <FlipNumbers
-                height={22}
-                width={14}
+                height={36}
+                width={22}
                 color="hsl(var(--primary))"
                 play={isVisible}
                 duration={2}
@@ -186,21 +186,21 @@ export function ServicesSection() {
                 numberStyle={{
                   fontFamily: 'inherit',
                   fontWeight: 'bold',
-                  letterSpacing: '1px'
+                  letterSpacing: '2px'
                 }}
               />
               <span className="ml-1">%</span>
             </h3>
-            <p className="text-xs text-muted-foreground">Mã hóa & tuân thủ bảo mật</p>
+            <p className="text-sm text-muted-foreground">Mã hóa & tuân thủ bảo mật</p>
           </div>
-          <div className="text-center p-3 rounded-lg bg-card border border-border">
-            <div className="bg-primary/10 p-2 rounded-lg w-fit mx-auto mb-2">
-              <BarChart3 className="h-5 w-5 text-primary" />
+          <div className="text-center p-6 rounded-xl bg-card border border-border">
+            <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
+              <BarChart3 className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-bold text-xl text-primary mb-1 flex items-center justify-center">
+            <h3 className="font-bold text-3xl text-primary mb-2 flex items-center justify-center">
               <FlipNumbers
-                height={22}
-                width={14}
+                height={36}
+                width={22}
                 color="hsl(var(--primary))"
                 play={isVisible}
                 duration={2}
@@ -208,12 +208,12 @@ export function ServicesSection() {
                 numberStyle={{
                   fontFamily: 'inherit',
                   fontWeight: 'bold',
-                  letterSpacing: '1px'
+                  letterSpacing: '2px'
                 }}
               />
               <span className="ml-1">%</span>
             </h3>
-            <p className="text-xs text-muted-foreground">Tiết kiệm chi phí vận hành</p>
+            <p className="text-sm text-muted-foreground">Tiết kiệm chi phí vận hành</p>
           </div>
         </div>
       </div>
