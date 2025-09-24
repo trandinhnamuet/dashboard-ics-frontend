@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Database, Shield, Zap, Globe, BarChart3, Cpu, HardDrive, Network, Lock, CloudCog } from "lucide-react"
 import { useTranslation } from "react-i18next"
+import FlipNumbers from "react-flip-numbers"
+import { useEffect, useState } from "react"
 
 const services = [
   {
@@ -46,6 +48,26 @@ const services = [
 
 export function ServicesSection() {
   const { t } = useTranslation()
+  const [isVisible, setIsVisible] = useState(false)
+
+  // Trigger animation when component becomes visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    const element = document.getElementById('additional-benefits')
+    if (element) {
+      observer.observe(element)
+    }
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <section id="services" className="py-10 lg:py-16">
@@ -101,34 +123,94 @@ export function ServicesSection() {
         </div>
 
         {/* Additional Benefits */}
-        <div className="mt-16 grid md:grid-cols-4 gap-6">
+        <div id="additional-benefits" className="mt-16 grid md:grid-cols-4 gap-6">
           <div className="text-center p-6 rounded-xl bg-card border border-border">
             <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
               <Zap className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-semibold mb-2 text-foreground">Triển khai nhanh</h3>
-            <p className="text-sm text-muted-foreground">Phù hợp mọi đối tượng</p>
+            <h3 className="font-bold text-3xl text-primary mb-2 flex items-center justify-center">
+              <FlipNumbers
+                height={36}
+                width={22}
+                color="hsl(var(--primary))"
+                play={isVisible}
+                duration={2}
+                numbers="10"
+                numberStyle={{
+                  fontFamily: 'inherit',
+                  fontWeight: 'bold',
+                  letterSpacing: '2px'
+                }}
+              />
+              <span className="ml-1">ngày</span>
+            </h3>
+            <p className="text-sm text-muted-foreground">Thời gian triển khai trung bình</p>
           </div>
           <div className="text-center p-6 rounded-xl bg-card border border-border">
             <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
               <Globe className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-semibold mb-2 text-foreground">Tích hợp đa dữ liệu</h3>
-            <p className="text-sm text-muted-foreground">Hỗ trợ mọi định dạng dữ liệu</p>
+            <h3 className="font-bold text-3xl text-primary mb-2 flex items-center justify-center">
+              <FlipNumbers
+                height={36}
+                width={22}
+                color="hsl(var(--primary))"
+                play={isVisible}
+                duration={2}
+                numbers="50"
+                numberStyle={{
+                  fontFamily: 'inherit',
+                  fontWeight: 'bold',
+                  letterSpacing: '2px'
+                }}
+              />
+              <span className="ml-1">+</span>
+            </h3>
+            <p className="text-sm text-muted-foreground">Nguồn dữ liệu hỗ trợ tích hợp</p>
           </div>
           <div className="text-center p-6 rounded-xl bg-card border border-border">
             <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
               <Lock className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-semibold mb-2 text-foreground">Bảo mật an toàn</h3>
-            <p className="text-sm text-muted-foreground">Tuân thủ quốc tế</p>
+            <h3 className="font-bold text-3xl text-primary mb-2 flex items-center justify-center">
+              <FlipNumbers
+                height={36}
+                width={22}
+                color="hsl(var(--primary))"
+                play={isVisible}
+                duration={2}
+                numbers="100"
+                numberStyle={{
+                  fontFamily: 'inherit',
+                  fontWeight: 'bold',
+                  letterSpacing: '2px'
+                }}
+              />
+              <span className="ml-1">%</span>
+            </h3>
+            <p className="text-sm text-muted-foreground">Mã hóa & tuân thủ bảo mật</p>
           </div>
           <div className="text-center p-6 rounded-xl bg-card border border-border">
             <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
               <BarChart3 className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-semibold mb-2 text-foreground">Tối ưu chi phí</h3>
-            <p className="text-sm text-muted-foreground">Tiết kiệm đến 40%</p>
+            <h3 className="font-bold text-3xl text-primary mb-2 flex items-center justify-center">
+              <FlipNumbers
+                height={36}
+                width={22}
+                color="hsl(var(--primary))"
+                play={isVisible}
+                duration={2}
+                numbers="40"
+                numberStyle={{
+                  fontFamily: 'inherit',
+                  fontWeight: 'bold',
+                  letterSpacing: '2px'
+                }}
+              />
+              <span className="ml-1">%</span>
+            </h3>
+            <p className="text-sm text-muted-foreground">Tiết kiệm chi phí vận hành</p>
           </div>
         </div>
       </div>
