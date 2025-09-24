@@ -85,53 +85,56 @@ export function ServicesSection() {
           {services.map((service, index) => {
             const IconComponent = service.icon
             return (
-              <Card
+              <div
                 key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 bg-gradient-to-br from-card to-background"
+                className="group h-64 perspective-1000"
+                style={{ perspective: '1000px' }}
               >
-                <CardHeader className="pb-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-primary/10 p-3 rounded-xl group-hover:bg-primary/20 transition-colors">
-                      <IconComponent className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-lg font-semibold group-hover:text-primary transition-colors text-foreground">
+                <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+                  {/* Front Face */}
+                  <Card className="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-card to-background border border-border shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <CardContent className="flex flex-col items-center justify-center h-full text-center space-y-4">
+                      <div className="bg-primary/10 p-4 rounded-2xl group-hover:bg-primary/20 transition-colors">
+                        <IconComponent className="h-8 w-8 text-primary" />
+                      </div>
+                      <CardTitle className="text-xl font-bold text-foreground">
                         {service.title}
                       </CardTitle>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-base leading-relaxed text-muted-foreground">
-                    {service.description}
-                  </CardDescription>
-                  <div className="space-y-2">
-                    <p className="text-sm font-medium text-foreground">Tính năng chính:</p>
-                    <div className="grid grid-cols-1 gap-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center space-x-2">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                          <span className="text-sm text-muted-foreground">{feature}</span>
+                    </CardContent>
+                  </Card>
+
+                  {/* Back Face */}
+                  <Card className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 shadow-xl">
+                    <CardContent className="flex flex-col justify-center h-full p-4">
+                      <div className="space-y-3">
+                        <p className="text-sm font-bold text-primary text-center mb-4">Tính năng chính:</p>
+                        <div className="space-y-2.5">
+                          {service.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-start space-x-2 animate-in slide-in-from-left-2 duration-300" style={{ animationDelay: `${featureIndex * 100}ms` }}>
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                              <span className="text-xs text-foreground leading-relaxed">{feature}</span>
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             )
           })}
         </div>
 
         {/* Additional Benefits */}
-        <div id="additional-benefits" className="mt-16 grid md:grid-cols-4 gap-6">
-          <div className="text-center p-6 rounded-xl bg-card border border-border">
-            <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
-              <Zap className="h-6 w-6 text-primary" />
+        <div id="additional-benefits" className="mt-16 grid md:grid-cols-4 gap-4">
+          <div className="text-center p-3 rounded-lg bg-card border border-border">
+            <div className="bg-primary/10 p-2 rounded-lg w-fit mx-auto mb-2">
+              <Zap className="h-5 w-5 text-primary" />
             </div>
-            <h3 className="font-bold text-3xl text-primary mb-2 flex items-center justify-center">
+            <h3 className="font-bold text-xl text-primary mb-1 flex items-center justify-center">
               <FlipNumbers
-                height={36}
-                width={22}
+                height={22}
+                width={14}
                 color="hsl(var(--primary))"
                 play={isVisible}
                 duration={2}
@@ -139,21 +142,21 @@ export function ServicesSection() {
                 numberStyle={{
                   fontFamily: 'inherit',
                   fontWeight: 'bold',
-                  letterSpacing: '2px'
+                  letterSpacing: '1px'
                 }}
               />
               <span className="ml-1">ngày</span>
             </h3>
-            <p className="text-sm text-muted-foreground">Thời gian triển khai trung bình</p>
+            <p className="text-xs text-muted-foreground">Thời gian triển khai trung bình</p>
           </div>
-          <div className="text-center p-6 rounded-xl bg-card border border-border">
-            <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
-              <Globe className="h-6 w-6 text-primary" />
+          <div className="text-center p-3 rounded-lg bg-card border border-border">
+            <div className="bg-primary/10 p-2 rounded-lg w-fit mx-auto mb-2">
+              <Globe className="h-5 w-5 text-primary" />
             </div>
-            <h3 className="font-bold text-3xl text-primary mb-2 flex items-center justify-center">
+            <h3 className="font-bold text-xl text-primary mb-1 flex items-center justify-center">
               <FlipNumbers
-                height={36}
-                width={22}
+                height={22}
+                width={14}
                 color="hsl(var(--primary))"
                 play={isVisible}
                 duration={2}
@@ -161,21 +164,21 @@ export function ServicesSection() {
                 numberStyle={{
                   fontFamily: 'inherit',
                   fontWeight: 'bold',
-                  letterSpacing: '2px'
+                  letterSpacing: '1px'
                 }}
               />
               <span className="ml-1">+</span>
             </h3>
-            <p className="text-sm text-muted-foreground">Nguồn dữ liệu hỗ trợ tích hợp</p>
+            <p className="text-xs text-muted-foreground">Nguồn dữ liệu hỗ trợ tích hợp</p>
           </div>
-          <div className="text-center p-6 rounded-xl bg-card border border-border">
-            <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
-              <Lock className="h-6 w-6 text-primary" />
+          <div className="text-center p-3 rounded-lg bg-card border border-border">
+            <div className="bg-primary/10 p-2 rounded-lg w-fit mx-auto mb-2">
+              <Lock className="h-5 w-5 text-primary" />
             </div>
-            <h3 className="font-bold text-3xl text-primary mb-2 flex items-center justify-center">
+            <h3 className="font-bold text-xl text-primary mb-1 flex items-center justify-center">
               <FlipNumbers
-                height={36}
-                width={22}
+                height={22}
+                width={14}
                 color="hsl(var(--primary))"
                 play={isVisible}
                 duration={2}
@@ -183,21 +186,21 @@ export function ServicesSection() {
                 numberStyle={{
                   fontFamily: 'inherit',
                   fontWeight: 'bold',
-                  letterSpacing: '2px'
+                  letterSpacing: '1px'
                 }}
               />
               <span className="ml-1">%</span>
             </h3>
-            <p className="text-sm text-muted-foreground">Mã hóa & tuân thủ bảo mật</p>
+            <p className="text-xs text-muted-foreground">Mã hóa & tuân thủ bảo mật</p>
           </div>
-          <div className="text-center p-6 rounded-xl bg-card border border-border">
-            <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
-              <BarChart3 className="h-6 w-6 text-primary" />
+          <div className="text-center p-3 rounded-lg bg-card border border-border">
+            <div className="bg-primary/10 p-2 rounded-lg w-fit mx-auto mb-2">
+              <BarChart3 className="h-5 w-5 text-primary" />
             </div>
-            <h3 className="font-bold text-3xl text-primary mb-2 flex items-center justify-center">
+            <h3 className="font-bold text-xl text-primary mb-1 flex items-center justify-center">
               <FlipNumbers
-                height={36}
-                width={22}
+                height={22}
+                width={14}
                 color="hsl(var(--primary))"
                 play={isVisible}
                 duration={2}
@@ -205,12 +208,12 @@ export function ServicesSection() {
                 numberStyle={{
                   fontFamily: 'inherit',
                   fontWeight: 'bold',
-                  letterSpacing: '2px'
+                  letterSpacing: '1px'
                 }}
               />
               <span className="ml-1">%</span>
             </h3>
-            <p className="text-sm text-muted-foreground">Tiết kiệm chi phí vận hành</p>
+            <p className="text-xs text-muted-foreground">Tiết kiệm chi phí vận hành</p>
           </div>
         </div>
       </div>

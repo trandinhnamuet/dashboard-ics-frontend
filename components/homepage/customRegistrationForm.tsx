@@ -40,9 +40,14 @@ type FormValues = z.infer<typeof formSchema>
 interface CustomRegistrationFormProps {
   open: boolean
   onOpenChange: (open: boolean) => void
+  selectedPlan?: {
+    name: string
+    description: string
+    price?: string
+  } | null
 }
 
-export default function CustomRegistrationForm({ open, onOpenChange }: CustomRegistrationFormProps) {
+export default function CustomRegistrationForm({ open, onOpenChange, selectedPlan }: CustomRegistrationFormProps) {
   const [isLoading, setIsLoading] = useState(false)
   const { toast } = useToast()
   const { user, isAuthenticated } = useAuthStore()
@@ -105,11 +110,34 @@ export default function CustomRegistrationForm({ open, onOpenChange }: CustomReg
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
+
         <DialogHeader>
           <DialogTitle>Đăng ký gói tùy chỉnh</DialogTitle>
           <DialogDescription>
             Chúng tôi sẽ liên hệ với bạn ngay để cung cấp giải pháp.
           </DialogDescription>
+          {selectedPlan && (
+            <div className="my-4 p-4 rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 border-2 border-primary/20 shadow-sm">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm font-medium text-primary uppercase tracking-wide">Gói đã chọn</span>
+                  </div>
+                  <h3 className="font-bold text-lg text-foreground mb-1">{selectedPlan.name}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{selectedPlan.description}</p>
+                </div>
+                {selectedPlan.price && (
+                  <div className="ml-4 text-right">
+                    <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-green-100 border border-green-200">
+                      <span className="text-xs font-medium text-green-800 mr-1">Giá:</span>
+                      <span className="text-sm font-bold text-green-700">{selectedPlan.price}</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </DialogHeader>
 
         <Form {...form}>
@@ -192,19 +220,24 @@ export default function CustomRegistrationForm({ open, onOpenChange }: CustomReg
               )}
             />
 
-            <div className="flex justify-end space-x-2 pt-4">
-              <Button 
-                type="button" 
-                variant="outline" 
-                onClick={() => onOpenChange(false)}
-                disabled={isLoading}
-              >
-                Hủy
-              </Button>
-              <Button type="submit" disabled={isLoading}>
-                {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                Đăng ký
-              </Button>
+            <div className="pt-4">
+              <span className="block mb-4 px-3 py-1 rounded-full bg-white text-primary font-semibold text-sm text-center mx-auto">
+                Hoặc liên hệ ngay với hotline: <a href="tel:0931487231" className="underline hover:text-primary/80">0931 487 231</a>
+              </span>
+              <div className="flex justify-end space-x-2">
+                <Button 
+                  type="button" 
+                  variant="outline" 
+                  onClick={() => onOpenChange(false)}
+                  disabled={isLoading}
+                >
+                  Hủy
+                </Button>
+                <Button type="submit" disabled={isLoading}>
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  Đăng ký
+                </Button>
+              </div>
             </div>
           </form>
         </Form>

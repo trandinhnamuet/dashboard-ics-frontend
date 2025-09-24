@@ -96,9 +96,9 @@ const payAsYouGoPlans: PayAsYouGoPlan[] = [
   {
     name: "Gói 12 tháng",
     description: "Phù hợp cho dự án ngắn hạn với linh hoạt thanh toán",
-    price: "99,000,000 VNĐ",
+    price: "198,000,000 VNĐ",
     period: "/12 tháng",
-    originalPrice: "120,000,000 VNĐ",
+    originalPrice: "240,000,000 VNĐ",
     discount: "17%",
     icon: Clock,
     popular: false,
@@ -118,9 +118,9 @@ const payAsYouGoPlans: PayAsYouGoPlan[] = [
   {
     name: "Gói 24 tháng",
     description: "Giải pháp tối ưu cho doanh nghiệp trung hạn",
-    price: "179,000,000 VNĐ",
+    price: "358,000,000 VNĐ",
     period: "/24 tháng",
-    originalPrice: "240,000,000 VNĐ",
+    originalPrice: "480,000,000 VNĐ",
     discount: "25%",
     icon: Star,
     popular: true,
@@ -142,9 +142,9 @@ const payAsYouGoPlans: PayAsYouGoPlan[] = [
   {
     name: "Gói 36 tháng",
     description: "Cam kết dài hạn với mức giá ưu đãi tốt nhất",
-    price: "249,000,000 VNĐ",
+    price: "498,000,000 VNĐ",
     period: "/36 tháng",
-    originalPrice: "360,000,000 VNĐ",
+    originalPrice: "720,000,000 VNĐ",
     discount: "31%",
     icon: Crown,
     popular: false,
@@ -167,10 +167,13 @@ const payAsYouGoPlans: PayAsYouGoPlan[] = [
 ]
 
 
+
 export function PricingSection() {
   const [formOpen, setFormOpen] = useState(false)
   const [pricingMode, setPricingMode] = useState<'saving' | 'payAsYouGo'>('saving')
   const [expandedCards, setExpandedCards] = useState<{[key: number]: boolean}>({})
+  const [hoveredMode, setHoveredMode] = useState<'saving' | 'payAsYouGo' | null>(null)
+  const [selectedPlan, setSelectedPlan] = useState<{ name: string; description: string; price?: string } | null>(null)
 
   const currentPlans: (BasePlan | PayAsYouGoPlan)[] = pricingMode === 'saving' ? savingPlans : payAsYouGoPlans
 
@@ -193,85 +196,105 @@ export function PricingSection() {
           </p>
 
           {/* Pricing Mode Toggle */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <button
-              onClick={() => setPricingMode('saving')}
-              className={`group relative flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-300 transform hover:scale-105 min-w-[200px] ${
-                pricingMode === 'saving'
-                  ? 'bg-gradient-to-r from-primary to-primary/90 text-white shadow-lg shadow-primary/25 scale-105'
-                  : 'bg-white border-2 border-gray-200 text-gray-700 hover:border-primary/30 hover:text-primary shadow-md hover:shadow-lg'
-              }`}
-            >
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-3" />
-                <div className="text-left">
-                  <div className="font-bold">Mua trọn gói</div>
-                  <div className="text-xs opacity-80">Saving plan</div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 relative">
+            {/* Button 1 */}
+            <div className="relative">
+              <button
+                onClick={() => setPricingMode('saving')}
+                onMouseEnter={() => setHoveredMode('saving')}
+                onMouseLeave={() => setHoveredMode(null)}
+                className={`group relative flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-300 transform hover:scale-105 min-w-[200px] ${pricingMode === 'saving'
+                    ? 'bg-gradient-to-r from-primary to-primary/90 text-white shadow-lg shadow-primary/25 scale-105'
+                    : 'bg-white border-2 border-gray-200 text-gray-700 hover:border-primary/30 hover:text-primary shadow-md hover:shadow-lg'
+                  }`}
+              >
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 mr-3" />
+                  <div className="text-left">
+                    <div className="font-bold">Mua trọn gói</div>
+                    <div className="text-xs opacity-80">Saving plan</div>
+                  </div>
+                </div>
+                {pricingMode === 'saving' && (
+                  <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                    Được chọn
+                  </div>
+                )}
+              </button>
+              {/* Dropdown for Saving Plan */}
+              <div
+                className={`absolute left-1/2 -translate-x-1/2 mt-2 w-[320px] z-20 transition-all duration-300 ease-out
+                  ${hoveredMode === 'saving' ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'}
+                `}
+                onMouseEnter={() => setHoveredMode('saving')}
+                onMouseLeave={() => setHoveredMode(null)}
+              >
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 shadow-xl animate-dropdown-fade-in">
+                  <p className="text-blue-800 font-medium text-base mb-2">
+                    💡 Mua trọn gói (Saving Plan)
+                  </p>
+                  <p className="text-blue-600 text-sm">
+                    Được thiết kế phù hợp với nhu cầu bao trọn gói và vận hành độc lập - thanh toán một lần duy nhất và chuyển giao toàn bộ hệ thống
+                  </p>
                 </div>
               </div>
-              {pricingMode === 'saving' && (
-                <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                  Được chọn
+            </div>
+            {/* Button 2 */}
+            <div className="relative">
+              <button
+                onClick={() => setPricingMode('payAsYouGo')}
+                onMouseEnter={() => setHoveredMode('payAsYouGo')}
+                onMouseLeave={() => setHoveredMode(null)}
+                className={`group relative flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-300 transform hover:scale-105 min-w-[200px] ${pricingMode === 'payAsYouGo'
+                    ? 'bg-gradient-to-r from-primary to-primary/90 text-white shadow-lg shadow-primary/25 scale-105'
+                    : 'bg-white border-2 border-gray-200 text-gray-700 hover:border-primary/30 hover:text-primary shadow-md hover:shadow-lg'
+                  }`}
+              >
+                <div className="flex items-center">
+                  <DollarSign className="w-5 h-5 mr-3" />
+                  <div className="text-left">
+                    <div className="font-bold">Thuê theo năm</div>
+                    <div className="text-xs opacity-80">Pay by year</div>
+                  </div>
                 </div>
-              )}
-            </button>
-            
-            <button
-              onClick={() => setPricingMode('payAsYouGo')}
-              className={`group relative flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold transition-all duration-300 transform hover:scale-105 min-w-[200px] ${
-                pricingMode === 'payAsYouGo'
-                  ? 'bg-gradient-to-r from-primary to-primary/90 text-white shadow-lg shadow-primary/25 scale-105'
-                  : 'bg-white border-2 border-gray-200 text-gray-700 hover:border-primary/30 hover:text-primary shadow-md hover:shadow-lg'
-              }`}
-            >
-              <div className="flex items-center">
-                <DollarSign className="w-5 h-5 mr-3" />
-                <div className="text-left">
-                  <div className="font-bold">Thuê theo năm</div>
-                  <div className="text-xs opacity-80">Pay by year</div>
+                {pricingMode === 'payAsYouGo' && (
+                  <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                    Được chọn
+                  </div>
+                )}
+              </button>
+              {/* Dropdown for Pay As You Go */}
+              <div
+                className={`absolute left-1/2 -translate-x-1/2 mt-2 w-[320px] z-20 transition-all duration-300 ease-out
+                  ${hoveredMode === 'payAsYouGo' ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'}
+                `}
+                onMouseEnter={() => setHoveredMode('payAsYouGo')}
+                onMouseLeave={() => setHoveredMode(null)}
+              >
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4 shadow-xl animate-dropdown-fade-in">
+                  <p className="text-green-800 font-medium text-base mb-2">
+                    ⚡ Thuê theo năm (Pay by year)
+                  </p>
+                  <p className="text-green-600 text-sm">
+                    Phù hợp nhu cầu linh hoạt và duy trì hỗ trợ kĩ thuật - thanh toán theo từng năm các gói 12, 24, 36 tháng
+                  </p>
                 </div>
               </div>
-              {pricingMode === 'payAsYouGo' && (
-                <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                  Được chọn
-                </div>
-              )}
-            </button>
+            </div>
           </div>
 
-          {/* Pricing Mode Description */}
-          <div className="text-center mb-8 max-w-4xl mx-auto">
-            {pricingMode === 'saving' ? (
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                <p className="text-blue-800 font-medium text-base mb-2">
-                  💡 Mua trọn gói (Saving Plan)
-                </p>
-                <p className="text-blue-600 text-sm">
-                  Được thiết kế phù hợp với nhu cầu sử dụng máy chủ liên tục 24/7 - thanh toán trọn gói theo tháng sử dụng
-                </p>
-              </div>
-            ) : (
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                <p className="text-green-800 font-medium text-base mb-2">
-                  ⚡ Thuê theo năm (Pay by year)
-                </p>
-                <p className="text-green-600 text-sm">
-                  Phù hợp nhu cầu linh hoạt và duy trì hỗ trợ kĩ thuật - thanh toán theo từng năm các gói 12, 24, 36 tháng
-                </p>
-              </div>
-            )}
-          </div>
+          {/* Pricing Mode Description (dropdown handled above) */}
+
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto transition-all duration-500 ease-in-out">
           {currentPlans.map((plan, index) => (
             <Card
               key={index}
-              className={`relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 ${
-                plan.popular
+              className={`relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 ${plan.popular
                   ? "border-2 border-primary shadow-lg scale-105"
                   : "border-border/50 hover:border-primary/50"
-              }`}
+                }`}
             >
               {plan.popular && (
                 <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-2 text-sm font-medium">
@@ -304,7 +327,15 @@ export function PricingSection() {
               </CardHeader>
 
               <CardContent className="space-y-6">
-                <Button className="w-full" variant={plan.buttonVariant} size="lg" onClick={() => setFormOpen(true)}>
+                <Button
+                  className="w-full"
+                  variant={plan.buttonVariant}
+                  size="lg"
+                  onClick={() => {
+                    setSelectedPlan({ name: plan.name, description: plan.description, price: (plan as any).price })
+                    setFormOpen(true)
+                  }}
+                >
                   {plan.buttonText}
                 </Button>
 
@@ -314,13 +345,13 @@ export function PricingSection() {
                     {plan.features
                       .slice(0, expandedCards[index] ? plan.features.length : 4)
                       .map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start space-x-3 text-sm">
-                        <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground leading-relaxed">{feature}</span>
-                      </li>
-                    ))}
+                        <li key={featureIndex} className="flex items-start space-x-3 text-sm">
+                          <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-muted-foreground leading-relaxed">{feature}</span>
+                        </li>
+                      ))}
                   </ul>
-                  
+
                   {plan.features.length > 4 && (
                     <button
                       onClick={() => toggleFeatures(index)}
@@ -353,13 +384,13 @@ export function PricingSection() {
           <p className="text-sm text-muted-foreground mb-4">
             Cần tư vấn để chọn gói phù hợp? Liên hệ với chúng tôi để được hỗ trợ miễn phí
           </p>
-            <div className="pt-4">
-              <span className="inline-block px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold text-lg tracking-wide">
-                Hotline hỗ trợ: <a href="tel:0931487231" className="underline hover:text-primary/80">0931 487 231</a>
-              </span>
-            </div>
+          <div className="pt-4">
+            <span className="inline-block px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold text-lg tracking-wide">
+              Hotline hỗ trợ: <a href="tel:0931487231" className="underline hover:text-primary/80">0931 487 231</a>
+            </span>
+          </div>
         </div>
-        <CustomRegistrationForm open={formOpen} onOpenChange={setFormOpen} />
+        <CustomRegistrationForm open={formOpen} onOpenChange={setFormOpen} selectedPlan={selectedPlan} />
       </div>
     </section>
   )

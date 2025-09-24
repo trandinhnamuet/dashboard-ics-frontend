@@ -6,10 +6,32 @@ import { ArrowRight, Shield, Zap, Globe, Award } from "lucide-react"
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
 import useAuthStore from "@/hooks/use-auth-store"
+import FlipNumbers from "react-flip-numbers"
+import { useEffect, useState } from "react"
 
 export function HeroSection() {
   const { t } = useTranslation()
   const { isAuthenticated } = useAuthStore()
+  const [isVisible, setIsVisible] = useState(false)
+
+  // Trigger animation when component becomes visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    const element = document.getElementById('trust-indicators')
+    if (element) {
+      observer.observe(element)
+    }
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <section id="home" className="relative py-15 lg:py-24 overflow-hidden">
@@ -18,9 +40,9 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-[url('/abstract-cloud-network-pattern.jpg')] opacity-5" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-[2fr_3fr] gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
-          <div className="space-y-6 lg:space-y-8">
+          <div className="space-y-8">
             <div className="space-y-4">
               <Badge variant="secondary" className="text-sm font-medium">
                 <Award className="h-4 w-4 mr-2" />
@@ -35,13 +57,13 @@ export function HeroSection() {
             </div>
 
             {/* Key Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+            <div className="space-y-3 sm:space-y-0 sm:grid sm:grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
               <div className="flex items-center space-x-3 p-3 sm:p-4 rounded-lg bg-card border border-border">
                 <div className="bg-primary/10 p-2 rounded-lg flex-shrink-0">
                   <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
-                <div className="min-w-0">
-                  <p className="font-semibold text-xs sm:text-sm text-foreground truncate">Trực quan hóa dữ liệu</p>
+                <div className="min-w-0 flex-1">
+                  <p className="font-semibold text-xs sm:text-sm text-foreground">Trực quan hóa dữ liệu</p>
                   <p className="text-xs text-muted-foreground">2D/3D Dashboard interface</p>
                 </div>
               </div>
@@ -49,8 +71,8 @@ export function HeroSection() {
                 <div className="bg-primary/10 p-2 rounded-lg flex-shrink-0">
                   <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
-                <div className="min-w-0">
-                  <p className="font-semibold text-xs sm:text-sm text-foreground truncate">Tối ưu vận hành</p>
+                <div className="min-w-0 flex-1">
+                  <p className="font-semibold text-xs sm:text-sm text-foreground">Tối ưu vận hành</p>
                   <p className="text-xs text-muted-foreground">Tốc độ vượt trội</p>
                 </div>
               </div>
@@ -58,8 +80,8 @@ export function HeroSection() {
                 <div className="bg-primary/10 p-2 rounded-lg flex-shrink-0">
                   <Globe className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
-                <div className="min-w-0">
-                  <p className="font-semibold text-xs sm:text-sm text-foreground truncate">Tích hợp đa nền tảng</p>
+                <div className="min-w-0 flex-1">
+                  <p className="font-semibold text-xs sm:text-sm text-foreground">Tích hợp đa nền tảng</p>
                   <p className="text-xs text-muted-foreground">Hỗ trợ tích hợp các hệ thống</p>
                 </div>
               </div>
@@ -80,7 +102,7 @@ export function HeroSection() {
                 }}
               >
                 {t('homepage.hero.getStarted')}
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
                 <Button
                   asChild
@@ -95,25 +117,78 @@ export function HeroSection() {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex items-center justify-between sm:justify-start sm:space-x-6 pt-4">
+            <div id="trust-indicators" className="flex items-center justify-between sm:justify-start sm:space-x-6 pt-4">
               <div className="text-center">
-                <p className="text-xl sm:text-2xl font-bold text-primary">400+</p>
+                <div className="text-xl sm:text-2xl font-bold text-primary flex items-center justify-center">
+                  <FlipNumbers
+                    height={24}
+                    width={16}
+                    color="hsl(var(--primary))"
+                    play={isVisible}
+                    duration={4}
+                    numbers="400"
+                    numberStyle={{
+                      fontFamily: 'inherit',
+                      fontWeight: 'bold',
+                    }}
+                  />
+                  <span className="ml-1">+</span>
+                </div>
                 <p className="text-xs sm:text-sm text-muted-foreground">Khách hàng</p>
               </div>
               <div className="text-center">
-                <p className="text-xl sm:text-2xl font-bold text-primary">100%</p>
+                <div className="text-xl sm:text-2xl font-bold text-primary flex items-center justify-center">
+                  <FlipNumbers
+                    height={24}
+                    width={16}
+                    color="hsl(var(--primary))"
+                    play={isVisible}
+                    duration={4}
+                    numbers="100"
+                    numberStyle={{
+                      fontFamily: 'inherit',
+                      fontWeight: 'bold',
+                    }}
+                  />
+                  <span className="ml-1">%</span>
+                </div>
                 <p className="text-xs sm:text-sm text-muted-foreground">Real time</p>
               </div>
               <div className="text-center">
-                <p className="text-xl sm:text-2xl font-bold text-primary">24/7</p>
+                <div className="text-xl sm:text-2xl font-bold text-primary flex items-center justify-center">
+                  <FlipNumbers
+                    height={24}
+                    width={16}
+                    color="hsl(var(--primary))"
+                    play={isVisible}
+                    duration={4}
+                    numbers="24"
+                    numberStyle={{
+                      fontFamily: 'inherit',
+                      fontWeight: 'bold',
+                    }}
+                  />
+                  <span className="mx-0.5">/</span>
+                  <FlipNumbers
+                    height={24}
+                    width={16}
+                    color="hsl(var(--primary))"
+                    play={isVisible}
+                    duration={4}
+                    numbers="7"
+                    numberStyle={{
+                      fontFamily: 'inherit',
+                      fontWeight: 'bold',
+                    }}
+                  />
+                </div>
                 <p className="text-xs sm:text-sm text-muted-foreground">Hỗ trợ</p>
               </div>
             </div>
           </div>
 
           {/* Visual */}
-          {/* <div className="relative mt-8 lg:mt-0"> */}
-          <div className="relative">
+          <div className="relative lg:-ml-8">
               <div className="relative z-10">
                 <video
                   src="/Smart-dashboard-overview.mp4"
@@ -121,7 +196,7 @@ export function HeroSection() {
                   autoPlay
                   muted
                   loop
-                  className="w-full h-auto min-h-[250px] sm:min-h-[300px] lg:min-h-[500px] rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl border border-border"
+                  className="w-full lg:min-w-[925px] h-auto min-h-[250px] sm:min-h-[350px] lg:min-h-[500px] rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl border border-border"
                   style={{ aspectRatio: '16/9' }}
                 >
                   <p>Trình duyệt của bạn không hỗ trợ phát video.</p>
