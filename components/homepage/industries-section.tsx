@@ -7,6 +7,8 @@ import { useState } from "react"
 export function IndustriesSection() {
   const router = useRouter()
   const [hoveredApp, setHoveredApp] = useState<string | null>(null)
+  const [pinnedApp, setPinnedApp] = useState<string | null>(null)
+  const [expandedApp, setExpandedApp] = useState<string | null>(null)
   
   const industries = [
     {
@@ -139,51 +141,103 @@ export function IndustriesSection() {
             {applications.map((app, index) => (
               <div
                 key={index}
-                className="relative flex flex-col sm:flex-row items-center justify-center sm:space-x-2 lg:space-x-3 bg-background rounded-lg px-3 sm:px-4 lg:px-6 py-3 sm:py-4 shadow-sm hover:shadow-md transition-all duration-200 border border-border cursor-pointer hover:border-primary/50 hover:bg-primary/5"
-                onMouseEnter={() => setHoveredApp(app.id)}
-                onMouseLeave={() => setHoveredApp(null)}
+                className={`relative flex flex-col sm:flex-row items-center justify-center sm:space-x-2 lg:space-x-3 bg-background rounded-lg px-3 sm:px-4 lg:px-6 py-3 sm:py-4 shadow-sm transition-all duration-300 ease-in-out border cursor-pointer transform hover:scale-105 ${
+                  expandedApp === app.id 
+                    ? 'border-primary/70 bg-primary/10 shadow-lg scale-105' 
+                    : 'border-border hover:border-primary/50 hover:bg-primary/5 hover:shadow-md'
+                } ${
+                  pinnedApp === app.id 
+                    ? 'ring-2 ring-primary/30 bg-primary/15' 
+                    : ''
+                }`}
+                onMouseEnter={() => {
+                  if (!pinnedApp) {
+                    setHoveredApp(app.id)
+                    setExpandedApp(app.id)
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (!pinnedApp) {
+                    setHoveredApp(null)
+                    setExpandedApp(null)
+                  }
+                }}
+                onClick={() => {
+                  if (pinnedApp === app.id) {
+                    // Unpin if clicking the same card
+                    setPinnedApp(null)
+                    setExpandedApp(null)
+                  } else {
+                    // Pin the clicked card
+                    setPinnedApp(app.id)
+                    setExpandedApp(app.id)
+                  }
+                  setHoveredApp(null)
+                }}
               >
-                <app.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary mb-1 sm:mb-0 flex-shrink-0" />
-                <span className="font-medium text-foreground text-xs sm:text-sm lg:text-base text-center sm:text-left">{app.name}</span>
+                <app.icon className={`h-4 w-4 sm:h-5 sm:w-5 mb-1 sm:mb-0 flex-shrink-0 transition-all duration-300 ${
+                  expandedApp === app.id ? 'text-primary scale-110' : 'text-primary'
+                }`} />
+                <span className={`font-medium text-foreground text-xs sm:text-sm lg:text-base text-center sm:text-left transition-all duration-300 ${
+                  expandedApp === app.id ? 'font-semibold' : ''
+                }`}>{app.name}</span>
+                {pinnedApp === app.id && (
+                  <div className="absolute -top-2 -right-2 w-5 h-5 bg-primary rounded-full flex items-center justify-center animate-bounce-in shadow-lg">
+                    <div className="text-white text-xs">📌</div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
 
-          {/* Hover Dropdown */}
-          {hoveredApp && (
-            <div className="absolute top-full left-0 right-0 mt-4 bg-white rounded-lg shadow-2xl border border-gray-200 p-6 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
-              <div className="grid md:grid-cols-3 gap-6 items-center max-w-4xl mx-auto">
-                {/* Image */}
-                <div className="md:col-span-1">
-                  <img 
-                    src={applications.find(app => app.id === hoveredApp)?.image} 
-                    alt={applications.find(app => app.id === hoveredApp)?.name}
-                    className="w-full h-32 sm:h-40 object-cover rounded-lg"
-                  />
-                </div>
-                
-                {/* Stats */}
-                <div className="md:col-span-1 text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">
-                    {applications.find(app => app.id === hoveredApp)?.stats.split(' ')[0]}
+          {/* Expandable Detail Section */}
+          <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
+            expandedApp 
+              ? 'max-h-96 opacity-100 mt-6 animate-slide-down' 
+              : 'max-h-0 opacity-0 mt-0'
+          }`}>
+            {expandedApp && (
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6 animate-fade-in-slide-up">
+                <div className="grid md:grid-cols-3 gap-6 items-center max-w-4xl mx-auto">
+                  {/* Image */}
+                  <div className="md:col-span-1 opacity-0 animate-[fadeInSlideUp_0.6s_ease-out_0.1s_forwards]">
+                    <img 
+                      src={applications.find(app => app.id === expandedApp)?.image} 
+                      alt={applications.find(app => app.id === expandedApp)?.name}
+                      className="w-full h-32 sm:h-40 object-cover rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-md"
+                    />
                   </div>
-                  <div className="text-sm text-muted-foreground">
-                    {applications.find(app => app.id === hoveredApp)?.stats.split(' ').slice(1).join(' ')}
+                  
+                  {/* Stats */}
+                  <div className="md:col-span-1 text-center opacity-0 animate-[fadeInSlideUp_0.6s_ease-out_0.3s_forwards]">
+                    <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 hover:scale-110 hover:text-primary/80">
+                      {applications.find(app => app.id === expandedApp)?.stats.split(' ')[0]}
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      {applications.find(app => app.id === expandedApp)?.stats.split(' ').slice(1).join(' ')}
+                    </div>
                   </div>
-                </div>
-                
-                {/* Description */}
-                <div className="md:col-span-1">
-                  <h4 className="font-semibold text-lg mb-3 text-foreground">
-                    {applications.find(app => app.id === hoveredApp)?.name}
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {applications.find(app => app.id === hoveredApp)?.description}
-                  </p>
+                  
+                  {/* Description */}
+                  <div className="md:col-span-1 opacity-0 animate-[fadeInSlideUp_0.6s_ease-out_0.5s_forwards]">
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="font-semibold text-lg text-foreground">
+                        {applications.find(app => app.id === expandedApp)?.name}
+                      </h4>
+                      {pinnedApp && (
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full animate-bounce-in">
+                          📌 Đã ghim
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {applications.find(app => app.id === expandedApp)?.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </section>
