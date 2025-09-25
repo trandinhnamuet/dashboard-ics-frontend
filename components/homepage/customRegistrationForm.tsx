@@ -231,7 +231,7 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
 
             <div className="pt-4">
               <span className="block mb-4 px-3 py-1 rounded-full bg-white text-primary font-semibold text-sm text-center mx-auto">
-                Hoặc liên hệ ngay với hotline: <a href="tel:0931487231" className="underline hover:text-primary/80">0931 487 231</a>
+                Hoặc liên hệ ngay với hotline: <a href="tel:0707806860" className="underline hover:text-primary/80">0707 806 860</a>
               </span>
               <div className="flex justify-end space-x-2">
                 <Button 

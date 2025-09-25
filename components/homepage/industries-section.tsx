@@ -112,41 +112,46 @@ export function IndustriesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+        <div className="space-y-8 mb-16">
           {industries.map((industry, index) => (
-            <Card
+            <div
               key={index}
-              className="group hover:shadow-xl transition-all duration-300 border-border hover:border-primary/30 cursor-pointer relative overflow-hidden"
-              style={{ backgroundColor: '#f3faff' }}
+              className="group hover:shadow-xl transition-all duration-300 cursor-pointer"
               onClick={() => router.push(industry.link)}
             >
-              {/* Background Image */}
-              <div
-                className="absolute inset-0 z-0"
-                style={{
-                  backgroundImage: `url(${industry.image})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  opacity: 0.18,
-                  pointerEvents: 'none',
-                }}
-              />
-              <CardContent className="p-6 relative z-10">
-                <div className="mb-4 rounded-lg bg-primary/10 p-3 w-fit group-hover:bg-primary/20 transition-colors">
-                  <industry.icon className="h-6 w-6 text-primary" />
+              <Card className="border-border hover:border-primary/30 transition-all duration-300 overflow-hidden">
+                <div className={`flex flex-col lg:flex-row ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} lg:h-96`}>
+                  {/* Image Section */}
+                  <div className="lg:w-1/2 relative overflow-hidden">
+                    <img
+                      src={industry.image}
+                      alt={industry.title}
+                      className="w-full h-64 lg:h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+                  </div>
+                  
+                  {/* Content Section */}
+                  <div className="lg:w-1/2 flex items-center lg:h-full">
+                    <CardContent className="p-8 lg:p-12 w-full h-full flex flex-col justify-center" style={{ backgroundColor: '#f3faff' }}>
+                      <div className="mb-6 rounded-lg bg-primary/10 p-4 w-fit group-hover:bg-primary/20 transition-colors">
+                        <industry.icon className="h-8 w-8 text-primary" />
+                      </div>
+                      <h3 className="mb-4 text-2xl lg:text-3xl font-bold text-foreground">{industry.title}</h3>
+                      <p className="text-muted-foreground mb-6 leading-relaxed text-base">{industry.description}</p>
+                      <div className="space-y-3">
+                        {industry.benefits.map((benefit, idx) => (
+                          <div key={idx} className="flex items-center text-sm">
+                            <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                            <span className="text-foreground font-medium">{benefit}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </div>
                 </div>
-                <h3 className="mb-3 text-lg font-bold text-foreground">{industry.title}</h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed text-sm">{industry.description}</p>
-                <div className="space-y-1">
-                  {industry.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center text-xs">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></div>
-                      <span className="text-foreground font-medium">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+              </Card>
+            </div>
           ))}
         </div>
 

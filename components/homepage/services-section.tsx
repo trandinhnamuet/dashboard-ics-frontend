@@ -162,7 +162,7 @@ export function ServicesSection() {
                   letterSpacing: '2px'
                 }}
               />
-              <span className="ml-1">ngày</span>
+              <span className="ml-1">ngày +</span>
             </h3>
             <p className="text-sm text-muted-foreground">Thời gian triển khai trung bình</p>
           </div>
