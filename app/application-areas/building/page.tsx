@@ -93,6 +93,14 @@ export default function BuildingPage() {
             {/* Giới thiệu chung */}
             <div className="mb-16">
               <h3 className="text-2xl font-semibold text-blue-700 mb-6">Giới thiệu chung về Quản lý Tòa nhà & Trung tâm dữ liệu</h3>
+              {/* Ảnh minh họa */}
+              <div className="mb-8 flex justify-center">
+                <img 
+                  src="/application-areas/15.png" 
+                  alt="Giới thiệu về Quản lý Tòa nhà & Trung tâm dữ liệu" 
+                  className="max-w-lg h-auto rounded-lg shadow-lg"
+                />
+              </div>
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
                   Trong bối cảnh đô thị hóa và số hóa, các tòa nhà hiện đại, đặc biệt là những hạ tầng trọng yếu như 
@@ -196,6 +204,23 @@ export default function BuildingPage() {
                 cho phép quản lý thông minh và chủ động.
               </p>
               
+              {/* Ảnh minh họa ứng dụng Smart Dashboard */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="flex justify-center">
+                  <img 
+                    src="/application-areas/16.png" 
+                    alt="Ứng dụng Smart Dashboard - Phần 1" 
+                    className="max-w-lg h-auto rounded-lg shadow-lg"
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <img 
+                    src="/application-areas/17.png" 
+                    alt="Ứng dụng Smart Dashboard - Phần 2" 
+                    className="max-w-lg h-auto rounded-lg shadow-lg"
+                  />
+                </div>
+              </div>
               <div className="space-y-8">
                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border-l-4 border-blue-500">
                   <h4 className="font-semibold text-blue-800 mb-4">🏢 Tạo ra "Phòng điều hành ảo" với Bản sao số (Digital Twin)</h4>

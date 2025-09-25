@@ -78,6 +78,16 @@ export default function GovernmentPage() {
             {/* Giới thiệu chung */}
             <div className="mb-16">
               <h3 className="text-2xl font-semibold text-blue-700 mb-6">Giới thiệu chung về Quản lý Nhà nước và Hành chính công</h3>
+              
+              {/* Ảnh minh họa */}
+              {/* <div className="mb-8 flex justify-center">
+                <img 
+                  src="/application-areas/1.png" 
+                  alt="Giới thiệu về Quản lý Nhà nước và Hành chính công" 
+                  className="max-w-md h-auto rounded-lg shadow-lg"
+                />
+              </div> */}
+              
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
                   Trong kỷ nguyên số, lĩnh vực quản lý nhà nước và hành chính công đang đứng trước một cuộc chuyển đổi mang tính cách mạng. 
@@ -102,6 +112,15 @@ export default function GovernmentPage() {
               <p className="text-gray-700 mb-8 leading-relaxed">
                 Việc vận hành theo phương thức truyền thống đang bộc lộ nhiều hạn chế, cản trở hiệu quả quản lý và điều hành của các cơ quan nhà nước.
               </p>
+              
+              {/* Ảnh minh họa thách thức */}
+              <div className="mb-8 flex justify-center">
+                <img 
+                  src="/application-areas/2.png" 
+                  alt="Thách thức thực tế của ngành Hành chính công" 
+                  className="max-w-lg h-auto rounded-lg shadow-lg"
+                />
+              </div>
               
               <div className="space-y-6">
                 <Card className="border-red-200 bg-red-50">
@@ -182,6 +201,24 @@ export default function GovernmentPage() {
                 Tại Việt Nam và trên thế giới, Smart Dashboard được triển khai như một "bộ não số" để giải quyết các thách thức trên, 
                 với mô hình nổi bật là các <span className="font-semibold text-blue-700">Trung tâm Điều hành Thông minh (IOC)</span>.
               </p>
+              
+              {/* Ảnh minh họa ứng dụng Smart Dashboard */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="flex justify-center">
+                  <img 
+                    src="/application-areas/3.png" 
+                    alt="Ứng dụng Smart Dashboard - Phần 1" 
+                    className="max-w-full h-auto rounded-lg shadow-lg"
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <img 
+                    src="/application-areas/4.png" 
+                    alt="Ứng dụng Smart Dashboard - Phần 2" 
+                    className="max-w-full h-auto rounded-lg shadow-lg"
+                  />
+                </div>
+              </div>
               
               <div className="space-y-8">
                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border-l-4 border-blue-500">
@@ -291,6 +328,15 @@ export default function GovernmentPage() {
                 Việc triển khai Smart Dashboard trong hành chính công mang lại những tác động to lớn và có thể đo lường được, 
                 góp phần xây dựng một nền hành chính hiện đại.
               </p>
+              
+              {/* Ảnh minh họa lợi ích chiến lược */}
+              <div className="mb-8 flex justify-center">
+                <img 
+                  src="/application-areas/5.png" 
+                  alt="Lợi ích chiến lược và định lượng" 
+                  className="max-w-lg h-auto rounded-lg shadow-lg"
+                />
+              </div>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-gradient-to-br from-blue-100 to-indigo-100 p-6 rounded-lg">

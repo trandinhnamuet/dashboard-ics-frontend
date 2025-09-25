@@ -92,6 +92,8 @@ export default function ManufacturingPage() {
             
             {/* Giới thiệu chung */}
             <div className="mb-16">
+              {/* Ảnh minh họa */}
+              
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
                   Trong bối cảnh của cuộc <span className="font-semibold text-orange-700">Cách mạng Công nghiệp lần thứ tư (Công nghiệp 4.0)</span>, 
@@ -99,6 +101,14 @@ export default function ManufacturingPage() {
                   Các nhà máy không còn đơn thuần là nơi lắp ráp, mà đã trở thành những <span className="font-semibold text-orange-700">"mỏ dữ liệu khổng lồ"</span> 
                   do sự bùng nổ của các thiết bị IoT, cảm biến thông minh và hệ thống tự động hóa.
                 </p>
+
+                <div className="mb-8 flex justify-center">
+                <img 
+                  src="/application-areas/11.png" 
+                  alt="Giới thiệu về Khu Công nghiệp, Nhà máy" 
+                  className="max-w-lg h-auto rounded-lg shadow-lg"
+                />
+              </div>
                 
                 <div className="bg-gradient-to-r from-orange-50 to-cyan-50 p-6 rounded-lg border-l-4 border-orange-500">
                   <p className="text-gray-700">
@@ -223,6 +233,23 @@ export default function ManufacturingPage() {
                 giải quyết triệt để các thách thức trên.
               </p>
               
+              {/* Ảnh minh họa ứng dụng Smart Dashboard */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="flex justify-center">
+                  <img 
+                    src="/application-areas/12.png" 
+                    alt="Ứng dụng Smart Dashboard - Phần 1" 
+                    className="max-w-lg h-auto rounded-lg shadow-lg"
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <img 
+                    src="/application-areas/13.png" 
+                    alt="Ứng dụng Smart Dashboard - Phần 2" 
+                    className="max-w-lg h-auto rounded-lg shadow-lg"
+                  />
+                </div>
+              </div>
               <div className="space-y-8">
                 <div className="bg-gradient-to-r from-orange-50 to-cyan-50 p-6 rounded-lg border-l-4 border-orange-500">
                   <h4 className="font-semibold text-orange-800 mb-4">🏭 Xây dựng "Phòng điều hành ảo" với Bản sao số (Digital Twin)</h4>
@@ -315,6 +342,14 @@ export default function ManufacturingPage() {
                 mang lại những kết quả kinh doanh vượt trội và có thể đo lường được.
               </p>
               
+              {/* Ảnh minh họa lợi ích chiến lược */}
+              <div className="mb-8 flex justify-center">
+                <img 
+                  src="/application-areas/14.png" 
+                  alt="Lợi ích chiến lược và định lượng" 
+                  className="max-w-lg h-auto rounded-lg shadow-lg"
+                />
+              </div>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-gradient-to-br from-orange-100 to-cyan-100 p-6 rounded-lg">
                   <h4 className="font-semibold text-orange-800 mb-4 flex items-center">

@@ -308,22 +308,12 @@ export function PricingSection() {
                 </div>
                 <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
                 <CardDescription className="text-sm text-muted-foreground mt-2">{plan.description}</CardDescription>
-                <div className="mt-6">
-                  {pricingMode === 'payAsYouGo' && (plan as PayAsYouGoPlan).originalPrice && (
-                    <div className="flex items-center justify-center gap-2 mb-2">
-                      <span className="text-sm line-through text-muted-foreground">
-                        {(plan as PayAsYouGoPlan).originalPrice}
-                      </span>
-                      {(plan as PayAsYouGoPlan).discount && (
-                        <span className="bg-red-100 text-red-600 px-2 py-1 rounded-full text-xs font-medium">
-                          -{(plan as PayAsYouGoPlan).discount} OFF
-                        </span>
-                      )}
-                    </div>
-                  )}
-                  <div className="text-3xl font-bold text-primary">{plan.price}</div>
-                  {plan.period && <div className="text-sm text-muted-foreground">{plan.period}</div>}
-                </div>
+                {pricingMode === 'saving' && (
+                  <div className="mt-6">
+                    <div className="text-3xl font-bold text-primary">{plan.price}</div>
+                    {plan.period && <div className="text-sm text-muted-foreground">{plan.period}</div>}
+                  </div>
+                )}
               </CardHeader>
 
               <CardContent className="space-y-6">

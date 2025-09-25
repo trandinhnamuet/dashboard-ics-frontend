@@ -47,6 +47,15 @@ export function IndustriesSection() {
       link: "/application-areas/building",
       image: "/application-areas/building/image.jpg"
     },
+    {
+      icon: Ship,
+      title: "Cảng biển thông minh",
+      description:
+        "Biến cảng biển thành trung tâm chỉ huy số với bản sao số 3D, giám sát KPIs thời gian thực, tự động hóa quy trình vận hành và nâng cao năng suất bốc dỡ lên 30%. Tối ưu logistics và giảm chi phí vận chuyển.",
+      benefits: ["Tăng năng suất 30%", "Giám sát KPIs thời gian thực", "Nâng cao an toàn 40%"],
+      link: "/application-areas/seaport",
+      image: "/application-areas/seaport/image.jpg"
+    },
   ]
 
   const applications = [
