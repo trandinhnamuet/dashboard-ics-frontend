@@ -188,7 +188,7 @@ export function HeroSection() {
           </div>
 
           {/* Visual */}
-          <div className="relative lg:-ml-8">
+          <div className="relative lg:-ml-8 max-[1800px]:overflow-hidden">
               <div className="relative z-10">
                 <video
                   src="/Smart-dashboard-overview.mp4"
@@ -196,7 +196,7 @@ export function HeroSection() {
                   autoPlay
                   muted
                   loop
-                  className="w-full lg:min-w-[925px] h-auto min-h-[250px] sm:min-h-[350px] lg:min-h-[500px] rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl border border-border"
+                  className="w-full max-[1800px]:max-w-full min-[1800px]:lg:min-w-[925px] h-auto min-h-[250px] sm:min-h-[350px] lg:min-h-[500px] rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl border border-border"
                   style={{ aspectRatio: '16/9' }}
                 >
                   <p>Trình duyệt của bạn không hỗ trợ phát video.</p>

@@ -13,36 +13,42 @@ const services = [
     title: "Data Intergration",
     description: "Kết nối và thu thập dữ liệu từ nhiều hệ thống khác nhau của doanh nghiệp",
     features: ["Kết nối dữ liệu thời gian thực từ nhiều nguồn", "Hỗ trợ cả dữ liệu truyền thống (SQL, Excel) và dữ liệu IOT/SCADA", "Làm sạch, chuẩn hóa và đồng bộ dữ liệu", "API mở, dễ dàng tích hợp mở rộng"],
+    image: "/service-section/data-itergration.jpg"
   },
   {
     icon: Cpu,
     title: "Visual & Reporting",
     description: "Cung cấp bảng điều khiển trực quan với các biểu đồ, báo cáo động giúp người dùng nắm bắt nhanh tình hình hoạt động",
     features: ["Biểu đồ KPI, heatmap, gauge chart, bảng phân tích đa chiều", "Dashboard tùy biến theo nhu cầu", "Xuất báo cáo tự động", "Chi tiết đến từng bộ phận"],
+    image: "/service-section/visual-and-reporting.jpg"
   },
   {
     icon: HardDrive,
     title: "Mornitoring & Alerts",
     description: "Theo dõi dữ liệu theo thời gian thực, đưa ra cảnh báo tức thì khi phát hiện bất thường hoặc vượt ngưỡng",
     features: ["Giám sát tiến độ", "Hệ thống cảnh báo qua Email, SMS,...", "Thiết lập ngưỡng linh hoạt", "Nhật ký theo dõi để truy vết sự cố"],
+    image: "/service-section/mornitoring-and-alert.jpg"
   },
   {
     icon: Network,
     title: "Collaboration & Remote Access",
     description: "Cho phép các phòng ban phối hợp trên cùng một nền tảng và truy cập dữ liệu mọi lúc, mọi nơi",
     features: ["Truy cập từ xa", "Chia sẻ dashboard theo vai trò, phòng ban", "Dữ liệu real time", "FastConnect"],
+    image: "/service-section/collabration.jpg"
   },
   {
     icon: Shield,
     title: "Security & Governance",
     description: "Đảm bảo an toàn, phân quyền và tuân thủ quy định trong toàn bộ quá trình quản trị dữ liệu",
     features: ["Phân quyền theo vai trò", "Mã hóa dữ liệu và truyền thông an toàn", "Quản lý truy cập, lưu vết hoạt động", "Tuân thủ các chuẩn bảo mật"],
+    image: "/service-section/security.jpg"
   },
   {
     icon: BarChart3,
     title: "Analytics & AI",
     description: "Ứng dụng phân tích dữ liệu thông minh và AI để dự báo xu hướng, gợi ý quyết định chiến lược",
     features: ["Phân tích xu hướng kinh doanh, sản xuất", "Machine Learning phát hiện bất thường", "Dự báo nhu cầu (nhân sự, nguyên liệu, năng lượng) ", "Đưa ra khuyến nghị hành động dựa trên dữ liệu"],
+    image: "/service-section/ai.jpg"
   },
 ]
 
@@ -92,12 +98,23 @@ export function ServicesSection() {
               >
                 <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
                   {/* Front Face */}
-                  <Card className="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-card to-background border border-border shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <CardContent className="flex flex-col items-center justify-center h-full text-center space-y-4">
-                      <div className="bg-primary/10 p-4 rounded-2xl group-hover:bg-primary/20 transition-colors">
+                  <Card className="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-card to-background border border-border shadow-md hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+                    {/* Background Image */}
+                    <div
+                      className="absolute inset-0 z-0"
+                      style={{
+                        backgroundImage: `url(${service.image})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        opacity: 0.15,
+                        pointerEvents: 'none',
+                      }}
+                    />
+                    <CardContent className="flex flex-col items-center justify-center h-full text-center space-y-4 relative z-10">
+                      <div className="bg-primary/10 p-4 rounded-2xl group-hover:bg-primary/20 transition-colors backdrop-blur-sm">
                         <IconComponent className="h-8 w-8 text-primary" />
                       </div>
-                      <CardTitle className="text-xl font-bold text-foreground">
+                      <CardTitle className="text-xl font-bold text-foreground bg-white/80 backdrop-blur-sm px-3 py-1 rounded-lg">
                         {service.title}
                       </CardTitle>
                     </CardContent>
@@ -137,8 +154,8 @@ export function ServicesSection() {
                 width={22}
                 color="hsl(var(--primary))"
                 play={isVisible}
-                duration={2}
-                numbers="10"
+                duration={4}
+                numbers="20"
                 numberStyle={{
                   fontFamily: 'inherit',
                   fontWeight: 'bold',
@@ -159,7 +176,7 @@ export function ServicesSection() {
                 width={22}
                 color="hsl(var(--primary))"
                 play={isVisible}
-                duration={2}
+                duration={4}
                 numbers="50"
                 numberStyle={{
                   fontFamily: 'inherit',
@@ -181,7 +198,7 @@ export function ServicesSection() {
                 width={22}
                 color="hsl(var(--primary))"
                 play={isVisible}
-                duration={2}
+                duration={4}
                 numbers="100"
                 numberStyle={{
                   fontFamily: 'inherit',
@@ -203,7 +220,7 @@ export function ServicesSection() {
                 width={22}
                 color="hsl(var(--primary))"
                 play={isVisible}
-                duration={2}
+                duration={4}
                 numbers="40"
                 numberStyle={{
                   fontFamily: 'inherit',

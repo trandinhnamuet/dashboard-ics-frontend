@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Building2, Banknote, Factory, Zap, Building, Ship, Users2 } from "lucide-react"
+import { Building2, Banknote, Factory, Building, Ship, Users2 } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
@@ -17,7 +17,8 @@ export function IndustriesSection() {
       description:
         "Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn.",
       benefits: ["Giám sát KPIs thời gian thực", "Theo dõi tiến độ dự án", "Phân tích ngân sách chi tiết"],
-      link: "/application-areas/government"
+      link: "/application-areas/government",
+      image: "/application-areas/government/image.jpg"
     },
     {
       icon: Banknote,
@@ -25,7 +26,8 @@ export function IndustriesSection() {
       description:
         "Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7.",
       benefits: ["Tăng trưởng 20-30%", "Giám sát dòng tiền 24/7", "Tối ưu quyết định kinh doanh"],
-      link: "/application-areas/finance"
+      link: "/application-areas/finance",
+      image: "/application-areas/finance/image.jpg"
     },
     {
       icon: Factory,
@@ -33,15 +35,17 @@ export function IndustriesSection() {
       description:
         "Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, giảm 20-30% chi phí nhờ tối ưu vận hành, cải thiện an toàn và hướng đến công nghiệp xanh, net-zero.",
       benefits: ["Giảm 20-30% chi phí", "Giám sát năng lượng thời gian thực", "Hướng đến net-zero"],
-      link: "/application-areas/manufacturing"
+      link: "/application-areas/manufacturing",
+      image: "/application-areas/manufacturing/image.jpg"
     },
     {
-      icon: Zap,
-      title: "Điện - Viễn thông",
+      icon: Building,
+      title: "Tòa nhà thông minh",
       description:
-        "Giám sát mạng thời gian thực 24/7, phân tích dữ liệu để tối ưu vận hành và dự báo sự cố, đồng thời hỗ trợ quyết định kinh doanh và mở rộng thị trường.",
-      benefits: ["Tăng năng suất 30-50%", "Tăng lợi nhuận 20-30%", "Dự báo sự cố chính xác"],
-      link: "/application-areas/telecom"
+        "Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. Tối ưu năng lượng, giảm chi phí vận hành và nâng cao trải nghiệm người dùng thông qua giám sát thời gian thực 24/7.",
+      benefits: ["Tiết kiệm năng lượng 30-40%", "Giảm chi phí vận hành 25%", "Tăng an toàn và bảo mật"],
+      link: "/application-areas/building",
+      image: "/application-areas/building/image.jpg"
     },
   ]
 
@@ -112,11 +116,22 @@ export function IndustriesSection() {
           {industries.map((industry, index) => (
             <Card
               key={index}
-              className="group hover:shadow-xl transition-all duration-300 border-border hover:border-primary/30 cursor-pointer"
+              className="group hover:shadow-xl transition-all duration-300 border-border hover:border-primary/30 cursor-pointer relative overflow-hidden"
               style={{ backgroundColor: '#f3faff' }}
               onClick={() => router.push(industry.link)}
             >
-              <CardContent className="p-6">
+              {/* Background Image */}
+              <div
+                className="absolute inset-0 z-0"
+                style={{
+                  backgroundImage: `url(${industry.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  opacity: 0.18,
+                  pointerEvents: 'none',
+                }}
+              />
+              <CardContent className="p-6 relative z-10">
                 <div className="mb-4 rounded-lg bg-primary/10 p-3 w-fit group-hover:bg-primary/20 transition-colors">
                   <industry.icon className="h-6 w-6 text-primary" />
                 </div>

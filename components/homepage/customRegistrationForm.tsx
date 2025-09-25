@@ -25,6 +25,7 @@ import { Button } from '@/components/ui/button'
 import { Loader2 } from 'lucide-react'
 import { useToast } from '@/hooks/use-toast'
 import useAuthStore from '@/hooks/use-auth-store'
+import { RegistrationRequestsService } from '@/services/registration-requests.service'
 import axios from 'axios'
 
 const formSchema = z.object({
@@ -80,12 +81,20 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
   const onSubmit = async (values: FormValues) => {
     setIsLoading(true)
     
-    // Giả lập thời gian xử lý
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
     try {
-      // TODO: Sẽ gọi API thật ở đây sau
-      console.log('Form values:', values)
+      // Gộp data user nhập và data gói đã chọn
+      const payload = {
+        user_name: values.userName,
+        email: values.email,
+        phone_number: values.phoneNumber,
+        company: values.company,
+        additional_notes: values.additionalNotes,
+        plan_name: selectedPlan?.name || "",
+        plan_description: selectedPlan?.description,
+        plan_price: selectedPlan?.price,
+      }
+
+      await RegistrationRequestsService.create(payload)
 
       toast({
         title: 'Đăng ký thành công!',

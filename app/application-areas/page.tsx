@@ -23,9 +23,9 @@ const applicationAreas = [
   },
   {
     title: "Điện - Viễn thông",
-    href: "/application-areas/telecom",
+    href: "/application-areas/building",
     description: "Quản lý hạ tầng, dịch vụ, khách hàng ngành viễn thông...",
-    image: "/application-areas/telecom/image.jpg",
+    image: "/application-areas/building/image.jpg",
   },
 ];
 
