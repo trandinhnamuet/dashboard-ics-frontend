@@ -188,18 +188,21 @@ export function HeroSection() {
           </div>
 
           {/* Visual */}
-          <div className="relative lg:-ml-8 max-[1800px]:overflow-hidden">
+          <div className="relative lg:-ml-8">
               <div className="relative z-10">
                 <video
-                  src="/Smart-dashboard-overview.mp4"
-                  controls
-                  autoPlay
-                  muted
-                  loop
-                  className="w-full max-[1800px]:max-w-full min-[1800px]:lg:min-w-[925px] h-auto min-h-[250px] sm:min-h-[350px] lg:min-h-[500px] rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl border border-border"
-                  style={{ aspectRatio: '16/9' }}
+                  playsInline={true}
+                  width="100%"
+                  style={{ objectFit: 'contain', aspectRatio: '16/9' }}
+                  autoPlay={true}
+                  muted={true}
+                  loop={true}
+                  preload="auto"
+                  controls={true}
+                  className="w-full max-[1800px]:max-w-full min-[1800px]:lg:min-w-[925px] h-auto rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl"
                 >
-                  <p>Trình duyệt của bạn không hỗ trợ phát video.</p>
+                  <source src="/Smart-dashboard-overview.mp4" type="video/mp4" />
+                  Sorry, your browser doesn't support embedded videos.
                 </video>
               </div>
             {/* Floating Elements */}
