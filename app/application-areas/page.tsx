@@ -7,25 +7,31 @@ const applicationAreas = [
     title: "Tài chính - Ngân hàng - Bảo hiểm",
     href: "/application-areas/finance",
     description: "Giải pháp dashboard cho ngành tài chính, ngân hàng, bảo hiểm...",
-    image: "/application-areas/finance/image.jpg",
+    image: "/application-areas/finance/thumbnail.jpg",
   },
   {
     title: "Chính phủ - Cơ quan ban ngành",
     href: "/application-areas/government",
     description: "Giám sát, quản trị dữ liệu cho các cơ quan nhà nước, đô thị thông minh...",
-    image: "/application-areas/government/image.jpg",
+    image: "/application-areas/government/thumbnail.jpg",
   },
   {
     title: "Công nghiệp - Sản xuất",
     href: "/application-areas/manufacturing",
     description: "Tối ưu vận hành, quản lý sản xuất, chất lượng, bảo trì...",
-    image: "/application-areas/manufacturing/image.jpg",
+    image: "/application-areas/manufacturing/thumbnail.jpg",
   },
   {
     title: "Điện - Viễn thông",
     href: "/application-areas/building",
     description: "Quản lý hạ tầng, dịch vụ, khách hàng ngành viễn thông...",
-    image: "/application-areas/building/image.jpg",
+    image: "/application-areas/building/thumbnail.jpg",
+  },
+  {
+    title: "Cảng biển",
+    href: "/application-areas/seaport",
+    description: "Giải pháp quản lý, giám sát vận hành cảng biển, logistics, tàu thuyền...",
+    image: "/application-areas/seaport/thumbnail.jpg",
   },
 ];
 
@@ -45,7 +51,7 @@ export default function ApplicationAreasPage() {
         }
       `}</style>
       <h1 className="text-3xl font-bold mb-8 text-center opacity-0 animate-[fadeInUp_0.6s_ease-out_forwards]">Lĩnh vực ứng dụng</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
         {applicationAreas.map((area, index) => (
           <Link
             key={area.href}
