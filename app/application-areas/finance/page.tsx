@@ -55,7 +55,7 @@ export default function FinancePage() {
         {/* Overlay (bỏ gradient) */}
         <div className="absolute inset-0 z-10" />
         <div className="container mx-auto px-4 relative z-20">
-          <div className="max-w-4xl text-left ml-0 mr-auto">
+          <div className="max-w-3xl text-left ml-0 mr-auto pr-5">
             <div className="flex justify-start mb-6">
               <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm">
                 <Banknote className="h-12 w-12 text-white" />
