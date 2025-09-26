@@ -41,23 +41,22 @@ export default function FinancePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-green-600 to-emerald-700 text-white overflow-hidden">
+      <section className="relative py-20 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/application-areas/finance/image.jpg)',
+            backgroundImage: 'url(/application-areas/finance/image.png)',
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: 'right center',
             backgroundRepeat: 'no-repeat',
           }}
         />
-        {/* Overlay */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-green-600/80 to-emerald-700/80" />
-        
+        {/* Overlay (bỏ gradient) */}
+        <div className="absolute inset-0 z-10" />
         <div className="container mx-auto px-4 relative z-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
+          <div className="max-w-4xl text-left ml-0 mr-auto">
+            <div className="flex justify-start mb-6">
               <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm">
                 <Banknote className="h-12 w-12 text-white" />
               </div>
@@ -65,7 +64,7 @@ export default function FinancePage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Smart Dashboard cho Tài chính - Ngân hàng - Bảo hiểm
             </h1>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-green-100 max-w-3xl leading-relaxed">
               Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, 
               hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7.
             </p>

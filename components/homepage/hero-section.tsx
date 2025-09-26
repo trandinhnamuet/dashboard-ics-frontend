@@ -199,7 +199,7 @@ export function HeroSection() {
                   loop={true}
                   preload="auto"
                   controls={true}
-                  className="w-full max-[1800px]:max-w-full min-[1800px]:lg:min-w-[925px] h-auto rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl"
+                  className="w-full max-[1800px]:max-w-full min-[1800px]:lg:min-w-[925px] h-auto rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl min-[1150px]:max-[1280px]:min-w-[570px] min-[1350px]:max-[1400px]:min-w-[670px] min-[1400px]:max-[1500px]:min-w-[700px]  min-[1500px]:max-[1535px]:min-w-[750px]"
                 >
                   <source src="/Smart-dashboard-overview.mp4" type="video/mp4" />
                   Sorry, your browser doesn't support embedded videos.

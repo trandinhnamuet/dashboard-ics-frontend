@@ -126,23 +126,23 @@ export default function SeaportPage() {
         </div>
       )}
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white overflow-hidden">
+      <section className="relative py-20 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/application-areas/seaport/image.jpg)',
+            backgroundImage: 'url(/application-areas/seaport/image.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
           }}
         />
-        {/* Overlay */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-blue-600/80 to-cyan-600/80" />
+        {/* Overlay (bỏ gradient) */}
+        <div className="absolute inset-0 z-10" />
         
         <div className="container mx-auto px-4 relative z-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
+          <div className="max-w-2xl text-left ml-0 mr-auto">
+            <div className="flex justify-start mb-6">
               <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm">
                 <Anchor className="h-12 w-12 text-white" />
               </div>
@@ -150,7 +150,7 @@ export default function SeaportPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Smart Dashboard cho Cảng biển thông minh
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-blue-100 max-w-xl leading-relaxed">
               Biến cảng biển thành trung tâm chỉ huy số với bản sao số 3D, giám sát KPIs thời gian thực, 
               tự động hóa quy trình vận hành và nâng cao năng suất bốc dỡ lên 30%.
             </p>

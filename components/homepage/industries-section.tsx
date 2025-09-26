@@ -18,7 +18,7 @@ export function IndustriesSection() {
         "Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn.",
       benefits: ["Giám sát KPIs thời gian thực", "Theo dõi tiến độ dự án", "Phân tích ngân sách chi tiết"],
       link: "/application-areas/government",
-      image: "/application-areas/government/image.jpg"
+      image: "/application-areas/government/thumbnail.jpg"
     },
     {
       icon: Banknote,
@@ -27,7 +27,7 @@ export function IndustriesSection() {
         "Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7.",
       benefits: ["Tăng trưởng 20-30%", "Giám sát dòng tiền 24/7", "Tối ưu quyết định kinh doanh"],
       link: "/application-areas/finance",
-      image: "/application-areas/finance/image.jpg"
+      image: "/application-areas/finance/thumbnail.jpg"
     },
     {
       icon: Factory,
@@ -36,7 +36,7 @@ export function IndustriesSection() {
         "Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, giảm 20-30% chi phí nhờ tối ưu vận hành, cải thiện an toàn và hướng đến công nghiệp xanh, net-zero.",
       benefits: ["Giảm 20-30% chi phí", "Giám sát năng lượng thời gian thực", "Hướng đến net-zero"],
       link: "/application-areas/manufacturing",
-      image: "/application-areas/manufacturing/image.jpg"
+      image: "/application-areas/manufacturing/thumbnail.jpg"
     },
     {
       icon: Building,
@@ -45,7 +45,7 @@ export function IndustriesSection() {
         "Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. Tối ưu năng lượng, giảm chi phí vận hành và nâng cao trải nghiệm người dùng thông qua giám sát thời gian thực 24/7.",
       benefits: ["Tiết kiệm năng lượng 30-40%", "Giảm chi phí vận hành 25%", "Tăng an toàn và bảo mật"],
       link: "/application-areas/building",
-      image: "/application-areas/building/image.jpg"
+      image: "/application-areas/building/thumbnail.jpg"
     },
     {
       icon: Ship,
@@ -54,7 +54,7 @@ export function IndustriesSection() {
         "Biến cảng biển thành trung tâm chỉ huy số với bản sao số 3D, giám sát KPIs thời gian thực, tự động hóa quy trình vận hành và nâng cao năng suất bốc dỡ lên 30%. Tối ưu logistics và giảm chi phí vận chuyển.",
       benefits: ["Tăng năng suất 30%", "Giám sát KPIs thời gian thực", "Nâng cao an toàn 40%"],
       link: "/application-areas/seaport",
-      image: "/application-areas/seaport/image.jpg"
+      image: "/application-areas/seaport/thumbnail.jpg"
     },
   ]
 

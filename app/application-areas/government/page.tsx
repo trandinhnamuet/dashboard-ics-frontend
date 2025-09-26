@@ -66,25 +66,22 @@ export default function GovernmentPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white overflow-hidden">
-        {/* Background Image */}
+      <section className="relative py-20 text-white overflow-hidden">
+        {/* Background Image Only */}
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/application-areas/government/image.jpg)',
+            backgroundImage: 'url(/application-areas/government/image.png)',
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: 'right center',
             backgroundRepeat: 'no-repeat',
           }}
         />
-        {/* Overlay */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-blue-600/80 to-blue-800/80" />
-        
         <div className="container mx-auto px-4 relative z-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
+          <div className="max-w-4xl text-left ml-0 mr-auto">
+            <div className="flex justify-start mb-6">
               <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm">
                 <Building2 className="h-12 w-12 text-white" />
               </div>
@@ -92,7 +89,7 @@ export default function GovernmentPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Smart Dashboard cho Chính phủ - Cơ quan ban ngành
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-blue-100 max-w-3xl leading-relaxed">
               Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, 
               cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn.
             </p>

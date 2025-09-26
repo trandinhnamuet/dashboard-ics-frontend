@@ -50,23 +50,23 @@ export default function BuildingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-gray-700 to-blue-800 text-white overflow-hidden">
+      <section className="relative py-20 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/application-areas/building/image.jpg)',
+            backgroundImage: 'url(/application-areas/building/image.png)',
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: 'right center',
             backgroundRepeat: 'no-repeat',
           }}
         />
-        {/* Overlay */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-gray-700/80 to-blue-800/80" />
+        {/* Overlay (bỏ gradient) */}
+        <div className="absolute inset-0 z-10" />
         
         <div className="container mx-auto px-4 relative z-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
+          <div className="max-w-2xl text-left ml-0 mr-auto">
+            <div className="flex justify-start mb-6">
               <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm">
                 <Building className="h-12 w-12 text-white" />
               </div>
@@ -74,7 +74,7 @@ export default function BuildingPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Smart Dashboard cho Tòa nhà thông minh
             </h1>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-100 max-w-xl leading-relaxed">
               Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. 
               Tối ưu năng lượng, giảm chi phí vận hành và nâng cao trải nghiệm người dùng thông qua giám sát thời gian thực 24/7.
             </p>
@@ -93,14 +93,7 @@ export default function BuildingPage() {
             {/* Giới thiệu chung */}
             <div className="mb-16">
               <h3 className="text-2xl font-semibold text-blue-700 mb-6">Giới thiệu chung về Quản lý Tòa nhà & Trung tâm dữ liệu</h3>
-              {/* Ảnh minh họa */}
-              <div className="mb-8 flex justify-center">
-                <img 
-                  src="/application-areas/15.png" 
-                  alt="Giới thiệu về Quản lý Tòa nhà & Trung tâm dữ liệu" 
-                  className="max-w-lg h-auto rounded-lg shadow-lg"
-                />
-              </div>
+              
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
                   Trong bối cảnh đô thị hóa và số hóa, các tòa nhà hiện đại, đặc biệt là những hạ tầng trọng yếu như 
@@ -109,6 +102,15 @@ export default function BuildingPage() {
                   Chúng không còn là những cấu trúc tĩnh mà là các <span className="font-semibold text-blue-700">tổ chức sống</span>, 
                   vận hành bởi sự kết hợp của nhiều hệ thống khác nhau.
                 </p>
+
+                {/* Ảnh minh họa */}
+              <div className="mb-8 flex justify-center">
+                <img 
+                  src="/application-areas/15.png" 
+                  alt="Giới thiệu về Quản lý Tòa nhà & Trung tâm dữ liệu" 
+                  className="max-w-lg h-auto rounded-lg shadow-lg"
+                />
+              </div>
                 
                 <div className="bg-gradient-to-r from-blue-50 to-gray-50 p-6 rounded-lg border-l-4 border-blue-500">
                   <p className="text-gray-700">

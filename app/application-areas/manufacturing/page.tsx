@@ -48,25 +48,22 @@ export default function ManufacturingPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-cyan-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-orange-600 to-cyan-400 text-white overflow-hidden">
-        {/* Background Image */}
+      <section className="relative py-20 text-white overflow-hidden">
+        {/* Background Image Only */}
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/application-areas/manufacturing/image.jpg)',
+            backgroundImage: 'url(/application-areas/manufacturing/image.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
           }}
         />
-        {/* Overlay */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-orange-600/80 to-cyan-400/80" />
-        
         <div className="container mx-auto px-4 relative z-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
+          <div className="max-w-4xl text-left ml-0 mr-auto">
+            <div className="flex justify-start mb-6">
               <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm">
                 <Factory className="h-12 w-12 text-white" />
               </div>
@@ -74,7 +71,7 @@ export default function ManufacturingPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Smart Dashboard cho Công nghiệp - Sản xuất
             </h1>
-            <p className="text-xl text-orange-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-orange-100 max-w-3xl leading-relaxed">
               Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, 
               giảm 20-30% chi phí nhờ tối ưu vận hành, cải thiện an toàn và hướng đến công nghiệp xanh, net-zero.
             </p>
