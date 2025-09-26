@@ -135,6 +135,7 @@ export function ServicesSection() {
 									style={{
 										transformStyle: 'preserve-3d',
 										WebkitTransformStyle: 'preserve-3d',
+										willChange: 'transform',
 									}}
 								>
 									{/* Front Face */}
@@ -142,6 +143,7 @@ export function ServicesSection() {
 										style={{
 											backfaceVisibility: 'hidden',
 											WebkitBackfaceVisibility: 'hidden',
+											willChange: 'transform',
 										}}
 									>
 										{/* Background Image */}
@@ -170,6 +172,9 @@ export function ServicesSection() {
 										style={{
 											backfaceVisibility: 'hidden',
 											WebkitBackfaceVisibility: 'hidden',
+											transform: 'rotateY(180deg)',
+											WebkitTransform: 'rotateY(180deg)',
+											willChange: 'transform',
 										}}
 									>
 										<CardContent className="flex flex-col justify-center h-full p-4">
