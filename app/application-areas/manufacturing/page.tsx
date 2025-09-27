@@ -152,7 +152,7 @@ export default function ManufacturingPage() {
 
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">Thách thức thực tế của Khu Công nghiệp & Nhà máy</h3>
+              <h3 className="text-4xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">Thách thức thực tế của Khu Công nghiệp & Nhà máy</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Sở hữu nhiều dữ liệu nhưng không thể khai thác hiệu quả sẽ biến tiềm năng thành gánh nặng. 
                 Các nhà máy và KCN đang đối mặt với những rào cản mang tính hệ thống.
@@ -243,7 +243,7 @@ export default function ManufacturingPage() {
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <h3 className="text-4xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Smart Dashboard đóng vai trò là "trung tâm chỉ huy" hoặc "bộ não số" của nhà máy và KCN, 
                 giải quyết triệt để các thách thức trên.
@@ -404,7 +404,7 @@ export default function ManufacturingPage() {
 
             {/* Lợi ích chiến lược */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">Lợi ích chiến lược và định lượng</h3>
+              <h3 className="text-4xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">Lợi ích chiến lược và định lượng</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Việc triển khai Smart Dashboard không chỉ là một nâng cấp công nghệ, mà là một quyết định chiến lược 
                 mang lại những kết quả kinh doanh vượt trội và có thể đo lường được.

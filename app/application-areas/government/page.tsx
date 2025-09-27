@@ -185,7 +185,7 @@ export default function GovernmentPage() {
           <div className="max-w-6xl mx-auto">
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Thách thức thực tế của ngành Hành chính công</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Thách thức thực tế của ngành Hành chính công</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Việc vận hành theo phương thức truyền thống đang bộc lộ nhiều hạn chế, cản trở hiệu quả quản lý và điều hành của các cơ quan nhà nước.
               </p>
@@ -266,7 +266,7 @@ export default function GovernmentPage() {
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Tại Việt Nam và trên thế giới, Smart Dashboard được triển khai như một "bộ não số" để giải quyết các thách thức trên, 
                 với mô hình nổi bật là các <span className="font-semibold text-blue-700">Trung tâm Điều hành Thông minh (IOC)</span>.
@@ -443,7 +443,7 @@ export default function GovernmentPage() {
 
             {/* Lợi ích chiến lược */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Lợi ích chiến lược và định lượng</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Lợi ích chiến lược và định lượng</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Việc triển khai Smart Dashboard trong hành chính công mang lại những tác động to lớn và có thể đo lường được, 
                 góp phần xây dựng một nền hành chính hiện đại.
@@ -527,7 +527,7 @@ export default function GovernmentPage() {
       {/* Features & Benefits Section - 2 columns */}
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-10 text-center">Tại sao chọn chúng tôi?</h3>
+          <h3 className="text-4xl font-bold text-blue-700 dark:text-blue-400 mb-10 text-center">Tại sao chọn chúng tôi?</h3>
           <div className="grid md:grid-cols-2 gap-10 items-start">
             {/* Tính năng chính - cột trái */}
             <div>

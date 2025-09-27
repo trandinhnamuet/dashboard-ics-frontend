@@ -102,36 +102,10 @@ export default function FinancePage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">NGÀNH TÀI CHÍNH - NGÂN HÀNG</h2>
-            </div>
-            
-            {/* Giới thiệu chung */}
-            <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6">Giới thiệu chung về ngành Tài chính - Ngân hàng</h3>
-              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-                <p>
-                  Trong kỷ nguyên số hiện nay, ngành tài chính ngân hàng được định hình bởi vai trò trung tâm của dữ liệu, 
-                  vốn được xem là một "tài sản chiến lược quý giá". Đây là một lĩnh vực đang trải qua một cuộc chuyển đổi mạnh mẽ, 
-                  dịch chuyển từ việc ra quyết định dựa trên kinh nghiệm và trực giác sang một mô hình quản trị dựa trên bằng chứng và dữ liệu thực tế.
-                </p>
-
-                {/* Ảnh minh họa */}
-              <div className="mb-8 flex justify-center">
-                <Image 
-                  src="/application-areas/1.png" 
-                  alt="Giới thiệu về ngành Tài chính - Ngân hàng" 
-                  className="max-w-lg h-auto rounded-lg shadow-lg"
-                />
-              </div>
-                
-
-              </div>
-            </div>
 
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6 text-center">Thách thức thực tế của ngành Tài chính - Ngân hàng</h3>
+              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6 text-center">Thách thức thực tế của ngành Tài chính - Ngân hàng</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Ngành tài chính ngân hàng vận hành trong một môi trường có độ phức tạp, rủi ro và yêu cầu tuân thủ cực kỳ cao. Các thách thức cốt lõi bao gồm:
               </p>
@@ -195,7 +169,7 @@ export default function FinancePage() {
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Để giải quyết các thách thức trên, Smart Dashboard được ứng dụng như một "trung tâm chỉ huy" hay "bộ não số", biến dữ liệu thành công cụ quản trị chủ động.
               </p>
@@ -346,7 +320,7 @@ export default function FinancePage() {
 
             {/* Lợi ích chiến lược */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">Lợi ích chiến lược và định lượng</h3>
+              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">Lợi ích chiến lược và định lượng</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Việc ứng dụng Smart Dashboard một cách hiệu quả mang lại những giá trị to lớn, có thể đo lường được:
               </p>

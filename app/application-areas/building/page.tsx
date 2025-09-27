@@ -119,7 +119,7 @@ export default function BuildingPage() {
             
             {/* Giới thiệu chung */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6">Giới thiệu chung về Quản lý Tòa nhà & Trung tâm dữ liệu</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Giới thiệu chung về Quản lý Tòa nhà & Trung tâm dữ liệu</h3>
               
               <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
@@ -152,7 +152,7 @@ export default function BuildingPage() {
 
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Thách thức thực tế của Quản lý Tòa nhà & Data Center</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Thách thức thực tế của Quản lý Tòa nhà & Data Center</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Việc quản lý các cơ sở hạ tầng này theo phương pháp truyền thống đang đối mặt với nhiều thách thức nghiêm trọng, 
                 bắt nguồn từ sự phức tạp và thiếu kết nối của các hệ thống.
@@ -230,7 +230,7 @@ export default function BuildingPage() {
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Smart Dashboard đóng vai trò là một <span className="font-semibold text-blue-700">"trung tâm thần kinh"</span>, 
                 hợp nhất mọi hệ thống của tòa nhà và trung tâm dữ liệu vào một giao diện duy nhất, 
@@ -392,7 +392,7 @@ export default function BuildingPage() {
 
             {/* Lợi ích chiến lược */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Lợi ích chiến lược và định lượng</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Lợi ích chiến lược và định lượng</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Việc triển khai Smart Dashboard cho tòa nhà và trung tâm dữ liệu mang lại những lợi ích cụ thể, 
                 giúp chuyển đổi hoàn toàn phương thức quản lý và vận hành.

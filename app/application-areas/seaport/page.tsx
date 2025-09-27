@@ -108,7 +108,7 @@ export default function SeaportPage() {
             
             {/* Giới thiệu chung */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Giới thiệu chung về ngành Cảng biển</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Giới thiệu chung về ngành Cảng biển</h3>
               
               
               
@@ -142,7 +142,7 @@ export default function SeaportPage() {
 
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Thách thức thực tế của ngành Cảng biển</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Thách thức thực tế của ngành Cảng biển</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Các cảng biển vận hành theo mô hình truyền thống đang phải đối mặt với những "nút thắt" cố hữu, 
                 cản trở sự phát triển trong kỷ nguyên số:
@@ -223,7 +223,7 @@ export default function SeaportPage() {
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Smart Dashboard trong lĩnh vực cảng biển không chỉ là một công cụ hiển thị, mà là một 
                 <span className="font-semibold text-blue-700 dark:text-blue-400">"trung tâm chỉ huy số"</span> (Digital Command Center), 
@@ -384,7 +384,7 @@ export default function SeaportPage() {
 
             {/* Lợi ích chiến lược */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Lợi ích chiến lược và định lượng</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Lợi ích chiến lược và định lượng</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Việc triển khai Smart Dashboard trong mô hình Cảng Thông Minh mang lại những kết quả đột phá, 
                 đã được chứng minh qua các trường hợp thực tiễn như <span className="font-semibold text-blue-700 dark:text-blue-400">Cảng Busan</span>.
