@@ -110,13 +110,12 @@ export default function ManufacturingPage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">KHU CÔNG NGHIỆP, NHÀ MÁY</h2>
-            </div>
             
             {/* Giới thiệu chung */}
             <div className="mb-16">
               {/* Ảnh minh họa */}
+              <h3 className="text-4xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">Giới thiệu chung về Smart Dashboard cho Công nghiệp - Sản xuất</h3>
+              
               
               <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
