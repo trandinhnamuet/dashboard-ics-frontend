@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Smart Dashboard Vietnam',
     description: 'Giải pháp Smart Dashboard hàng đầu tại Việt Nam',
-    url: 'https://your-domain.com/', // Thay bằng domain thật nếu có
+    url: 'https://smartdashboard.vn/', // Thay bằng domain thật nếu có
     siteName: 'Smart Dashboard Vietnam',
     images: [
       {
