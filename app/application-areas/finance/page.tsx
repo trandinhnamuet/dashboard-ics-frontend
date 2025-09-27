@@ -1,11 +1,37 @@
 "use client"
 
-import { Banknote, TrendingUp, Shield, Clock, BarChart3, CreditCard } from "lucide-react"
+import { useState, useEffect } from "react"
+import { Banknote, TrendingUp, Shield, Clock, BarChart3, CreditCard, ChevronLeft, ChevronRight } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Link from "next/link"
+import Image from "@/components/common/Image"
 
 export default function FinancePage() {
+  // Slideshow state
+  const [currentSlide, setCurrentSlide] = useState(0)
+  
+  const slideshowImages = [
+    { src: "/application-areas/3.png", alt: "Ứng dụng Smart Dashboard - Phần 1" },
+    { src: "/application-areas/4.png", alt: "Ứng dụng Smart Dashboard - Phần 2" }
+  ]
+
+  // Auto slideshow
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideshowImages.length)
+    }, 3000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slideshowImages.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slideshowImages.length) % slideshowImages.length)
+  }
   const features = [
     {
       icon: TrendingUp,
@@ -57,8 +83,8 @@ export default function FinancePage() {
         <div className="container mx-auto px-4 relative z-20">
           <div className="max-w-3xl text-left ml-0 mr-auto pr-5">
             <div className="flex justify-start mb-6">
-              <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm">
-                <Banknote className="h-12 w-12 text-white" />
+              <div className="p-4 rounded-full backdrop-blur-sm flex items-center justify-center">
+                <div className="h-12 w-12" />
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -89,6 +115,15 @@ export default function FinancePage() {
                   vốn được xem là một "tài sản chiến lược quý giá". Đây là một lĩnh vực đang trải qua một cuộc chuyển đổi mạnh mẽ, 
                   dịch chuyển từ việc ra quyết định dựa trên kinh nghiệm và trực giác sang một mô hình quản trị dựa trên bằng chứng và dữ liệu thực tế.
                 </p>
+
+                {/* Ảnh minh họa */}
+              <div className="mb-8 flex justify-center">
+                <Image 
+                  src="/application-areas/1.png" 
+                  alt="Giới thiệu về ngành Tài chính - Ngân hàng" 
+                  className="max-w-lg h-auto rounded-lg shadow-lg"
+                />
+              </div>
                 
                 <div className="bg-green-50 p-6 rounded-lg mt-6">
                   <h4 className="font-semibold text-green-800 mb-4">Ngành này có những đặc thù rất riêng biệt:</h4>
@@ -123,58 +158,64 @@ export default function FinancePage() {
             {/* Thách thức thực tế */}
             <div className="mb-16">
               <h3 className="text-2xl font-semibold text-green-700 mb-6">1. Thách thức thực tế của ngành Tài chính - Ngân hàng</h3>
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-gray-700 mb-8 leading-relaxed">
                 Ngành tài chính ngân hàng vận hành trong một môi trường có độ phức tạp, rủi ro và yêu cầu tuân thủ cực kỳ cao. Các thách thức cốt lõi bao gồm:
               </p>
               
-              <div className="grid md:grid-cols-2 gap-6">
-                <Card className="border-orange-200 bg-orange-50">
-                  <CardHeader>
-                    <CardTitle className="text-orange-800 flex items-center">
-                      <Clock className="h-5 w-5 mr-2" />
-                      Độ trễ trong ra quyết định
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-700">
-                    Theo phương pháp quản lý truyền thống, các quyết định thường được đưa ra dựa trên các báo cáo thủ công, định kỳ theo tháng hoặc quý. Điều này tạo ra một độ trễ lớn, khiến ban lãnh đạo phải "phản ứng" với các dữ liệu đã lỗi thời.
-                  </CardContent>
-                </Card>
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Ảnh minh họa thách thức - Cột trái */}
+                <div className="h-full flex items-center justify-center">
+                  <Image 
+                    src="/application-areas/2.png" 
+                    alt="Thách thức thực tế của ngành Tài chính - Ngân hàng" 
+                    className="object-contain max-h-80 md:max-h-96 w-auto rounded-lg shadow-lg"
+                  />
+                </div>
+                
+                {/* Accordion cards - Cột phải */}
+                <div className="space-y-4">
+                  <Accordion type="multiple" className="space-y-4">
+                    <AccordionItem value="challenge-1" className="border border-orange-200 bg-orange-50 rounded-lg">
+                      <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <Clock className="h-5 w-5 mr-2" />
+                        Độ trễ trong ra quyết định
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 px-6 pb-4">
+                        Theo phương pháp quản lý truyền thống, các quyết định thường được đưa ra dựa trên các báo cáo thủ công, định kỳ theo tháng hoặc quý. Điều này tạo ra một độ trễ lớn, khiến ban lãnh đạo phải "phản ứng" với các dữ liệu đã lỗi thời.
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <Card className="border-red-200 bg-red-50">
-                  <CardHeader>
-                    <CardTitle className="text-red-800 flex items-center">
-                      <BarChart3 className="h-5 w-5 mr-2" />
-                      Dữ liệu phân mảnh
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-700">
-                    Dữ liệu thường nằm rải rác ở nhiều hệ thống độc lập (Data Silos) như hệ thống lõi ngân hàng, CRM, dữ liệu giao dịch. Việc thiếu nền tảng hợp nhất khiến việc có cái nhìn 360 độ trở nên khó khăn.
-                  </CardContent>
-                </Card>
+                    <AccordionItem value="challenge-2" className="border border-red-200 bg-red-50 rounded-lg">
+                      <AccordionTrigger className="text-red-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <BarChart3 className="h-5 w-5 mr-2" />
+                        Dữ liệu phân mảnh
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 px-6 pb-4">
+                        Dữ liệu thường nằm rải rác ở nhiều hệ thống độc lập (Data Silos) như hệ thống lõi ngân hàng, CRM, dữ liệu giao dịch. Việc thiếu nền tảng hợp nhất khiến việc có cái nhìn 360 độ trở nên khó khăn.
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <Card className="border-purple-200 bg-purple-50">
-                  <CardHeader>
-                    <CardTitle className="text-purple-800 flex items-center">
-                      <Shield className="h-5 w-5 mr-2" />
-                      Áp lực tuân thủ và bảo mật
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-700">
-                    Phải tuân thủ nhiều quy định khắt khe về bảo mật dữ liệu và tài chính như GDPR, HIPAA, ISO 27001. Đồng thời đối mặt với nguy cơ tấn công mạng và rò rỉ dữ liệu.
-                  </CardContent>
-                </Card>
+                    <AccordionItem value="challenge-3" className="border border-purple-200 bg-purple-50 rounded-lg">
+                      <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <Shield className="h-5 w-5 mr-2" />
+                        Áp lực tuân thủ và bảo mật
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 px-6 pb-4">
+                        Phải tuân thủ nhiều quy định khắt khe về bảo mật dữ liệu và tài chính như GDPR, HIPAA, ISO 27001. Đồng thời đối mặt với nguy cơ tấn công mạng và rò rỉ dữ liệu.
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <Card className="border-yellow-200 bg-yellow-50">
-                  <CardHeader>
-                    <CardTitle className="text-yellow-800 flex items-center">
-                      <TrendingUp className="h-5 w-5 mr-2" />
-                      Quản lý rủi ro phức tạp
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-700">
-                    Đối mặt với nhiều loại rủi ro như rủi ro tín dụng, rủi ro thị trường, gian lận tài chính. Việc phát hiện sớm dấu hiệu bất thường trong hàng triệu giao dịch hàng ngày là thách thức khổng lồ.
-                  </CardContent>
-                </Card>
+                    <AccordionItem value="challenge-4" className="border border-yellow-200 bg-yellow-50 rounded-lg">
+                      <AccordionTrigger className="text-yellow-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <TrendingUp className="h-5 w-5 mr-2" />
+                        Quản lý rủi ro phức tạp
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 px-6 pb-4">
+                        Đối mặt với nhiều loại rủi ro như rủi ro tín dụng, rủi ro thị trường, gian lận tài chính. Việc phát hiện sớm dấu hiệu bất thường trong hàng triệu giao dịch hàng ngày là thách thức khổng lồ.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </div>
               </div>
             </div>
 
@@ -185,59 +226,144 @@ export default function FinancePage() {
                 Để giải quyết các thách thức trên, Smart Dashboard được ứng dụng như một "trung tâm chỉ huy" hay "bộ não số", biến dữ liệu thành công cụ quản trị chủ động.
               </p>
               
-              <div className="space-y-8">
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <h4 className="font-semibold text-blue-800 mb-4">🎯 Xây dựng "Phòng điều hành ảo" cho Ban lãnh đạo</h4>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h5 className="font-medium text-blue-700 mb-2">Thực tế:</h5>
-                      <p className="text-gray-700">Thay vì chờ báo cáo giấy, CEO và ban giám đốc có thể truy cập một Dashboard Quản lý hiển thị các KPI tài chính cốt lõi theo thời gian thực.</p>
-                    </div>
-                    <div>
-                      <h5 className="font-medium text-blue-700 mb-2">Ứng dụng:</h5>
-                      <p className="text-gray-700">Dashboard trực quan hóa các chỉ số như Tỷ lệ nợ xấu, Tỷ suất lợi nhuận trên tài sản (ROA) và Chỉ số hài lòng khách hàng (NPS), cho phép so sánh với mục tiêu và cùng kỳ năm trước.</p>
-                    </div>
-                  </div>
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                {/* Accordion cards - Cột trái */}
+                <div className="space-y-4 order-2 md:order-1">
+                  <Accordion type="multiple" className="space-y-4">
+                    <AccordionItem value="application-1" className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
+                      <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        🎯 Xây dựng "Phòng điều hành ảo" cho Ban lãnh đạo
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-4">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <h5 className="font-medium text-blue-700 mb-2">Thực tế:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Thay vì chờ báo cáo giấy, CEO và ban giám đốc có thể truy cập một Dashboard Quản lý hiển thị các KPI tài chính cốt lõi theo thời gian thực.
+                            </p>
+                          </div>
+                          <div>
+                            <h5 className="font-medium text-blue-700 mb-2">Ứng dụng:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Dashboard trực quan hóa các chỉ số như Tỷ lệ nợ xấu, Tỷ suất lợi nhuận trên tài sản (ROA) và Chỉ số hài lòng khách hàng (NPS), cho phép so sánh với mục tiêu và cùng kỳ năm trước.
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="application-2" className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
+                      <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        🤖 Tích hợp AI để quản lý rủi ro chủ động
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-4">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <h5 className="font-medium text-green-700 mb-2">Thực tế:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Tập đoàn tài chính sử dụng Dashboard tích hợp AI để không chỉ theo dõi mà còn dự báo các rủi ro.
+                            </p>
+                          </div>
+                          <div>
+                            <h5 className="font-medium text-green-700 mb-2">Ứng dụng:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Hệ thống AI phân tích xu hướng thị trường để dự báo biến động lãi suất, phát hiện sớm gian lận và dự báo rủi ro tín dụng khách hàng.
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="application-3" className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg border border-purple-200">
+                      <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        🛡️ Trung tâm An ninh Mạng (SOC) thông minh
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-4">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <h5 className="font-medium text-purple-700 mb-2">Thực tế:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Các nhóm an ninh mạng phải đối mặt với hàng triệu cảnh báo mỗi ngày, dẫn đến tình trạng "mệt mỏi vì cảnh báo".
+                            </p>
+                          </div>
+                          <div>
+                            <h5 className="font-medium text-purple-700 mb-2">Ứng dụng:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Smart Dashboard tổng hợp dữ liệu từ SIEM và SOAR, sử dụng AI để tự động phân loại và chỉ làm nổi bật các mối đe dọa thực sự nghiêm trọng.
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="application-4" className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg border border-orange-200">
+                      <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        📋 Tối ưu hóa hoạt động và tuân thủ
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-4">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <h5 className="font-medium text-orange-700 mb-2">Thực tế:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Các quy trình kiểm toán và báo cáo tuân thủ thường rất tốn công sức.
+                            </p>
+                          </div>
+                          <div>
+                            <h5 className="font-medium text-orange-700 mb-2">Ứng dụng:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Dashboard tự động hóa việc tạo báo cáo tuân thủ, giám sát liên tục và cung cấp nhật ký kiểm toán, giúp tổ chức "luôn sẵn sàng cho kiểm toán".
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
 
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border-l-4 border-green-500">
-                  <h4 className="font-semibold text-green-800 mb-4">🤖 Tích hợp AI để quản lý rủi ro chủ động</h4>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h5 className="font-medium text-green-700 mb-2">Thực tế:</h5>
-                      <p className="text-gray-700">Tập đoàn tài chính sử dụng Dashboard tích hợp AI để không chỉ theo dõi mà còn dự báo các rủi ro.</p>
-                    </div>
-                    <div>
-                      <h5 className="font-medium text-green-700 mb-2">Ứng dụng:</h5>
-                      <p className="text-gray-700">Hệ thống AI phân tích xu hướng thị trường để dự báo biến động lãi suất, phát hiện sớm gian lận và dự báo rủi ro tín dụng khách hàng.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-6 rounded-lg border-l-4 border-purple-500">
-                  <h4 className="font-semibold text-purple-800 mb-4">🛡️ Trung tâm An ninh Mạng (SOC) thông minh</h4>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h5 className="font-medium text-purple-700 mb-2">Thực tế:</h5>
-                      <p className="text-gray-700">Các nhóm an ninh mạng phải đối mặt với hàng triệu cảnh báo mỗi ngày, dẫn đến tình trạng "mệt mỏi vì cảnh báo".</p>
-                    </div>
-                    <div>
-                      <h5 className="font-medium text-purple-700 mb-2">Ứng dụng:</h5>
-                      <p className="text-gray-700">Smart Dashboard tổng hợp dữ liệu từ SIEM và SOAR, sử dụng AI để tự động phân loại và chỉ làm nổi bật các mối đe dọa thực sự nghiêm trọng.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-6 rounded-lg border-l-4 border-orange-500">
-                  <h4 className="font-semibold text-orange-800 mb-4">📋 Tối ưu hóa hoạt động và tuân thủ</h4>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h5 className="font-medium text-orange-700 mb-2">Thực tế:</h5>
-                      <p className="text-gray-700">Các quy trình kiểm toán và báo cáo tuân thủ thường rất tốn công sức.</p>
-                    </div>
-                    <div>
-                      <h5 className="font-medium text-orange-700 mb-2">Ứng dụng:</h5>
-                      <p className="text-gray-700">Dashboard tự động hóa việc tạo báo cáo tuân thủ, giám sát liên tục và cung cấp nhật ký kiểm toán, giúp tổ chức "luôn sẵn sàng cho kiểm toán".</p>
+                {/* Slideshow - Cột phải */}
+                <div className="h-full flex items-center justify-center order-1 md:order-2">
+                  <div className="relative w-full max-w-[37rem]">
+                    {/* Slideshow Container */}
+                    <div className="relative overflow-hidden rounded-lg shadow-lg">
+                      <div 
+                        className="flex transition-transform duration-500 ease-in-out"
+                        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                      >
+                        {slideshowImages.map((image, index) => (
+                          <div key={index} className="w-full flex-shrink-0">
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-auto max-h-96 object-contain"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                      {/* Navigation buttons */}
+                      <button
+                        onClick={prevSlide}
+                        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                      >
+                        <ChevronLeft className="h-4 w-4" />
+                      </button>
+                      <button
+                        onClick={nextSlide}
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                      >
+                        <ChevronRight className="h-4 w-4" />
+                      </button>
+                      {/* Dots indicator */}
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {slideshowImages.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => setCurrentSlide(index)}
+                            className={`w-2 h-2 rounded-full transition-colors ${
+                              index === currentSlide ? 'bg-white' : 'bg-white/50'
+                            }`}
+                          />
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -251,55 +377,70 @@ export default function FinancePage() {
                 Việc ứng dụng Smart Dashboard một cách hiệu quả mang lại những giá trị to lớn, có thể đo lường được:
               </p>
               
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-gradient-to-br from-green-100 to-emerald-100 p-6 rounded-lg">
-                  <h4 className="font-semibold text-green-800 mb-4 flex items-center">
-                    <TrendingUp className="h-5 w-5 mr-2" />
-                    Tăng tốc độ và chất lượng ra quyết định
-                  </h4>
-                  <p className="text-gray-700 mb-3">
-                    Đây là lợi ích hữu hình nhất. Các ngân hàng sử dụng dashboard đã ghi nhận:
-                  </p>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-center">
-                      <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">30%</span>
-                      Giảm thời gian xử lý dữ liệu
-                    </li>
-                    <li className="flex items-center">
-                      <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">40%</span>
-                      Cải thiện tốc độ ra quyết định tài chính
-                    </li>
-                  </ul>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Cột ảnh bên trái */}
+                <div className="flex justify-center">
+                  <Image 
+                    src="/application-areas/5.png" 
+                    alt="Lợi ích chiến lược và định lượng" 
+                    className="max-w-lg h-auto rounded-lg shadow-lg"
+                  />
                 </div>
+                {/* Cột các card bên phải */}
+                <div className="space-y-4">
+                  <Accordion type="multiple" className="space-y-4">
+                    <AccordionItem value="benefit-1" className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg border">
+                      <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <TrendingUp className="h-5 w-5 mr-2" />
+                        Tăng tốc độ và chất lượng ra quyết định
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
+                        <p className="mb-3">
+                          Đây là lợi ích hữu hình nhất. Các ngân hàng sử dụng dashboard đã ghi nhận:
+                        </p>
+                        <ul className="space-y-2">
+                          <li className="flex items-center">
+                            <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">30%</span>
+                            Giảm thời gian xử lý dữ liệu
+                          </li>
+                          <li className="flex items-center">
+                            <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">40%</span>
+                            Cải thiện tốc độ ra quyết định tài chính
+                          </li>
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <div className="bg-gradient-to-br from-blue-100 to-indigo-100 p-6 rounded-lg">
-                  <h4 className="font-semibold text-blue-800 mb-4 flex items-center">
-                    <BarChart3 className="h-5 w-5 mr-2" />
-                    Tiết kiệm chi phí và nâng cao hiệu suất
-                  </h4>
-                  <p className="text-gray-700">
-                    Việc tự động hóa quá trình thu thập, tổng hợp dữ liệu và tạo báo cáo giúp giải phóng nhân lực khỏi các công việc thủ công. Điều này không chỉ tiết kiệm chi phí nhân sự mà còn cho phép họ tập trung vào các nhiệm vụ có giá trị cao hơn như phân tích chiến lược.
-                  </p>
-                </div>
+                    <AccordionItem value="benefit-2" className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg border">
+                      <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <BarChart3 className="h-5 w-5 mr-2" />
+                        Tiết kiệm chi phí và nâng cao hiệu suất
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
+                        Việc tự động hóa quá trình thu thập, tổng hợp dữ liệu và tạo báo cáo giúp giải phóng nhân lực khỏi các công việc thủ công. Điều này không chỉ tiết kiệm chi phí nhân sự mà còn cho phép họ tập trung vào các nhiệm vụ có giá trị cao hơn như phân tích chiến lược.
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <div className="bg-gradient-to-br from-purple-100 to-violet-100 p-6 rounded-lg">
-                  <h4 className="font-semibold text-purple-800 mb-4 flex items-center">
-                    <Shield className="h-5 w-5 mr-2" />
-                    Tăng cường an ninh và khả năng phục hồi
-                  </h4>
-                  <p className="text-gray-700">
-                    Cung cấp một cái nhìn toàn diện và theo thời gian thực về các mối đe dọa, giúp các tổ chức tài chính giảm thiểu thời gian phát hiện và phản ứng sự cố, từ đó bảo vệ tài sản và dữ liệu khách hàng tốt hơn.
-                  </p>
-                </div>
+                    <AccordionItem value="benefit-3" className="bg-gradient-to-br from-purple-100 to-violet-100 rounded-lg border">
+                      <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <Shield className="h-5 w-5 mr-2" />
+                        Tăng cường an ninh và khả năng phục hồi
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
+                        Cung cấp một cái nhìn toàn diện và theo thời gian thực về các mối đe dọa, giúp các tổ chức tài chính giảm thiểu thời gian phát hiện và phản ứng sự cố, từ đó bảo vệ tài sản và dữ liệu khách hàng tốt hơn.
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <div className="bg-gradient-to-br from-orange-100 to-amber-100 p-6 rounded-lg">
-                  <h4 className="font-semibold text-orange-800 mb-4 flex items-center">
-                    <CreditCard className="h-5 w-5 mr-2" />
-                    Minh bạch hóa và định lượng rủi ro
-                  </h4>
-                  <p className="text-gray-700">
-                    Một Smart Dashboard cao cấp có khả năng "dịch rủi ro mạng thành đô la và xu". Nó giúp CISO chứng minh được Lợi tức đầu tư an ninh (ROSI), biện minh cho ngân sách và truyền đạt giá trị của an ninh bằng ngôn ngữ kinh doanh tới hội đồng quản trị.
-                  </p>
+                    <AccordionItem value="benefit-4" className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-lg border">
+                      <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <CreditCard className="h-5 w-5 mr-2" />
+                        Minh bạch hóa và định lượng rủi ro
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
+                        Một Smart Dashboard cao cấp có khả năng "dịch rủi ro mạng thành đô la và xu". Nó giúp CISO chứng minh được Lợi tức đầu tư an ninh (ROSI), biện minh cho ngân sách và truyền đạt giá trị của an ninh bằng ngôn ngữ kinh doanh tới hội đồng quản trị.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
               </div>
             </div>
@@ -379,10 +520,10 @@ export default function FinancePage() {
           <h2 className="text-3xl font-bold mb-4">Tối ưu hóa hiệu quả tài chính ngay hôm nay</h2>
           <p className="text-xl mb-8">Liên hệ để được tư vấn giải pháp Smart Dashboard phù hợp</p>
           <div className="space-x-4">
-            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100" asChild>
               <Link href="/contact-info">Liên hệ ngay</Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600">
+            <Button variant="outline" size="lg" className="border-white text-green-600 hover:bg-white hover:text-green-600" asChild>
               <Link href="/">Về trang chủ</Link>
             </Button>
           </div>

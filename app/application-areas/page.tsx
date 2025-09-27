@@ -22,7 +22,7 @@ const applicationAreas = [
     image: "/application-areas/manufacturing/thumbnail.jpg",
   },
   {
-    title: "Điện - Viễn thông",
+    title: "Tòa nhà",
     href: "/application-areas/building",
     description: "Quản lý hạ tầng, dịch vụ, khách hàng ngành viễn thông...",
     image: "/application-areas/building/thumbnail.jpg",

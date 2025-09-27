@@ -1,73 +1,39 @@
 "use client"
 
-import { Anchor, TrendingUp, Shield, Clock, BarChart3, Ship } from "lucide-react"
+import { Anchor, TrendingUp, Shield, Clock, BarChart3, Ship, ChevronLeft, ChevronRight, Settings, Leaf, Zap, Factory } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import Image from "@/components/common/Image"
 import Link from "next/link"
-import { useState } from "react"
-import { useRef, useEffect } from "react"
-import { useCallback } from "react"
+import { useState, useRef, useEffect, useCallback } from "react"
 
 export default function SeaportPage() {
-  const [modalImage, setModalImage] = useState<string | null>(null)
-  const [imageScale, setImageScale] = useState(1)
-  const [imgPos, setImgPos] = useState({ x: 0, y: 0 })
-  const [dragging, setDragging] = useState(false)
-  const [dragStart, setDragStart] = useState<{ x: number; y: number } | null>(null)
-  const imgRef = useRef<HTMLImageElement>(null)
+  // Slideshow state
+  const [currentSlide, setCurrentSlide] = useState(0)
+  
+  const slideshowImages = [
+    { src: "/application-areas/8.png", alt: "Bản sao số 3D cảng biển" },
+    { src: "/application-areas/9.png", alt: "Giám sát KPIs thời gian thực" },
+    { src: "/application-areas/10.png", alt: "Tự động hóa quy trình vận hành" }
+  ]
 
-  // Reset scale when modalImage changes
+  // Auto slideshow
   useEffect(() => {
-    setImageScale(1)
-    setImgPos({ x: 0, y: 0 })
-  }, [modalImage])
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideshowImages.length)
+    }, 3000)
+    return () => clearInterval(timer)
+  }, [])
 
-  // Wheel zoom handler
-  useEffect(() => {
-    if (!modalImage || !imgRef.current) return;
-    const handleWheel = (e: WheelEvent) => {
-      if (e.ctrlKey) {
-        e.preventDefault()
-        setImageScale(prev => {
-          let next = prev + (e.deltaY < 0 ? 0.1 : -0.1)
-          next = Math.max(0.2, Math.min(next, 5))
-          return next
-        })
-      }
-    }
-    const img = imgRef.current
-    img.addEventListener('wheel', handleWheel, { passive: false })
-    return () => img.removeEventListener('wheel', handleWheel)
-  }, [modalImage])
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slideshowImages.length)
+  }
 
-  // Mouse drag to move image
-  useEffect(() => {
-    if (!modalImage || !imgRef.current) return;
-    const img = imgRef.current
-    let lastPos = { x: imgPos.x, y: imgPos.y }
-    const handleMouseDown = (e: MouseEvent) => {
-      e.preventDefault()
-      setDragging(true)
-      setDragStart({ x: e.clientX - lastPos.x, y: e.clientY - lastPos.y })
-    }
-    const handleMouseMove = (e: MouseEvent) => {
-      if (dragging && dragStart) {
-        setImgPos({ x: e.clientX - dragStart.x, y: e.clientY - dragStart.y })
-      }
-    }
-    const handleMouseUp = () => {
-      setDragging(false)
-      setDragStart(null)
-    }
-    img.addEventListener('mousedown', handleMouseDown)
-    window.addEventListener('mousemove', handleMouseMove)
-    window.addEventListener('mouseup', handleMouseUp)
-    return () => {
-      img.removeEventListener('mousedown', handleMouseDown)
-      window.removeEventListener('mousemove', handleMouseMove)
-      window.removeEventListener('mouseup', handleMouseUp)
-    }
-  }, [modalImage, dragging, dragStart, imgPos])
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slideshowImages.length) % slideshowImages.length)
+  }
+
   const features = [
     {
       icon: TrendingUp,
@@ -101,30 +67,7 @@ export default function SeaportPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
-      {/* Modal hiển thị ảnh lớn */}
-      {modalImage && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70" onClick={() => setModalImage(null)}>
-          <div className="relative" onClick={e => e.stopPropagation()}>
-            <img
-              ref={imgRef}
-              src={modalImage}
-              alt="Ảnh phóng to"
-              className="max-w-[90vw] max-h-[80vh] rounded-lg shadow-2xl border-4 border-white cursor-move select-none"
-              style={{ transform: `scale(${imageScale}) translate(${imgPos.x}px, ${imgPos.y}px)`, transition: dragging ? 'none' : 'transform 0.2s' }}
-              draggable={false}
-              onClick={e => e.stopPropagation()}
-            />
-            <button
-              className="absolute top-2 right-2 bg-white/80 text-black rounded-full px-3 py-1 font-bold text-lg shadow-lg hover:bg-white"
-              onClick={e => { e.stopPropagation(); setModalImage(null); }}
-            >
-              &times;
-            </button>
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-white/80 text-black rounded px-3 py-1 text-xs shadow">Giữ Ctrl và lăn chuột để phóng to/thu nhỏ. Nhấn giữ chuột trái và kéo để di chuyển ảnh.</div>
-          </div>
-        </div>
-      )}
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 text-white overflow-hidden">
         {/* Background Image */}
@@ -143,8 +86,8 @@ export default function SeaportPage() {
         <div className="container mx-auto px-4 relative z-20">
           <div className="max-w-2xl text-left ml-0 mr-auto">
             <div className="flex justify-start mb-6">
-              <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm">
-                <Anchor className="h-12 w-12 text-white" />
+              <div className="p-4 rounded-full backdrop-blur-sm flex items-center justify-center">
+                <div className="h-12 w-12" />
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -162,13 +105,10 @@ export default function SeaportPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">NGÀNH CẢNG BIỂN</h2>
-            </div>
             
             {/* Giới thiệu chung */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 mb-6">Giới thiệu chung về ngành Cảng biển</h3>
+              <h3 className="text-2xl font-semibold text-blue-700 mb-6 text-center">Giới thiệu chung về ngành Cảng biển</h3>
               
               
               
@@ -181,15 +121,13 @@ export default function SeaportPage() {
                   quyết định nhịp độ của cả một nền kinh tế.
                 </p>
 
-                {/* Ảnh minh họa */}
-              <div className="mb-8 flex justify-center">
-                <img 
-                  src="/application-areas/6.png" 
-                  alt="Giới thiệu về ngành Cảng biển" 
-                  className="max-w-lg h-auto rounded-lg shadow-lg cursor-pointer"
-                  onClick={() => setModalImage('/application-areas/6.png')}
-                />
-              </div>
+                <div className="mb-8 flex justify-center">
+                  <Image 
+                    src="/application-areas/6.png" 
+                    alt="Giới thiệu về ngành Cảng biển" 
+                    className="max-w-lg h-auto rounded-lg shadow-lg"
+                  />
+                </div>
                 
                 <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-lg border-l-4 border-blue-500">
                   <p className="text-gray-700">
@@ -204,212 +142,240 @@ export default function SeaportPage() {
 
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 mb-6">1. Thách thức thực tế của ngành Cảng biển</h3>
+              <h3 className="text-2xl font-semibold text-blue-700 mb-6 text-center">Thách thức thực tế của ngành Cảng biển</h3>
               <p className="text-gray-700 mb-8 leading-relaxed">
                 Các cảng biển vận hành theo mô hình truyền thống đang phải đối mặt với những "nút thắt" cố hữu, 
                 cản trở sự phát triển trong kỷ nguyên số:
               </p>
               
-              {/* Ảnh minh họa thách thức */}
-              <div className="mb-8 flex justify-center">
-                <img 
-                  src="/application-areas/7.png" 
-                  alt="Thách thức thực tế của ngành Cảng biển" 
-                  className="max-w-lg h-auto rounded-lg shadow-lg cursor-pointer"
-                  onClick={() => setModalImage('/application-areas/7.png')}
-                />
-              </div>
-              
-              <div className="space-y-6">
-                <Card className="border-red-200 bg-red-50">
-                  <CardHeader>
-                    <CardTitle className="text-red-800 flex items-center">
-                      <BarChart3 className="h-5 w-5 mr-2" />
-                      Dữ liệu phân mảnh và "Ốc đảo thông tin"
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-700">
-                    <p className="mb-3">
-                      Đây là thách thức lớn nhất. Thông tin về một lô hàng có thể nằm ở email của bộ phận kinh doanh, 
-                      lịch trình tàu lại ở một phần mềm khác, trong khi thông tin xe ra vào cổng được ghi chép thủ công.
-                    </p>
-                    <div className="bg-white p-3 rounded border-l-4 border-red-300">
-                      <p className="text-sm text-gray-600">
-                        Sự thiếu kết nối này tạo ra một môi trường vận hành mà không ai có được bức tranh toàn cảnh, 
-                        dẫn đến quyết định chậm trễ và kém hiệu quả.
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Ảnh minh họa thách thức - Cột trái */}
+                <div className="h-full flex items-center justify-center">
+                  <Image 
+                    src="/application-areas/7.png" 
+                    alt="Thách thức thực tế của ngành Cảng biển" 
+                    className="object-contain max-h-80 md:max-h-96 w-auto rounded-lg shadow-lg"
+                  />
+                </div>
+                
+                {/* Accordion cards - Cột phải */}
+                <div className="space-y-4">
+                  <Accordion type="multiple" className="space-y-4">
+                    <AccordionItem value="challenge-1" className="border border-red-200 bg-red-50 rounded-lg">
+                      <AccordionTrigger className="text-red-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <BarChart3 className="h-5 w-5 mr-2" />
+                        Dữ liệu phân mảnh và "Ốc đảo thông tin"
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 px-6 pb-4">
+                        <p className="mb-3">
+                          Đây là thách thức lớn nhất. Thông tin về một lô hàng có thể nằm ở email của bộ phận kinh doanh, 
+                          lịch trình tàu lại ở một phần mềm khác, trong khi thông tin xe ra vào cổng được ghi chép thủ công.
+                        </p>
+                        <div className="bg-white p-3 rounded border-l-4 border-red-300">
+                          <p className="text-sm text-gray-600">
+                            Sự thiếu kết nối này tạo ra một môi trường vận hành mà không ai có được bức tranh toàn cảnh, 
+                            dẫn đến quyết định chậm trễ và kém hiệu quả.
+                          </p>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <Card className="border-orange-200 bg-orange-50">
-                  <CardHeader>
-                    <CardTitle className="text-orange-800 flex items-center">
-                      <Clock className="h-5 w-5 mr-2" />
-                      Thiếu tầm nhìn toàn cảnh theo thời gian thực
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-700">
-                    Hệ quả trực tiếp là ban quản lý không thể trả lời nhanh các câu hỏi vận hành quan trọng như: 
-                    "Bến nào đang trống?", "Xe tải đang ùn tắc ở đâu?", hay "Năng suất xếp dỡ hiện tại là bao nhiêu?". 
-                    Việc ra quyết định thường dựa trên kinh nghiệm hoặc các báo cáo có độ trễ lớn.
-                  </CardContent>
-                </Card>
+                    <AccordionItem value="challenge-2" className="border border-orange-200 bg-orange-50 rounded-lg">
+                      <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <Clock className="h-5 w-5 mr-2" />
+                        Thiếu tầm nhìn toàn cảnh theo thời gian thực
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 px-6 pb-4">
+                        Hệ quả trực tiếp là ban quản lý không thể trả lời nhanh các câu hỏi vận hành quan trọng như: 
+                        "Bến nào đang trống?", "Xe tải đang ùn tắc ở đâu?", hay "Năng suất xếp dỡ hiện tại là bao nhiêu?". 
+                        Việc ra quyết định thường dựa trên kinh nghiệm hoặc các báo cáo có độ trễ lớn.
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <Card className="border-yellow-200 bg-yellow-50">
-                  <CardHeader>
-                    <CardTitle className="text-yellow-800 flex items-center">
-                      <TrendingUp className="h-5 w-5 mr-2" />
-                      Hiệu suất vận hành kém và ùn tắc kéo dài
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-700">
-                    Khi thiếu dữ liệu đồng bộ, hiệu suất sụt giảm là điều không thể tránh khỏi. 
-                    Tàu phải chờ đợi lâu để cập bến, xe container xếp hàng dài ngoài cổng vì thủ tục giấy tờ thủ công, 
-                    và việc điều phối thiết bị thiếu tối ưu. Tình trạng này không chỉ gây lãng phí mà còn làm tăng chi phí vận hành, 
-                    giảm năng lực cạnh tranh nghiêm trọng.
-                  </CardContent>
-                </Card>
+                    <AccordionItem value="challenge-3" className="border border-yellow-200 bg-yellow-50 rounded-lg">
+                      <AccordionTrigger className="text-yellow-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <TrendingUp className="h-5 w-5 mr-2" />
+                        Hiệu suất vận hành kém và ùn tắc kéo dài
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 px-6 pb-4">
+                        Khi thiếu dữ liệu đồng bộ, hiệu suất sụt giảm là điều không thể tránh khỏi. 
+                        Tàu phải chờ đợi lâu để cập bến, xe container xếp hàng dài ngoài cổng vì thủ tục giấy tờ thủ công, 
+                        và việc điều phối thiết bị thiếu tối ưu. Tình trạng này không chỉ gây lãng phí mà còn làm tăng chi phí vận hành, 
+                        giảm năng lực cạnh tranh nghiêm trọng.
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <Card className="border-purple-200 bg-purple-50">
-                  <CardHeader>
-                    <CardTitle className="text-purple-800 flex items-center">
-                      <Shield className="h-5 w-5 mr-2" />
-                      Rủi ro về an toàn, an ninh và sai sót con người
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-700">
-                    Môi trường vận hành thủ công tiềm ẩn rủi ro cao về an toàn lao động và an ninh. 
-                    Việc kiểm soát ra vào lỏng lẻo và phản ứng chậm với các sự cố như hỏa hoạn là những vấn đề nhức nhối. 
-                    Sự phụ thuộc vào giấy tờ cũng làm tăng nguy cơ sai sót do con người, gây tổn thất về tài chính và hàng hóa.
-                  </CardContent>
-                </Card>
+                    <AccordionItem value="challenge-4" className="border border-purple-200 bg-purple-50 rounded-lg">
+                      <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <Shield className="h-5 w-5 mr-2" />
+                        Rủi ro về an toàn, an ninh và sai sót con người
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 px-6 pb-4">
+                        Môi trường vận hành thủ công tiềm ẩn rủi ro cao về an toàn lao động và an ninh. 
+                        Việc kiểm soát ra vào lỏng lẻo và phản ứng chậm với các sự cố như hỏa hoạn là những vấn đề nhức nhối. 
+                        Sự phụ thuộc vào giấy tờ cũng làm tăng nguy cơ sai sót do con người, gây tổn thất về tài chính và hàng hóa.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </div>
               </div>
             </div>
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 mb-6">2. Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <h3 className="text-2xl font-semibold text-blue-700 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
               <p className="text-gray-700 mb-8 leading-relaxed">
                 Smart Dashboard trong lĩnh vực cảng biển không chỉ là một công cụ hiển thị, mà là một 
                 <span className="font-semibold text-blue-700">"trung tâm chỉ huy số"</span> (Digital Command Center), 
                 đóng vai trò là bộ não của toàn bộ hệ sinh thái <span className="font-semibold text-blue-700">Cảng Thông Minh</span> (Smart Port).
               </p>
               
-              {/* Ảnh minh họa ứng dụng Smart Dashboard */}
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="flex flex-col items-center">
-                  <img 
-                    src="/application-areas/8.png" 
-                    alt="Ứng dụng Smart Dashboard - Phần 1" 
-                    className="max-w-full h-auto rounded-lg shadow-lg cursor-pointer"
-                    onClick={() => setModalImage('/application-areas/8.png')}
-                  />
-                  <span className="mt-2 text-sm text-gray-500 text-center">Bản sao số 3D cảng biển</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <img 
-                    src="/application-areas/9.png" 
-                    alt="Ứng dụng Smart Dashboard - Phần 2" 
-                    className="max-w-full h-auto rounded-lg shadow-lg cursor-pointer"
-                    onClick={() => setModalImage('/application-areas/9.png')}
-                  />
-                  <span className="mt-2 text-sm text-gray-500 text-center">Giám sát KPIs thời gian thực</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <img 
-                    src="/application-areas/10.png" 
-                    alt="Ứng dụng Smart Dashboard - Phần 3" 
-                    className="max-w-full h-auto rounded-lg shadow-lg cursor-pointer"
-                    onClick={() => setModalImage('/application-areas/10.png')}
-                  />
-                  <span className="mt-2 text-sm text-gray-500 text-center">Tự động hóa quy trình vận hành</span>
-                </div>
-              </div>
-              
-              <div className="space-y-8">
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <h4 className="font-semibold text-blue-800 mb-4">🏗️ Xây dựng Bản sao số (Digital Twin) của cảng biển</h4>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h5 className="font-medium text-blue-700 mb-2">Thực tế:</h5>
-                      <p className="text-gray-700">
-                        Thay vì nhìn vào các bản đồ giấy hoặc bảng tính, người quản lý tương tác với một mô hình 3D sống động của toàn bộ cảng.
-                      </p>
-                    </div>
-                    <div>
-                      <h5 className="font-medium text-blue-700 mb-2">Ứng dụng:</h5>
-                      <p className="text-gray-700">
-                        Mô hình 3D này là một bản sao số chính xác, được xây dựng từ bản đồ và khảo sát thực địa. 
-                        Nó cho phép giám sát vị trí và trạng thái của mọi đối tượng (tàu, xe, cần cẩu) theo thời gian thực. 
-                        Người dùng có thể dễ dàng phóng to, xoay, và di chuyển góc nhìn để quan sát chi tiết từng khu vực, 
-                        mang lại cảm giác chân thực như đang có mặt tại hiện trường.
-                      </p>
-                    </div>
-                  </div>
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                {/* Accordion cards - Cột trái */}
+                <div className="space-y-4 order-2 md:order-1">
+                  <Accordion type="multiple" className="space-y-4">
+                    <AccordionItem value="application-1" className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
+                      <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        🏗️ Xây dựng Bản sao số (Digital Twin) của cảng biển
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-4">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <h5 className="font-medium text-blue-700 mb-2">Thực tế:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Thay vì nhìn vào các bản đồ giấy hoặc bảng tính, người quản lý tương tác với một mô hình 3D sống động của toàn bộ cảng.
+                            </p>
+                          </div>
+                          <div>
+                            <h5 className="font-medium text-blue-700 mb-2">Ứng dụng:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Mô hình 3D này là một bản sao số chính xác, được xây dựng từ bản đồ và khảo sát thực địa. 
+                              Nó cho phép giám sát vị trí và trạng thái của mọi đối tượng (tàu, xe, cần cẩu) theo thời gian thực.
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="application-2" className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
+                      <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        📊 Hệ thống giám sát KPIs toàn diện
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-4">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <h5 className="font-medium text-green-700 mb-2">Thực tế:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Các chỉ số hiệu suất được tổng hợp và hiển thị một cách khoa học, dễ hiểu.
+                            </p>
+                          </div>
+                          <div>
+                            <h5 className="font-medium text-green-700 mb-2">Ứng dụng:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Xung quanh mô hình 3D là một hệ thống các KPIs được làm mới liên tục: 
+                              Hiệu quả hoạt động của cảng, Thông lượng hàng hóa, Thời gian quay vòng tàu, và Tình trạng bến.
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="application-3" className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg border border-purple-200">
+                      <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        🚨 Xử lý sự cố thông minh và tự động
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-4">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <h5 className="font-medium text-purple-700 mb-2">Thực tế:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Quy trình xử lý các sự cố khẩn cấp như hỏa hoạn được tự động hóa để giảm thiểu thời gian phản ứng.
+                            </p>
+                          </div>
+                          <div>
+                            <h5 className="font-medium text-purple-700 mb-2">Ứng dụng:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Hệ thống tự động cảnh báo, điều hướng đến hiện trường, tích hợp CCTV và hỗ trợ ra quyết định khẩn cấp.
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="application-4" className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg border border-orange-200">
+                      <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        ⚙️ Tự động hóa quy trình vận hành
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-4">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <h5 className="font-medium text-orange-700 mb-2">Thực tế:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Các thủ tục giấy tờ thủ công được loại bỏ hoàn toàn.
+                            </p>
+                          </div>
+                          <div>
+                            <h5 className="font-medium text-orange-700 mb-2">Ứng dụng:</h5>
+                            <p className="text-gray-700 text-sm">
+                              Hệ thống Cổng tự động sử dụng Camera AI và RFID, kết hợp ứng dụng di động để đồng bộ dữ liệu ngay lập tức.
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
 
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border-l-4 border-green-500">
-                  <h4 className="font-semibold text-green-800 mb-4">📊 Hệ thống giám sát KPIs toàn diện</h4>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h5 className="font-medium text-green-700 mb-2">Thực tế:</h5>
-                      <p className="text-gray-700">
-                        Các chỉ số hiệu suất được tổng hợp và hiển thị một cách khoa học, dễ hiểu.
-                      </p>
-                    </div>
-                    <div>
-                      <h5 className="font-medium text-green-700 mb-2">Ứng dụng:</h5>
-                      <p className="text-gray-700">
-                        Xung quanh mô hình 3D là một hệ thống các KPIs được làm mới liên tục, bao gồm: 
-                        Hiệu quả hoạt động của cảng (Port Efficiency), Thông lượng hàng hóa (Total Throughput), 
-                        Thời gian quay vòng tàu (Vessel Turnaround Time), Lịch trình tàu (Vessel Schedule), 
-                        và Tình trạng bến (Berth Status).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-6 rounded-lg border-l-4 border-purple-500">
-                  <h4 className="font-semibold text-purple-800 mb-4">🚨 Xử lý sự cố thông minh và tự động</h4>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h5 className="font-medium text-purple-700 mb-2">Thực tế:</h5>
-                      <p className="text-gray-700">
-                        Quy trình xử lý các sự cố khẩn cấp như hỏa hoạn được tự động hóa để giảm thiểu thời gian phản ứng.
-                      </p>
-                    </div>
-                    <div>
-                      <h5 className="font-medium text-purple-700 mb-2">Ứng dụng:</h5>
-                      <div className="text-gray-700">
-                        <p className="mb-2">Khi cảm biến phát hiện có cháy, hệ thống sẽ:</p>
-                        <ul className="space-y-1 text-sm">
-                          <li>• <strong>Cảnh báo tự động:</strong> Hiển thị một cảnh báo lớn ngay lập tức trên màn hình</li>
-                          <li>• <strong>Điều hướng đến hiện trường:</strong> Mô hình 3D tự động di chuyển đến vị trí xảy ra vụ cháy</li>
-                          <li>• <strong>Tích hợp CCTV:</strong> Phát hình ảnh trực tiếp từ camera an ninh gần nhất</li>
-                          <li>• <strong>Hỗ trợ ra quyết định:</strong> Cửa sổ pop-up cho phép gửi thông báo khẩn cấp và theo dõi vị trí công nhân để sơ tán</li>
-                        </ul>
+                {/* Slideshow - Cột phải */}
+                <div className="h-full flex items-center justify-center order-1 md:order-2">
+                  <div className="relative w-full max-w-[37rem]">
+                    {/* Slideshow Container */}
+                    <div className="relative overflow-hidden rounded-lg shadow-lg">
+                      <div 
+                        className="flex transition-transform duration-500 ease-in-out"
+                        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                      >
+                        {slideshowImages.map((image, index) => (
+                          <div key={index} className="w-full flex-shrink-0">
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-auto max-h-96 object-contain"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                      {/* Navigation buttons */}
+                      <button
+                        onClick={prevSlide}
+                        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                      >
+                        <ChevronLeft className="h-4 w-4" />
+                      </button>
+                      <button
+                        onClick={nextSlide}
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                      >
+                        <ChevronRight className="h-4 w-4" />
+                      </button>
+                      {/* Dots indicator */}
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {slideshowImages.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => setCurrentSlide(index)}
+                            className={`w-2 h-2 rounded-full transition-colors ${
+                              index === currentSlide ? 'bg-white' : 'bg-white/50'
+                            }`}
+                          />
+                        ))}
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-6 rounded-lg border-l-4 border-orange-500">
-                  <h4 className="font-semibold text-orange-800 mb-4">⚙️ Tự động hóa quy trình vận hành</h4>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h5 className="font-medium text-orange-700 mb-2">Thực tế:</h5>
-                      <p className="text-gray-700">
-                        Các thủ tục giấy tờ thủ công được loại bỏ hoàn toàn.
-                      </p>
-                    </div>
-                    <div>
-                      <h5 className="font-medium text-orange-700 mb-2">Ứng dụng:</h5>
-                      <p className="text-gray-700">
-                        Hệ thống Cổng tự động (Auto-Gate) sử dụng Camera AI và RFID để tự động hóa quy trình quản lý xe ra/vào. 
-                        Tài xế và kiểm viên tại hiện trường sử dụng ứng dụng di động (App Mobile) để nhận lệnh và tạo phiếu kiểm đếm, 
-                        giúp dữ liệu được đồng bộ về hệ thống ngay lập tức.
-                      </p>
+                    {/* Image caption */}
+                    <div className="mt-4 text-center">
+                      <span className="text-sm text-gray-500">
+                        {slideshowImages[currentSlide].alt}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -418,89 +384,108 @@ export default function SeaportPage() {
 
             {/* Lợi ích chiến lược */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-blue-700 mb-6">3. Lợi ích chiến lược và định lượng</h3>
+              <h3 className="text-2xl font-semibold text-blue-700 mb-6 text-center">Lợi ích chiến lược và định lượng</h3>
               <p className="text-gray-700 mb-8 leading-relaxed">
                 Việc triển khai Smart Dashboard trong mô hình Cảng Thông Minh mang lại những kết quả đột phá, 
                 đã được chứng minh qua các trường hợp thực tiễn như <span className="font-semibold text-blue-700">Cảng Busan</span>.
               </p>
               
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-gradient-to-br from-blue-100 to-cyan-100 p-6 rounded-lg">
-                  <h4 className="font-semibold text-blue-800 mb-4 flex items-center">
-                    <TrendingUp className="h-5 w-5 mr-2" />
-                    Bùng nổ về năng suất và hiệu quả
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="bg-white p-3 rounded border-l-4 border-blue-400">
-                      <p className="text-sm font-medium text-blue-700">Minh chứng:</p>
-                      <p className="text-gray-700 text-sm">
-                        Tại Cảng Busan, việc áp dụng hệ thống điều hành thông minh đã giúp tăng năng suất bốc dỡ hàng hóa lên <span className="font-bold text-blue-600">30%</span> so với các nhà ga truyền thống.
-                      </p>
-                    </div>
-                    <div className="bg-white p-3 rounded border-l-4 border-blue-400">
-                      <p className="text-sm font-medium text-blue-700">Lợi ích:</p>
-                      <p className="text-gray-700 text-sm">
-                        Thời gian một con tàu phải lưu lại cảng (turnaround time) giảm được <span className="font-bold text-blue-600">20%</span>, 
-                        giúp các hãng tàu tiết kiệm chi phí nhiên liệu và tăng hiệu quả khai thác.
-                      </p>
-                    </div>
-                  </div>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Cột ảnh bên trái */}
+                <div className="flex justify-center">
+                  <Image 
+                    src="/application-areas/23.jpg" 
+                    alt="Lợi ích chiến lược và định lượng" 
+                    className="max-w-2xl max-h-[32rem] w-full h-auto rounded-lg shadow-2xl"
+                  />
                 </div>
+                {/* Cột các card bên phải */}
+                <div className="space-y-4">
+                  <Accordion type="multiple" className="space-y-4">
+                    <AccordionItem value="benefit-1" className="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-lg border">
+                      <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <TrendingUp className="h-5 w-5 mr-2" />
+                        Bùng nổ về năng suất và hiệu quả
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
+                        <div className="space-y-3">
+                          <div className="bg-white p-3 rounded border-l-4 border-blue-400">
+                            <p className="text-sm font-medium text-blue-700">Minh chứng:</p>
+                            <p className="text-gray-700 text-sm">
+                              Tại Cảng Busan, việc áp dụng hệ thống điều hành thông minh đã giúp tăng năng suất bốc dỡ hàng hóa lên <span className="font-bold text-blue-600">30%</span> so với các nhà ga truyền thống.
+                            </p>
+                          </div>
+                          <div className="bg-white p-3 rounded border-l-4 border-blue-400">
+                            <p className="text-sm font-medium text-blue-700">Lợi ích:</p>
+                            <p className="text-gray-700 text-sm">
+                              Thời gian một con tàu phải lưu lại cảng (turnaround time) giảm được <span className="font-bold text-blue-600">20%</span>, 
+                              giúp các hãng tàu tiết kiệm chi phí nhiên liệu và tăng hiệu quả khai thác.
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <div className="bg-gradient-to-br from-green-100 to-emerald-100 p-6 rounded-lg">
-                  <h4 className="font-semibold text-green-800 mb-4 flex items-center">
-                    <Shield className="h-5 w-5 mr-2" />
-                    Nâng cao an toàn và an ninh vượt trội
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="bg-white p-3 rounded border-l-4 border-green-400">
-                      <p className="text-sm font-medium text-green-700">Minh chứng:</p>
-                      <p className="text-gray-700 text-sm">
-                        Việc tự động hóa và giám sát tập trung đã giúp giảm tới <span className="font-bold text-green-600">40%</span> số vụ tai nạn cảng biển nghiêm trọng tại Cảng Busan.
-                      </p>
-                    </div>
-                    <div className="bg-white p-3 rounded border-l-4 border-green-400">
-                      <p className="text-sm font-medium text-green-700">Lợi ích:</p>
-                      <p className="text-gray-700 text-sm">
-                        Môi trường làm việc trở nên an toàn hơn, giảm thiểu sai sót do con người, đồng thời hệ thống giám sát và cảnh báo thông minh giúp phản ứng nhanh với các sự cố.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                    <AccordionItem value="benefit-2" className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg border">
+                      <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <Shield className="h-5 w-5 mr-2" />
+                        Nâng cao an toàn và an ninh vượt trội
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
+                        <div className="space-y-3">
+                          <div className="bg-white p-3 rounded border-l-4 border-green-400">
+                            <p className="text-sm font-medium text-green-700">Minh chứng:</p>
+                            <p className="text-gray-700 text-sm">
+                              Việc tự động hóa và giám sát tập trung đã giúp giảm tới <span className="font-bold text-green-600">40%</span> số vụ tai nạn cảng biển nghiêm trọng tại Cảng Busan.
+                            </p>
+                          </div>
+                          <div className="bg-white p-3 rounded border-l-4 border-green-400">
+                            <p className="text-sm font-medium text-green-700">Lợi ích:</p>
+                            <p className="text-gray-700 text-sm">
+                              Môi trường làm việc trở nên an toàn hơn, giảm thiểu sai sót do con người, đồng thời hệ thống giám sát và cảnh báo thông minh giúp phản ứng nhanh với các sự cố.
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <div className="bg-gradient-to-br from-purple-100 to-violet-100 p-6 rounded-lg">
-                  <h4 className="font-semibold text-purple-800 mb-4 flex items-center">
-                    <BarChart3 className="h-5 w-5 mr-2" />
-                    Tăng trưởng bền vững và nâng cao năng lực cạnh tranh
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="bg-white p-3 rounded border-l-4 border-purple-400">
-                      <p className="text-sm font-medium text-purple-700">Minh chứng:</p>
-                      <p className="text-gray-700 text-sm">
-                        Ngay cả trong một năm đầy thách thức, Cảng Busan vẫn đạt được sản lượng container cao nhất lịch sử, 
-                        một thành tích có sự đóng góp to lớn của các nhà ga tự động.
-                      </p>
-                    </div>
-                    <div className="bg-white p-3 rounded border-l-4 border-purple-400">
-                      <p className="text-sm font-medium text-purple-700">Lợi ích:</p>
-                      <p className="text-gray-700 text-sm">
-                        Ban lãnh đạo có thể đưa ra các quyết định chiến lược dựa trên dữ liệu thực tế thay vì kinh nghiệm, 
-                        từ đó phân tích hiệu suất, tìm ra điểm nghẽn và lập kế hoạch đầu tư dài hạn một cách chính xác.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                    <AccordionItem value="benefit-3" className="bg-gradient-to-br from-purple-100 to-violet-100 rounded-lg border">
+                      <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <BarChart3 className="h-5 w-5 mr-2" />
+                        Tăng trưởng bền vững và nâng cao năng lực cạnh tranh
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
+                        <div className="space-y-3">
+                          <div className="bg-white p-3 rounded border-l-4 border-purple-400">
+                            <p className="text-sm font-medium text-purple-700">Minh chứng:</p>
+                            <p className="text-gray-700 text-sm">
+                              Ngay cả trong một năm đầy thách thức, Cảng Busan vẫn đạt được sản lượng container cao nhất lịch sử, 
+                              một thành tích có sự đóng góp to lớn của các nhà ga tự động.
+                            </p>
+                          </div>
+                          <div className="bg-white p-3 rounded border-l-4 border-purple-400">
+                            <p className="text-sm font-medium text-purple-700">Lợi ích:</p>
+                            <p className="text-gray-700 text-sm">
+                              Ban lãnh đạo có thể đưa ra các quyết định chiến lược dựa trên dữ liệu thực tế thay vì kinh nghiệm, 
+                              từ đó phân tích hiệu suất, tìm ra điểm nghẽn và lập kế hoạch đầu tư dài hạn một cách chính xác.
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <div className="bg-gradient-to-br from-orange-100 to-amber-100 p-6 rounded-lg">
-                  <h4 className="font-semibold text-orange-800 mb-4 flex items-center">
-                    <Ship className="h-5 w-5 mr-2" />
-                    Nâng cao trải nghiệm và sự hài lòng của khách hàng
-                  </h4>
-                  <p className="text-gray-700">
-                    Khách hàng có thể dễ dàng đăng ký dịch vụ, theo dõi trạng thái yêu cầu và thực hiện thanh toán trực tuyến. 
-                    Sự minh bạch và tiện lợi này giúp nâng cao đáng kể trải nghiệm dịch vụ, 
-                    tạo ra lợi thế cạnh tranh bền vững.
-                  </p>
+                    <AccordionItem value="benefit-4" className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-lg border">
+                      <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                        <Ship className="h-5 w-5 mr-2" />
+                        Nâng cao trải nghiệm và sự hài lòng của khách hàng
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
+                        Khách hàng có thể dễ dàng đăng ký dịch vụ, theo dõi trạng thái yêu cầu và thực hiện thanh toán trực tuyến. 
+                        Sự minh bạch và tiện lợi này giúp nâng cao đáng kể trải nghiệm dịch vụ, 
+                        tạo ra lợi thế cạnh tranh bền vững.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
               </div>
             </div>
@@ -584,7 +569,7 @@ export default function SeaportPage() {
               <Link href="/contact-info">Liên hệ ngay</Link>
             </Button>
             <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
-              <Link href="/">Về trang chủ</Link>
+              <Link href="/" className="text-blue-600">Về trang chủ</Link>
             </Button>
           </div>
         </div>
