@@ -183,9 +183,6 @@ export default function GovernmentPage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            
-
-
             {/* Thách thức thực tế */}
             <div className="mb-16">
               <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Thách thức thực tế của ngành Hành chính công</h3>
