@@ -65,12 +65,12 @@ export default function FinancePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <section className="relative py-20 text-white overflow-hidden">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 dark:opacity-80"
           style={{
             backgroundImage: 'url(/application-areas/finance/image.png)',
             backgroundSize: 'cover',
@@ -99,17 +99,17 @@ export default function FinancePage() {
       </section>
 
       {/* Industry Introduction Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">NGÀNH TÀI CHÍNH - NGÂN HÀNG</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">NGÀNH TÀI CHÍNH - NGÂN HÀNG</h2>
             </div>
             
             {/* Giới thiệu chung */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-green-700 mb-6">Giới thiệu chung về ngành Tài chính - Ngân hàng</h3>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <h3 className="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6">Giới thiệu chung về ngành Tài chính - Ngân hàng</h3>
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   Trong kỷ nguyên số hiện nay, ngành tài chính ngân hàng được định hình bởi vai trò trung tâm của dữ liệu, 
                   vốn được xem là một "tài sản chiến lược quý giá". Đây là một lĩnh vực đang trải qua một cuộc chuyển đổi mạnh mẽ, 
@@ -125,40 +125,14 @@ export default function FinancePage() {
                 />
               </div>
                 
-                <div className="bg-green-50 p-6 rounded-lg mt-6">
-                  <h4 className="font-semibold text-green-800 mb-4">Ngành này có những đặc thù rất riêng biệt:</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <div className="bg-green-500 rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></div>
-                      <div>
-                        <span className="font-medium">Cường độ dữ liệu cao:</span> Các tổ chức tài chính phải xử lý một khối lượng dữ liệu khổng lồ và đa dạng mỗi ngày, từ thông tin giao dịch, dữ liệu khách hàng, đến các chỉ số thị trường.
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="bg-green-500 rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></div>
-                      <div>
-                        <span className="font-medium">Môi trường rủi ro và tuân thủ nghiêm ngặt:</span> Đây là ngành có mức độ rủi ro cao, bao gồm rủi ro tín dụng, rủi ro thị trường, gian lận và các mối đe dọa an ninh mạng tinh vi. Do đó, ngành phải hoạt động dưới một khung pháp lý và quy định chặt chẽ để đảm bảo an toàn và bảo mật thông tin.
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="bg-green-500 rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></div>
-                      <div>
-                        <span className="font-medium">Tốc độ và tính thời gian thực:</span> Thị trường tài chính biến động không ngừng, đòi hỏi các tổ chức phải có khả năng nắm bắt thông tin và ra quyết định gần như tức thời để phản ứng với thay đổi và duy trì lợi thế cạnh tranh.
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                
-                <p className="mt-6">
-                  Những đặc thù này tạo ra một áp lực lớn, buộc ngành tài chính ngân hàng phải tiên phong trong việc ứng dụng các công nghệ tiên tiến như Smart Dashboard để tối ưu hóa vận hành, quản lý rủi ro và đưa ra các quyết sách chiến lược một cách thông minh và hiệu quả.
-                </p>
+
               </div>
             </div>
 
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-green-700 mb-6">1. Thách thức thực tế của ngành Tài chính - Ngân hàng</h3>
-              <p className="text-gray-700 mb-8 leading-relaxed">
+              <h3 className="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6 text-center">Thách thức thực tế của ngành Tài chính - Ngân hàng</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Ngành tài chính ngân hàng vận hành trong một môi trường có độ phức tạp, rủi ro và yêu cầu tuân thủ cực kỳ cao. Các thách thức cốt lõi bao gồm:
               </p>
               
@@ -180,7 +154,7 @@ export default function FinancePage() {
                         <Clock className="h-5 w-5 mr-2" />
                         Độ trễ trong ra quyết định
                       </AccordionTrigger>
-                      <AccordionContent className="text-gray-700 px-6 pb-4">
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
                         Theo phương pháp quản lý truyền thống, các quyết định thường được đưa ra dựa trên các báo cáo thủ công, định kỳ theo tháng hoặc quý. Điều này tạo ra một độ trễ lớn, khiến ban lãnh đạo phải "phản ứng" với các dữ liệu đã lỗi thời.
                       </AccordionContent>
                     </AccordionItem>
@@ -190,7 +164,7 @@ export default function FinancePage() {
                         <BarChart3 className="h-5 w-5 mr-2" />
                         Dữ liệu phân mảnh
                       </AccordionTrigger>
-                      <AccordionContent className="text-gray-700 px-6 pb-4">
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
                         Dữ liệu thường nằm rải rác ở nhiều hệ thống độc lập (Data Silos) như hệ thống lõi ngân hàng, CRM, dữ liệu giao dịch. Việc thiếu nền tảng hợp nhất khiến việc có cái nhìn 360 độ trở nên khó khăn.
                       </AccordionContent>
                     </AccordionItem>
@@ -200,7 +174,7 @@ export default function FinancePage() {
                         <Shield className="h-5 w-5 mr-2" />
                         Áp lực tuân thủ và bảo mật
                       </AccordionTrigger>
-                      <AccordionContent className="text-gray-700 px-6 pb-4">
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
                         Phải tuân thủ nhiều quy định khắt khe về bảo mật dữ liệu và tài chính như GDPR, HIPAA, ISO 27001. Đồng thời đối mặt với nguy cơ tấn công mạng và rò rỉ dữ liệu.
                       </AccordionContent>
                     </AccordionItem>
@@ -210,7 +184,7 @@ export default function FinancePage() {
                         <TrendingUp className="h-5 w-5 mr-2" />
                         Quản lý rủi ro phức tạp
                       </AccordionTrigger>
-                      <AccordionContent className="text-gray-700 px-6 pb-4">
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
                         Đối mặt với nhiều loại rủi ro như rủi ro tín dụng, rủi ro thị trường, gian lận tài chính. Việc phát hiện sớm dấu hiệu bất thường trong hàng triệu giao dịch hàng ngày là thách thức khổng lồ.
                       </AccordionContent>
                     </AccordionItem>
@@ -221,8 +195,8 @@ export default function FinancePage() {
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-green-700 mb-6">2. Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
-              <p className="text-gray-700 mb-8 leading-relaxed">
+              <h3 className="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Để giải quyết các thách thức trên, Smart Dashboard được ứng dụng như một "trung tâm chỉ huy" hay "bộ não số", biến dữ liệu thành công cụ quản trị chủ động.
               </p>
               
@@ -238,13 +212,13 @@ export default function FinancePage() {
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
                             <h5 className="font-medium text-blue-700 mb-2">Thực tế:</h5>
-                            <p className="text-gray-700 text-sm">
+                            <p className="text-gray-700 dark:text-gray-300 text-sm">
                               Thay vì chờ báo cáo giấy, CEO và ban giám đốc có thể truy cập một Dashboard Quản lý hiển thị các KPI tài chính cốt lõi theo thời gian thực.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-blue-700 mb-2">Ứng dụng:</h5>
-                            <p className="text-gray-700 text-sm">
+                            <h5 className="font-medium text-blue-700 dark:text-blue-400 mb-2">Ứng dụng:</h5>
+                            <p className="text-gray-700 dark:text-gray-300 text-sm">
                               Dashboard trực quan hóa các chỉ số như Tỷ lệ nợ xấu, Tỷ suất lợi nhuận trên tài sản (ROA) và Chỉ số hài lòng khách hàng (NPS), cho phép so sánh với mục tiêu và cùng kỳ năm trước.
                             </p>
                           </div>
@@ -260,13 +234,13 @@ export default function FinancePage() {
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
                             <h5 className="font-medium text-green-700 mb-2">Thực tế:</h5>
-                            <p className="text-gray-700 text-sm">
+                            <p className="text-gray-700 dark:text-gray-300 text-sm">
                               Tập đoàn tài chính sử dụng Dashboard tích hợp AI để không chỉ theo dõi mà còn dự báo các rủi ro.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-green-700 mb-2">Ứng dụng:</h5>
-                            <p className="text-gray-700 text-sm">
+                            <h5 className="font-medium text-green-700 dark:text-green-400 mb-2">Ứng dụng:</h5>
+                            <p className="text-gray-700 dark:text-gray-300 text-sm">
                               Hệ thống AI phân tích xu hướng thị trường để dự báo biến động lãi suất, phát hiện sớm gian lận và dự báo rủi ro tín dụng khách hàng.
                             </p>
                           </div>
@@ -282,13 +256,13 @@ export default function FinancePage() {
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
                             <h5 className="font-medium text-purple-700 mb-2">Thực tế:</h5>
-                            <p className="text-gray-700 text-sm">
+                            <p className="text-gray-700 dark:text-gray-300 text-sm">
                               Các nhóm an ninh mạng phải đối mặt với hàng triệu cảnh báo mỗi ngày, dẫn đến tình trạng "mệt mỏi vì cảnh báo".
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-purple-700 mb-2">Ứng dụng:</h5>
-                            <p className="text-gray-700 text-sm">
+                            <h5 className="font-medium text-purple-700 dark:text-purple-400 mb-2">Ứng dụng:</h5>
+                            <p className="text-gray-700 dark:text-gray-300 text-sm">
                               Smart Dashboard tổng hợp dữ liệu từ SIEM và SOAR, sử dụng AI để tự động phân loại và chỉ làm nổi bật các mối đe dọa thực sự nghiêm trọng.
                             </p>
                           </div>
@@ -304,13 +278,13 @@ export default function FinancePage() {
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
                             <h5 className="font-medium text-orange-700 mb-2">Thực tế:</h5>
-                            <p className="text-gray-700 text-sm">
+                            <p className="text-gray-700 dark:text-gray-300 text-sm">
                               Các quy trình kiểm toán và báo cáo tuân thủ thường rất tốn công sức.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-orange-700 mb-2">Ứng dụng:</h5>
-                            <p className="text-gray-700 text-sm">
+                            <h5 className="font-medium text-orange-700 dark:text-orange-400 mb-2">Ứng dụng:</h5>
+                            <p className="text-gray-700 dark:text-gray-300 text-sm">
                               Dashboard tự động hóa việc tạo báo cáo tuân thủ, giám sát liên tục và cung cấp nhật ký kiểm toán, giúp tổ chức "luôn sẵn sàng cho kiểm toán".
                             </p>
                           </div>
@@ -372,8 +346,8 @@ export default function FinancePage() {
 
             {/* Lợi ích chiến lược */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold text-green-700 mb-6">3. Lợi ích chiến lược và định lượng</h3>
-              <p className="text-gray-700 mb-8 leading-relaxed">
+              <h3 className="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">Lợi ích chiến lược và định lượng</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Việc ứng dụng Smart Dashboard một cách hiệu quả mang lại những giá trị to lớn, có thể đo lường được:
               </p>
               
@@ -394,7 +368,7 @@ export default function FinancePage() {
                         <TrendingUp className="h-5 w-5 mr-2" />
                         Tăng tốc độ và chất lượng ra quyết định
                       </AccordionTrigger>
-                      <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
                         <p className="mb-3">
                           Đây là lợi ích hữu hình nhất. Các ngân hàng sử dụng dashboard đã ghi nhận:
                         </p>
@@ -416,7 +390,7 @@ export default function FinancePage() {
                         <BarChart3 className="h-5 w-5 mr-2" />
                         Tiết kiệm chi phí và nâng cao hiệu suất
                       </AccordionTrigger>
-                      <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
                         Việc tự động hóa quá trình thu thập, tổng hợp dữ liệu và tạo báo cáo giúp giải phóng nhân lực khỏi các công việc thủ công. Điều này không chỉ tiết kiệm chi phí nhân sự mà còn cho phép họ tập trung vào các nhiệm vụ có giá trị cao hơn như phân tích chiến lược.
                       </AccordionContent>
                     </AccordionItem>
@@ -426,7 +400,7 @@ export default function FinancePage() {
                         <Shield className="h-5 w-5 mr-2" />
                         Tăng cường an ninh và khả năng phục hồi
                       </AccordionTrigger>
-                      <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
                         Cung cấp một cái nhìn toàn diện và theo thời gian thực về các mối đe dọa, giúp các tổ chức tài chính giảm thiểu thời gian phát hiện và phản ứng sự cố, từ đó bảo vệ tài sản và dữ liệu khách hàng tốt hơn.
                       </AccordionContent>
                     </AccordionItem>
@@ -436,7 +410,7 @@ export default function FinancePage() {
                         <CreditCard className="h-5 w-5 mr-2" />
                         Minh bạch hóa và định lượng rủi ro
                       </AccordionTrigger>
-                      <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
                         Một Smart Dashboard cao cấp có khả năng "dịch rủi ro mạng thành đô la và xu". Nó giúp CISO chứng minh được Lợi tức đầu tư an ninh (ROSI), biện minh cho ngân sách và truyền đạt giá trị của an ninh bằng ngôn ngữ kinh doanh tới hội đồng quản trị.
                       </AccordionContent>
                     </AccordionItem>
@@ -449,17 +423,17 @@ export default function FinancePage() {
       </section>
 
       {/* Metrics Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Số liệu ấn tượng</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Số liệu ấn tượng</h2>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
             {metrics.map((metric, index) => (
-              <div key={index} className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg">
-                <div className="text-3xl font-bold text-green-600 mb-2">{metric.value}</div>
-                <div className="text-gray-600">{metric.label}</div>
+              <div key={index} className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 rounded-lg">
+                <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">{metric.value}</div>
+                <div className="text-gray-600 dark:text-gray-300">{metric.label}</div>
               </div>
             ))}
           </div>
@@ -467,11 +441,11 @@ export default function FinancePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Tính năng nổi bật</h2>
-            <p className="text-lg text-gray-600">Giải pháp toàn diện cho ngành tài chính ngân hàng</p>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Tính năng nổi bật</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho ngành tài chính ngân hàng</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -484,7 +458,7 @@ export default function FinancePage() {
                   <CardTitle className="text-xl text-green-800">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -493,20 +467,20 @@ export default function FinancePage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Lợi ích mang lại</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Lợi ích mang lại</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm">
+                <div key={index} className="flex items-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
                   <div className="bg-green-100 p-2 rounded-full mr-4">
                     <CreditCard className="h-5 w-5 text-green-600" />
                   </div>
-                  <span className="font-medium text-gray-900">{benefit}</span>
+                  <span className="font-medium text-gray-900 dark:text-gray-100">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -515,7 +489,7 @@ export default function FinancePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-green-600 text-white">
+      <section className="py-16 bg-green-600 dark:bg-green-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Tối ưu hóa hiệu quả tài chính ngay hôm nay</h2>
           <p className="text-xl mb-8">Liên hệ để được tư vấn giải pháp Smart Dashboard phù hợp</p>

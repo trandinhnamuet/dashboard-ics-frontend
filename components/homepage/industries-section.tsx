@@ -142,7 +142,7 @@ export function IndustriesSection() {
                   
                   {/* Content Section */}
                   <div className="lg:w-1/2 flex items-center lg:h-full">
-                    <CardContent className="p-8 lg:p-12 w-full h-full flex flex-col justify-center" style={{ backgroundColor: '#f3faff' }}>
+                    <CardContent className="p-8 lg:p-12 w-full h-full flex flex-col justify-center bg-blue-50/80 dark:bg-gray-800/50">
                       <div className="mb-6 rounded-lg bg-primary/10 p-4 w-fit group-hover:bg-primary/20 transition-colors">
                         <industry.icon className="h-8 w-8 text-primary" />
                       </div>
