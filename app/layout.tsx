@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'Smart Dashboard Vietnam',
     images: [
       {
-        url: '/application-areas/24.png',
+        url: '/application-areas/24.jpg',
         width: 1200,
         height: 630,
         alt: 'Smart Dashboard Vietnam',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Smart Dashboard Vietnam',
     description: 'Giải pháp Smart Dashboard hàng đầu tại Việt Nam',
-    images: ['/application-areas/24.png'],
+    images: ['/application-areas/24.jpg'],
   },
 }
 
