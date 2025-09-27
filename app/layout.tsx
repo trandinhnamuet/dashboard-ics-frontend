@@ -14,6 +14,28 @@ export const metadata: Metadata = {
   title: 'Smart Dashboard Vietnam',
   description: 'Giải pháp Smart Dashboard hàng đầu tại Việt Nam',
   generator: 'Next.js',
+  openGraph: {
+    title: 'Smart Dashboard Vietnam',
+    description: 'Giải pháp Smart Dashboard hàng đầu tại Việt Nam',
+    url: 'https://your-domain.com/', // Thay bằng domain thật nếu có
+    siteName: 'Smart Dashboard Vietnam',
+    images: [
+      {
+        url: '/3.png',
+        width: 1200,
+        height: 630,
+        alt: 'Smart Dashboard Vietnam',
+      },
+    ],
+    locale: 'vi_VN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Smart Dashboard Vietnam',
+    description: 'Giải pháp Smart Dashboard hàng đầu tại Việt Nam',
+    images: ['/3.png'],
+  },
 }
 
 export default function RootLayout({
