@@ -98,7 +98,7 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
 
       toast({
         title: 'Đăng ký thành công!',
-        description: 'Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.',
+        description: 'Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất. Mail đăng ký tặng kèm ebook sẽ được gửi về email của bạn.',
         variant: 'success',
       })
 
