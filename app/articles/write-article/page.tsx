@@ -36,6 +36,7 @@ function WriteArticleContent() {
   const { toast } = useToast()
   const [isLoading, setIsLoading] = useState(false)
   const [isEditing, setIsEditing] = useState(false)
+  const [useHtml, setUseHtml] = useState(false)
   const articleId = searchParams.get('id')
 
   const [article, setArticle] = useState<Article>({
@@ -188,37 +189,61 @@ function WriteArticleContent() {
               />
             </div>
 
+            {/* Toggle button for editor mode */}
+            <div className="flex items-center gap-4 mb-2">
+              <Button
+                type="button"
+                className={useHtml ? 'bg-green-600 hover:bg-green-700' : 'bg-blue-600 hover:bg-blue-700'}
+                onClick={() => setUseHtml((prev) => !prev)}
+              >
+                {useHtml ? 'HTML thuần' : 'React Quill'}
+              </Button>
+              <span className="text-muted-foreground text-sm">Chọn chế độ nhập nội dung</span>
+            </div>
+
             <div>
               <Label htmlFor="content">Nội dung *</Label>
               <div className="mt-2">
-                <ReactQuill
-                  value={article.content}
-                  onChange={(value) => handleInputChange('content', value)}
-                  theme="snow"
-                  placeholder="Nhập nội dung bài viết..."
-                  modules={{
-                    toolbar: [
-                      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-                      ['bold', 'italic', 'underline', 'strike'],
-                      [{ 'color': [] }, { 'background': [] }],
-                      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                      [{ 'indent': '-1'}, { 'indent': '+1' }],
-                      [{ 'align': [] }],
-                      ['blockquote', 'code-block'],
-                      ['link', 'image', 'video'],
-                      ['clean']
-                    ]
-                  }}
-                  formats={[
-                    'header', 'bold', 'italic', 'underline', 'strike',
-                    'color', 'background', 'list', 'bullet', 'indent',
-                    'align', 'blockquote', 'code-block', 'link', 'image', 'video'
-                  ]}
-                  style={{ minHeight: '200px' }}
-                />
+                {useHtml ? (
+                  <Textarea
+                    id="content"
+                    value={article.content}
+                    onChange={(e) => handleInputChange('content', e.target.value)}
+                    placeholder="Nhập mã HTML cho nội dung bài viết..."
+                    rows={12}
+                  />
+                ) : (
+                  <ReactQuill
+                    value={article.content}
+                    onChange={(value) => handleInputChange('content', value)}
+                    theme="snow"
+                    placeholder="Nhập nội dung bài viết..."
+                    modules={{
+                      toolbar: [
+                        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                        ['bold', 'italic', 'underline', 'strike'],
+                        [{ 'color': [] }, { 'background': [] }],
+                        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                        [{ 'indent': '-1'}, { 'indent': '+1' }],
+                        [{ 'align': [] }],
+                        ['blockquote', 'code-block'],
+                        ['link', 'image', 'video'],
+                        ['clean']
+                      ]
+                    }}
+                    formats={[
+                      'header', 'bold', 'italic', 'underline', 'strike',
+                      'color', 'background', 'list', 'bullet', 'indent',
+                      'align', 'blockquote', 'code-block', 'link', 'image', 'video'
+                    ]}
+                    style={{ minHeight: '200px' }}
+                  />
+                )}
               </div>
               <p className="text-sm text-muted-foreground mt-1">
-                Sử dụng thanh công cụ để định dạng văn bản, thêm ảnh, liên kết...
+                {useHtml
+                  ? 'Nhập mã HTML trực tiếp cho nội dung bài viết.'
+                  : 'Sử dụng thanh công cụ để định dạng văn bản, thêm ảnh, liên kết...'}
               </p>
             </div>
 
