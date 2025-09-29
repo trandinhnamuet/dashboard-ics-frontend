@@ -139,7 +139,6 @@ export function ServicesSection() {
 								className="group h-64 perspective-1000"
 								style={{ perspective: '1000px' }}
 								onClick={() => handleFlip(index)}
-								onTouchStart={() => handleFlip(index)}
 							>
 								<div
 									className={
