@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -32,7 +32,7 @@ interface Article {
   updated_at: string
 }
 
-export default function ArticlesListPage() {
+function ArticlesListContent() {
   const searchParams = useSearchParams()
   const { toast } = useToast()
   const [articles, setArticles] = useState<Article[]>([])
@@ -265,5 +265,29 @@ export default function ArticlesListPage() {
         </Dialog>
       )}
     </div>
+  )
+}
+
+function LoadingFallback() {
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="mb-8">
+        <h1 className="text-4xl font-bold mb-4">Tin tức & Bài viết</h1>
+        <p className="text-muted-foreground text-lg">
+          Cập nhật những thông tin mới nhất về công nghệ và dịch vụ từ ICS Smart Dashboard
+        </p>
+      </div>
+      <div className="flex justify-center py-12">
+        <div className="text-muted-foreground">Đang tải...</div>
+      </div>
+    </div>
+  )
+}
+
+export default function ArticlesListPage() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <ArticlesListContent />
+    </Suspense>
   )
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import dynamic from 'next/dynamic'
 import { Button } from '@/components/ui/button'
@@ -30,7 +30,7 @@ interface Article {
   status: string
 }
 
-export default function WriteArticlePage() {
+function WriteArticleContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const { toast } = useToast()
@@ -262,5 +262,23 @@ export default function WriteArticlePage() {
         </CardContent>
       </Card>
     </div>
+  )
+}
+
+function LoadingFallback() {
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="text-center py-12">
+        <div className="text-muted-foreground">Đang tải...</div>
+      </div>
+    </div>
+  )
+}
+
+export default function WriteArticlePage() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <WriteArticleContent />
+    </Suspense>
   )
 }
