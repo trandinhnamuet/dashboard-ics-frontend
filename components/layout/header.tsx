@@ -155,6 +155,13 @@ export function Header() {
             <button
               type="button"
               className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
+              onClick={() => router.push('/articles/articles-list')}
+            >
+              Tin tức
+            </button>
+            <button
+              type="button"
+              className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
               onClick={() => router.push('/contact-info')}
             >
               {t('header.contact')}
@@ -211,6 +218,13 @@ export function Header() {
                 onClick={() => { setIsMenuOpen(false); window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" }) }}
               >
                 {t('header.support')}
+              </button>
+              <button
+                type="button"
+                className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0 text-left"
+                onClick={() => { setIsMenuOpen(false); router.push('/articles/articles-list') }}
+              >
+                Tin tức
               </button>
               <button
                 type="button"

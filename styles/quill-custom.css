@@ -1,0 +1,76 @@
+/* Custom styles for React Quill editor */
+.ql-toolbar {
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+  border-color: hsl(var(--border));
+}
+
+.ql-container {
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  border-color: hsl(var(--border));
+  font-size: 14px;
+}
+
+.ql-editor {
+  min-height: 200px;
+  padding: 12px 15px;
+  color: hsl(var(--foreground));
+}
+
+.ql-editor.ql-blank::before {
+  color: hsl(var(--muted-foreground));
+  font-style: normal;
+}
+
+/* Dark mode support */
+.dark .ql-toolbar {
+  border-color: hsl(var(--border));
+  background-color: hsl(var(--background));
+}
+
+.dark .ql-container {
+  border-color: hsl(var(--border));
+  background-color: hsl(var(--background));
+}
+
+.dark .ql-editor {
+  color: hsl(var(--foreground));
+}
+
+/* Toolbar button styles */
+.ql-toolbar .ql-formats {
+  margin-right: 8px;
+}
+
+.ql-toolbar button {
+  padding: 4px;
+  margin: 1px;
+}
+
+.ql-toolbar button:hover {
+  background-color: hsl(var(--accent));
+  border-radius: 3px;
+}
+
+.ql-toolbar button.ql-active {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-radius: 3px;
+}
+
+/* Dropdown styles */
+.ql-toolbar .ql-picker {
+  color: hsl(var(--foreground));
+}
+
+.ql-toolbar .ql-picker-options {
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.ql-toolbar .ql-picker-item:hover {
+  background-color: hsl(var(--accent));
+}
