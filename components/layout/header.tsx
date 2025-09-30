@@ -152,13 +152,13 @@ export function Header() {
             >
               {t('header.support')}
             </button>
-            <button
+            {/* <button
               type="button"
               className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
               onClick={() => router.push('/articles/articles-list')}
             >
               Tin tức
-            </button>
+            </button> */}
             <button
               type="button"
               className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
