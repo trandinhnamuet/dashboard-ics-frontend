@@ -38,7 +38,7 @@ export function Chatbot({ isOpen, onClose }: ChatbotProps) {
               <MessageCircle className="h-3 w-3 text-white" />
             </div>
             <div className="bg-white rounded-lg p-2 shadow-sm">
-              <p className="text-sm">Xin chào! Tôi có thể hỗ trợ gì cho bạn về dịch vụ Oracle Cloud?</p>
+              <p className="text-sm">Xin chào! Tôi có thể hỗ trợ gì cho bạn về dịch vụ Smartdashboard?</p>
             </div>
           </div>
         </div>

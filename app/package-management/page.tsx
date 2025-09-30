@@ -33,7 +33,7 @@ interface PackageSubscription {
 const mockPackages: PackageSubscription[] = [
   {
     id: 1,
-    packageName: 'Oracle Cloud Starter',
+    packageName: 'Smartdashboard Starter',
     packageType: 'starter',
     status: 'active',
     startDate: '2025-01-15',
@@ -52,7 +52,7 @@ const mockPackages: PackageSubscription[] = [
   },
   {
     id: 2,
-    packageName: 'Oracle Cloud Professional',
+    packageName: 'Smartdashboard Professional',
     packageType: 'professional',
     status: 'active',
     startDate: '2025-03-01',
@@ -71,7 +71,7 @@ const mockPackages: PackageSubscription[] = [
   },
   {
     id: 3,
-    packageName: 'Oracle Cloud Enterprise',
+    packageName: 'Smartdashboard Enterprise',
     packageType: 'enterprise',
     status: 'suspended',
     startDate: '2024-12-01',
@@ -109,7 +109,7 @@ const mockPackages: PackageSubscription[] = [
   },
   {
     id: 5,
-    packageName: 'Oracle Cloud Professional',
+    packageName: 'Smartdashboard Professional',
     packageType: 'professional',
     status: 'expired',
     startDate: '2024-01-01',
