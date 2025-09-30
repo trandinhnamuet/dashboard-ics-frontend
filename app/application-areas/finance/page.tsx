@@ -88,7 +88,7 @@ export default function FinancePage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Smart Dashboard cho Tài chính - Ngân hàng - Bảo hiểm
+              Smart Dashboard - Ngành Tài chính / Ngân hàng / Bảo hiểm
             </h1>
             <p className="text-xl text-green-100 max-w-3xl leading-relaxed">
               Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, 
@@ -400,7 +400,7 @@ export default function FinancePage() {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Số liệu ấn tượng</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Số liệu ấn tượng</h2>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
@@ -418,7 +418,7 @@ export default function FinancePage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Tính năng nổi bật</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Tính năng nổi bật</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho ngành tài chính ngân hàng</p>
           </div>
           
@@ -445,7 +445,7 @@ export default function FinancePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Lợi ích mang lại</h2>
+              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Lợi ích mang lại</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">

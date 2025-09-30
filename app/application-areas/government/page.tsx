@@ -169,7 +169,7 @@ export default function GovernmentPage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Smart Dashboard cho Chính phủ - Cơ quan ban ngành
+              Smart Dashboard - Chính phủ / Cơ quan ban ngành
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl leading-relaxed">
               Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, 
@@ -532,7 +532,7 @@ export default function GovernmentPage() {
             {/* Tính năng chính - cột trái */}
             <div>
               <div className="mb-8 text-center">
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Tính năng chính</h2>
+                <h2 className="text-xl font-semibold text-red-600 dark:text-red-400 mb-4">Tính năng chính</h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho quản trị nhà nước hiệu quả</p>
               </div>
               <div className="space-y-4">
@@ -556,7 +556,7 @@ export default function GovernmentPage() {
             {/* Lợi ích mang lại - cột phải */}
             <div>
               <div className="mb-8 text-center">
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Lợi ích mang lại</h2>
+                <h2 className="text-xl font-semibold text-red-600 dark:text-red-400 mb-4">Lợi ích mang lại</h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho quản trị nhà nước hiệu quả</p>
               </div>
               <div className="space-y-4">
@@ -565,7 +565,7 @@ export default function GovernmentPage() {
                     <div className="bg-green-100 p-2 rounded-full mr-4">
                       <Target className="h-5 w-5 text-green-600" />
                     </div>
-                    <span className="font-medium text-gray-900 dark:text-gray-100">{benefit}</span>
+                    <span className="font-medium text-gray-900 dark:text-gray-100 text-center w-full">{benefit}</span>
                   </div>
                 ))}
               </div>

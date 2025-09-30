@@ -96,7 +96,7 @@ export default function ManufacturingPage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Smart Dashboard cho Công nghiệp - Sản xuất
+              Smart Dashboard - Ngành Công nghiệp / Sản xuất
             </h1>
             <p className="text-xl text-orange-100 max-w-3xl leading-relaxed">
               Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, 
@@ -113,10 +113,6 @@ export default function ManufacturingPage() {
             
             {/* Giới thiệu chung */}
             <div className="mb-16">
-              {/* Ảnh minh họa */}
-              <h3 className="text-4xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">Giới thiệu chung về Smart Dashboard cho Công nghiệp - Sản xuất</h3>
-              
-              
               <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   Trong bối cảnh của cuộc <span className="font-semibold text-orange-700">Cách mạng Công nghiệp lần thứ tư (Công nghiệp 4.0)</span>, 
@@ -506,7 +502,7 @@ export default function ManufacturingPage() {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Hiệu quả đã chứng minh</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Hiệu quả đã chứng minh</h2>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
@@ -524,7 +520,7 @@ export default function ManufacturingPage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Tính năng chính</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Tính năng chính</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho ngành công nghiệp sản xuất</p>
           </div>
           
@@ -550,7 +546,7 @@ export default function ManufacturingPage() {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Ứng dụng thực tế</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Ứng dụng thực tế</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -571,7 +567,7 @@ export default function ManufacturingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Lợi ích mang lại</h2>
+              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Lợi ích mang lại</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">

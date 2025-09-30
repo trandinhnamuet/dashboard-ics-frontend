@@ -99,7 +99,7 @@ export default function BuildingPage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Smart Dashboard cho Tòa nhà thông minh
+              Smart Dashboard - Tòa nhà thông minh
             </h1>
             <p className="text-xl text-gray-100 max-w-xl leading-relaxed">
               Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. 
@@ -116,13 +116,11 @@ export default function BuildingPage() {
             
             {/* Giới thiệu chung */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Giới thiệu chung về Quản lý Tòa nhà & Trung tâm dữ liệu</h3>
-              
               <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   Trong bối cảnh đô thị hóa và số hóa, các tòa nhà hiện đại, đặc biệt là những hạ tầng trọng yếu như 
                   <span className="font-semibold text-blue-700"> trung tâm dữ liệu (Data Center)</span>, đã phát triển thành những 
-                  <span className="font-semibold text-blue-700">hệ sinh thái công nghệ phức tạp</span>. 
+                  <span className="font-semibold text-blue-700"> hệ sinh thái công nghệ phức tạp</span>. 
                   Chúng không còn là những cấu trúc tĩnh mà là các <span className="font-semibold text-blue-700">tổ chức sống</span>, 
                   vận hành bởi sự kết hợp của nhiều hệ thống khác nhau.
                 </p>
@@ -140,7 +138,7 @@ export default function BuildingPage() {
                   <p className="text-gray-700 dark:text-gray-300">
                     Các hệ thống này bao gồm <span className="font-semibold text-blue-700">Quản lý Tòa nhà (BMS)</span>, 
                     điện (Electrical), <span className="font-semibold text-blue-700">thông gió và điều hòa không khí (HVAC)</span>, 
-                    cùng các hệ thống an ninh như <span className="font-semibold text-blue-700">camera giám sát (CCTV)</span> 
+                    cùng các hệ thống an ninh như <span className="font-semibold text-blue-700">camera giám sát (CCTV) </span> 
                     và kiểm soát ra vào.
                   </p>
                 </div>
@@ -493,7 +491,7 @@ export default function BuildingPage() {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Hiệu quả đã chứng minh</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Hiệu quả đã chứng minh</h2>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
@@ -511,7 +509,7 @@ export default function BuildingPage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Tính năng nổi bật</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Tính năng nổi bật</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho tòa nhà thông minh</p>
           </div>
           
@@ -541,28 +539,67 @@ export default function BuildingPage() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Cột 1: Hệ thống được quản lý */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">Hệ thống được quản lý</h2>
-              <div className="space-y-4">
+              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-6 text-center">Hệ thống được quản lý</h2>
+              <div className="grid grid-cols-3 gap-6 justify-items-center">
                 {services.map((service, index) => (
-                  <div key={index} className="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
-                    <service.icon className="h-6 w-6 text-blue-600 dark:text-blue-400 mb-2" />
-                    <span className="font-medium text-gray-900 dark:text-gray-100">{service.name}</span>
+                  <div key={index} className="flex flex-col items-center">
+                    <div className="w-20 h-20 rounded-full bg-white dark:bg-gray-900 border-2 border-blue-200 dark:border-blue-700 shadow flex items-center justify-center mb-2">
+                      <service.icon className="h-9 w-9 text-blue-600 dark:text-blue-400" />
+                    </div>
+                    <span className="font-medium text-gray-900 dark:text-gray-100 text-center text-sm max-w-[90px]">{service.name}</span>
                   </div>
                 ))}
               </div>
             </div>
             {/* Cột 2: Lợi ích mang lại */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">Lợi ích mang lại</h2>
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex flex-col items-center text-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
-                    <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full mb-2">
-                      <Building className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                    </div>
-                    <span className="font-medium text-gray-900 dark:text-gray-100">{benefit}</span>
+              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-6 text-center">Lợi ích mang lại</h2>
+              <div className="grid grid-cols-2 gap-12 relative py-6 px-2">
+                {/* Card 0 */}
+                <div className="flex flex-col items-center text-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm z-20">
+                  <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full mb-2">
+                    <Building className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                   </div>
-                ))}
+                  <span className="font-medium text-gray-900 dark:text-gray-100">{benefits[0]}</span>
+                </div>
+                {/* Card 1 */}
+                <div className="flex flex-col items-center text-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm z-20">
+                  <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full mb-2">
+                    <Building className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <span className="font-medium text-gray-900 dark:text-gray-100">{benefits[1]}</span>
+                </div>
+                {/* Card 2 */}
+                <div className="flex flex-col items-center text-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm z-20">
+                  <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full mb-2">
+                    <Building className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <span className="font-medium text-gray-900 dark:text-gray-100">{benefits[2]}</span>
+                </div>
+                {/* Card 3 */}
+                <div className="flex flex-col items-center text-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm z-20">
+                  <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full mb-2">
+                    <Building className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <span className="font-medium text-gray-900 dark:text-gray-100">{benefits[3]}</span>
+                </div>
+
+                {/* Arrow: Card 0 → Card 1 */}
+                <svg className="hidden sm:block absolute left-1/2 top-8 w-12 h-6 z-10" style={{transform: 'translateX(-50%)'}} viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 12h40m0 0l-6-6m6 6l-6 6" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                {/* Arrow: Card 1 → Card 3 */}
+                <svg className="hidden sm:block absolute right-4 top-1/2 w-6 h-12 z-10" style={{transform: 'translateY(-50%)'}} viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4v40m0 0l6-6m-6 6l-6-6" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                {/* Arrow: Card 3 → Card 2 */}
+                <svg className="hidden sm:block absolute left-1/2 bottom-4 w-12 h-6 z-10" style={{transform: 'translateX(-50%) rotate(180deg)'}} viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 12h40m0 0l-6-6m6 6l-6 6" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                {/* Arrow: Card 2 → Card 0 (lên trên) */}
+                <svg className="hidden sm:block absolute left-4 bottom-1/2 w-6 h-12 z-10" style={{transform: 'translateY(50%)'}} viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 44V4m0 0l-6 6m6-6l6 6" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </div>
             </div>
           </div>

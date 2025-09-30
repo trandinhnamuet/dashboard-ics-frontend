@@ -91,7 +91,7 @@ export default function SeaportPage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Smart Dashboard cho Cảng biển thông minh
+              Smart Dashboard - Ngành cảng biển
             </h1>
             <p className="text-xl text-blue-100 max-w-xl leading-relaxed">
               Biến cảng biển thành trung tâm chỉ huy số với bản sao số 3D, giám sát KPIs thời gian thực, 
@@ -108,9 +108,6 @@ export default function SeaportPage() {
             
             {/* Giới thiệu chung */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Giới thiệu chung về ngành Cảng biển</h3>
-              
-              
               
               <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
@@ -497,7 +494,7 @@ export default function SeaportPage() {
       <section className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Hiệu quả đã chứng minh</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Hiệu quả đã chứng minh</h2>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
@@ -515,7 +512,7 @@ export default function SeaportPage() {
       <section className="py-16 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Tính năng nổi bật</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Tính năng nổi bật</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">Giải pháp toàn diện cho cảng biển thông minh</p>
           </div>
           
@@ -542,7 +539,7 @@ export default function SeaportPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Lợi ích mang lại</h2>
+              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Lợi ích mang lại</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -568,7 +565,7 @@ export default function SeaportPage() {
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
               <Link href="/contact-info">Liên hệ ngay</Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Button variant="outline" size="lg" className="border-white text-white text-blue-600 hover:bg-gray-100">
               <Link href="/">Về trang chủ</Link>
             </Button>
           </div>
