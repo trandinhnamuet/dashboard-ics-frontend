@@ -123,17 +123,13 @@ export function Footer() {
                   <p className="opacity-80 font-semibold">CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS</p>
                   <div className="flex items-start space-x-2">
                     <MapPin className="h-4 w-4 mt-1 opacity-80" />
-                    <p className="opacity-80">Trụ sở: Đường Vũ Văn Cẩn, Phường Bần Yên Nhân, Thị Xã Mỹ Hào, Hưng Yên</p>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <MapPin className="h-4 w-4 mt-1 opacity-80" />
                     <p className="opacity-80">Văn phòng: TT3-5 Khu đô thị Đại Kim mới, Định Công, Hà Nội</p>
                   </div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 opacity-80" />
-                <p className="opacity-80">Điện thoại: 0931.487.231 &nbsp; - &nbsp; Hotline: 0931.487.231</p>
+                <p className="opacity-80">Điện thoại: 0931.487.231 &nbsp; - &nbsp; Hotline: 0707.806.860</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 opacity-80" />
