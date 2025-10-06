@@ -46,6 +46,10 @@ function WriteArticleContent() {
     thumbnail_url: '',
     status: 'draft'
   })
+  const [uploading, setUploading] = useState(false)
+  const [uploadError, setUploadError] = useState<string | null>(null)
+  const [originalContent, setOriginalContent] = useState('')
+  const [password, setPassword] = useState('')
 
   // Load article for editing if ID is provided
   useEffect(() => {
@@ -60,6 +64,12 @@ function WriteArticleContent() {
       setIsLoading(true)
       const data = await articlesService.getArticleById(id)
       setArticle(data)
+      setOriginalContent(data.content) // Lưu nội dung gốc
+      
+      // Nếu content có HTML phức tạp (style, div với style, animation), tự động chuyển sang HTML mode
+      if (data.content.includes('<style>') || data.content.includes('animation:') || data.content.includes('margin:') || data.content.includes('padding:')) {
+        setUseHtml(true)
+      }
     } catch (error) {
       toast({
         title: 'Lỗi',
@@ -73,6 +83,16 @@ function WriteArticleContent() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Kiểm tra password trước
+    if (password !== 'ics@062025') {
+      toast({
+        title: 'Lỗi xác thực',
+        description: 'Hãy nhập mật khẩu đúng để lưu bài viết',
+        variant: 'destructive',
+      })
+      return
+    }
     
     if (!article.title || !article.content) {
       toast({
@@ -130,6 +150,39 @@ function WriteArticleContent() {
     }))
   }
 
+  // Upload image handler
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    setUploading(true)
+    setUploadError(null)
+    try {
+      const formData = new FormData()
+      formData.append('image', file)
+      const apiUrl = process.env.NEXT_PUBLIC_DASHBOARD_API_URL || ''
+      const res = await fetch(apiUrl + '/api/images/upload', {
+        method: 'POST',
+        body: formData,
+      })
+      if (!res.ok) throw new Error('Upload failed')
+      const data = await res.json()
+      // Đảm bảo link ảnh luôn có prefix api url
+      let url = ''
+      if (data.url) {
+        url = data.url.startsWith('http') ? data.url : apiUrl + data.url
+      } else if (data.filename) {
+        url = apiUrl + '/api/images/' + data.filename
+      }
+      setArticle(prev => ({ ...prev, thumbnail_url: url }))
+      toast({ title: 'Upload thành công', description: 'Ảnh đã được tải lên.' })
+    } catch (err) {
+      setUploadError('Upload thất bại')
+      toast({ title: 'Lỗi', description: 'Upload ảnh thất bại', variant: 'destructive' })
+    } finally {
+      setUploading(false)
+    }
+  }
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-6">
@@ -180,13 +233,38 @@ function WriteArticleContent() {
 
             <div>
               <Label htmlFor="thumbnail_url">URL ảnh thumbnail</Label>
-              <Input
-                id="thumbnail_url"
-                type="url"
-                value={article.thumbnail_url}
-                onChange={(e) => handleInputChange('thumbnail_url', e.target.value)}
-                placeholder="https://example.com/image.jpg"
-              />
+              <div className="flex items-center gap-2">
+                <Input
+                  id="thumbnail_url"
+                  type="url"
+                  value={article.thumbnail_url}
+                  onChange={(e) => handleInputChange('thumbnail_url', e.target.value)}
+                  placeholder="https://example.com/image.jpg"
+                  className="flex-1"
+                />
+                <input
+                  type="file"
+                  accept="image/*"
+                  id="upload-thumbnail"
+                  style={{ display: 'none' }}
+                  onChange={handleImageUpload}
+                  disabled={uploading}
+                />
+                <Button
+                  type="button"
+                  onClick={() => document.getElementById('upload-thumbnail')?.click()}
+                  disabled={uploading}
+                  variant="outline"
+                >
+                  {uploading ? 'Đang tải...' : 'Upload ảnh'}
+                </Button>
+              </div>
+              {uploadError && <div className="text-red-500 text-sm mt-1">{uploadError}</div>}
+              {article.thumbnail_url && (
+                <div className="mt-2">
+                  <img src={article.thumbnail_url} alt="thumbnail" className="h-16 rounded border" />
+                </div>
+              )}
             </div>
 
             {/* Toggle button for editor mode */}
@@ -194,11 +272,28 @@ function WriteArticleContent() {
               <Button
                 type="button"
                 className={useHtml ? 'bg-green-600 hover:bg-green-700' : 'bg-blue-600 hover:bg-blue-700'}
-                onClick={() => setUseHtml((prev) => !prev)}
+                onClick={() => {
+                  const hasComplexHTML = originalContent && (originalContent.includes('<style>') || originalContent.includes('animation:') || originalContent.includes('margin:') || originalContent.includes('padding:'));
+                  // Nếu đang ở HTML thuần và muốn chuyển sang Quill nhưng content phức tạp thì chặn
+                  if (useHtml && hasComplexHTML) {
+                    toast({
+                      title: 'Không thể chuyển sang React Quill',
+                      description: 'Nội dung có HTML/CSS phức tạp. Chuyển sang React Quill sẽ làm mất style và format. Hãy chỉnh sửa ở chế độ HTML thuần.',
+                      variant: 'destructive',
+                    });
+                    return;
+                  }
+                  // Khôi phục nội dung gốc khi chuyển mode
+                  if (isEditing && originalContent) {
+                    setArticle(prev => ({ ...prev, content: originalContent }))
+                  }
+                  setUseHtml((prev) => !prev)
+                }}
               >
                 {useHtml ? 'HTML thuần' : 'React Quill'}
               </Button>
               <span className="text-muted-foreground text-sm">Chọn chế độ nhập nội dung</span>
+              {/* Đã xoá button khôi phục gốc */}
             </div>
 
             <div>
@@ -229,7 +324,11 @@ function WriteArticleContent() {
                         ['blockquote', 'code-block'],
                         ['link', 'image', 'video'],
                         ['clean']
-                      ]
+                      ],
+                      clipboard: {
+                        matchVisual: false,
+                        dangerouslyPasteHTML: true
+                      }
                     }}
                     formats={[
                       'header', 'bold', 'italic', 'underline', 'strike',
@@ -237,6 +336,7 @@ function WriteArticleContent() {
                       'align', 'blockquote', 'code-block', 'link', 'image', 'video'
                     ]}
                     style={{ minHeight: '200px' }}
+                    preserveWhitespace={true}
                   />
                 )}
               </div>
@@ -262,6 +362,18 @@ function WriteArticleContent() {
                   <SelectItem value="archived">Lưu trữ</SelectItem>
                 </SelectContent>
               </Select>
+            </div>
+
+            <div>
+              <Label htmlFor="password">Mật khẩu *</Label>
+              <Input
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Nhập mật khẩu để lưu bài viết..."
+                required
+              />
             </div>
 
             <div className="flex gap-4">

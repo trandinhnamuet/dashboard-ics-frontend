@@ -58,7 +58,7 @@ export default function ArticleDetailPage() {
   }
 
   return (
-    <div className="container mx-auto max-w-3xl px-4 py-8">
+    <div className="container mx-auto max-w-4xl px-4 py-8">
       <h1 className="text-4xl font-bold mb-2">{article.title}</h1>
       <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
         <div className="flex items-center">
