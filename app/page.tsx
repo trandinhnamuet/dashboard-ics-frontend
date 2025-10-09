@@ -27,43 +27,43 @@ function AnimatedSection({ children, delay = 0 }: { children: React.ReactNode, d
 
 export default function HomePage() {
   // Tích hợp GIM Chatbot
-  useEffect(() => {
-    // Khởi tạo GIM chatbot
-    (window as any).__gim = (window as any).__gim || {};
-    (window as any).__gim.licenseId = "586508500633432247";
+  // useEffect(() => {
+  //   // Khởi tạo GIM chatbot
+  //   (window as any).__gim = (window as any).__gim || {};
+  //   (window as any).__gim.licenseId = "586508500633432247";
     
-    const initGIMBot = () => {
-      const queue: any[] = [];
-      const gimBot = {
-        _handler: null,
-        _version: "1.0",
-        _queue: queue,
-        on: function() {
-          queue.push(["on", arguments]);
-          return gimBot;
-        },
-        call: function() {
-          queue.push(["call", arguments]);
-          return gimBot;
-        },
-        loadScript: function() {
-          const script = document.createElement("script");
-          script.async = true;
-          script.type = "text/javascript";
-          script.src = "https://botsdk.stg.gim.beango.com/index.umd.js";
-          document.head.appendChild(script);
-        }
-      };
+  //   const initGIMBot = () => {
+  //     const queue: any[] = [];
+  //     const gimBot = {
+  //       _handler: null,
+  //       _version: "1.0",
+  //       _queue: queue,
+  //       on: function() {
+  //         queue.push(["on", arguments]);
+  //         return gimBot;
+  //       },
+  //       call: function() {
+  //         queue.push(["call", arguments]);
+  //         return gimBot;
+  //       },
+  //       loadScript: function() {
+  //         const script = document.createElement("script");
+  //         script.async = true;
+  //         script.type = "text/javascript";
+  //         script.src = "https://botsdk.stg.gim.beango.com/index.umd.js";
+  //         document.head.appendChild(script);
+  //       }
+  //     };
       
-      gimBot.loadScript();
-      (window as any).GIMBotTool = gimBot;
-    };
+  //     gimBot.loadScript();
+  //     (window as any).GIMBotTool = gimBot;
+  //   };
     
-    // Chỉ load chatbot nếu chưa được load
-    if (!(window as any).GIMBotTool) {
-      initGIMBot();
-    }
-  }, []);
+  //   // Chỉ load chatbot nếu chưa được load
+  //   if (!(window as any).GIMBotTool) {
+  //     initGIMBot();
+  //   }
+  // }, []);
 
   return (
     <div className="min-h-screen">
