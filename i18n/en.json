@@ -742,6 +742,15 @@
       }
     }
   },
+  "articles": {
+    "list": {
+      "title": "News & Articles",
+      "subtitle": "Stay updated with the latest technology and service information from ICS Smart Dashboard",
+      "searchPlaceholder": "Search articles...",
+      "noArticlesFound": "No articles found",
+      "noArticlesPublished": "No articles have been published yet"
+    }
+  },
   "footer": {
     "company": {
       "title": "Company",

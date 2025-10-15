@@ -160,19 +160,19 @@ export function Footer() {
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex flex-wrap gap-6 text-sm opacity-80">
             <a href="#" className="hover:opacity-100 hover:text-primary transition-colors">
-              Chính sách bảo mật
+              {t('footer.legal.privacy')}
             </a>
             <a href="#" className="hover:opacity-100 hover:text-primary transition-colors">
-              Điều khoản sử dụng
+              {t('footer.legal.terms')}
             </a>
             <a href="#" className="hover:opacity-100 hover:text-primary transition-colors">
-              SLA
+              {t('footer.legal.sla')}
             </a>
             <a href="#" className="hover:opacity-100 hover:text-primary transition-colors">
-              Sitemap
+              {t('footer.legal.sitemap')}
             </a>
           </div>
-          <p className="text-sm opacity-80">© 2025 CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS. Tất cả quyền được bảo lưu.</p>
+          <p className="text-sm opacity-80">{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

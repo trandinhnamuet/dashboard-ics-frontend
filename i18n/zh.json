@@ -392,18 +392,24 @@
     "hotline": "热线："
   },
   "contactInfo": {
-    "title": "联系信息",
+    "title": "联系我们",
+    "subtitle": "越南领先的智能仪表板解决方案，随时为您提供24/7支持",
     "companyInfo": {
-      "companyName": "ICS智能仪表板",
-      "name": "公司名称",
-      "address": "地址",
-      "phone": "电话",
-      "email": "邮箱",
-      "businessLicense": "营业执照",
-      "taxCode": "税号",
-      "workingHours": "工作时间"
+      "title": "公司信息",
+      "name": "国际网络安全股份公司 - ICS",
+      "office": "河内办事处",
+      "address": "河内市定公区新大金城区TT3-5号"
     },
-    "subtitle": "越南领先的智能仪表板解决方案，随时为您提供24/7支持"
+    "contact": {
+      "title": "联系信息",
+      "phone": "电话与热线",
+      "email": "邮箱",
+      "website": "网站"
+    },
+    "map": {
+      "title": "地图位置",
+      "description": "查找前往我们办公室的路线"
+    }
   },
   "applicationAreas": {
     "government": {
@@ -752,6 +758,15 @@
         "contactNow": "立即联系",
         "backHome": "返回首页"
       }
+    }
+  },
+  "articles": {
+    "list": {
+      "title": "新闻资讯",
+      "subtitle": "获取ICS智能仪表板最新的技术和服务信息",
+      "searchPlaceholder": "搜索文章...",
+      "noArticlesFound": "未找到相关文章",
+      "noArticlesPublished": "暂无已发布的文章"
     }
   },
   "footer": {

@@ -392,18 +392,24 @@
     "hotline": "ホットライン："
   },
   "contactInfo": {
-    "title": "連絡先情報",
+    "title": "お問い合わせ",
+    "subtitle": "ベトナム最先端のスマートダッシュボードソリューション、24/7サポートでお客様をサポート",
     "companyInfo": {
-      "companyName": "ICSスマートダッシュボード",
-      "name": "会社名",
-      "address": "住所",
-      "phone": "電話番号",
-      "email": "メールアドレス",
-      "businessLicense": "営業許可証",
-      "taxCode": "税番号",
-      "workingHours": "営業時間"
+      "title": "会社情報",
+      "name": "国際ネットワークセキュリティ株式会社 - ICS",
+      "office": "ハノイオフィス",
+      "address": "ハノイ市ディンコン区新大金都市区域TT3-5"
     },
-    "subtitle": "ベトナム最先端のスマートダッシュボードソリューション、24/7サポートでお客様をサポート"
+    "contact": {
+      "title": "連絡先情報",
+      "phone": "電話・ホットライン",
+      "email": "メールアドレス",
+      "website": "ウェブサイト"
+    },
+    "map": {
+      "title": "地図上の位置",
+      "description": "弊社オフィスへの道順を検索"
+    }
   },
   "applicationAreas": {
     "government": {
@@ -752,6 +758,15 @@
         "contactNow": "今すぐお問い合わせ",
         "backHome": "ホームに戻る"
       }
+    }
+  },
+  "articles": {
+    "list": {
+      "title": "ニュース・記事",
+      "subtitle": "ICSスマートダッシュボードの最新技術とサービス情報をお届けします",
+      "searchPlaceholder": "記事を検索...",
+      "noArticlesFound": "記事が見つかりませんでした",
+      "noArticlesPublished": "まだ記事は公開されていません"
     }
   },
   "footer": {

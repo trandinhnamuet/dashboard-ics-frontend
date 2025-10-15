@@ -18,6 +18,7 @@ import { useToast } from '@/hooks/use-toast'
 import { Search, Calendar, User } from 'lucide-react'
 import { format } from 'date-fns'
 import { articlesService, type Article as ServiceArticle, type ArticlesResponse } from '@/services/articles.service'
+import { useTranslation } from 'react-i18next'
 
 interface Article {
   id: string
@@ -33,6 +34,7 @@ interface Article {
 }
 
 function ArticlesListContent() {
+  const { t } = useTranslation()
   const searchParams = useSearchParams()
   const { toast } = useToast()
   const [articles, setArticles] = useState<Article[]>([])
@@ -115,9 +117,9 @@ function ArticlesListContent() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Tin tức & Bài viết</h1>
+        <h1 className="text-4xl font-bold mb-4">{t('articles.list.title')}</h1>
         <p className="text-muted-foreground text-lg">
-          Cập nhật những thông tin mới nhất về công nghệ và dịch vụ từ ICS Smart Dashboard
+          {t('articles.list.subtitle')}
         </p>
       </div>
 
@@ -127,7 +129,7 @@ function ArticlesListContent() {
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             type="text"
-            placeholder="Tìm kiếm bài viết..."
+            placeholder={t('articles.list.searchPlaceholder')}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="pl-10"
@@ -142,7 +144,7 @@ function ArticlesListContent() {
       ) : filteredArticles.length === 0 ? (
         <div className="text-center py-12">
           <div className="text-muted-foreground text-lg">
-            {searchTerm ? 'Không tìm thấy bài viết nào' : 'Chưa có bài viết nào được xuất bản'}
+            {searchTerm ? t('articles.list.noArticlesFound') : t('articles.list.noArticlesPublished')}
           </div>
         </div>
       ) : (

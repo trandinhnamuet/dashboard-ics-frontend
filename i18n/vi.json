@@ -742,6 +742,15 @@
       }
     }
   },
+  "articles": {
+    "list": {
+      "title": "Tin tức & Bài viết",
+      "subtitle": "Cập nhật những thông tin mới nhất về công nghệ và dịch vụ từ ICS Smart Dashboard",
+      "searchPlaceholder": "Tìm kiếm bài viết...",
+      "noArticlesFound": "Không tìm thấy bài viết nào",
+      "noArticlesPublished": "Chưa có bài viết nào được xuất bản"
+    }
+  },
   "footer": {
     "company": {
       "title": "Công ty",
