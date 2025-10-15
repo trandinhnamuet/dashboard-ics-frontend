@@ -4,6 +4,8 @@ import { Cloud, Mail, Phone, MapPin, Building2, Globe } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
+import { useTranslation } from "react-i18next"
+import { PageTracker } from "@/components/common/page-tracker"
 
 function AnimatedSection({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) {
   const ref = useRef(null)
@@ -22,6 +24,8 @@ function AnimatedSection({ children, delay = 0 }: { children: React.ReactNode, d
 }
 
 export default function ContactPage() {
+  const { t } = useTranslation()
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
       {/* Hero Section */}
@@ -35,10 +39,10 @@ export default function ContactPage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Liên hệ với chúng tôi
+              {t('contactInfo.hero.title')}
             </h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Giải pháp Smart Dashboard hàng đầu tại Việt Nam, sẵn sàng hỗ trợ bạn 24/7
+              {t('contactInfo.hero.description')}
             </p>
           </div>
         </div>
@@ -59,8 +63,8 @@ export default function ContactPage() {
                       <Building2 className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <CardTitle className="text-xl text-gray-900">Thông tin công ty</CardTitle>
-                      <p className="text-sm text-gray-600">CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS</p>
+                      <CardTitle className="text-xl text-gray-900">{t('contactInfo.companyInfo.title')}</CardTitle>
+                      <p className="text-sm text-gray-600">{t('contactInfo.companyInfo.companyName')}</p>
                     </div>
                   </div>
                 </CardHeader>
@@ -78,8 +82,8 @@ export default function ContactPage() {
                   <div className="flex items-start space-x-3">
                     <MapPin className="h-5 w-5 mt-1 text-green-600" />
                     <div>
-                      <p className="font-semibold text-gray-900 mb-1">Văn phòng tại Hà Nội</p>
-                      <p className="text-gray-700">TT3-5 Khu đô thị Đại Kim mới, Định Công, Hà Nội</p>
+                      <p className="font-semibold text-gray-900 mb-1">{t('contactInfo.companyInfo.office')}</p>
+                      <p className="text-gray-700">{t('contactInfo.companyInfo.officeAddress')}</p>
                     </div>
                   </div>
                 </div>
@@ -95,7 +99,7 @@ export default function ContactPage() {
                   <div className="bg-gradient-to-r from-green-600 to-green-700 p-3 rounded-xl">
                     <Phone className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-xl text-gray-900">Thông tin liên hệ</CardTitle>
+                  <CardTitle className="text-xl text-gray-900">{t('contactInfo.contactDetails.title')}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -103,8 +107,8 @@ export default function ContactPage() {
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-orange-600" />
                     <div>
-                      <p className="font-semibold text-gray-900 mb-1">Điện thoại & Hotline</p>
-                      <p className="text-gray-700">0931.487.231</p>
+                      <p className="font-semibold text-gray-900 mb-1">{t('contactInfo.contactDetails.phoneHotline')}</p>
+                      <p className="text-gray-700">{t('contactInfo.contactDetails.phoneNumber')}</p>
                     </div>
                   </div>
                 </div>
@@ -112,8 +116,8 @@ export default function ContactPage() {
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5 text-purple-600" />
                     <div>
-                      <p className="font-semibold text-gray-900 mb-1">Email</p>
-                      <p className="text-gray-700">info@icss.com.vn</p>
+                      <p className="font-semibold text-gray-900 mb-1">{t('contactInfo.contactDetails.emailLabel')}</p>
+                      <p className="text-gray-700">{t('contactInfo.contactDetails.email')}</p>
                     </div>
                   </div>
                 </div>
@@ -121,8 +125,8 @@ export default function ContactPage() {
                   <div className="flex items-center space-x-3">
                     <Globe className="h-5 w-5 text-indigo-600" />
                     <div>
-                      <p className="font-semibold text-gray-900 mb-1">Website</p>
-                      <p className="text-gray-700">www.icss.com.vn</p>
+                      <p className="font-semibold text-gray-900 mb-1">{t('contactInfo.contactDetails.websiteLabel')}</p>
+                      <p className="text-gray-700">{t('contactInfo.contactDetails.website')}</p>
                     </div>
                   </div>
                 </div>
@@ -138,9 +142,9 @@ export default function ContactPage() {
                   <div className="bg-gradient-to-r from-red-600 to-red-700 p-3 rounded-xl">
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-xl text-gray-900">Vị trí trên bản đồ</CardTitle>
+                  <CardTitle className="text-xl text-gray-900">{t('contactInfo.mapSection.title')}</CardTitle>
                 </div>
-                <p className="text-sm text-gray-600">Tìm đường đến văn phòng của chúng tôi</p>
+                <p className="text-sm text-gray-600">{t('contactInfo.mapSection.description')}</p>
               </CardHeader>
               <CardContent>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
@@ -152,7 +156,7 @@ export default function ContactPage() {
                     allowFullScreen={true}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="ICS Google Map"
+                    title={t('contactInfo.mapSection.mapTitle')}
                     className="w-full"
                   ></iframe>
                 </div>

@@ -10,78 +10,73 @@ import { useEffect, useState } from "react"
 const services = [
 	{
 		icon: Database,
-		title: "Data Intergration",
-		description: "Kết nối và thu thập dữ liệu từ nhiều hệ thống khác nhau của doanh nghiệp",
+		title: "services.dataIntegration.title",
+		description: "services.dataIntegration.description",
 		features: [
-			"Kết nối dữ liệu thời gian thực từ nhiều nguồn",
-			"Hỗ trợ cả dữ liệu truyền thống (SQL, Excel) và dữ liệu IOT/SCADA",
-			"Làm sạch, chuẩn hóa và đồng bộ dữ liệu",
-			"API mở, dễ dàng tích hợp mở rộng",
+			"services.dataIntegration.features.0",
+			"services.dataIntegration.features.1",
+			"services.dataIntegration.features.2",
+			"services.dataIntegration.features.3",
 		],
 		image: "/service-section/data-itergration.jpg",
 	},
 	{
 		icon: Cpu,
-		title: "Visual & Reporting",
-		description:
-			"Cung cấp bảng điều khiển trực quan với các biểu đồ, báo cáo động giúp người dùng nắm bắt nhanh tình hình hoạt động",
+		title: "services.visualReporting.title",
+		description: "services.visualReporting.description",
 		features: [
-			"Biểu đồ KPI, heatmap, gauge chart, bảng phân tích đa chiều",
-			"Dashboard tùy biến theo nhu cầu",
-			"Xuất báo cáo tự động",
-			"Chi tiết đến từng bộ phận",
+			"services.visualReporting.features.0",
+			"services.visualReporting.features.1",
+			"services.visualReporting.features.2",
+			"services.visualReporting.features.3",
 		],
 		image: "/service-section/visual-and-reporting.jpg",
 	},
 	{
 		icon: HardDrive,
-		title: "Mornitoring & Alerts",
-		description:
-			"Theo dõi dữ liệu theo thời gian thực, đưa ra cảnh báo tức thì khi phát hiện bất thường hoặc vượt ngưỡng",
+		title: "services.monitoringAlerts.title",
+		description: "services.monitoringAlerts.description",
 		features: [
-			"Giám sát tiến độ",
-			"Hệ thống cảnh báo qua Email, SMS,...",
-			"Thiết lập ngưỡng linh hoạt",
-			"Nhật ký theo dõi để truy vết sự cố",
+			"services.monitoringAlerts.features.0",
+			"services.monitoringAlerts.features.1",
+			"services.monitoringAlerts.features.2",
+			"services.monitoringAlerts.features.3",
 		],
 		image: "/service-section/mornitoring-and-alert.jpg",
 	},
 	{
 		icon: Network,
-		title: "Collaboration & Remote Access",
-		description:
-			"Cho phép các phòng ban phối hợp trên cùng một nền tảng và truy cập dữ liệu mọi lúc, mọi nơi",
+		title: "services.collaborationRemote.title",
+		description: "services.collaborationRemote.description",
 		features: [
-			"Truy cập từ xa",
-			"Chia sẻ dashboard theo vai trò, phòng ban",
-			"Dữ liệu real time",
-			"FastConnect",
+			"services.collaborationRemote.features.0",
+			"services.collaborationRemote.features.1",
+			"services.collaborationRemote.features.2",
+			"services.collaborationRemote.features.3",
 		],
 		image: "/service-section/collabration.jpg",
 	},
 	{
 		icon: Shield,
-		title: "Security & Governance",
-		description:
-			"Đảm bảo an toàn, phân quyền và tuân thủ quy định trong toàn bộ quá trình quản trị dữ liệu",
+		title: "services.securityGovernance.title",
+		description: "services.securityGovernance.description",
 		features: [
-			"Phân quyền theo vai trò",
-			"Mã hóa dữ liệu và truyền thông an toàn",
-			"Quản lý truy cập, lưu vết hoạt động",
-			"Tuân thủ các chuẩn bảo mật",
+			"services.securityGovernance.features.0",
+			"services.securityGovernance.features.1",
+			"services.securityGovernance.features.2",
+			"services.securityGovernance.features.3",
 		],
 		image: "/service-section/security.jpg",
 	},
 	{
 		icon: BarChart3,
-		title: "Analytics & AI",
-		description:
-			"Ứng dụng phân tích dữ liệu thông minh và AI để dự báo xu hướng, gợi ý quyết định chiến lược",
+		title: "services.analyticsAI.title",
+		description: "services.analyticsAI.description",
 		features: [
-			"Phân tích xu hướng kinh doanh, sản xuất",
-			"Machine Learning phát hiện bất thường",
-			"Dự báo nhu cầu (nhân sự, nguyên liệu, năng lượng) ",
-			"Đưa ra khuyến nghị hành động dựa trên dữ liệu",
+			"services.analyticsAI.features.0",
+			"services.analyticsAI.features.1",
+			"services.analyticsAI.features.2",
+			"services.analyticsAI.features.3",
 		],
 		image: "/service-section/ai.jpg",
 	},
@@ -177,7 +172,7 @@ export function ServicesSection() {
 												<IconComponent className="h-8 w-8 text-primary" />
 											</div>
 											<CardTitle className="text-xl font-bold text-foreground bg-white/80 backdrop-blur-sm px-3 py-1 rounded-lg">
-												{service.title}
+												{t(service.title)}
 											</CardTitle>
 										</CardContent>
 									</Card>
@@ -195,7 +190,7 @@ export function ServicesSection() {
 									>
 										<CardContent className="flex flex-col justify-center h-full p-4">
 											<div className="space-y-3">
-												<p className="text-sm font-bold text-primary text-center mb-4">Tính năng chính:</p>
+												<p className="text-sm font-bold text-primary text-center mb-4">{t('services.additionalBenefits.mainFeatures')}</p>
 												<div className="space-y-2.5">
 													{service.features.map((feature, featureIndex) => (
 														<div
@@ -204,7 +199,7 @@ export function ServicesSection() {
 															style={{ animationDelay: `${featureIndex * 100}ms` }}
 														>
 															<div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-															<span className="text-xs text-foreground leading-relaxed">{feature}</span>
+															<span className="text-xs text-foreground leading-relaxed">{t(feature)}</span>
 														</div>
 													))}
 												</div>
@@ -237,9 +232,9 @@ export function ServicesSection() {
 													letterSpacing: '2px',
 												}}
 											/>
-							<span className="ml-1">ngày +</span>
+							<span className="ml-1">{t('services.additionalBenefits.deploymentTimeUnit')}</span>
 						</h3>
-						<p className="text-sm text-muted-foreground">Thời gian triển khai trung bình</p>
+						<p className="text-sm text-muted-foreground">{t('services.additionalBenefits.deploymentTime')}</p>
 					</div>
 					<div className="text-center p-6 rounded-xl bg-card border border-border">
 						<div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
@@ -261,7 +256,7 @@ export function ServicesSection() {
 											/>
 							<span className="ml-1">+</span>
 						</h3>
-						<p className="text-sm text-muted-foreground">Nguồn dữ liệu hỗ trợ tích hợp</p>
+						<p className="text-sm text-muted-foreground">{t('services.additionalBenefits.dataSources')}</p>
 					</div>
 					<div className="text-center p-6 rounded-xl bg-card border border-border">
 						<div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
@@ -283,7 +278,7 @@ export function ServicesSection() {
 											/>
 							<span className="ml-1">%</span>
 						</h3>
-						<p className="text-sm text-muted-foreground">Mã hóa & tuân thủ bảo mật</p>
+						<p className="text-sm text-muted-foreground">{t('services.additionalBenefits.security')}</p>
 					</div>
 					<div className="text-center p-6 rounded-xl bg-card border border-border">
 						<div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
@@ -305,7 +300,7 @@ export function ServicesSection() {
 											/>
 							<span className="ml-1">%</span>
 						</h3>
-						<p className="text-sm text-muted-foreground">Tiết kiệm chi phí vận hành</p>
+						<p className="text-sm text-muted-foreground">{t('services.additionalBenefits.costSaving')}</p>
 					</div>
 				</div>
 			</div>

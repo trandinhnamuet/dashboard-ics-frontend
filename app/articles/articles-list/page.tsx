@@ -3,6 +3,7 @@
 import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -33,6 +34,7 @@ interface Article {
 }
 
 function ArticlesListContent() {
+  const { t } = useTranslation()
   const searchParams = useSearchParams()
   const { toast } = useToast()
   const [articles, setArticles] = useState<Article[]>([])
@@ -63,8 +65,8 @@ function ArticlesListContent() {
       setTotalPages(Math.ceil(data.total / data.limit))
     } catch (error) {
       toast({
-        title: 'Lỗi',
-        description: 'Không thể tải danh sách bài viết',
+        title: t('articlesList.errors.errorTitle'),
+        description: t('articlesList.errors.fetchError'),
         variant: 'destructive',
       })
     } finally {
@@ -102,11 +104,11 @@ function ArticlesListContent() {
   const getStatusText = (status: string) => {
     switch (status) {
       case 'published':
-        return 'Đã xuất bản'
+        return t('articlesList.status.published')
       case 'draft':
-        return 'Bản nháp'
+        return t('articlesList.status.draft')
       case 'archived':
-        return 'Lưu trữ'
+        return t('articlesList.status.archived')
       default:
         return status
     }
@@ -115,9 +117,9 @@ function ArticlesListContent() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Tin tức & Bài viết</h1>
+        <h1 className="text-4xl font-bold mb-4">{t('articlesList.title')}</h1>
         <p className="text-muted-foreground text-lg">
-          Cập nhật những thông tin mới nhất về công nghệ và dịch vụ từ ICS Smart Dashboard
+          {t('articlesList.description')}
         </p>
       </div>
 
@@ -127,7 +129,7 @@ function ArticlesListContent() {
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             type="text"
-            placeholder="Tìm kiếm bài viết..."
+            placeholder={t('articlesList.searchPlaceholder')}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="pl-10"
@@ -137,12 +139,12 @@ function ArticlesListContent() {
 
       {isLoading ? (
         <div className="flex justify-center py-12">
-          <div className="text-muted-foreground">Đang tải bài viết...</div>
+          <div className="text-muted-foreground">{t('articlesList.loading')}</div>
         </div>
       ) : filteredArticles.length === 0 ? (
         <div className="text-center py-12">
           <div className="text-muted-foreground text-lg">
-            {searchTerm ? 'Không tìm thấy bài viết nào' : 'Chưa có bài viết nào được xuất bản'}
+            {searchTerm ? t('articlesList.noResults') : t('articlesList.noArticles')}
           </div>
         </div>
       ) : (
@@ -183,7 +185,7 @@ function ArticlesListContent() {
                     </div>
                     <div className="flex items-center text-sm text-muted-foreground">
                       <User className="h-3 w-3 mr-1" />
-                      Tác giả #{article.author_id}
+                      {t('articlesList.author', { id: article.author_id })}
                     </div>
                   </CardContent>
                 </Card>
@@ -199,17 +201,17 @@ function ArticlesListContent() {
                 onClick={() => setPage(page - 1)}
                 disabled={page === 1}
               >
-                Trang trước
+                {t('articlesList.pagination.previous')}
               </Button>
               <span className="flex items-center px-4">
-                Trang {page} / {totalPages}
+                {t('articlesList.pagination.pageInfo', { current: page, total: totalPages })}
               </span>
               <Button
                 variant="outline"
                 onClick={() => setPage(page + 1)}
                 disabled={page === totalPages}
               >
-                Trang sau
+                {t('articlesList.pagination.next')}
               </Button>
             </div>
           )}
@@ -233,7 +235,7 @@ function ArticlesListContent() {
                 </div>
                 <div className="flex items-center">
                   <User className="h-4 w-4 mr-1" />
-                  Tác giả #{selectedArticle.author_id}
+                  {t('articlesList.author', { id: selectedArticle.author_id })}
                 </div>
                 <Badge className={getStatusColor(selectedArticle.status)}>
                   {getStatusText(selectedArticle.status)}
@@ -269,16 +271,18 @@ function ArticlesListContent() {
 }
 
 function LoadingFallback() {
+  const { t } = useTranslation()
+  
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Tin tức & Bài viết</h1>
+        <h1 className="text-4xl font-bold mb-4">{t('articlesList.title')}</h1>
         <p className="text-muted-foreground text-lg">
-          Cập nhật những thông tin mới nhất về công nghệ và dịch vụ từ ICS Smart Dashboard
+          {t('articlesList.description')}
         </p>
       </div>
       <div className="flex justify-center py-12">
-        <div className="text-muted-foreground">Đang tải...</div>
+        <div className="text-muted-foreground">{t('articlesList.loading')}</div>
       </div>
     </div>
   )

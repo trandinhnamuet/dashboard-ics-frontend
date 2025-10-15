@@ -9,6 +9,7 @@ import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { Toaster } from '@/components/ui/toaster'
 import './globals.css'
+import { PageTrackerGlobal } from '@/components/common/page-tracker-global'
 
 export const metadata: Metadata = {
   title: 'Smart Dashboard Vietnam',
@@ -57,6 +58,7 @@ export default function RootLayout({
               <div className="min-h-screen flex flex-col">
                 <Header />
                 <main className="flex-1">
+                  <PageTrackerGlobal />
                   {children}
                 </main>
                 <Footer />

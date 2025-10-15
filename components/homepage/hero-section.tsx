@@ -10,7 +10,7 @@ import FlipNumbers from "react-flip-numbers"
 import { useEffect, useState } from "react"
 
 export function HeroSection() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const { isAuthenticated } = useAuthStore()
   const [isVisible, setIsVisible] = useState(false)
 
@@ -63,8 +63,8 @@ export function HeroSection() {
                   <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="font-semibold text-xs sm:text-sm text-foreground">Trực quan hóa dữ liệu</p>
-                  <p className="text-xs text-muted-foreground">2D/3D Dashboard interface</p>
+                  <p className="font-semibold text-xs sm:text-sm text-foreground">{t('homepage.hero.features.visualization')}</p>
+                  <p className="text-xs text-muted-foreground">{t('homepage.hero.features.visualizationDescription')}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3 p-3 sm:p-4 rounded-lg bg-card border border-border">
@@ -72,8 +72,8 @@ export function HeroSection() {
                   <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="font-semibold text-xs sm:text-sm text-foreground">Tối ưu vận hành</p>
-                  <p className="text-xs text-muted-foreground">Tốc độ vượt trội</p>
+                  <p className="font-semibold text-xs sm:text-sm text-foreground">{t('homepage.hero.features.optimization')}</p>
+                  <p className="text-xs text-muted-foreground">{t('homepage.hero.features.optimizationDescription')}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3 p-3 sm:p-4 rounded-lg bg-card border border-border">
@@ -81,8 +81,8 @@ export function HeroSection() {
                   <Globe className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="font-semibold text-xs sm:text-sm text-foreground">Tích hợp đa nền tảng</p>
-                  <p className="text-xs text-muted-foreground">Hỗ trợ tích hợp các hệ thống</p>
+                  <p className="font-semibold text-xs sm:text-sm text-foreground">{t('homepage.hero.features.integration')}</p>
+                  <p className="text-xs text-muted-foreground">{t('homepage.hero.features.integrationDescription')}</p>
                 </div>
               </div>
             </div>
@@ -93,27 +93,27 @@ export function HeroSection() {
                 size="lg"
                 className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6"
                 onClick={() => {
-                  const el = document.getElementById('pricing')
+                  const el = document.getElementById('pricing');
                   if (el) {
-                    el.scrollIntoView({ behavior: 'smooth' })
+                    el.scrollIntoView({ behavior: 'smooth' });
                   } else {
-                    window.location.href = '/#pricing'
+                    window.location.href = '/#pricing';
                   }
                 }}
               >
                 {t('homepage.hero.getStarted')}
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-transparent text-foreground border-foreground hover:bg-foreground hover:text-background"
-                >
-                  <Link href="/contact-info">
-                    {t('homepage.hero.contact')}
-                  </Link>
-                </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-transparent text-foreground border-foreground hover:bg-foreground hover:text-background"
+              >
+                <Link href="/contact-info">
+                  {t('homepage.hero.contact')}
+                </Link>
+              </Button>
             </div>
 
             {/* Trust Indicators */}
@@ -134,7 +134,7 @@ export function HeroSection() {
                   />
                   <span className="ml-1">+</span>
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground">Khách hàng</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">{t('homepage.hero.trustIndicators.customers')}</p>
               </div>
               <div className="text-center">
                 <div className="text-xl sm:text-2xl font-bold text-primary flex items-center justify-center">
@@ -152,7 +152,7 @@ export function HeroSection() {
                   />
                   <span className="ml-1">%</span>
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground">Real time</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">{t('homepage.hero.trustIndicators.realTime')}</p>
               </div>
               <div className="text-center">
                 <div className="text-xl sm:text-2xl font-bold text-primary flex items-center justify-center">
@@ -182,39 +182,32 @@ export function HeroSection() {
                     }}
                   />
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground">Hỗ trợ</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">{t('homepage.hero.trustIndicators.support')}</p>
               </div>
             </div>
           </div>
 
           {/* Visual */}
           <div className="relative lg:-ml-8">
-              <div className="relative z-10">
-                <video
-                  playsInline={true}
-                  width="100%"
-                  style={{ objectFit: 'contain', aspectRatio: '16/9' }}
-                  autoPlay={true}
-                  muted={true}
-                  loop={true}
-                  preload="auto"
-                  controls={true}
-                  className="w-full max-[1800px]:max-w-full min-[1800px]:lg:min-w-[925px] h-auto rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl min-[1150px]:max-[1280px]:min-w-[570px] min-[1350px]:max-[1400px]:min-w-[670px] min-[1400px]:max-[1500px]:min-w-[700px]  min-[1500px]:max-[1535px]:min-w-[750px]"
-                >
-                  <source src="/Smart-dashboard-overview.mp4" type="video/mp4" />
-                  Sorry, your browser doesn't support embedded videos.
-                </video>
-              </div>
-            {/* Floating Elements */}
-            {/* <div className="absolute -top-20 -right-6 bg-primary text-primary-foreground p-4 rounded-xl shadow-lg animate-bounce z-20">
-              <p className="text-sm font-semibold">Tiết kiệm 40% chi phí</p>
+            <div className="relative z-10">
+              <video
+                playsInline={true}
+                width="100%"
+                style={{ objectFit: 'contain', aspectRatio: '16/9' }}
+                autoPlay={true}
+                muted={true}
+                loop={true}
+                preload="auto"
+                controls={true}
+                className="w-full max-[1800px]:max-w-full min-[1800px]:lg:min-w-[925px] h-auto rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl min-[1150px]:max-[1280px]:min-w-[570px] min-[1350px]:max-[1400px]:min-w-[670px] min-[1400px]:max-[1500px]:min-w-[700px]  min-[1500px]:max-[1535px]:min-w-[750px]"
+              >
+                <source src="/Smart-dashboard-overview.mp4" type="video/mp4" />
+                {t('homepage.hero.videoFallback')}
+              </video>
             </div>
-            <div className="absolute -bottom-20 -left-6 bg-accent text-accent-foreground p-4 rounded-xl shadow-lg animate-bounce z-20">
-              <p className="text-sm font-semibold">Triển khai trong 24h</p>
-            </div> */}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

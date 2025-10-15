@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useTranslation } from 'react-i18next'
 import { Building, Thermometer, TrendingDown, Shield, Zap, Settings, ChevronLeft, ChevronRight } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -9,12 +10,14 @@ import Link from "next/link"
 import Image from "@/components/common/Image"
 
 export default function BuildingPage() {
+  const { t } = useTranslation()
+  
   // Slideshow state
   const [currentSlide, setCurrentSlide] = useState(0)
   
   const slideshowImages = [
-    { src: "/application-areas/16.png", alt: "Ứng dụng Smart Dashboard - Phần 1" },
-    { src: "/application-areas/17.png", alt: "Ứng dụng Smart Dashboard - Phần 2" }
+    { src: "/application-areas/16.png", alt: t('building.slideshow.slide1Alt') },
+    { src: "/application-areas/17.png", alt: t('building.slideshow.slide2Alt') }
   ]
 
   // Auto slideshow
@@ -36,42 +39,42 @@ export default function BuildingPage() {
   const features = [
     {
       icon: TrendingDown,
-      title: "Tiết kiệm năng lượng 30-40%",
-      description: "Tối ưu hóa hệ thống HVAC, chiếu sáng và điều hòa thông qua AI và IoT thông minh."
+      title: t('building.features.energySaving.title'),
+      description: t('building.features.energySaving.description')
     },
     {
       icon: Shield,
-      title: "Tăng an toàn và bảo mật",
-      description: "Giám sát an ninh 24/7, kiểm soát ra vào tự động và phát hiện sớm các rủi ro tiềm ẩn."
+      title: t('building.features.security.title'),
+      description: t('building.features.security.description')
     },
     {
       icon: Settings,
-      title: "Quản lý tự động hóa",
-      description: "Điều khiển thông minh các hệ thống tòa nhà, giảm thiểu can thiệp thủ công và tối ưu vận hành."
+      title: t('building.features.automation.title'),
+      description: t('building.features.automation.description')
     }
   ]
 
   const metrics = [
-    { label: "Tiết kiệm năng lượng", value: "35%" },
-    { label: "Giảm chi phí vận hành", value: "25%" },
-    { label: "Tăng hiệu quả làm việc", value: "40%" },
-    { label: "Cải thiện an toàn", value: "50%" }
+    { label: t('building.metrics.energySaving'), value: "35%" },
+    { label: t('building.metrics.costReduction'), value: "25%" },
+    { label: t('building.metrics.efficiency'), value: "40%" },
+    { label: t('building.metrics.safety'), value: "50%" }
   ]
 
   const benefits = [
-    "Giám sát hệ thống tòa nhà 24/7/365",
-    "Tự động hóa 85% quy trình quản lý",
-    "Tăng 45% sự hài lòng của người dùng",
-    "Giảm 60% thời gian bảo trì và sửa chữa"
+    t('building.benefits.monitoring'),
+    t('building.benefits.automation'),
+    t('building.benefits.satisfaction'),
+    t('building.benefits.maintenance')
   ]
 
   const services = [
-    { name: "Hệ thống HVAC", icon: Thermometer },
-    { name: "Chiếu sáng thông minh", icon: Zap },
-    { name: "An ninh - Camera", icon: Shield },
-    { name: "Kiểm soát ra vào", icon: Shield },
-    { name: "Quản lý năng lượng", icon: TrendingDown },
-    { name: "Hệ thống báo cháy", icon: Settings }
+    { name: t('building.services.hvac'), icon: Thermometer },
+    { name: t('building.services.lighting'), icon: Zap },
+    { name: t('building.services.security'), icon: Shield },
+    { name: t('building.services.accessControl'), icon: Shield },
+    { name: t('building.services.energyManagement'), icon: TrendingDown },
+    { name: t('building.services.fireSystem'), icon: Settings }
   ]
 
   return (
@@ -99,11 +102,10 @@ export default function BuildingPage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Smart Dashboard - Tòa nhà thông minh
+              {t('building.hero.title')}
             </h1>
             <p className="text-xl text-gray-100 max-w-xl leading-relaxed">
-              Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. 
-              Tối ưu năng lượng, giảm chi phí vận hành và nâng cao trải nghiệm người dùng thông qua giám sát thời gian thực 24/7.
+              {t('building.hero.description')}
             </p>
           </div>
         </div>
@@ -118,28 +120,21 @@ export default function BuildingPage() {
             <div className="mb-16">
               <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
-                  Trong bối cảnh đô thị hóa và số hóa, các tòa nhà hiện đại, đặc biệt là những hạ tầng trọng yếu như 
-                  <span className="font-semibold text-blue-700"> trung tâm dữ liệu (Data Center)</span>, đã phát triển thành những 
-                  <span className="font-semibold text-blue-700"> hệ sinh thái công nghệ phức tạp</span>. 
-                  Chúng không còn là những cấu trúc tĩnh mà là các <span className="font-semibold text-blue-700">tổ chức sống</span>, 
-                  vận hành bởi sự kết hợp của nhiều hệ thống khác nhau.
+                  {t('building.introduction.overview')}
                 </p>
 
                 {/* Ảnh minh họa */}
               <div className="mb-8 flex justify-center">
                 <Image 
                   src="/application-areas/15.png" 
-                  alt="Giới thiệu về Quản lý Tòa nhà & Trung tâm dữ liệu" 
+                  alt={t('building.introduction.imageAlt')}
                   className="max-w-lg h-auto rounded-lg shadow-lg"
                 />
               </div>
                 
                 <div className="bg-gradient-to-r from-blue-50 to-gray-50 dark:from-blue-900/30 dark:to-gray-800/30 p-6 rounded-lg border-l-4 border-blue-500">
                   <p className="text-gray-700 dark:text-gray-300">
-                    Các hệ thống này bao gồm <span className="font-semibold text-blue-700">Quản lý Tòa nhà (BMS)</span>, 
-                    điện (Electrical), <span className="font-semibold text-blue-700">thông gió và điều hòa không khí (HVAC)</span>, 
-                    cùng các hệ thống an ninh như <span className="font-semibold text-blue-700">camera giám sát (CCTV) </span> 
-                    và kiểm soát ra vào.
+                    {t('building.introduction.systems')}
                   </p>
                 </div>
               </div>
@@ -147,10 +142,9 @@ export default function BuildingPage() {
 
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Thách thức thực tế của Quản lý Tòa nhà & Data Center</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">{t('building.challenges.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Việc quản lý các cơ sở hạ tầng này theo phương pháp truyền thống đang đối mặt với nhiều thách thức nghiêm trọng, 
-                bắt nguồn từ sự phức tạp và thiếu kết nối của các hệ thống.
+                {t('building.challenges.description')}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -158,7 +152,7 @@ export default function BuildingPage() {
                 <div className="h-full flex items-center justify-center">
                   <Image 
                     src="/application-areas/16.png" 
-                    alt="Thách thức thực tế của Quản lý Tòa nhà & Data Center" 
+                    alt={t('building.challenges.imageAlt')}
                     className="object-contain max-h-80 md:max-h-96 w-auto rounded-lg shadow-lg"
                   />
                 </div>
@@ -169,17 +163,15 @@ export default function BuildingPage() {
                     <AccordionItem value="challenge-1" className="border border-red-200 bg-red-50 rounded-lg">
                       <AccordionTrigger className="text-red-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Building className="h-5 w-5 mr-2" />
-                        Dữ liệu phân mảnh, thiếu tầm nhìn hợp nhất
+                        {t('building.challenges.dataFragmentation.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
                         <p className="mb-3">
-                          Đây là vấn đề cố hữu. Dữ liệu từ hệ thống quản lý năng lượng (EMS), hệ thống quản lý tòa nhà (BMS), 
-                          và hệ thống an ninh thường hoạt động trong các "ốc đảo thông tin" (Data Silos) riêng biệt.
+                          {t('building.challenges.dataFragmentation.description')}
                         </p>
                         <div className="bg-white dark:bg-gray-800 p-3 rounded border-l-4 border-red-300">
                           <p className="text-sm text-gray-600 dark:text-gray-300">
-                            Người quản lý không thể có một cái nhìn toàn cảnh để thấy mối liên hệ giữa việc nhiệt độ tăng 
-                            trong phòng máy chủ (dữ liệu BMS) và mức tiêu thụ điện đột biến (dữ liệu EMS).
+                            {t('building.challenges.dataFragmentation.example')}
                           </p>
                         </div>
                       </AccordionContent>
@@ -188,34 +180,30 @@ export default function BuildingPage() {
                     <AccordionItem value="challenge-2" className="border border-orange-200 bg-orange-50 rounded-lg">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <TrendingDown className="h-5 w-5 mr-2" />
-                        Quản lý vận hành theo kiểu "phản ứng"
+                        {t('building.challenges.reactiveManagement.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Do thiếu dữ liệu tập trung và khả năng phân tích, đội ngũ vận hành thường chỉ hành động khi sự cố đã xảy ra. 
-                        Họ quản lý theo kiểu "chữa cháy", thay vì hành động chủ động.
+                        {t('building.challenges.reactiveManagement.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-3" className="border border-yellow-200 bg-yellow-50 rounded-lg">
                       <AccordionTrigger className="text-yellow-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Zap className="h-5 w-5 mr-2" />
-                        Lãng phí năng lượng và chi phí cao
+                        {t('building.challenges.energyWaste.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Việc không thể giám sát và phân tích tổng thể khiến việc xác định các khu vực lãng phí năng lượng trở nên khó khăn. 
-                        Các hệ thống HVAC có thể hoạt động dưới công suất tối ưu.
+                        {t('building.challenges.energyWaste.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-4" className="border border-purple-200 bg-purple-50 rounded-lg">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Settings className="h-5 w-5 mr-2" />
-                        Thời gian phản ứng sự cố chậm
+                        {t('building.challenges.slowResponse.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Khi một sự cố xảy ra (mất điện, rò rỉ nước, hoặc có xâm nhập trái phép), việc xác định nguyên nhân gốc rễ 
-                        và vị trí chính xác của vấn đề bị chậm lại do phải kiểm tra thông tin từ nhiều hệ thống rời rạc. 
-                        Điều này làm tăng rủi ro và thiệt hại.
+                        {t('building.challenges.slowResponse.description')}
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -225,11 +213,9 @@ export default function BuildingPage() {
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">{t('building.applications.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Smart Dashboard đóng vai trò là một <span className="font-semibold text-blue-700">"trung tâm thần kinh"</span>, 
-                hợp nhất mọi hệ thống của tòa nhà và trung tâm dữ liệu vào một giao diện duy nhất, 
-                cho phép quản lý thông minh và chủ động.
+                {t('building.applications.description')}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -238,23 +224,20 @@ export default function BuildingPage() {
                   <Accordion type="multiple" className="space-y-4">
                     <AccordionItem value="application-1" className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
                       <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🏢 Tạo ra "Phòng điều hành ảo" với Bản sao số (Digital Twin)
+                        🏢 {t('building.applications.digitalTwin.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-blue-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-blue-700 mb-2">{t('building.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Người quản lý không còn phải nhìn vào các bản vẽ kỹ thuật hay nhiều màn hình riêng lẻ. 
-                              Thay vào đó, họ tương tác với một mô hình 3D chi tiết của toàn bộ tòa nhà hoặc trung tâm dữ liệu.
+                              {t('building.applications.digitalTwin.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-blue-700 dark:text-blue-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-blue-700 dark:text-blue-400 mb-2">{t('building.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Mô hình 3D này là một "bản sao kỹ thuật số" được liên kết với dữ liệu thời gian thực từ các cảm biến và hệ thống. 
-                              Người dùng có thể "đi sâu" vào mô hình, nhấp vào một phòng máy chủ, một dãy tủ rack, 
-                              hoặc một thiết bị làm mát cụ thể để xem các thông số vận hành.
+                              {t('building.applications.digitalTwin.application')}
                             </p>
                           </div>
                         </div>
@@ -263,22 +246,20 @@ export default function BuildingPage() {
 
                     <AccordionItem value="application-2" className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
                       <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🌡️ Giám sát môi trường và năng lượng thông minh
+                        🌡️ {t('building.applications.environmentalMonitoring.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-green-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-green-700 mb-2">{t('building.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Các chỉ số quan trọng về môi trường và năng lượng được theo dõi liên tục và trực quan hóa một cách dễ hiểu.
+                              {t('building.applications.environmentalMonitoring.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-green-700 dark:text-green-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-green-700 dark:text-green-400 mb-2">{t('building.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Dashboard tích hợp dữ liệu từ các cảm biến IoT để theo dõi nhiệt độ, chất lượng không khí. 
-                              Nó sử dụng các công cụ như bản đồ nhiệt (heatmap) để hiển thị các khu vực có nhiệt độ cao bất thường 
-                              trong trung tâm dữ liệu và giám sát các chỉ số tiêu thụ năng lượng.
+                              {t('building.applications.environmentalMonitoring.application')}
                             </p>
                           </div>
                         </div>
@@ -287,22 +268,20 @@ export default function BuildingPage() {
 
                     <AccordionItem value="application-3" className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg border border-purple-200">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🛡️ Quản lý an ninh và an toàn tích hợp
+                        🛡️ {t('building.applications.securityManagement.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-purple-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-purple-700 mb-2">{t('building.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Các sự kiện an ninh được xác minh và xử lý nhanh chóng hơn nhờ việc kết hợp nhiều nguồn thông tin.
+                              {t('building.applications.securityManagement.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-purple-700 dark:text-purple-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-purple-700 dark:text-purple-400 mb-2">{t('building.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Hệ thống tích hợp hình ảnh trực tiếp từ camera an ninh (CCTV) ngay trên mô hình 3D. 
-                              Khi có một cảnh báo (ví dụ: cửa phòng máy chủ bị mở trái phép), dashboard có thể tự động hiển thị 
-                              hình ảnh từ camera gần nhất tại vị trí đó.
+                              {t('building.applications.securityManagement.application')}
                             </p>
                           </div>
                         </div>
@@ -311,22 +290,20 @@ export default function BuildingPage() {
 
                     <AccordionItem value="application-4" className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg border border-orange-200">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🔧 Hỗ trợ vận hành và bảo trì chủ động
+                        🔧 {t('building.applications.maintenanceSupport.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-orange-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-orange-700 mb-2">{t('building.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Giảm thiểu rủi ro ngừng hoạt động đột xuất, một yếu tố sống còn đối với các trung tâm dữ liệu.
+                              {t('building.applications.maintenanceSupport.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-orange-700 dark:text-orange-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-orange-700 dark:text-orange-400 mb-2">{t('building.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Dashboard tích hợp AI để thực hiện bảo trì dự đoán cho các thiết bị trọng yếu như hệ thống làm mát 
-                              hay bộ lưu điện (UPS). AI có thể cảnh báo sớm nguy cơ hỏng hóc, cho phép lên kế hoạch bảo trì 
-                              trước khi sự cố xảy ra.
+                              {t('building.applications.maintenanceSupport.application')}
                             </p>
                           </div>
                         </div>
@@ -387,10 +364,9 @@ export default function BuildingPage() {
 
             {/* Lợi ích chiến lược */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Lợi ích chiến lược và định lượng</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">{t('building.strategicBenefits.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Việc triển khai Smart Dashboard cho tòa nhà và trung tâm dữ liệu mang lại những lợi ích cụ thể, 
-                giúp chuyển đổi hoàn toàn phương thức quản lý và vận hành.
+                {t('building.strategicBenefits.description')}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -398,7 +374,7 @@ export default function BuildingPage() {
                 <div className="flex justify-center">
                   <Image 
                     src="/application-areas/17.png" 
-                    alt="Lợi ích chiến lược và định lượng" 
+                    alt={t('building.strategicBenefits.imageAlt')}
                     className="max-w-lg h-auto rounded-lg shadow-lg"
                   />
                 </div>
@@ -491,7 +467,7 @@ export default function BuildingPage() {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Hiệu quả đã chứng minh</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t('building.metrics.title')}</h2>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
@@ -509,8 +485,8 @@ export default function BuildingPage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Tính năng nổi bật</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho tòa nhà thông minh</p>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t('building.featuresSection.title')}</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400">{t('building.featuresSection.subtitle')}</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -539,7 +515,7 @@ export default function BuildingPage() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Cột 1: Hệ thống được quản lý */}
             <div>
-              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-6 text-center">Hệ thống được quản lý</h2>
+              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-6 text-center">{t('building.systemsManagement.title')}</h2>
               <div className="grid grid-cols-3 gap-6 justify-items-center">
                 {services.map((service, index) => (
                   <div key={index} className="flex flex-col items-center">
@@ -553,7 +529,7 @@ export default function BuildingPage() {
             </div>
             {/* Cột 2: Lợi ích mang lại */}
             <div>
-              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-6 text-center">Lợi ích mang lại</h2>
+              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-6 text-center">{t('building.benefitsSection.title')}</h2>
               <div className="grid grid-cols-2 gap-12 relative py-6 px-2">
                 {/* Card 0 */}
                 <div className="flex flex-col items-center text-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm z-20">
@@ -609,14 +585,14 @@ export default function BuildingPage() {
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 dark:bg-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Chuyển đổi tòa nhà của bạn thành tòa nhà thông minh</h2>
-          <p className="text-xl mb-8">Tối ưu năng lượng, nâng cao an toàn và cải thiện trải nghiệm người dùng</p>
+          <h2 className="text-3xl font-bold mb-4">{t('building.cta.title')}</h2>
+          <p className="text-xl mb-8">{t('building.cta.subtitle')}</p>
           <div className="space-x-4">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Link href="/contact-info">Liên hệ ngay</Link>
+              <Link href="/contact-info">{t('building.cta.contactButton')}</Link>
             </Button>
             <Button variant="outline" size="lg" className="border-white text-white hover:bg-white text-blue-600">
-              <Link href="/">Về trang chủ</Link>
+              <Link href="/">{t('building.cta.homeButton')}</Link>
             </Button>
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import { useTranslation } from 'react-i18next';
 
 interface ImageProps {
   src: string
@@ -19,6 +20,7 @@ export default function Image({
   enableZoom = true,
   onClick 
 }: ImageProps) {
+  const { t } = useTranslation();
   const [modalImage, setModalImage] = useState<string | null>(null)
   const [imageScale, setImageScale] = useState(1)
   const [imgPos, setImgPos] = useState({ x: 0, y: 0 })
@@ -123,10 +125,10 @@ export default function Image({
                 setModalImage(null); 
               }}
             >
-              &times;
+              {t('image.modal.closeButton')}
             </button>
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-white/80 text-black rounded px-3 py-1 text-xs shadow">
-              Giữ Ctrl và lăn chuột để phóng to/thu nhỏ. Nhấn giữ chuột trái và kéo để di chuyển ảnh.
+              {t('image.modal.instructions')}
             </div>
           </div>
         </div>

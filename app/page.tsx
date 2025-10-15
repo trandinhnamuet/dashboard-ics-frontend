@@ -8,6 +8,7 @@ import { PricingSection } from "@/components/homepage/pricing-section"
 import { Footer } from "@/components/layout/footer"
 import { motion, useInView } from "framer-motion"
 import { useRef, useEffect } from "react"
+import { useHomePageTracking } from "@/hooks/use-visitor-tracking"
 
 function AnimatedSection({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) {
   const ref = useRef(null)
@@ -26,6 +27,9 @@ function AnimatedSection({ children, delay = 0 }: { children: React.ReactNode, d
 }
 
 export default function HomePage() {
+  // Track trang chủ
+  useHomePageTracking();
+  
   // Tích hợp GIM Chatbot
   useEffect(() => {
     // Khởi tạo GIM chatbot

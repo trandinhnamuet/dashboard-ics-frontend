@@ -27,6 +27,7 @@ import { useToast } from '@/hooks/use-toast'
 import useAuthStore from '@/hooks/use-auth-store'
 import { RegistrationRequestsService } from '@/services/registration-requests.service'
 import axios from 'axios'
+import { useTranslation } from 'react-i18next'
 
 const formSchema = z.object({
   userName: z.string().min(2, 'Tên người dùng phải có ít nhất 2 ký tự'),
@@ -49,6 +50,7 @@ interface CustomRegistrationFormProps {
 }
 
 export default function CustomRegistrationForm({ open, onOpenChange, selectedPlan }: CustomRegistrationFormProps) {
+  const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(false)
   const { toast } = useToast()
   const { user, isAuthenticated } = useAuthStore()
@@ -97,8 +99,8 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
       await RegistrationRequestsService.create(payload)
 
       toast({
-        title: 'Đăng ký thành công!',
-        description: 'Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất. Mail đăng ký tặng kèm ebook sẽ được gửi về email của bạn.',
+        title: t('customRegistrationForm.toast.success.title'),
+        description: t('customRegistrationForm.toast.success.description'),
         variant: 'success',
       })
 
@@ -107,8 +109,8 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
     } catch (error) {
       console.error('Registration error:', error)
       toast({
-        title: 'Có lỗi xảy ra',
-        description: 'Vui lòng thử lại sau hoặc liên hệ hỗ trợ.',
+        title: t('customRegistrationForm.toast.error.title'),
+        description: t('customRegistrationForm.toast.error.description'),
         variant: 'destructive',
       })
     } finally {
@@ -121,9 +123,9 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
 
         <DialogHeader>
-          <DialogTitle>Đăng ký gói tùy chỉnh</DialogTitle>
+          <DialogTitle>{t('customRegistrationForm.title')}</DialogTitle>
           <DialogDescription>
-            Chúng tôi sẽ liên hệ với bạn ngay để cung cấp giải pháp.
+            {t('customRegistrationForm.description')}
           </DialogDescription>
           {selectedPlan && (
             <div className="my-4 p-4 rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 border-2 border-primary/20 shadow-sm">
@@ -131,7 +133,7 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-sm font-medium text-primary uppercase tracking-wide">Gói đã chọn</span>
+                    <span className="text-sm font-medium text-primary uppercase tracking-wide">{t('customRegistrationForm.selectedPlan')}</span>
                   </div>
                   <h3 className="font-bold text-lg text-foreground mb-1">{selectedPlan.name}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{selectedPlan.description}</p>
@@ -139,7 +141,7 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
                 {selectedPlan.price && (
                   <div className="ml-4 text-right">
                     <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-green-100 border border-green-200">
-                      <span className="text-xs font-medium text-green-800 mr-1">Giá:</span>
+                      <span className="text-xs font-medium text-green-800 mr-1">{t('customRegistrationForm.priceLabel')}:</span>
                       <span className="text-sm font-bold text-green-700">{selectedPlan.price}</span>
                     </div>
                   </div>
@@ -157,9 +159,9 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
                 name="userName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Tên người dùng *</FormLabel>
+                    <FormLabel>{t('customRegistrationForm.fields.userName.label')}</FormLabel>
                     <FormControl>
-                      <Input placeholder="Nhập tên của bạn" {...field} className="placeholder:text-gray-400" />
+                      <Input placeholder={t('customRegistrationForm.fields.userName.placeholder')} {...field} className="placeholder:text-gray-400" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -171,9 +173,9 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email *</FormLabel>
+                    <FormLabel>{t('customRegistrationForm.fields.email.label')}</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="example@company.com" {...field} className="placeholder:text-gray-400" />
+                      <Input type="email" placeholder={t('customRegistrationForm.fields.email.placeholder')} {...field} className="placeholder:text-gray-400" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -187,9 +189,9 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
                 name="phoneNumber"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Số điện thoại *</FormLabel>
+                    <FormLabel>{t('customRegistrationForm.fields.phoneNumber.label')}</FormLabel>
                     <FormControl>
-                      <Input placeholder="0987654321" {...field} className="placeholder:text-gray-400" />
+                      <Input placeholder={t('customRegistrationForm.fields.phoneNumber.placeholder')} {...field} className="placeholder:text-gray-400" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -201,9 +203,9 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
                 name="company"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Tên công ty</FormLabel>
+                    <FormLabel>{t('customRegistrationForm.fields.company.label')}</FormLabel>
                     <FormControl>
-                      <Input placeholder="Công ty ABC" {...field} className="placeholder:text-gray-400" />
+                      <Input placeholder={t('customRegistrationForm.fields.company.placeholder')} {...field} className="placeholder:text-gray-400" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -216,10 +218,10 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
               name="additionalNotes"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Ghi chú thêm</FormLabel>
+                  <FormLabel>{t('customRegistrationForm.fields.additionalNotes.label')}</FormLabel>
                   <FormControl>
                     <Textarea 
-                      placeholder="Mô tả thêm về yêu cầu đặc biệt, thời gian triển khai, ngân sách dự kiến..."
+                      placeholder={t('customRegistrationForm.fields.additionalNotes.placeholder')}
                       className="min-h-[100px] placeholder:text-gray-400"
                       {...field} 
                     />
@@ -231,7 +233,7 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
 
             <div className="pt-4">
               <span className="block mb-4 px-3 py-1 rounded-full bg-white text-primary font-semibold text-sm text-center mx-auto">
-                Hoặc liên hệ ngay với hotline: <a href="tel:0707806860" className="underline hover:text-primary/80">0707 806 860</a>
+                {t('customRegistrationForm.hotlineText')} <a href="tel:0707806860" className="underline hover:text-primary/80">0707 806 860</a>
               </span>
               <div className="flex justify-end space-x-2">
                 <Button 
@@ -240,11 +242,11 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
                   onClick={() => onOpenChange(false)}
                   disabled={isLoading}
                 >
-                  Hủy
+                  {t('customRegistrationForm.cancelButton')}
                 </Button>
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  Đăng ký
+                  {t('customRegistrationForm.submitButton')}
                 </Button>
               </div>
             </div>

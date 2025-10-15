@@ -1,41 +1,44 @@
 "use client";
 
+
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const applicationAreas = [
   {
-    title: "Tài chính - Ngân hàng - Bảo hiểm",
+    titleKey: "applicationAreas.finance.title",
     href: "/application-areas/finance",
-    description: "Giải pháp dashboard cho ngành tài chính, ngân hàng, bảo hiểm...",
+    descriptionKey: "applicationAreas.finance.description",
     image: "/application-areas/finance/thumbnail.jpg",
   },
   {
-    title: "Chính phủ - Cơ quan ban ngành",
+    titleKey: "applicationAreas.government.title",
     href: "/application-areas/government",
-    description: "Giám sát, quản trị dữ liệu cho các cơ quan nhà nước, đô thị thông minh...",
+    descriptionKey: "applicationAreas.government.description",
     image: "/application-areas/government/thumbnail.jpg",
   },
   {
-    title: "Công nghiệp - Sản xuất",
+    titleKey: "applicationAreas.manufacturing.title",
     href: "/application-areas/manufacturing",
-    description: "Tối ưu vận hành, quản lý sản xuất, chất lượng, bảo trì...",
+    descriptionKey: "applicationAreas.manufacturing.description",
     image: "/application-areas/manufacturing/thumbnail.jpg",
   },
   {
-    title: "Tòa nhà",
+    titleKey: "applicationAreas.building.title",
     href: "/application-areas/building",
-    description: "Quản lý hạ tầng, dịch vụ, khách hàng ngành viễn thông...",
+    descriptionKey: "applicationAreas.building.description",
     image: "/application-areas/building/thumbnail.jpg",
   },
   {
-    title: "Cảng biển",
+    titleKey: "applicationAreas.seaport.title",
     href: "/application-areas/seaport",
-    description: "Giải pháp quản lý, giám sát vận hành cảng biển, logistics, tàu thuyền...",
+    descriptionKey: "applicationAreas.seaport.description",
     image: "/application-areas/seaport/thumbnail.jpg",
   },
 ];
 
 export default function ApplicationAreasPage() {
+  const { t } = useTranslation();
   return (
     <div className="container mx-auto px-4 py-12">
       <style jsx global>{`
@@ -50,8 +53,8 @@ export default function ApplicationAreasPage() {
           }
         }
       `}</style>
-      <h1 className="text-3xl font-bold mb-8 text-center opacity-0 animate-[fadeInUp_0.6s_ease-out_forwards]">Lĩnh vực ứng dụng</h1>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+      <h1 className="text-3xl font-bold mb-8 text-center opacity-0 animate-[fadeInUp_0.6s_ease-out_forwards]">{t('applicationAreas.title')}</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
         {applicationAreas.map((area, index) => (
           <Link
             key={area.href}
@@ -62,13 +65,13 @@ export default function ApplicationAreasPage() {
             <div className="mb-6 -mx-6 -mt-6">
               <img
                 src={area.image}
-                alt={area.title}
+                alt={t(area.titleKey)}
                 className="w-full aspect-[4/3] object-cover rounded-t-xl shadow-md border-b border-border bg-white dark:bg-card"
                 loading="lazy"
               />
             </div>
-            <div className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">{area.title}</div>
-            <div className="text-sm text-muted-foreground">{area.description}</div>
+            <div className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">{t(area.titleKey)}</div>
+            <div className="text-sm text-muted-foreground">{t(area.descriptionKey)}</div>
           </Link>
         ))}
       </div>

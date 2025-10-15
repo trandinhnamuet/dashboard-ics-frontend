@@ -7,14 +7,17 @@ import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Link from "next/link"
 import Image from "@/components/common/Image"
+import { useTranslation } from "react-i18next"
 
 export default function FinancePage() {
+  const { t } = useTranslation()
+  
   // Slideshow state
   const [currentSlide, setCurrentSlide] = useState(0)
   
   const slideshowImages = [
-    { src: "/application-areas/3.png", alt: "Ứng dụng Smart Dashboard - Phần 1" },
-    { src: "/application-areas/4.png", alt: "Ứng dụng Smart Dashboard - Phần 2" }
+    { src: "/application-areas/3.png", alt: t("finance.slideshow.image1Alt") },
+    { src: "/application-areas/4.png", alt: t("finance.slideshow.image2Alt") }
   ]
 
   // Auto slideshow
@@ -35,33 +38,33 @@ export default function FinancePage() {
   const features = [
     {
       icon: TrendingUp,
-      title: "Tăng trưởng 20-30%",
-      description: "Tối ưu hóa doanh thu và lợi nhuận thông qua phân tích dữ liệu chính xác và kịp thời."
+      title: t("finance.features.growth.title"),
+      description: t("finance.features.growth.description")
     },
     {
       icon: BarChart3,
-      title: "Giám sát dòng tiền 24/7",
-      description: "Theo dõi dòng tiền thời gian thực từ tất cả các chi nhánh, ATM và kênh giao dịch."
+      title: t("finance.features.monitoring.title"),
+      description: t("finance.features.monitoring.description")
     },
     {
       icon: Shield,
-      title: "Tối ưu quyết định kinh doanh",
-      description: "Ra quyết định nhanh chóng dựa trên dữ liệu phân tích thông minh và dự báo chính xác."
+      title: t("finance.features.decisions.title"),
+      description: t("finance.features.decisions.description")
     }
   ]
 
   const metrics = [
-    { label: "Dư nợ theo thời gian thực", value: "100%" },
-    { label: "Hiệu suất thu hồi nợ", value: "95%" },
-    { label: "Tài khoản mới mỗi ngày", value: "500+" },
-    { label: "Giao dịch được xử lý", value: "1M+" }
+    { label: t("finance.metrics.realTimeDebt"), value: "100%" },
+    { label: t("finance.metrics.recoveryEfficiency"), value: "95%" },
+    { label: t("finance.metrics.newAccountsDaily"), value: "500+" },
+    { label: t("finance.metrics.transactionsProcessed"), value: "1M+" }
   ]
 
   const benefits = [
-    "Tăng 25% hiệu quả quản lý rủi ro tín dụng",
-    "Giảm 40% thời gian xử lý báo cáo",
-    "Tăng 30% độ chính xác dự báo dòng tiền",
-    "Cải thiện 50% trải nghiệm khách hàng"
+    t("finance.benefits.creditRisk"),
+    t("finance.benefits.reportProcessing"),
+    t("finance.benefits.cashFlowAccuracy"),
+    t("finance.benefits.customerExperience")
   ]
 
   return (
@@ -88,11 +91,10 @@ export default function FinancePage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Smart Dashboard - Ngành Tài chính / Ngân hàng / Bảo hiểm
+              {t("finance.hero.title")}
             </h1>
             <p className="text-xl text-green-100 max-w-3xl leading-relaxed">
-              Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, 
-              hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7.
+              {t("finance.hero.description")}
             </p>
           </div>
         </div>
@@ -105,9 +107,9 @@ export default function FinancePage() {
 
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6 text-center">Thách thức thực tế của ngành Tài chính - Ngân hàng</h3>
+              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6 text-center">{t("finance.challenges.title")}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Ngành tài chính ngân hàng vận hành trong một môi trường có độ phức tạp, rủi ro và yêu cầu tuân thủ cực kỳ cao. Các thách thức cốt lõi bao gồm:
+                {t("finance.challenges.description")}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -115,7 +117,7 @@ export default function FinancePage() {
                 <div className="h-full flex items-center justify-center">
                   <Image 
                     src="/application-areas/2.png" 
-                    alt="Thách thức thực tế của ngành Tài chính - Ngân hàng" 
+                    alt={t("finance.challenges.imageAlt")} 
                     className="object-contain max-h-80 md:max-h-96 w-auto rounded-lg shadow-lg"
                   />
                 </div>
@@ -126,40 +128,40 @@ export default function FinancePage() {
                     <AccordionItem value="challenge-1" className="border border-orange-200 bg-orange-50 rounded-lg">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Clock className="h-5 w-5 mr-2" />
-                        Độ trễ trong ra quyết định
+                        {t("finance.challenges.challenge1.title")}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Theo phương pháp quản lý truyền thống, các quyết định thường được đưa ra dựa trên các báo cáo thủ công, định kỳ theo tháng hoặc quý. Điều này tạo ra một độ trễ lớn, khiến ban lãnh đạo phải "phản ứng" với các dữ liệu đã lỗi thời.
+                        {t("finance.challenges.challenge1.content")}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-2" className="border border-red-200 bg-red-50 rounded-lg">
                       <AccordionTrigger className="text-red-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <BarChart3 className="h-5 w-5 mr-2" />
-                        Dữ liệu phân mảnh
+                        {t("finance.challenges.challenge2.title")}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Dữ liệu thường nằm rải rác ở nhiều hệ thống độc lập (Data Silos) như hệ thống lõi ngân hàng, CRM, dữ liệu giao dịch. Việc thiếu nền tảng hợp nhất khiến việc có cái nhìn 360 độ trở nên khó khăn.
+                        {t("finance.challenges.challenge2.content")}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-3" className="border border-purple-200 bg-purple-50 rounded-lg">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Shield className="h-5 w-5 mr-2" />
-                        Áp lực tuân thủ và bảo mật
+                        {t("finance.challenges.challenge3.title")}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Phải tuân thủ nhiều quy định khắt khe về bảo mật dữ liệu và tài chính như GDPR, HIPAA, ISO 27001. Đồng thời đối mặt với nguy cơ tấn công mạng và rò rỉ dữ liệu.
+                        {t("finance.challenges.challenge3.content")}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-4" className="border border-yellow-200 bg-yellow-50 rounded-lg">
                       <AccordionTrigger className="text-yellow-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <TrendingUp className="h-5 w-5 mr-2" />
-                        Quản lý rủi ro phức tạp
+                        {t("finance.challenges.challenge4.title")}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Đối mặt với nhiều loại rủi ro như rủi ro tín dụng, rủi ro thị trường, gian lận tài chính. Việc phát hiện sớm dấu hiệu bất thường trong hàng triệu giao dịch hàng ngày là thách thức khổng lồ.
+                        {t("finance.challenges.challenge4.content")}
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -169,9 +171,9 @@ export default function FinancePage() {
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">{t("finance.applications.title")}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Để giải quyết các thách thức trên, Smart Dashboard được ứng dụng như một "trung tâm chỉ huy" hay "bộ não số", biến dữ liệu thành công cụ quản trị chủ động.
+                {t("finance.applications.description")}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -180,20 +182,20 @@ export default function FinancePage() {
                   <Accordion type="multiple" className="space-y-4">
                     <AccordionItem value="application-1" className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
                       <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🎯 Xây dựng "Phòng điều hành ảo" cho Ban lãnh đạo
+                        🎯 {t("finance.applications.application1.title")}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-blue-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-blue-700 mb-2">{t("finance.applications.realityLabel")}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Thay vì chờ báo cáo giấy, CEO và ban giám đốc có thể truy cập một Dashboard Quản lý hiển thị các KPI tài chính cốt lõi theo thời gian thực.
+                              {t("finance.applications.application1.reality")}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-blue-700 dark:text-blue-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-blue-700 dark:text-blue-400 mb-2">{t("finance.applications.applicationLabel")}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Dashboard trực quan hóa các chỉ số như Tỷ lệ nợ xấu, Tỷ suất lợi nhuận trên tài sản (ROA) và Chỉ số hài lòng khách hàng (NPS), cho phép so sánh với mục tiêu và cùng kỳ năm trước.
+                              {t("finance.applications.application1.application")}
                             </p>
                           </div>
                         </div>
@@ -202,20 +204,20 @@ export default function FinancePage() {
 
                     <AccordionItem value="application-2" className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
                       <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🤖 Tích hợp AI để quản lý rủi ro chủ động
+                        🤖 {t("finance.applications.application2.title")}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-green-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-green-700 mb-2">{t("finance.applications.realityLabel")}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Tập đoàn tài chính sử dụng Dashboard tích hợp AI để không chỉ theo dõi mà còn dự báo các rủi ro.
+                              {t("finance.applications.application2.reality")}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-green-700 dark:text-green-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-green-700 dark:text-green-400 mb-2">{t("finance.applications.applicationLabel")}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Hệ thống AI phân tích xu hướng thị trường để dự báo biến động lãi suất, phát hiện sớm gian lận và dự báo rủi ro tín dụng khách hàng.
+                              {t("finance.applications.application2.application")}
                             </p>
                           </div>
                         </div>
@@ -224,20 +226,20 @@ export default function FinancePage() {
 
                     <AccordionItem value="application-3" className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg border border-purple-200">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🛡️ Trung tâm An ninh Mạng (SOC) thông minh
+                        🛡️ {t("finance.applications.application3.title")}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-purple-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-purple-700 mb-2">{t("finance.applications.realityLabel")}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Các nhóm an ninh mạng phải đối mặt với hàng triệu cảnh báo mỗi ngày, dẫn đến tình trạng "mệt mỏi vì cảnh báo".
+                              {t("finance.applications.application3.reality")}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-purple-700 dark:text-purple-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-purple-700 dark:text-purple-400 mb-2">{t("finance.applications.applicationLabel")}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Smart Dashboard tổng hợp dữ liệu từ SIEM và SOAR, sử dụng AI để tự động phân loại và chỉ làm nổi bật các mối đe dọa thực sự nghiêm trọng.
+                              {t("finance.applications.application3.application")}
                             </p>
                           </div>
                         </div>
@@ -246,20 +248,20 @@ export default function FinancePage() {
 
                     <AccordionItem value="application-4" className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg border border-orange-200">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        📋 Tối ưu hóa hoạt động và tuân thủ
+                        📋 {t("finance.applications.application4.title")}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-orange-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-orange-700 mb-2">{t("finance.applications.realityLabel")}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Các quy trình kiểm toán và báo cáo tuân thủ thường rất tốn công sức.
+                              {t("finance.applications.application4.reality")}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-orange-700 dark:text-orange-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-orange-700 dark:text-orange-400 mb-2">{t("finance.applications.applicationLabel")}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Dashboard tự động hóa việc tạo báo cáo tuân thủ, giám sát liên tục và cung cấp nhật ký kiểm toán, giúp tổ chức "luôn sẵn sàng cho kiểm toán".
+                              {t("finance.applications.application4.application")}
                             </p>
                           </div>
                         </div>
@@ -320,9 +322,9 @@ export default function FinancePage() {
 
             {/* Lợi ích chiến lược */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">Lợi ích chiến lược và định lượng</h3>
+              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">{t("finance.strategicBenefits.title")}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Việc ứng dụng Smart Dashboard một cách hiệu quả mang lại những giá trị to lớn, có thể đo lường được:
+                {t("finance.strategicBenefits.description")}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -330,7 +332,7 @@ export default function FinancePage() {
                 <div className="flex justify-center">
                   <Image 
                     src="/application-areas/5.png" 
-                    alt="Lợi ích chiến lược và định lượng" 
+                    alt={t("finance.strategicBenefits.imageAlt")} 
                     className="max-w-lg h-auto rounded-lg shadow-lg"
                   />
                 </div>
@@ -340,20 +342,20 @@ export default function FinancePage() {
                     <AccordionItem value="benefit-1" className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg border">
                       <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <TrendingUp className="h-5 w-5 mr-2" />
-                        Tăng tốc độ và chất lượng ra quyết định
+                        {t("finance.strategicBenefits.benefit1.title")}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
                         <p className="mb-3">
-                          Đây là lợi ích hữu hình nhất. Các ngân hàng sử dụng dashboard đã ghi nhận:
+                          {t("finance.strategicBenefits.benefit1.intro")}
                         </p>
                         <ul className="space-y-2">
                           <li className="flex items-center">
                             <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">30%</span>
-                            Giảm thời gian xử lý dữ liệu
+                            {t("finance.strategicBenefits.benefit1.point1")}
                           </li>
                           <li className="flex items-center">
                             <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">40%</span>
-                            Cải thiện tốc độ ra quyết định tài chính
+                            {t("finance.strategicBenefits.benefit1.point2")}
                           </li>
                         </ul>
                       </AccordionContent>
@@ -362,30 +364,30 @@ export default function FinancePage() {
                     <AccordionItem value="benefit-2" className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg border">
                       <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <BarChart3 className="h-5 w-5 mr-2" />
-                        Tiết kiệm chi phí và nâng cao hiệu suất
+                        {t("finance.strategicBenefits.benefit2.title")}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
-                        Việc tự động hóa quá trình thu thập, tổng hợp dữ liệu và tạo báo cáo giúp giải phóng nhân lực khỏi các công việc thủ công. Điều này không chỉ tiết kiệm chi phí nhân sự mà còn cho phép họ tập trung vào các nhiệm vụ có giá trị cao hơn như phân tích chiến lược.
+                        {t("finance.strategicBenefits.benefit2.content")}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="benefit-3" className="bg-gradient-to-br from-purple-100 to-violet-100 rounded-lg border">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Shield className="h-5 w-5 mr-2" />
-                        Tăng cường an ninh và khả năng phục hồi
+                        {t("finance.strategicBenefits.benefit3.title")}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
-                        Cung cấp một cái nhìn toàn diện và theo thời gian thực về các mối đe dọa, giúp các tổ chức tài chính giảm thiểu thời gian phát hiện và phản ứng sự cố, từ đó bảo vệ tài sản và dữ liệu khách hàng tốt hơn.
+                        {t("finance.strategicBenefits.benefit3.content")}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="benefit-4" className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-lg border">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <CreditCard className="h-5 w-5 mr-2" />
-                        Minh bạch hóa và định lượng rủi ro
+                        {t("finance.strategicBenefits.benefit4.title")}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
-                        Một Smart Dashboard cao cấp có khả năng "dịch rủi ro mạng thành đô la và xu". Nó giúp CISO chứng minh được Lợi tức đầu tư an ninh (ROSI), biện minh cho ngân sách và truyền đạt giá trị của an ninh bằng ngôn ngữ kinh doanh tới hội đồng quản trị.
+                        {t("finance.strategicBenefits.benefit4.content")}
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -400,7 +402,7 @@ export default function FinancePage() {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Số liệu ấn tượng</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t("finance.metrics.title")}</h2>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
@@ -418,8 +420,8 @@ export default function FinancePage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Tính năng nổi bật</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho ngành tài chính ngân hàng</p>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t("finance.featuresSection.title")}</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400">{t("finance.featuresSection.subtitle")}</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -445,7 +447,7 @@ export default function FinancePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Lợi ích mang lại</h2>
+              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t("finance.benefitsSection.title")}</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -465,14 +467,14 @@ export default function FinancePage() {
       {/* CTA Section */}
       <section className="py-16 bg-green-600 dark:bg-green-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Tối ưu hóa hiệu quả tài chính ngay hôm nay</h2>
-          <p className="text-xl mb-8">Liên hệ để được tư vấn giải pháp Smart Dashboard phù hợp</p>
+          <h2 className="text-3xl font-bold mb-4">{t("finance.cta.title")}</h2>
+          <p className="text-xl mb-8">{t("finance.cta.description")}</p>
           <div className="space-x-4">
             <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100" asChild>
-              <Link href="/contact-info">Liên hệ ngay</Link>
+              <Link href="/contact-info">{t("finance.cta.contactButton")}</Link>
             </Button>
             <Button variant="outline" size="lg" className="border-white text-green-600 hover:bg-white hover:text-green-600" asChild>
-              <Link href="/">Về trang chủ</Link>
+              <Link href="/">{t("finance.cta.homeButton")}</Link>
             </Button>
           </div>
         </div>

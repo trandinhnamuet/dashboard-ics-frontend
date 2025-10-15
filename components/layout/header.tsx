@@ -27,19 +27,19 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { user, isAuthenticated, logout, setLoading, setError, initAuth } = useAuthStore()
 
-  // Khởi tạo auth khi component mount
+  // {t('header.comments.initAuth')}
   useEffect(() => {
     initAuth()
   }, [initAuth])
 
-  // Xử lý scroll khi có hash trong URL
+  // {t('header.comments.handleScroll')}
   useEffect(() => {
     const hash = window.location.hash
     if (hash) {
-      const sectionId = hash.substring(1) // Bỏ ký tự '#'
+      const sectionId = hash.substring(1) // {t('header.comments.removeHash')}
       setTimeout(() => {
         handleSmoothScroll(sectionId)
-      }, 100) // Delay nhỏ để đảm bảo page đã load
+      }, 100) // {t('header.comments.delayLoad')}
     }
   }, [])
 
@@ -68,7 +68,7 @@ export function Header() {
     router.push('/profile')
   }
 
-  // Scroll mượt đến section
+  // {t('header.comments.smoothScroll')}
   const handleSmoothScroll = (sectionId: string) => {
     const el = document.getElementById(sectionId)
     if (el) {
@@ -76,18 +76,18 @@ export function Header() {
     }
   }
 
-  // Scroll đến section, nếu không ở trang chủ thì quay về trang chủ trước
+  // {t('header.comments.navigateSection')}
   const handleNavigateToSection = (sectionId: string) => {
     if (window.location.pathname !== "/") {
-      // Nếu không ở trang chủ, chuyển về trang chủ với hash
+      // {t('header.comments.notHomePage')}
       router.push(`/#${sectionId}`)
     } else {
-      // Nếu đã ở trang chủ, scroll trực tiếp
+      // {t('header.comments.alreadyHome')}
       handleSmoothScroll(sectionId)
     }
   }
 
-  // Scroll lên đầu trang
+  // {t('header.comments.scrollToTop')}
   const handleHomeClick = () => {
     if (window.location.pathname !== "/") {
       router.push("/")
@@ -100,22 +100,22 @@ export function Header() {
     <header className="bg-background border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-background/95">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* {t('header.comments.logo')} */}
           <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <Image
               src="/SMART DASHBOARD.png"
-              alt="Smart Dashboard Logo"
+              alt={t('header.altText')}
               width={40}
               height={40}
               className="h-10 w-10 object-contain"
             />
             <div>
-              <h1 className="text-xl font-bold text-foreground">ICS Smart Dashboard</h1>
-              <p className="text-xs text-muted-foreground">Bảng điều khiển thông minh </p>
+              <h1 className="text-xl font-bold text-foreground">{t('header.logoTitle')}</h1>
+              <p className="text-xs text-muted-foreground">{t('header.logoSubtitle')} </p>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* {t('header.comments.desktopNav')} */}
           <nav className="hidden md:flex items-center space-x-8">
             <button
               type="button"
@@ -143,7 +143,7 @@ export function Header() {
               className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
               onClick={() => handleNavigateToSection('industries')}
             >
-              Khách hàng
+              {t('header.customers')}
             </button>
             <button
               type="button"
@@ -157,7 +157,7 @@ export function Header() {
               className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
               onClick={() => router.push('/articles/articles-list')}
             >
-              Tin tức
+              {t('header.news')}
             </button>
             <button
               type="button"
@@ -169,22 +169,22 @@ export function Header() {
           </nav>
 
           <span className="hidden 2xl:inline-block bg-red-600 text-white font-semibold rounded-full px-4 py-1 text-sm shadow-md mr-2 select-none">
-            Hotline: 0707.806.860
+            {t('header.hotline')}
           </span>
 
-          {/* Auth Section */}
+          {/* {t('header.comments.authSection')} */}
           <div className="hidden md:flex items-center space-x-4">
             <LanguageSelector />
             <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* {t('header.comments.mobileMenuButton')} */}
           <Button variant="ghost" size="sm" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* {t('header.comments.mobileMenu')} */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
             <nav className="flex flex-col space-y-3">
@@ -214,7 +214,7 @@ export function Header() {
                 className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0 text-left"
                 onClick={() => { setIsMenuOpen(false); handleNavigateToSection('industries') }}
               >
-                Khách hàng
+                {t('header.customers')}
               </button>
               <button
                 type="button"
@@ -228,7 +228,7 @@ export function Header() {
                 className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0 text-left"
                 onClick={() => { setIsMenuOpen(false); router.push('/articles/articles-list') }}
               >
-                Tin tức
+                {t('header.news')}
               </button>
               <button
                 type="button"
@@ -240,7 +240,7 @@ export function Header() {
             </nav>
             <div className="mt-4 pt-4 border-t border-border space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">Ngôn ngữ</span>
+                <span className="text-sm text-muted-foreground">{t('header.language')}</span>
                 <div className="flex items-center space-x-2">
                   <LanguageSelector />
                   <ThemeToggle />

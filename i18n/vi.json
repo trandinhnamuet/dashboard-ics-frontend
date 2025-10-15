@@ -2,11 +2,24 @@
   "homepage": {
     "hero": {
       "title": "Giải pháp Smart Dashboard hàng đầu tại Việt Nam",
-      "subtitle": "Giải pháp cho Nghị quyết 57-NQ/TW của chính phủ",
+      "subtitle": "Giải pháp hàng đầu Việt Nam",
       "description": "Chúng tôi cung cấp giải pháp bảng điều khiển thông minh toàn diện, hỗ trợ doanh nghiệp và tổ chức tối ưu hóa quy trình vận hành, đồng thời nâng cao hiệu suất làm việc.",
+      "features": {
+        "visualization": "Trực quan hóa dữ liệu",
+        "visualizationDescription": "2D/3D Dashboard interface",
+        "optimization": "Tối ưu vận hành",
+        "optimizationDescription": "Tốc độ vượt trội",
+        "integration": "Tích hợp đa nền tảng",
+        "integrationDescription": "Hỗ trợ tích hợp các hệ thống"
+      },
       "getStarted": "Bắt đầu ngay",
-      "dashboard": "Xem Dashboard",
-      "contact": "Liên hệ tư vấn"
+      "contact": "Liên hệ tư vấn",
+      "trustIndicators": {
+        "customers": "Khách hàng",
+        "realTime": "Real time",
+        "support": "Hỗ trợ"
+      },
+      "videoFallback": "Xin lỗi, trình duyệt của bạn không hỗ trợ video nhúng."
     },
     "services": {
       "title": "Dịch vụ",
@@ -34,7 +47,30 @@
     "hello": "Xin chào",
     "profile": "Thông tin cá nhân",
     "settings": "Cài đặt",
-    "logout": "Đăng xuất"
+    "logout": "Đăng xuất",
+    "logoTitle": "ICS Smart Dashboard",
+    "logoSubtitle": "Bảng điều khiển thông minh",
+    "customers": "Khách hàng",
+    "news": "Tin tức",
+    "hotline": "Hotline: 0707.806.860",
+    "language": "Ngôn ngữ",
+    "altText": "Smart Dashboard Logo",
+    "comments": {
+      "initAuth": "Khởi tạo auth khi component mount",
+      "handleScroll": "Xử lý scroll khi có hash trong URL",
+      "removeHash": "Bỏ ký tự '#'",
+      "delayLoad": "Delay nhỏ để đảm bảo page đã load",
+      "smoothScroll": "Scroll mượt đến section",
+      "navigateSection": "Scroll đến section, nếu không ở trang chủ thì quay về trang chủ trước",
+      "notHomePage": "Nếu không ở trang chủ, chuyển về trang chủ với hash",
+      "alreadyHome": "Nếu đã ở trang chủ, scroll trực tiếp",
+      "scrollToTop": "Scroll lên đầu trang",
+      "logo": "Logo",
+      "desktopNav": "Desktop Navigation",
+      "authSection": "Auth Section",
+      "mobileMenuButton": "Mobile Menu Button",
+      "mobileMenu": "Mobile Menu"
+    }
   },
   "common": {
     "loading": "Đang tải...",
@@ -60,4 +96,1084 @@
     "note": "Lưu ý: Vui lòng chuyển khoản đúng nội dung để hệ thống tự động kích hoạt dịch vụ.",
     "contactSupport": "Liên hệ hỗ trợ"
   }
+  ,
+  "footer": {
+    "companyName": "ICS Smart Dashboard",
+    "companySlogan": "Giái pháp bảng điều khiển thông minh",
+    "companyDescription": "Giải pháp Smart Dashboard hàng đầu tại Việt Nam, cung cấp hệ thống bảng điều khiển thông minh cho doanh nghiệp của bạn.",
+    "servicesTitle": "Dịch vụ",
+    "services": {
+      "building": "Smart Dashboard cho tòa nhà",
+      "iot": "Quản lý thiết bị IoT",
+      "digital": "Giải pháp chuyển đổi số tòa nhà",
+      "monitor": "Giám sát & phân tích dữ liệu vận hành",
+      "energy": "Quản lý năng lượng thông minh",
+      "security": "An ninh & kiểm soát truy cập"
+    },
+    "supportTitle": "Hỗ trợ",
+    "support": {
+      "docs": "Tài liệu kỹ thuật",
+      "video": "Video hướng dẫn",
+      "forum": "Diễn đàn cộng đồng",
+      "ticket": "Ticket hỗ trợ",
+      "training": "Đào tạo & Chứng chỉ",
+      "api": "API Documentation"
+    },
+    "contactTitle": "Liên hệ",
+    "companyFull": "CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS",
+    "office": "Văn phòng: TT3-5 Khu đô thị Đại Kim mới, Định Công, Hà Nội",
+    "phone": "Điện thoại: 0931.487.231   -   Hotline: 0707.806.860",
+    "email": "E-mail: info@icss.com.vn   -   www.icss.com.vn",
+    "newsletterTitle": "Đăng ký nhận tin",
+    "newsletterPlaceholder": "Email của bạn",
+    "newsletterButton": "Đăng ký",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản sử dụng",
+    "sla": "SLA",
+    "sitemap": "Sitemap",
+    "copyright": "© 2025 CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS. Tất cả quyền được bảo lưu."
+  },
+  "services": {
+    "dataIntegration": {
+      "title": "Data Integration",
+      "description": "Kết nối và thu thập dữ liệu từ nhiều hệ thống khác nhau của doanh nghiệp",
+      "features": [
+        "Kết nối dữ liệu thời gian thực từ nhiều nguồn",
+        "Hỗ trợ cả dữ liệu truyền thống (SQL, Excel) và dữ liệu IOT/SCADA",
+        "Làm sạch, chuẩn hóa và đồng bộ dữ liệu",
+        "API mở, dễ dàng tích hợp mở rộng"
+      ]
+    },
+    "visualReporting": {
+      "title": "Visual & Reporting",
+      "description": "Cung cấp bảng điều khiển trực quan với các biểu đồ, báo cáo động giúp người dùng nắm bắt nhanh tình hình hoạt động",
+      "features": [
+        "Biểu đồ KPI, heatmap, gauge chart, bảng phân tích đa chiều",
+        "Dashboard tùy biến theo nhu cầu",
+        "Xuất báo cáo tự động",
+        "Chi tiết đến từng bộ phận"
+      ]
+    },
+    "monitoringAlerts": {
+      "title": "Monitoring & Alerts",
+      "description": "Theo dõi dữ liệu theo thời gian thực, đưa ra cảnh báo tức thì khi phát hiện bất thường hoặc vượt ngưỡng",
+      "features": [
+        "Giám sát tiến độ",
+        "Hệ thống cảnh báo qua Email, SMS,...",
+        "Thiết lập ngưỡng linh hoạt",
+        "Nhật ký theo dõi để truy vết sự cố"
+      ]
+    },
+    "collaborationRemote": {
+      "title": "Collaboration & Remote Access",
+      "description": "Cho phép các phòng ban phối hợp trên cùng một nền tảng và truy cập dữ liệu mọi lúc, mọi nơi",
+      "features": [
+        "Truy cập từ xa",
+        "Chia sẻ dashboard theo vai trò, phòng ban",
+        "Dữ liệu real time",
+        "FastConnect"
+      ]
+    },
+    "securityGovernance": {
+      "title": "Security & Governance",
+      "description": "Đảm bảo an toàn, phân quyền và tuân thủ quy định trong toàn bộ quá trình quản trị dữ liệu",
+      "features": [
+        "Phân quyền theo vai trò",
+        "Mã hóa dữ liệu và truyền thông an toàn",
+        "Quản lý truy cập, lưu vết hoạt động",
+        "Tuân thủ các chuẩn bảo mật"
+      ]
+    },
+    "analyticsAI": {
+      "title": "Analytics & AI",
+      "description": "Ứng dụng phân tích dữ liệu thông minh và AI để dự báo xu hướng, gợi ý quyết định chiến lược",
+      "features": [
+        "Phân tích xu hướng kinh doanh, sản xuất",
+        "Machine Learning phát hiện bất thường",
+        "Dự báo nhu cầu (nhân sự, nguyên liệu, năng lượng)",
+        "Đưa ra khuyến nghị hành động dựa trên dữ liệu"
+      ]
+    },
+    "additionalBenefits": {
+      "deploymentTime": "Thời gian triển khai trung bình",
+      "dataSources": "Nguồn dữ liệu hỗ trợ tích hợp",
+      "security": "Mã hóa & tuân thủ bảo mật",
+      "costSaving": "Tiết kiệm chi phí vận hành",
+      "mainFeatures": "Tính năng chính",
+      "deploymentTimeUnit": "ngày +"
+    }
+  },
+  "pricing": {
+    "title": "Bảng giá dịch vụ",
+    "subtitle": "Từ giải pháp cơ bản đến mô hình 3D tương tác, chúng tôi có gói dịch vụ phù hợp cho mọi quy mô tòa nhà",
+    "savingPlan": {
+      "title": "Mua trọn gói",
+      "subtitle": "Saving plan",
+      "selected": "Được chọn",
+      "dropdownTitle": "💡 Mua trọn gói (Saving Plan)",
+      "dropdownDescription": "Được thiết kế phù hợp với nhu cầu bao trọn gói và vận hành độc lập - thanh toán một lần duy nhất và chuyển giao toàn bộ hệ thống"
+    },
+    "payAsYouGo": {
+      "title": "Thuê theo năm",
+      "subtitle": "Pay by year",
+      "selected": "Được chọn",
+      "dropdownTitle": "⚡ Thuê theo năm (Pay by year)",
+      "dropdownDescription": "Phù hợp nhu cầu linh hoạt và duy trì hỗ trợ kĩ thuật - thanh toán theo từng năm các gói 12, 24, 36 tháng"
+    },
+    "popular": "Tối ưu nhất",
+    "featuresTitle": "Tính năng bao gồm:",
+    "collapse": "Thu gọn",
+    "expand": "Xem thêm {{count}} tính năng",
+    "contactSupport": "Cần tư vấn để chọn gói phù hợp? Liên hệ với chúng tôi để được hỗ trợ miễn phí",
+    "hotline": "Hotline hỗ trợ",
+    "plans": {
+      "Business": {
+        "title": "Business",
+        "description": "Giải pháp cơ bản cho doanh nghiệp vừa và nhỏ",
+        "price": "Liên hệ",
+        "period": "",
+        "buttonText": "Bắt đầu ngay",
+        "features": {
+          "0": "Dashboard cơ bản với các chỉ số quan trọng",
+          "1": "Giám sát thời gian thực 24/7",
+          "2": "Báo cáo tự động hàng tuần",
+          "3": "Hỗ trợ email trong giờ hành chính",
+          "4": "Tích hợp tối đa 5 hệ thống",
+          "5": "Lưu trữ dữ liệu 6 tháng",
+          "6": "Truy cập trên web và mobile",
+          "7": "Cảnh báo qua email và SMS"
+        }
+      },
+      "Dashboard 2D": {
+        "title": "Dashboard 2D",
+        "description": "Trực quan hóa dữ liệu với giao diện 2D chuyên nghiệp",
+        "price": "Liên hệ",
+        "period": "",
+        "buttonText": "Chọn gói phổ biến",
+        "features": {
+          "0": "Tất cả tính năng của gói Business",
+          "1": "Dashboard 2D tương tác với sơ đồ tòa nhà",
+          "2": "Trực quan hóa dữ liệu nâng cao",
+          "3": "Báo cáo chi tiết theo từng khu vực",
+          "4": "Hỗ trợ 24/7 qua điện thoại",
+          "5": "Tích hợp không giới hạn hệ thống",
+          "6": "Lưu trữ dữ liệu 2 năm",
+          "7": "API tùy chỉnh cho tích hợp",
+          "8": "Đào tạo sử dụng miễn phí",
+          "9": "Cảnh báo thông minh với AI"
+        }
+      },
+      "Dashboard 3D": {
+        "title": "Dashboard 3D",
+        "description": "Trải nghiệm tối ưu với mô hình 3D sinh động",
+        "price": "Liên hệ",
+        "period": "",
+        "buttonText": "Liên hệ tư vấn",
+        "features": {
+          "0": "Tất cả tính năng của gói Dashboard 2D",
+          "1": "Mô hình 3D tòa nhà tương tác",
+          "2": "Thực tế ảo (VR) và thực tế tăng cường (AR)",
+          "3": "Mô phỏng tình huống khẩn cấp",
+          "4": "Phân tích dự đoán với AI/ML",
+          "5": "Tích hợp IoT không giới hạn",
+          "6": "Lưu trữ dữ liệu vĩnh viễn",
+          "7": "Dedicated support manager",
+          "8": "Tùy chỉnh giao diện theo yêu cầu",
+          "9": "Đào tạo chuyên sâu cho team",
+          "10": "SLA 99.9% uptime guarantee"
+        }
+      }
+    }
+  },
+  "industries": {
+    "title": "Lĩnh vực ứng dụng",
+    "subtitle": "Smart Dashboard phục vụ đa dạng các ngành nghề với hiệu quả vượt trội",
+    "government": {
+      "title": "Chính phủ - Cơ quan ban ngành",
+      "description": "Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn.",
+      "benefits": {
+        "0": "Giám sát KPIs thời gian thực",
+        "1": "Theo dõi tiến độ dự án",
+        "2": "Phân tích ngân sách chi tiết"
+      }
+    },
+    "finance": {
+      "title": "Tài chính - Ngân hàng - Bảo hiểm",
+      "description": "Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7.",
+      "benefits": {
+        "0": "Tăng trưởng 20-30%",
+        "1": "Giám sát dòng tiền 24/7",
+        "2": "Tối ưu quyết định kinh doanh"
+      }
+    },
+    "manufacturing": {
+      "title": "Công nghiệp - Sản xuất",
+      "description": "Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, giảm 20-30% chi phí nhờ tối ưu vận hành, cải thiện an toàn và hướng đến công nghiệp xanh, net-zero.",
+      "benefits": {
+        "0": "Giảm 20-30% chi phí",
+        "1": "Giám sát năng lượng thời gian thực",
+        "2": "Hướng đến net-zero"
+      }
+    },
+    "building": {
+      "title": "Tòa nhà thông minh",
+      "description": "Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. Tối ưu năng lượng, giảm chi phí vận hành và nâng cao trải nghiệm người dùng thông qua giám sát thời gian thực 24/7.",
+      "benefits": {
+        "0": "Tiết kiệm năng lượng 30-40%",
+        "1": "Giảm chi phí vận hành 25%",
+        "2": "Tăng an toàn và bảo mật"
+      }
+    },
+    "seaport": {
+      "title": "Cảng biển thông minh",
+      "description": "Biến cảng biển thành trung tâm chỉ huy số với bản sao số 3D, giám sát KPIs thời gian thực, tự động hóa quy trình vận hành và nâng cao năng suất bốc dỡ lên 30%. Tối ưu logistics và giảm chi phí vận chuyển.",
+      "benefits": {
+        "0": "Tăng năng suất 30%",
+        "1": "Giám sát KPIs thời gian thực",
+        "2": "Nâng cao an toàn 40%"
+      }
+    }
+  },
+  "applications": {
+    "title": "Ứng dụng rộng rãi",
+    "factory": {
+      "name": "Nhà máy",
+      "stats": "150+ nhà máy đã áp dụng",
+      "description": "Giám sát toàn bộ quy trình sản xuất từ nguyên liệu đến thành phẩm. Theo dõi hiệu suất máy móc, năng lượng tiêu thụ và chất lượng sản phẩm theo thời gian thực."
+    },
+    "port": {
+      "name": "Cảng biển",
+      "stats": "25+ cảng biển tin dùng",
+      "description": "Quản lý hoạt động bốc xếp hàng hóa, theo dõi tàu thuyền ra vào cảng, tối ưu hóa logistics và giảm thời gian chờ đợi."
+    },
+    "bank": {
+      "name": "Ngân hàng",
+      "stats": "80+ chi nhánh ngân hàng",
+      "description": "Giám sát giao dịch, phân tích dòng tiền, quản lý rủi ro tín dụng và tối ưu hóa dịch vụ khách hàng trên toàn hệ thống."
+    },
+    "government": {
+      "name": "Hành chính công",
+      "stats": "200+ cơ quan nhà nước",
+      "description": "Số hóa quy trình hành chính, theo dõi tiến độ xử lý hồ sơ, tăng tính minh bạch và cải thiện dịch vụ công."
+    },
+    "building": {
+      "name": "Tòa nhà",
+      "stats": "500+ tòa nhà thông minh",
+      "description": "Quản lý hệ thống HVAC, điện, nước, an ninh và các tiện ích trong tòa nhà để tối ưu năng lượng và nâng cao trải nghiệm."
+    },
+    "logistics": {
+      "name": "Kho vận",
+      "stats": "300+ kho hàng được kết nối",
+      "description": "Theo dõi tồn kho, tối ưu tuyến vận chuyển, quản lý nhiệt độ bảo quản và tự động hóa quy trình logistics."
+    },
+    "pinned": "Đã ghim"
+  },
+  "customRegistrationForm": {
+    "title": "Đăng ký gói tùy chỉnh",
+    "description": "Chúng tôi sẽ liên hệ với bạn ngay để cung cấp giải pháp.",
+    "selectedPlan": "Gói đã chọn",
+    "priceLabel": "Giá",
+    "fields": {
+      "userName": {
+        "label": "Tên người dùng *",
+        "placeholder": "Nhập tên của bạn"
+      },
+      "email": {
+        "label": "Email *",
+        "placeholder": "example@company.com"
+      },
+      "phoneNumber": {
+        "label": "Số điện thoại *",
+        "placeholder": "0987654321"
+      },
+      "company": {
+        "label": "Tên công ty",
+        "placeholder": "Công ty ABC"
+      },
+      "additionalNotes": {
+        "label": "Ghi chú thêm",
+        "placeholder": "Mô tả thêm về yêu cầu đặc biệt, thời gian triển khai, ngân sách dự kiến..."
+      }
+    },
+    "hotlineText": "Hoặc liên hệ ngay với hotline:",
+    "cancelButton": "Hủy",
+    "submitButton": "Đăng ký",
+    "toast": {
+      "success": {
+        "title": "Đăng ký thành công!",
+        "description": "Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất. Mail đăng ký tặng kèm ebook sẽ được gửi về email của bạn."
+      },
+      "error": {
+        "title": "Có lỗi xảy ra",
+        "description": "Vui lòng thử lại sau hoặc liên hệ hỗ trợ."
+      }
+    },
+    "validation": {
+      "userName": {
+        "min": "Tên người dùng phải có ít nhất 2 ký tự"
+      },
+      "email": {
+        "invalid": "Email không hợp lệ"
+      },
+      "phoneNumber": {
+        "min": "Số điện thoại phải có ít nhất 10 số",
+        "max": "Số điện thoại không được quá 20 số"
+      }
+    }
+  },
+  "image": {
+    "modal": {
+      "closeButton": "Đóng",
+      "instructions": "Giữ Ctrl và lăn chuột để phóng to/thu nhỏ. Nhấn giữ chuột trái và kéo để di chuyển ảnh."
+    }
+  },
+  "building": {
+    "slideshow": {
+      "slide1Alt": "Ứng dụng Smart Dashboard - Phần 1",
+      "slide2Alt": "Ứng dụng Smart Dashboard - Phần 2"
+    },
+    "hero": {
+      "title": "Smart Dashboard - Tòa nhà thông minh",
+      "description": "Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. Tối ưu năng lượng, giảm chi phí vận hành và nâng cao trải nghiệm người dùng thông qua giám sát thời gian thực 24/7."
+    },
+    "introduction": {
+      "overview": "Trong bối cảnh đô thị hóa và số hóa, các tòa nhà hiện đại, đặc biệt là những hạ tầng trọng yếu như <span class=\"font-semibold text-blue-700\"> trung tâm dữ liệu (Data Center)</span>, đã phát triển thành những <span class=\"font-semibold text-blue-700\"> hệ sinh thái công nghệ phức tạp</span>. Chúng không còn là những cấu trúc tĩnh mà là các <span class=\"font-semibold text-blue-700\">tổ chức sống</span>, vận hành bởi sự kết hợp của nhiều hệ thống khác nhau.",
+      "imageAlt": "Giới thiệu về Quản lý Tòa nhà & Trung tâm dữ liệu",
+      "systems": "Các hệ thống này bao gồm <span class=\"font-semibold text-blue-700\">Quản lý Tòa nhà (BMS)</span>, điện (Electrical), <span class=\"font-semibold text-blue-700\">thông gió và điều hòa không khí (HVAC)</span>, cùng các hệ thống an ninh như <span class=\"font-semibold text-blue-700\">camera giám sát (CCTV) </span> và kiểm soát ra vào."
+    },
+    "challenges": {
+      "title": "Thách thức thực tế của Quản lý Tòa nhà & Data Center",
+      "description": "Việc quản lý các cơ sở hạ tầng này theo phương pháp truyền thống đang đối mặt với nhiều thách thức nghiêm trọng, bắt nguồn từ sự phức tạp và thiếu kết nối của các hệ thống.",
+      "imageAlt": "Thách thức thực tế của Quản lý Tòa nhà & Data Center",
+      "dataFragmentation": {
+        "title": "Dữ liệu phân mảnh, thiếu tầm nhìn hợp nhất",
+        "description": "Đây là vấn đề cố hữu. Dữ liệu từ hệ thống quản lý năng lượng (EMS), hệ thống quản lý tòa nhà (BMS), và hệ thống an ninh thường hoạt động trong các \"ốc đảo thông tin\" (Data Silos) riêng biệt.",
+        "example": "Người quản lý không thể có một cái nhìn toàn cảnh để thấy mối liên hệ giữa việc nhiệt độ tăng trong phòng máy chủ (dữ liệu BMS) và mức tiêu thụ điện đột biến (dữ liệu EMS)."
+      },
+      "reactiveManagement": {
+        "title": "Quản lý vận hành theo kiểu \"phản ứng\"",
+        "description": "Do thiếu dữ liệu tập trung và khả năng phân tích, đội ngũ vận hành thường chỉ hành động khi sự cố đã xảy ra. Họ quản lý theo kiểu \"chữa cháy\", thay vì hành động chủ động."
+      },
+      "energyWaste": {
+        "title": "Lãng phí năng lượng và chi phí cao",
+        "description": "Việc không thể giám sát và phân tích tổng thể khiến việc xác định các khu vực lãng phí năng lượng trở nên khó khăn. Các hệ thống HVAC có thể hoạt động dưới công suất tối ưu."
+      },
+      "slowResponse": {
+        "title": "Thời gian phản ứng sự cố chậm",
+        "description": "Khi một sự cố xảy ra (mất điện, rò rỉ nước, hoặc có xâm nhập trái phép), việc xác định nguyên nhân gốc rễ và vị trí chính xác của vấn đề bị chậm lại do phải kiểm tra thông tin từ nhiều hệ thống rời rạc. Điều này làm tăng rủi ro và thiệt hại."
+      }
+    },
+    "strategicBenefits": {
+      "title": "Lợi ích chiến lược và định lượng",
+      "description": "Việc triển khai Smart Dashboard cho tòa nhà và trung tâm dữ liệu mang lại những lợi ích cụ thể, giúp chuyển đổi hoàn toàn phương thức quản lý và vận hành.",
+      "imageAlt": "Lợi ích chiến lược và định lượng"
+    },
+    "features": {
+      "energySaving": {
+        "title": "Tiết kiệm năng lượng 30-40%",
+        "description": "Tối ưu hóa hệ thống HVAC, chiếu sáng và điều hòa thông qua AI và IoT thông minh."
+      },
+      "security": {
+        "title": "Tăng an toàn và bảo mật",
+        "description": "Giám sát an ninh 24/7, kiểm soát ra vào tự động và phát hiện sớm các rủi ro tiềm ẩn."
+      },
+      "automation": {
+        "title": "Quản lý tự động hóa",
+        "description": "Điều khiển thông minh các hệ thống tòa nhà, giảm thiểu can thiệp thủ công và tối ưu vận hành."
+      }
+    },
+    "metrics": {
+      "title": "Hiệu quả đã chứng minh",
+      "energySaving": "Tiết kiệm năng lượng",
+      "costReduction": "Giảm chi phí vận hành",
+      "efficiency": "Tăng hiệu quả làm việc",
+      "safety": "Cải thiện an toàn"
+    },
+    "featuresSection": {
+      "title": "Tính năng nổi bật",
+      "subtitle": "Giải pháp toàn diện cho tòa nhà thông minh"
+    },
+    "systemsManagement": {
+      "title": "Hệ thống được quản lý"
+    },
+    "benefitsSection": {
+      "title": "Lợi ích mang lại"
+    },
+    "benefits": {
+      "monitoring": "Giám sát hệ thống tòa nhà 24/7/365",
+      "automation": "Tự động hóa 85% quy trình quản lý",
+      "satisfaction": "Tăng 45% sự hài lòng của người dùng",
+      "maintenance": "Giảm 60% thời gian bảo trì và sửa chữa"
+    },
+    "services": {
+      "hvac": "Hệ thống HVAC",
+      "lighting": "Chiếu sáng thông minh",
+      "security": "An ninh - Camera",
+      "accessControl": "Kiểm soát ra vào",
+      "energyManagement": "Quản lý năng lượng",
+      "fireSystem": "Hệ thống báo cháy"
+    },
+    "cta": {
+      "title": "Chuyển đổi tòa nhà của bạn thành tòa nhà thông minh",
+      "subtitle": "Tối ưu năng lượng, nâng cao an toàn và cải thiện trải nghiệm người dùng",
+      "contactButton": "Liên hệ ngay",
+      "homeButton": "Về trang chủ"
+    },
+    "applications": {
+      "title": "Ứng dụng chi tiết của Smart Dashboard trong thực tế",
+      "subtitle": "Smart Dashboard trong lĩnh vực quản lý tòa nhà và trung tâm dữ liệu hoạt động như một \"phòng điều hành ảo\" (Virtual Command Center), nơi tập trung toàn bộ thông tin về hoạt động, môi trường và hiệu suất.",
+      "realityLabel": "Thực tế",
+      "applicationLabel": "Ứng dụng",
+      "digitalTwin": {
+        "title": "Tạo ra \"Phòng điều hành ảo\" với Bản sao số (Digital Twin)",
+        "reality": "Người quản lý không còn phải nhìn vào các bản vẽ kỹ thuật hay nhiều màn hình riêng lẻ. Thay vào đó, họ tương tác với một mô hình 3D chi tiết của toàn bộ tòa nhà hoặc trung tâm dữ liệu.",
+        "application": "Mô hình 3D này là một \"bản sao kỹ thuật số\" được liên kết với dữ liệu thời gian thực từ các cảm biến và hệ thống. Người dùng có thể \"đi sâu\" vào mô hình, nhấp vào một phòng máy chủ, một dãy tủ rack, hoặc một thiết bị làm mát cụ thể để xem các thông số vận hành."
+      },
+      "environmentalMonitoring": {
+        "title": "Giám sát môi trường và năng lượng thông minh",
+        "reality": "Các chỉ số quan trọng về môi trường và năng lượng được theo dõi liên tục và trực quan hóa một cách dễ hiểu.",
+        "application": "Dashboard tích hợp dữ liệu từ các cảm biến IoT để theo dõi nhiệt độ, chất lượng không khí. Nó sử dụng các công cụ như bản đồ nhiệt (heatmap) để hiển thị các khu vực có nhiệt độ cao bất thường trong trung tâm dữ liệu và giám sát các chỉ số tiêu thụ năng lượng."
+      },
+      "securityManagement": {
+        "title": "Quản lý an ninh và an toàn tích hợp",
+        "reality": "Các sự kiện an ninh được xác minh và xử lý nhanh chóng hơn nhờ việc kết hợp nhiều nguồn thông tin.",
+        "application": "Hệ thống tích hợp hình ảnh trực tiếp từ camera an ninh (CCTV) ngay trên mô hình 3D. Khi có một cảnh báo (ví dụ: cửa phòng máy chủ bị mở trái phép), dashboard có thể tự động hiển thị hình ảnh từ camera gần nhất tại vị trí đó."
+      },
+      "maintenanceSupport": {
+        "title": "Hỗ trợ vận hành và bảo trì chủ động",
+        "reality": "Giảm thiểu rủi ro ngừng hoạt động đột xuất, một yếu tố sống còn đối với các trung tâm dữ liệu.",
+        "application": "Dashboard tích hợp AI để thực hiện bảo trì dự đoán cho các thiết bị trọng yếu như hệ thống làm mát hay bộ lưu điện (UPS). AI có thể cảnh báo sớm nguy cơ hỏng hóc, cho phép lên kế hoạch bảo trì trước khi sự cố xảy ra."
+      }
+    }
+  },
+  "finance": {
+    "slideshow": {
+      "image1Alt": "Ứng dụng Smart Dashboard - Phần 1",
+      "image2Alt": "Ứng dụng Smart Dashboard - Phần 2"
+    },
+    "features": {
+      "growth": {
+        "title": "Tăng trưởng 20-30%",
+        "description": "Tối ưu hóa doanh thu và lợi nhuận thông qua phân tích dữ liệu chính xác và kịp thời."
+      },
+      "monitoring": {
+        "title": "Giám sát dòng tiền 24/7",
+        "description": "Theo dõi dòng tiền thời gian thực từ tất cả các chi nhánh, ATM và kênh giao dịch."
+      },
+      "decisions": {
+        "title": "Tối ưu quyết định kinh doanh",
+        "description": "Ra quyết định nhanh chóng dựa trên dữ liệu phân tích thông minh và dự báo chính xác."
+      }
+    },
+    "metrics": {
+      "title": "Số liệu ấn tượng",
+      "realTimeDebt": "Dư nợ theo thời gian thực",
+      "recoveryEfficiency": "Hiệu suất thu hồi nợ",
+      "newAccountsDaily": "Tài khoản mới mỗi ngày",
+      "transactionsProcessed": "Giao dịch được xử lý"
+    },
+    "benefits": {
+      "creditRisk": "Tăng 25% hiệu quả quản lý rủi ro tín dụng",
+      "reportProcessing": "Giảm 40% thời gian xử lý báo cáo",
+      "cashFlowAccuracy": "Tăng 30% độ chính xác dự báo dòng tiền",
+      "customerExperience": "Cải thiện 50% trải nghiệm khách hàng"
+    },
+    "hero": {
+      "title": "Smart Dashboard - Ngành Tài chính / Ngân hàng / Bảo hiểm",
+      "description": "Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7."
+    },
+    "challenges": {
+      "title": "Thách thức thực tế của ngành Tài chính - Ngân hàng",
+      "description": "Ngành tài chính ngân hàng vận hành trong một môi trường có độ phức tạp, rủi ro và yêu cầu tuân thủ cực kỳ cao. Các thách thức cốt lõi bao gồm:",
+      "imageAlt": "Thách thức thực tế của ngành Tài chính - Ngân hàng",
+      "challenge1": {
+        "title": "Độ trễ trong ra quyết định",
+        "content": "Theo phương pháp quản lý truyền thống, các quyết định thường được đưa ra dựa trên các báo cáo thủ công, định kỳ theo tháng hoặc quý. Điều này tạo ra một độ trễ lớn, khiến ban lãnh đạo phải \"phản ứng\" với các dữ liệu đã lỗi thời."
+      },
+      "challenge2": {
+        "title": "Dữ liệu phân mảnh",
+        "content": "Dữ liệu thường nằm rải rác ở nhiều hệ thống độc lập (Data Silos) như hệ thống lõi ngân hàng, CRM, dữ liệu giao dịch. Việc thiếu nền tảng hợp nhất khiến việc có cái nhìn 360 độ trở nên khó khăn."
+      },
+      "challenge3": {
+        "title": "Áp lực tuân thủ và bảo mật",
+        "content": "Phải tuân thủ nhiều quy định khắt khe về bảo mật dữ liệu và tài chính như GDPR, HIPAA, ISO 27001. Đồng thời đối mặt với nguy cơ tấn công mạng và rò rỉ dữ liệu."
+      },
+      "challenge4": {
+        "title": "Quản lý rủi ro phức tạp",
+        "content": "Đối mặt với nhiều loại rủi ro như rủi ro tín dụng, rủi ro thị trường, gian lận tài chính. Việc phát hiện sớm dấu hiệu bất thường trong hàng triệu giao dịch hàng ngày là thách thức khổng lồ."
+      }
+    },
+    "applications": {
+      "title": "Ứng dụng chi tiết của Smart Dashboard trong thực tế",
+      "description": "Để giải quyết các thách thức trên, Smart Dashboard được ứng dụng như một \"trung tâm chỉ huy\" hay \"bộ não số\", biến dữ liệu thành công cụ quản trị chủ động.",
+      "realityLabel": "Thực tế",
+      "applicationLabel": "Ứng dụng",
+      "application1": {
+        "title": "Xây dựng \"Phòng điều hành ảo\" cho Ban lãnh đạo",
+        "reality": "Thay vì chờ báo cáo giấy, CEO và ban giám đốc có thể truy cập một Dashboard Quản lý hiển thị các KPI tài chính cốt lõi theo thời gian thực.",
+        "application": "Dashboard trực quan hóa các chỉ số như Tỷ lệ nợ xấu, Tỷ suất lợi nhuận trên tài sản (ROA) và Chỉ số hài lòng khách hàng (NPS), cho phép so sánh với mục tiêu và cùng kỳ năm trước."
+      },
+      "application2": {
+        "title": "Tích hợp AI để quản lý rủi ro chủ động",
+        "reality": "Tập đoàn tài chính sử dụng Dashboard tích hợp AI để không chỉ theo dõi mà còn dự báo các rủi ro.",
+        "application": "Hệ thống AI phân tích xu hướng thị trường để dự báo biến động lãi suất, phát hiện sớm gian lận và dự báo rủi ro tín dụng khách hàng."
+      },
+      "application3": {
+        "title": "Trung tâm An ninh Mạng (SOC) thông minh",
+        "reality": "Các nhóm an ninh mạng phải đối mặt với hàng triệu cảnh báo mỗi ngày, dẫn đến tình trạng \"mệt mỏi vì cảnh báo\".",
+        "application": "Smart Dashboard tổng hợp dữ liệu từ SIEM và SOAR, sử dụng AI để tự động phân loại và chỉ làm nổi bật các mối đe dọa thực sự nghiêm trọng."
+      },
+      "application4": {
+        "title": "Tối ưu hóa hoạt động và tuân thủ",
+        "reality": "Các quy trình kiểm toán và báo cáo tuân thủ thường rất tốn công sức.",
+        "application": "Dashboard tự động hóa việc tạo báo cáo tuân thủ, giám sát liên tục và cung cấp nhật ký kiểm toán, giúp tổ chức \"luôn sẵn sàng cho kiểm toán\"."
+      }
+    },
+    "strategicBenefits": {
+      "title": "Lợi ích chiến lược và định lượng",
+      "description": "Việc ứng dụng Smart Dashboard một cách hiệu quả mang lại những giá trị to lớn, có thể đo lường được:",
+      "imageAlt": "Lợi ích chiến lược và định lượng",
+      "benefit1": {
+        "title": "Tăng tốc độ và chất lượng ra quyết định",
+        "intro": "Đây là lợi ích hữu hình nhất. Các ngân hàng sử dụng dashboard đã ghi nhận:",
+        "point1": "Giảm thời gian xử lý dữ liệu",
+        "point2": "Cải thiện tốc độ ra quyết định tài chính"
+      },
+      "benefit2": {
+        "title": "Tiết kiệm chi phí và nâng cao hiệu suất",
+        "content": "Việc tự động hóa quá trình thu thập, tổng hợp dữ liệu và tạo báo cáo giúp giải phóng nhân lực khỏi các công việc thủ công. Điều này không chỉ tiết kiệm chi phí nhân sự mà còn cho phép họ tập trung vào các nhiệm vụ có giá trị cao hơn như phân tích chiến lược."
+      },
+      "benefit3": {
+        "title": "Tăng cường an ninh và khả năng phục hồi",
+        "content": "Cung cấp một cái nhìn toàn diện và theo thời gian thực về các mối đe dọa, giúp các tổ chức tài chính giảm thiểu thời gian phát hiện và phản ứng sự cố, từ đó bảo vệ tài sản và dữ liệu khách hàng tốt hơn."
+      },
+      "benefit4": {
+        "title": "Minh bạch hóa và định lượng rủi ro",
+        "content": "Một Smart Dashboard cao cấp có khả năng \"dịch rủi ro mạng thành đô la và xu\". Nó giúp CISO chứng minh được Lợi tức đầu tư an ninh (ROSI), biện minh cho ngân sách và truyền đạt giá trị của an ninh bằng ngôn ngữ kinh doanh tới hội đồng quản trị."
+      }
+    },
+    "featuresSection": {
+      "title": "Tính năng nổi bật",
+      "subtitle": "Giải pháp toàn diện cho ngành tài chính ngân hàng"
+    },
+    "benefitsSection": {
+      "title": "Lợi ích mang lại"
+    },
+    "cta": {
+      "title": "Tối ưu hóa hiệu quả tài chính ngay hôm nay",
+      "description": "Liên hệ để được tư vấn giải pháp Smart Dashboard phù hợp",
+      "contactButton": "Liên hệ ngay",
+      "homeButton": "Về trang chủ"
+    }
+  },
+  "government": {
+    "slideshow": {
+      "image1Alt": "Ứng dụng Smart Dashboard - Phần 1",
+      "image2Alt": "Ứng dụng Smart Dashboard - Phần 2"
+    },
+    "modal": {
+      "instructions": "Giữ Ctrl và lăn chuột để phóng to/thu nhỏ. Nhấn giữ chuột trái và kéo để di chuyển ảnh."
+    },
+    "features": {
+      "monitoring": {
+        "title": "Giám sát KPIs thời gian thực",
+        "description": "Theo dõi các chỉ số hiệu suất chính của từng phòng ban, dự án một cách trực quan và tức thì."
+      },
+      "projectTracking": {
+        "title": "Theo dõi tiến độ dự án",
+        "description": "Quản lý và giám sát tiến độ thực hiện các dự án đầu tư công, chương trình phát triển."
+      },
+      "budgetAnalysis": {
+        "title": "Phân tích ngân sách chi tiết",
+        "description": "Phân tích thu - chi ngân sách theo từng khoản mục, phòng ban với độ chính xác cao."
+      }
+    },
+    "benefits": {
+      "efficiency": "Tăng 40% hiệu quả quản lý nhà nước",
+      "reportingTime": "Giảm 30% thời gian báo cáo định kỳ",
+      "transparency": "Tăng 50% độ minh bạch thông tin",
+      "decisionProcess": "Cải thiện 60% quy trình ra quyết định"
+    },
+    "hero": {
+      "title": "Smart Dashboard - Chính phủ / Cơ quan ban ngành",
+      "description": "Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn."
+    },
+    "challenges": {
+      "title": "Thách thức thực tế của ngành Hành chính công",
+      "description": "Việc vận hành theo phương thức truyền thống đang bộc lộ nhiều hạn chế, cản trở hiệu quả quản lý và điều hành của các cơ quan nhà nước.",
+      "imageAlt": "Thách thức thực tế của ngành Hành chính công",
+      "challenge1": {
+        "title": "Quản lý \"phản ứng\" và độ trễ thông tin",
+        "content": "Các quyết định thường được đưa ra dựa trên các báo cáo theo tháng, quý, năm. Phương thức này khiến việc quản lý mang tính chất \"phản ứng\" với các sự việc đã xảy ra, gây khó khăn trong việc ứng phó với các vấn đề đột xuất hoặc thay đổi nhanh chóng như thiên tai, dịch bệnh hay các vấn đề an ninh."
+      },
+      "challenge2": {
+        "title": "Dữ liệu rời rạc và thiếu đồng bộ",
+        "content": "Các cơ quan nhà nước thường phải xử lý một lượng lớn dữ liệu rời rạc từ nhiều nguồn khác nhau. Việc tổng hợp thủ công không chỉ tốn thời gian mà còn dễ sai sót, dẫn đến tình trạng thiếu một cái nhìn tổng thể để ra quyết định vĩ mô. Thách thức lớn nhất là tích hợp dữ liệu từ các hệ thống thông tin cũ của các sở, ban, ngành."
+      },
+      "challenge3": {
+        "title": "Thiếu minh bạch và trách nhiệm giải trình",
+        "content": "Các quy trình báo cáo truyền thống thường thiếu tính công khai và khó tiếp cận, có thể làm suy giảm niềm tin của công chúng vào chính phủ."
+      },
+      "challenge4": {
+        "title": "Rủi ro về bảo mật và quyền riêng tư",
+        "content": "Việc tập trung dữ liệu nhạy cảm của người dân và doanh nghiệp tạo ra \"điểm yếu\" hấp dẫn đối với tấn công mạng. Cân bằng giữa minh bạch và bảo mật là thách thức lớn."
+      },
+      "challenge5": {
+        "title": "Thách thức về quản lý thay đổi",
+        "content": "Việc chuyển đổi từ thói quen làm việc thủ công, báo cáo giấy sang môi trường làm việc dựa trên dữ liệu là một thách thức văn hóa lớn, đòi hỏi sự thay đổi trong tư duy và cần có kế hoạch đào tạo bài bản cho đội ngũ cán bộ, công chức."
+      }
+    },
+    "applications": {
+      "title": "Ứng dụng chi tiết của Smart Dashboard trong thực tế",
+      "description": "Tại Việt Nam và trên thế giới, Smart Dashboard được triển khai như một \"bộ não số\" để giải quyết các thách thức trên, với mô hình nổi bật là các <span className=\"font-semibold text-blue-700\">Trung tâm Điều hành Thông minh (IOC)</span>.",
+      "realityLabel": "Thực tế",
+      "applicationLabel": "Ứng dụng",
+      "application1": {
+        "title": "Xây dựng Trung tâm Điều hành Thông minh (IOC) toàn diện",
+        "reality": "Thay vì các phòng ban hoạt động độc lập, lãnh đạo tỉnh/thành phố có một phòng điều hành trung tâm, nơi mọi thông tin được hội tụ.",
+        "application": "IOC được ví như \"bộ não số\", tích hợp dữ liệu từ các sở, ngành về một trung tâm chung, tạo ra một cái nhìn toàn cảnh trên mọi lĩnh vực từ kinh tế - xã hội, an ninh trật tự đến dịch vụ công.",
+        "evidenceTitle": "Minh chứng tại Việt Nam",
+        "dalat": {
+          "title": "Đà Lạt",
+          "description": "Là thành phố đầu tiên đưa IOC vào hoạt động, đã tích hợp gần 300 camera độ phân giải cao để giám sát an ninh và giao thông, cho phép lãnh đạo quản lý từ tổng thể đến chi tiết."
+        },
+        "binhduong": {
+          "title": "Bình Dương",
+          "description": "Một mô hình toàn diện đã thu thập và tích hợp hơn 1,000 chỉ số ở 27 lĩnh vực, tập trung vào thu chi ngân sách, giải ngân đầu tư công, và đường dây nóng 1022. Đã công bố 13 bộ dữ liệu trên cổng dữ liệu mở."
+        }
+      },
+      "application2": {
+        "title": "Giám sát đa chiều và hỗ trợ ra quyết định tức thời",
+        "reality": "Lãnh đạo có thể nắm bắt tình hình ngay lập tức và đưa ra chỉ đạo kịp thời mà không cần chờ báo cáo.",
+        "application": "Dashboard cho phép theo dõi mọi khía cạnh của một hệ thống, từ tình hình tài chính công, tiến độ giải ngân, đến số lượng hồ sơ được xử lý tại các trung tâm hành chính công."
+      },
+      "application3": {
+        "title": "Cải thiện chất lượng dịch vụ công",
+        "reality": "Các vấn đề trong quy trình phục vụ người dân được phát hiện và khắc phục nhanh hơn.",
+        "application": "Dashboard theo dõi và phân tích các chỉ số về sự hài lòng của người dân, thời gian chờ đợi, và tỷ lệ giải quyết hồ sơ đúng hạn. Dữ liệu này giúp các cơ quan công quyền xác định điểm nghẽn và cải thiện quy trình."
+      },
+      "application4": {
+        "title": "Tăng cường tương tác và minh bạch với người dân",
+        "reality": "Người dân có thể giám sát hoạt động của chính quyền và gửi phản ánh một cách dễ dàng.",
+        "application": "Dashboard là công cụ mạnh mẽ để công khai dữ liệu chính phủ (Open Government Data). Nó cho phép người dân gửi ý kiến phản ánh về các vấn đề hạ tầng, an ninh, từ đó thúc đẩy công tác điều hành diễn ra minh bạch và hiệu quả hơn."
+      }
+    },
+    "strategicBenefits": {
+      "title": "Lợi ích chiến lược và định lượng",
+      "description": "Việc triển khai Smart Dashboard trong hành chính công mang lại những tác động to lớn và có thể đo lường được, góp phần xây dựng một nền hành chính hiện đại.",
+      "imageAlt": "Lợi ích chiến lược và định lượng",
+      "benefit1": {
+        "title": "Chuyển đổi sang mô hình quản trị chủ động",
+        "benefitsLabel": "Lợi ích",
+        "content": "Đây là lợi ích chiến lược lớn nhất. Dashboard giúp chính quyền chuyển đổi từ quản lý \"phản ứng\" sang \"chủ động\". Khi được tích hợp AI và Học máy, hệ thống còn có thể phân tích dữ liệu lịch sử để dự báo các kịch bản trong tương lai, hỗ trợ hoạch định chính sách dựa trên bằng chứng."
+      },
+      "benefit2": {
+        "title": "Nâng cao hiệu quả và tiết kiệm chi phí",
+        "evidenceLabel": "Minh chứng",
+        "evidence": "Các dự án số hóa như nộp thuế trực tuyến có thể giảm thời gian trung bình lên tới 25%.",
+        "benefitsLabel": "Lợi ích",
+        "benefits": "Việc tự động hóa quy trình tạo báo cáo giúp giảm thiểu công việc thủ công, tiết kiệm đáng kể thời gian và nhân lực, qua đó tăng năng suất làm việc và hạn chế sai sót."
+      },
+      "benefit3": {
+        "title": "Tăng cường minh bạch và niềm tin công chúng",
+        "benefitsLabel": "Lợi ích",
+        "content": "Việc công khai dữ liệu giúp tăng cường sự giám sát từ công chúng, từ đó nâng cao niềm tin và sự hài lòng của người dân. Điều này tạo ra một môi trường đối thoại khách quan, thúc đẩy công tác điều hành hiệu quả hơn."
+      },
+      "benefit4": {
+        "title": "Tối ưu hóa nguồn lực công",
+        "benefitsLabel": "Lợi ích",
+        "content": "Bằng cách cung cấp cái nhìn tổng quan về ngân sách và hiệu suất, dashboard giúp chính phủ giám sát và điều phối tài nguyên hiệu quả hơn, đặc biệt trong việc giải ngân đầu tư công."
+      }
+    },
+    "whyChooseUs": {
+      "title": "Tại sao chọn chúng tôi?",
+      "featuresTitle": "Tính năng chính",
+      "featuresSubtitle": "Giải pháp toàn diện cho quản trị nhà nước hiệu quả",
+      "benefitsTitle": "Lợi ích mang lại",
+      "benefitsSubtitle": "Giải pháp toàn diện cho quản trị nhà nước hiệu quả"
+    },
+    "cta": {
+      "title": "Sẵn sàng hiện đại hóa quản trị nhà nước?",
+      "description": "Liên hệ với chúng tôi để được tư vấn giải pháp phù hợp",
+      "contactButton": "Liên hệ ngay",
+      "homeButton": "Về trang chủ"
+    }
+  },
+  "manufacturing": {
+    "slideshow": {
+      "alt1": "Ứng dụng Smart Dashboard - Phần 1",
+      "alt2": "Ứng dụng Smart Dashboard - Phần 2"
+    },
+    "features": {
+      "costReduction": {
+        "title": "Giảm 20-30% chi phí",
+        "description": "Tối ưu hóa quy trình sản xuất và quản lý nguồn lực hiệu quả, giảm thiểu lãng phí."
+      },
+      "energyMonitoring": {
+        "title": "Giám sát năng lượng thời gian thực",
+        "description": "Theo dõi và điều chỉnh mức tiêu thụ năng lượng của từng máy móc, dây chuyền sản xuất."
+      },
+      "netZero": {
+        "title": "Hướng đến Net-Zero",
+        "description": "Đạt mục tiêu phát thải carbon bằng 0 thông qua giám sát môi trường và tối ưu năng lượng."
+      }
+    },
+    "metrics": {
+      "costReduction": "Giảm chi phí vận hành",
+      "productivityIncrease": "Tăng hiệu suất sản xuất",
+      "co2Reduction": "Giảm phát thải CO2",
+      "energyOptimization": "Tối ưu năng lượng"
+    },
+    "benefits": {
+      "productivity": "Tăng 25% hiệu quả sản xuất tổng thể",
+      "maintenance": "Giảm 30% thời gian simple maintenance",
+      "safety": "Cải thiện 40% an toàn lao động",
+      "inventory": "Tối ưu 50% quản lý kho vật tư"
+    },
+    "applications": {
+      "automotive": "Dây chuyền sản xuất ô tô",
+      "food": "Nhà máy chế biến thực phẩm",
+      "textile": "Khu công nghiệp dệt may",
+      "chemical": "Nhà máy hóa chất",
+      "electronics": "Cơ sở sản xuất điện tử",
+      "mechanical": "Xưởng cơ khí chế tạo"
+    },
+    "hero": {
+      "title": "Smart Dashboard - Ngành Công nghiệp / Sản xuất",
+      "description": "Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, giảm 20-30% chi phí nhờ tối ưu vận hành, cải thiện an toàn và hướng đến công nghiệp xanh, net-zero."
+    },
+    "introduction": {
+      "paragraph1": "Trong bối cảnh của cuộc Cách mạng Công nghiệp lần thứ tư (Công nghiệp 4.0), ngành sản xuất và các khu công nghiệp (KCN) đang đứng ở tâm điểm của một cuộc chuyển đổi sâu sắc và toàn diện. Các nhà máy không còn đơn thuần là nơi lắp ráp, mà đã trở thành những \"mỏ dữ liệu khổng lồ\" do sự bùng nổ của các thiết bị IoT, cảm biến thông minh và hệ thống tự động hóa.",
+      "imageAlt": "Giới thiệu về Khu Công nghiệp, Nhà máy",
+      "paragraph2": "Dữ liệu giờ đây được ví như \"dầu mỏ mới\", trở thành tài sản chiến lược và là huyết mạch nuôi sống mọi hoạt động của một Nhà máy thông minh (Smart Factory).",
+      "paragraph3": "Khu Công nghiệp Thông minh (Smart Industrial Park) là một bước tiến xa hơn, áp dụng các nguyên tắc của Smart Factory trên quy mô toàn khu, quản lý một cách tích hợp từ hạ tầng, sản xuất, năng lượng, môi trường cho đến an ninh và logistics."
+    },
+    "challenges": {
+      "title": "Thách thức thực tế của Khu Công nghiệp & Nhà máy",
+      "description": "Sở hữu nhiều dữ liệu nhưng không thể khai thác hiệu quả sẽ biến tiềm năng thành gánh nặng. Các nhà máy và KCN đang đối mặt với những rào cản mang tính hệ thống.",
+      "imageAlt": "Thách thức thực tế của Khu Công nghiệp & Nhà máy",
+      "challenge1": {
+        "title": "Dữ liệu phân mảnh và \"Ốc đảo thông tin\" (Data Silos)",
+        "description": "Đây là thách thức hàng đầu. Dữ liệu từ các hệ thống OT (SCADA, PLC) và IT (ERP, MES) thường do các bộ phận khác nhau quản lý và không \"nói chuyện\" với nhau.",
+        "exampleTitle": "Ví dụ điển hình:",
+        "exampleContent": "Đội bảo trì xem dữ liệu về độ rung của máy trên hệ thống CMMS, đội sản xuất theo dõi sản lượng trên MES, và đội quản lý cơ sở vật chất giám sát mức tiêu thụ năng lượng của chính cái máy đó trên hệ thống BMS. Hậu quả là không ai có được cái nhìn toàn cảnh, dẫn đến quyết định chậm trễ và kém hiệu quả."
+      },
+      "challenge2": {
+        "title": "Khó khăn tích hợp và thiếu chuẩn hóa",
+        "description": "Việc kết nối một máy tiện CNC 20 năm tuổi với một cảm biến IoT hiện đại đòi hỏi các giải pháp chuyển đổi giao thức phức tạp và tốn kém do sự đa dạng về nhà cung cấp và công nghệ."
+      },
+      "challenge3": {
+        "title": "Chất lượng dữ liệu kém",
+        "description": "Chất lượng của quyết định phụ thuộc vào chất lượng của dữ liệu đầu vào. Các vấn đề: dữ liệu thiếu do lỗi kết nối mạng, không chính xác do cảm biến lệch chuẩn, hoặc không nhất quán do nhập liệu thủ công."
+      },
+      "challenge4": {
+        "title": "An ninh và Bảo mật",
+        "description": "Khi các hệ thống OT được kết nối với mạng IT và Internet, chúng đối mặt với nguy cơ an ninh mạng. Tấn công không chỉ làm rò rỉ dữ liệu mà còn có thể phá hoại máy móc, gây ngừng trệ sản xuất."
+      },
+      "challenge5": {
+        "title": "Khoảng trống về kỹ năng",
+        "description": "Việc biến dữ liệu thành insight đòi hỏi đội ngũ có kỹ năng đa ngành: vừa hiểu sâu về máy móc, vừa có chuyên môn về khoa học dữ liệu. Sự thiếu hụt nhân sự này là rào cản lớn."
+      }
+    },
+    "smartDashboard": {
+      "title": "Ứng dụng chi tiết của Smart Dashboard trong thực tế",
+      "description": "Smart Dashboard đóng vai trò là \"trung tâm chỉ huy\" hoặc \"bộ não số\" của nhà máy và KCN, giải quyết triệt để các thách thức trên.",
+      "application1": {
+        "title": "Xây dựng \"Phòng điều hành ảo\" với Bản sao số (Digital Twin)",
+        "practiceTitle": "Thực tế:",
+        "practiceContent": "Thay vì quản lý qua các màn hình SCADA riêng lẻ hoặc bảng tính, người quản lý tương tác với một mô hình 3D trực quan của toàn bộ nhà máy hoặc KCN.",
+        "applicationTitle": "Ứng dụng:",
+        "applicationContent": "Mô hình 3D này là một \"bản sao kỹ thuật số\" sống động, nơi mỗi máy móc được liên kết với luồng dữ liệu thời gian thực. Khi cảm biến báo động, máy móc tương ứng trên mô hình 3D sẽ thay đổi màu sắc, nhấp nháy hoặc hiển thị cảnh báo."
+      },
+      "application2": {
+        "title": "Giám sát hiệu suất toàn diện qua KPIs then chốt",
+        "practiceTitle": "Thực tế:",
+        "practiceContent": "Các chỉ số hiệu suất quan trọng nhất được theo dõi liên tục, giúp ban lãnh đạo nắm bắt \"sức khỏe\" của hoạt động sản xuất ngay lập tức.",
+        "applicationTitle": "Ứng dụng:",
+        "oee": "(Overall Equipment Effectiveness)",
+        "mtbf": "(Mean Time Between Failures)",
+        "mttr": "(Mean Time To Repair)",
+        "other": "Tỷ lệ phế phẩm và Tiêu thụ năng lượng"
+      },
+      "application3": {
+        "title": "Bảo trì dự đoán nhờ tích hợp AI/ML",
+        "practiceTitle": "Thực tế:",
+        "practiceContent": "Chuyển đổi từ mô hình bảo trì \"chữa cháy\" (khi hỏng mới sửa) sang bảo trì chủ động.",
+        "applicationTitle": "Ứng dụng:",
+        "applicationContent": "Hệ thống tích hợp thuật toán học máy để phân tích dữ liệu lịch sử về độ rung, nhiệt độ, áp suất. Dashboard có thể dự báo khả năng xảy ra hỏng hóc, cho phép lên kế hoạch bảo trì trước khi sự cố xảy ra."
+      },
+      "application4": {
+        "title": "Hệ thống cảnh báo thông minh, giảm thiểu \"nhiễu loạn\"",
+        "practiceTitle": "Thực tế:",
+        "practiceContent": "Người vận hành không còn bị quá tải bởi hàng trăm cảnh báo không quan trọng, tình trạng gọi là \"nhiễu loạn cảnh báo\" (Alert Fatigue).",
+        "applicationTitle": "Ứng dụng:",
+        "applicationContent": "Hệ thống sử dụng logic phức tạp để tương quan nhiều sự kiện. Ví dụ: cảnh báo chỉ kích hoạt khi có đồng thời (1) nhiệt độ tăng, (2) độ rung tăng, VÀ (3) sản lượng giảm - cho thấy vấn đề nghiêm trọng thay vì biến động tạm thời."
+      }
+    },
+    "strategicBenefits": {
+      "title": "Lợi ích chiến lược và định lượng",
+      "description": "Việc triển khai Smart Dashboard không chỉ là một nâng cấp công nghệ, mà là một quyết định chiến lược mang lại những kết quả kinh doanh vượt trội và có thể đo lường được.",
+      "imageAlt": "Lợi ích chiến lược và định lượng",
+      "benefit1": {
+        "title": "Tối ưu hóa vận hành và nâng cao hiệu suất",
+        "evidenceTitle": "Minh chứng:",
+        "evidenceContent": "Tăng hiệu quả thiết bị tổng thể (OEE) lên đến 30%",
+        "benefitsTitle": "Lợi ích:",
+        "downtimeReduction": "Giảm thời gian ngừng hoạt động: 73%",
+        "troubleshootingTime": "Giảm thời gian xử lý sự cố: 90%",
+        "reportingTime": "Báo cáo từ 1-2 ngày → tức thì"
+      },
+      "benefit2": {
+        "title": "Tiết kiệm chi phí đáng kể",
+        "evidenceTitle": "Minh chứng:",
+        "evidenceContent": "Giảm chi phí vận hành KCN lên đến 60%",
+        "benefitsTitle": "Lợi ích:",
+        "laborCost": "Tiết kiệm chi phí nhân lực: 20%",
+        "energyCost": "Giảm chi phí năng lượng đáng kể",
+        "automation": "Tự động hóa báo cáo và thu thập dữ liệu"
+      },
+      "benefit3": {
+        "title": "Chuyển đổi văn hóa quản lý",
+        "description": "Smart Dashboard thay đổi văn hóa quản lý từ phản ứng, dựa trên kinh nghiệm (\"chữa cháy\") sang chủ động, dựa trên dữ liệu (\"quản trị thông minh\"). Tạo ra \"ngôn ngữ chung\" về hiệu suất, thúc đẩy minh bạch và cộng tác."
+      },
+      "benefit4": {
+        "title": "Tăng cường năng lực cạnh tranh",
+        "description": "KCN được quản lý hiệu quả, an toàn và bền vững sẽ hấp dẫn hơn đối với các nhà đầu tư quốc tế, đặc biệt những doanh nghiệp yêu cầu cao về tiêu chuẩn ESG. Đây là chìa khóa xây dựng lợi thế cạnh tranh bền vững trong thời đại số."
+      }
+    },
+    "metricsSection": {
+      "title": "Hiệu quả đã chứng minh"
+    },
+    "featuresSection": {
+      "title": "Tính năng chính",
+      "subtitle": "Giải pháp toàn diện cho ngành công nghiệp sản xuất"
+    },
+    "applicationsSection": {
+      "title": "Ứng dụng thực tế"
+    },
+    "benefitsSection": {
+      "title": "Lợi ích mang lại"
+    },
+    "ctaSection": {
+      "title": "Chuyển đổi số cho nhà máy của bạn",
+      "subtitle": "Bắt đầu hành trình hướng đến công nghiệp 4.0 và Net-Zero",
+      "contactButton": "Liên hệ ngay",
+      "homeButton": "Về trang chủ"
+    }
+  },
+  "seaport": {
+    "slideshow": {
+      "digitalTwin": "Bản sao số 3D cảng biển",
+      "realTimeKPIs": "Giám sát KPIs thời gian thực",
+      "automation": "Tự động hóa quy trình vận hành"
+    },
+    "features": {
+      "productivity": {
+        "title": "Tăng năng suất 30%",
+        "description": "Tối ưu hóa hiệu suất bốc dỡ hàng hóa và giảm thời gian quay vòng tàu thông qua quản lý thông minh."
+      },
+      "monitoring": {
+        "title": "Giám sát KPIs thời gian thực",
+        "description": "Theo dõi hiệu quả cảng, thông lượng hàng hóa và tình trạng bến cảng 24/7."
+      },
+      "safety": {
+        "title": "Nâng cao an toàn và an ninh",
+        "description": "Giảm 40% tai nạn nghiêm trọng và tăng cường kiểm soát an ninh toàn diện."
+      }
+    },
+    "metrics": {
+      "productivity": "Tăng năng suất bốc dỡ",
+      "turnaroundTime": "Giảm thời gian quay vòng tàu",
+      "safetyImprovement": "Giảm tai nạn nghiêm trọng",
+      "operationalEfficiency": "Tăng hiệu quả vận hành"
+    },
+    "benefits": {
+      "automation": "Tự động hóa 85% quy trình vận hành",
+      "logisticsCost": "Giảm 30% chi phí logistics tổng thể",
+      "accuracy": "Tăng 40% độ chính xác trong kiểm đếm",
+      "customerExperience": "Cải thiện 50% trải nghiệm khách hàng"
+    },
+    "hero": {
+      "title": "Smart Dashboard - Ngành cảng biển",
+      "description": "Biến cảng biển thành trung tâm chỉ huy số với bản sao số 3D, giám sát KPIs thời gian thực, tự động hóa quy trình vận hành và nâng cao năng suất bốc dỡ lên 30%."
+    },
+    "introduction": {
+      "paragraph1": "Ngành cảng biển đóng vai trò là \"huyết mạch\" của thương mại toàn cầu và là mắt xích không thể thiếu trong chuỗi cung ứng quốc tế. Trong bối cảnh khối lượng hàng hóa lưu thông ngày càng tăng và áp lực về tốc độ, sự chính xác ngày càng lớn, các cảng biển không còn là những bến đỗ tĩnh mà đã trở thành những hệ sinh thái vận hành phức tạp, quyết định nhịp độ của cả một nền kinh tế.",
+      "imageAlt": "Giới thiệu về ngành Cảng biển",
+      "paragraph2": "Tại Việt Nam, với vị thế địa lý chiến lược, hệ thống cảng biển được xem là động lực quan trọng cho tăng trưởng kinh tế. Tuy nhiên, ngành cũng đối mặt với thách thức lớn về hạ tầng kết nối sau cảng và chi phí logistics còn cao, đòi hỏi một cuộc cách mạng về quản trị vận hành để nâng cao năng lực cạnh tranh."
+    },
+    "challenges": {
+      "title": "Thách thức thực tế của ngành Cảng biển",
+      "description": "Các cảng biển vận hành theo mô hình truyền thống đang phải đối mặt với những \"nút thắt\" cố hữu, cản trở sự phát triển trong kỷ nguyên số:",
+      "imageAlt": "Thách thức thực tế của ngành Cảng biển",
+      "challenge1": {
+        "title": "Dữ liệu phân mảnh và \"Ốc đảo thông tin\"",
+        "description": "Đây là thách thức lớn nhất. Thông tin về một lô hàng có thể nằm ở email của bộ phận kinh doanh, lịch trình tàu lại ở một phần mềm khác, trong khi thông tin xe ra vào cổng được ghi chép thủ công.",
+        "impact": "Sự thiếu kết nối này tạo ra một môi trường vận hành mà không ai có được bức tranh toàn cảnh, dẫn đến quyết định chậm trễ và kém hiệu quả."
+      },
+      "challenge2": {
+        "title": "Thiếu tầm nhìn toàn cảnh theo thời gian thực",
+        "description": "Hệ quả trực tiếp là ban quản lý không thể trả lời nhanh các câu hỏi vận hành quan trọng như: \"Bến nào đang trống?\", \"Xe tải đang ùn tắc ở đâu?\", hay \"Năng suất xếp dỡ hiện tại là bao nhiêu?\". Việc ra quyết định thường dựa trên kinh nghiệm hoặc các báo cáo có độ trễ lớn."
+      },
+      "challenge3": {
+        "title": "Hiệu suất vận hành kém và ùn tắc kéo dài",
+        "description": "Khi thiếu dữ liệu đồng bộ, hiệu suất sụt giảm là điều không thể tránh khỏi. Tàu phải chờ đợi lâu để cập bến, xe container xếp hàng dài ngoài cổng vì thủ tục giấy tờ thủ công, và việc điều phối thiết bị thiếu tối ưu. Tình trạng này không chỉ gây lãng phí mà còn làm tăng chi phí vận hành, giảm năng lực cạnh tranh nghiêm trọng."
+      },
+      "challenge4": {
+        "title": "Rủi ro về an toàn, an ninh và sai sót con người",
+        "description": "Môi trường vận hành thủ công tiềm ẩn rủi ro cao về an toàn lao động và an ninh. Việc kiểm soát ra vào lỏng lẻo và phản ứng chậm với các sự cố như hỏa hoạn là những vấn đề nhức nhối. Sự phụ thuộc vào giấy tờ cũng làm tăng nguy cơ sai sót do con người, gây tổn thất về tài chính và hàng hóa."
+      }
+    },
+    "applications": {
+      "title": "Ứng dụng chi tiết của Smart Dashboard trong thực tế",
+      "description": "Smart Dashboard trong lĩnh vực cảng biển không chỉ là một công cụ hiển thị, mà là một \"trung tâm chỉ huy số\" (Digital Command Center), đóng vai trò là bộ não của toàn bộ hệ sinh thái Cảng Thông Minh (Smart Port).",
+      "digitalTwin": {
+        "title": "Xây dựng Bản sao số (Digital Twin) của cảng biển",
+        "realityTitle": "Thực tế:",
+        "realityContent": "Thay vì nhìn vào các bản đồ giấy hoặc bảng tính, người quản lý tương tác với một mô hình 3D sống động của toàn bộ cảng.",
+        "applicationTitle": "Ứng dụng:",
+        "applicationContent": "Mô hình 3D này là một bản sao số chính xác, được xây dựng từ bản đồ và khảo sát thực địa. Nó cho phép giám sát vị trí và trạng thái của mọi đối tượng (tàu, xe, cần cẩu) theo thời gian thực."
+      },
+      "kpiMonitoring": {
+        "title": "Hệ thống giám sát KPIs toàn diện",
+        "realityTitle": "Thực tế:",
+        "realityContent": "Các chỉ số hiệu suất được tổng hợp và hiển thị một cách khoa học, dễ hiểu.",
+        "applicationTitle": "Ứng dụng:",
+        "applicationContent": "Xung quanh mô hình 3D là một hệ thống các KPIs được làm mới liên tục: Hiệu quả hoạt động của cảng, Thông lượng hàng hóa, Thời gian quay vòng tàu, và Tình trạng bến."
+      },
+      "incidentManagement": {
+        "title": "Xử lý sự cố thông minh và tự động",
+        "realityTitle": "Thực tế:",
+        "realityContent": "Quy trình xử lý các sự cố khẩn cấp như hỏa hoạn được tự động hóa để giảm thiểu thời gian phản ứng.",
+        "applicationTitle": "Ứng dụng:",
+        "applicationContent": "Hệ thống tự động cảnh báo, điều hướng đến hiện trường, tích hợp CCTV và hỗ trợ ra quyết định khẩn cấp."
+      },
+      "automation": {
+        "title": "Tự động hóa quy trình vận hành",
+        "realityTitle": "Thực tế:",
+        "realityContent": "Các thủ tục giấy tờ thủ công được loại bỏ hoàn toàn.",
+        "applicationTitle": "Ứng dụng:",
+        "applicationContent": "Hệ thống Cổng tự động sử dụng Camera AI và RFID, kết hợp ứng dụng di động để đồng bộ dữ liệu ngay lập tức."
+      }
+    },
+    "strategicBenefits": {
+      "title": "Lợi ích chiến lược và định lượng",
+      "description": "Việc triển khai Smart Dashboard trong mô hình Cảng Thông Minh mang lại những kết quả đột phá, đã được chứng minh qua các trường hợp thực tiễn như Cảng Busan.",
+      "imageAlt": "Lợi ích chiến lược và định lượng",
+      "benefit1": {
+        "title": "Bùng nổ về năng suất và hiệu quả",
+        "evidenceTitle": "Minh chứng:",
+        "evidenceContent": "Tại Cảng Busan, việc áp dụng hệ thống điều hành thông minh đã giúp tăng năng suất bốc dỡ hàng hóa lên 30% so với các nhà ga truyền thống.",
+        "benefitsTitle": "Lợi ích:",
+        "benefitsContent": "Thời gian một con tàu phải lưu lại cảng (turnaround time) giảm được 20%, giúp các hãng tàu tiết kiệm chi phí nhiên liệu và tăng hiệu quả khai thác."
+      },
+      "benefit2": {
+        "title": "Nâng cao an toàn và an ninh vượt trội",
+        "evidenceTitle": "Minh chứng:",
+        "evidenceContent": "Việc tự động hóa và giám sát tập trung đã giúp giảm tới 40% số vụ tai nạn cảng biển nghiêm trọng tại Cảng Busan.",
+        "benefitsTitle": "Lợi ích:",
+        "benefitsContent": "Môi trường làm việc trở nên an toàn hơn, giảm thiểu sai sót do con người, đồng thời hệ thống giám sát và cảnh báo thông minh giúp phản ứng nhanh với các sự cố."
+      },
+      "benefit3": {
+        "title": "Tăng trưởng bền vững và nâng cao năng lực cạnh tranh",
+        "evidenceTitle": "Minh chứng:",
+        "evidenceContent": "Ngay cả trong một năm đầy thách thức, Cảng Busan vẫn đạt được sản lượng container cao nhất lịch sử, một thành tích có sự đóng góp to lớn của các nhà ga tự động.",
+        "benefitsTitle": "Lợi ích:",
+        "benefitsContent": "Ban lãnh đạo có thể đưa ra các quyết định chiến lược dựa trên dữ liệu thực tế thay vì kinh nghiệm, từ đó phân tích hiệu suất, tìm ra điểm nghẽn và lập kế hoạch đầu tư dài hạn một cách chính xác."
+      },
+      "benefit4": {
+        "title": "Nâng cao trải nghiệm và sự hài lòng của khách hàng",
+        "content": "Khách hàng có thể dễ dàng đăng ký dịch vụ, theo dõi trạng thái yêu cầu và thực hiện thanh toán trực tuyến. Sự minh bạch và tiện lợi này giúp nâng cao đáng kể trải nghiệm dịch vụ, tạo ra lợi thế cạnh tranh bền vững."
+      }
+    },
+    "metricsSection": {
+      "title": "Hiệu quả đã chứng minh"
+    },
+    "featuresSection": {
+      "title": "Tính năng nổi bật",
+      "subtitle": "Giải pháp toàn diện cho cảng biển thông minh"
+    },
+    "benefitsSection": {
+      "title": "Lợi ích mang lại"
+    },
+    "cta": {
+      "title": "Chuyển đổi cảng biển thành cảng thông minh",
+      "subtitle": "Tối ưu hóa vận hành và nâng cao năng lực cạnh tranh với Smart Dashboard",
+      "contactButton": "Liên hệ ngay",
+      "homeButton": "Về trang chủ"
+    }
+  },
+  "applicationAreas": {
+    "title": "Lĩnh vực ứng dụng",
+    "finance": {
+      "title": "Tài chính - Ngân hàng - Bảo hiểm",
+      "description": "Giải pháp dashboard cho ngành tài chính, ngân hàng, bảo hiểm..."
+    },
+    "government": {
+      "title": "Chính phủ - Cơ quan ban ngành",
+      "description": "Giám sát, quản trị dữ liệu cho các cơ quan nhà nước, đô thị thông minh..."
+    },
+    "manufacturing": {
+      "title": "Công nghiệp - Sản xuất",
+      "description": "Tối ưu vận hành, quản lý sản xuất, chất lượng, bảo trì..."
+    },
+    "building": {
+      "title": "Tòa nhà",
+      "description": "Quản lý hạ tầng, dịch vụ, khách hàng ngành viễn thông..."
+    },
+    "seaport": {
+      "title": "Cảng biển",
+      "description": "Giải pháp quản lý, giám sát vận hành cảng biển, logistics, tàu thuyền..."
+    }
+  },
+  "contactInfo": {
+    "hero": {
+      "title": "Liên hệ với chúng tôi",
+      "description": "Giải pháp Smart Dashboard hàng đầu tại Việt Nam, sẵn sàng hỗ trợ bạn 24/7"
+    },
+    "companyInfo": {
+      "title": "Thông tin công ty",
+      "companyName": "CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS",
+      "office": "Văn phòng tại Hà Nội",
+      "officeAddress": "TT3-5 Khu đô thị Đại Kim mới, Định Công, Hà Nội"
+    },
+    "contactDetails": {
+      "title": "Thông tin liên hệ",
+      "phoneHotline": "Điện thoại & Hotline",
+      "phoneNumber": "0931.487.231",
+      "emailLabel": "Email",
+      "email": "info@icss.com.vn",
+      "websiteLabel": "Website",
+      "website": "www.icss.com.vn"
+    },
+    "mapSection": {
+      "title": "Vị trí trên bản đồ",
+      "description": "Tìm đường đến văn phòng của chúng tôi",
+      "mapTitle": "ICS Google Map"
+    }
+  },
+  "articlesList": {
+    "title": "Tin tức & Bài viết",
+    "description": "Cập nhật những thông tin mới nhất về công nghệ và dịch vụ từ ICS Smart Dashboard",
+    "searchPlaceholder": "Tìm kiếm bài viết...",
+    "loading": "Đang tải bài viết...",
+    "noResults": "Không tìm thấy bài viết nào",
+    "noArticles": "Chưa có bài viết nào được xuất bản",
+    "author": "Tác giả #{{id}}",
+    "status": {
+      "published": "Đã xuất bản",
+      "draft": "Bản nháp",
+      "archived": "Lưu trữ"
+    },
+    "pagination": {
+      "previous": "Trang trước",
+      "next": "Trang sau",
+      "pageInfo": "Trang {{current}} / {{total}}"
+    },
+    "errors": {
+      "errorTitle": "Lỗi",
+      "fetchError": "Không thể tải danh sách bài viết"
+    }
+  }
+
 }

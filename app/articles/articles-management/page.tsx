@@ -134,6 +134,13 @@ export default function ArticlesManagementPage() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">Quản lý bài viết</h1>
         <div className="flex items-center gap-4">
+          <Button
+            variant="outline"
+            onClick={() => router.push('/visitor-statistics')}
+            className="flex items-center gap-2"
+          >
+            Thống kê truy cập
+          </Button>
           <div className="flex flex-col gap-1">
             <Input
               id="password"

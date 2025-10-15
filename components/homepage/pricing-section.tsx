@@ -1,11 +1,9 @@
-
-
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Check, Star, Zap, Crown, Clock, DollarSign } from "lucide-react"
 import CustomRegistrationForm from "./customRegistrationForm"
+import { useTranslation } from 'react-i18next';
 
 interface BasePlan {
   name: string
@@ -169,6 +167,7 @@ const payAsYouGoPlans: PayAsYouGoPlan[] = [
 
 
 export function PricingSection() {
+  const { t } = useTranslation();
   const [formOpen, setFormOpen] = useState(false)
   const [pricingMode, setPricingMode] = useState<'saving' | 'payAsYouGo'>('saving')
   const [expandedCards, setExpandedCards] = useState<{[key: number]: boolean}>({})
@@ -189,10 +188,10 @@ export function PricingSection() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h2 className="mb-4 text-3xl font-bold tracking-tight lg:text-4xl text-balance">
-            Bảng giá dịch vụ
+            {t('pricing.title')}
           </h2>
           <p className="text-lg text-muted-foreground text-pretty mb-8">
-            Từ giải pháp cơ bản đến mô hình 3D tương tác, chúng tôi có gói dịch vụ phù hợp cho mọi quy mô tòa nhà
+            {t('pricing.subtitle')}
           </p>
 
           {/* Pricing Mode Toggle */}
@@ -211,13 +210,13 @@ export function PricingSection() {
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-3" />
                   <div className="text-left">
-                    <div className="font-bold">Mua trọn gói</div>
-                    <div className="text-xs opacity-80">Saving plan</div>
+                    <div className="font-bold">{t('pricing.savingPlan.title')}</div>
+                    <div className="text-xs opacity-80">{t('pricing.savingPlan.subtitle')}</div>
                   </div>
                 </div>
                 {pricingMode === 'saving' && (
                   <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                    Được chọn
+                    {t('pricing.savingPlan.selected')}
                   </div>
                 )}
               </button>
@@ -231,10 +230,10 @@ export function PricingSection() {
               >
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 shadow-xl animate-dropdown-fade-in">
                   <p className="text-blue-800 font-medium text-base mb-2">
-                    💡 Mua trọn gói (Saving Plan)
+                    {t('pricing.savingPlan.dropdownTitle')}
                   </p>
                   <p className="text-blue-600 text-sm">
-                    Được thiết kế phù hợp với nhu cầu bao trọn gói và vận hành độc lập - thanh toán một lần duy nhất và chuyển giao toàn bộ hệ thống
+                    {t('pricing.savingPlan.dropdownDescription')}
                   </p>
                 </div>
               </div>
@@ -253,13 +252,13 @@ export function PricingSection() {
                 <div className="flex items-center">
                   <DollarSign className="w-5 h-5 mr-3" />
                   <div className="text-left">
-                    <div className="font-bold">Thuê theo năm</div>
-                    <div className="text-xs opacity-80">Pay by year</div>
+                    <div className="font-bold">{t('pricing.payAsYouGo.title')}</div>
+                    <div className="text-xs opacity-80">{t('pricing.payAsYouGo.subtitle')}</div>
                   </div>
                 </div>
                 {pricingMode === 'payAsYouGo' && (
                   <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                    Được chọn
+                    {t('pricing.payAsYouGo.selected')}
                   </div>
                 )}
               </button>
@@ -273,10 +272,10 @@ export function PricingSection() {
               >
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4 shadow-xl animate-dropdown-fade-in">
                   <p className="text-green-800 font-medium text-base mb-2">
-                    ⚡ Thuê theo năm (Pay by year)
+                    {t('pricing.payAsYouGo.dropdownTitle')}
                   </p>
                   <p className="text-green-600 text-sm">
-                    Phù hợp nhu cầu linh hoạt và duy trì hỗ trợ kĩ thuật - thanh toán theo từng năm các gói 12, 24, 36 tháng
+                    {t('pricing.payAsYouGo.dropdownDescription')}
                   </p>
                 </div>
               </div>
@@ -298,7 +297,7 @@ export function PricingSection() {
             >
               {plan.popular && (
                 <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-2 text-sm font-medium">
-                  Tối ưu nhất
+                  {t('pricing.popular')}
                 </div>
               )}
 
@@ -306,12 +305,12 @@ export function PricingSection() {
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                   <plan.icon className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
-                <CardDescription className="text-sm text-muted-foreground mt-2">{plan.description}</CardDescription>
+                <CardTitle className="text-2xl font-bold">{t(`pricing.plans.${plan.name}.title`)}</CardTitle>
+                <CardDescription className="text-sm text-muted-foreground mt-2">{t(`pricing.plans.${plan.name}.description`)}</CardDescription>
                 {pricingMode === 'saving' && (
                   <div className="mt-6">
-                    <div className="text-3xl font-bold text-primary">{plan.price}</div>
-                    {plan.period && <div className="text-sm text-muted-foreground">{plan.period}</div>}
+                    <div className="text-3xl font-bold text-primary">{t(`pricing.plans.${plan.name}.price`)}</div>
+                    {plan.period && <div className="text-sm text-muted-foreground">{t(`pricing.plans.${plan.name}.period`)}</div>}
                   </div>
                 )}
               </CardHeader>
@@ -326,18 +325,18 @@ export function PricingSection() {
                     setFormOpen(true)
                   }}
                 >
-                  {plan.buttonText}
+                  {t(`pricing.plans.${plan.name}.buttonText`)}
                 </Button>
 
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-sm text-foreground">Tính năng bao gồm:</h4>
+                  <h4 className="font-semibold text-sm text-foreground">{t('pricing.featuresTitle')}</h4>
                   <ul className="space-y-2">
                     {plan.features
                       .slice(0, expandedCards[index] ? plan.features.length : 4)
                       .map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start space-x-3 text-sm">
                           <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span className="text-muted-foreground leading-relaxed">{feature}</span>
+                          <span className="text-muted-foreground leading-relaxed">{t(`pricing.plans.${plan.name}.features.${featureIndex}`)}</span>
                         </li>
                       ))}
                   </ul>
@@ -349,14 +348,14 @@ export function PricingSection() {
                     >
                       {expandedCards[index] ? (
                         <>
-                          <span>Thu gọn</span>
+                          <span>{t('pricing.collapse')}</span>
                           <svg className="w-4 h-4 ml-2 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                           </svg>
                         </>
                       ) : (
                         <>
-                          <span>Xem thêm {plan.features.length - 4} tính năng</span>
+                          <span>{t('pricing.expand', { count: plan.features.length - 4 })}</span>
                           <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                           </svg>
@@ -372,16 +371,16 @@ export function PricingSection() {
 
         <div className="mt-16 text-center">
           <p className="text-sm text-muted-foreground mb-4">
-            Cần tư vấn để chọn gói phù hợp? Liên hệ với chúng tôi để được hỗ trợ miễn phí
+            {t('pricing.contactSupport')}
           </p>
           <div className="pt-4">
             <span className="inline-block px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold text-lg tracking-wide">
-              Hotline hỗ trợ: <a href="tel:0707806860" className="underline hover:text-primary/80">0707 806 860</a>
+              {t('pricing.hotline')}: <a href="tel:0707806860" className="underline hover:text-primary/80">0707 806 860</a>
             </span>
           </div>
         </div>
         <CustomRegistrationForm open={formOpen} onOpenChange={setFormOpen} selectedPlan={selectedPlan} />
       </div>
     </section>
-  )
+  );
 }

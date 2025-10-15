@@ -1,42 +1,1177 @@
 {
   "homepage": {
     "hero": {
-      "title": "越南领先的Smartdashboard云解决方案",
-      "subtitle": "Smartdashboard在越南的官方合作伙伴",
-      "description": "我们通过Smartdashboard云基础设施(OCI)提供全面的云计算解决方案，帮助企业优化成本并提高性能。",
+      "title": "越南领先的智能仪表板解决方案",
+      "subtitle": "越南首选解决方案",
+      "description": "我们提供全面的智能仪表板解决方案，帮助企业和组织优化运营流程，同时提升工作效率。",
+      "features": {
+        "visualization": "数据可视化",
+        "visualizationDescription": "2D/3D 仪表板界面",
+        "optimization": "运营优化",
+        "optimizationDescription": "卓越速度",
+        "integration": "多平台集成",
+        "integrationDescription": "支持系统集成"
+      },
       "getStarted": "立即开始",
-      "dashboard": "查看仪表板",
-      "contact": "联系咨询"
+      "contact": "联系咨询",
+      "trustIndicators": {
+        "customers": "客户",
+        "realTime": "实时",
+        "support": "支持"
+      },
+      "videoFallback": "抱歉，您的浏览器不支持嵌入视频。"
     },
     "services": {
       "title": "服务",
-      "subtitle": "全面的云解决方案"
+      "subtitle": "全面的智能仪表板解决方案"
     },
     "pricing": {
-      "title": "价格",
+      "title": "价格表",
       "subtitle": "适合各种规模企业的服务套餐",
       "plans": {
-        "starter": "标准版",
-        "professional": "高级版",
-        "enterprise": "企业版",
-        "custom": "定制版"
+        "starter": "标准",
+        "professional": "高级",
+        "enterprise": "企业",
+        "custom": "定制"
       }
     }
   },
   "header": {
     "home": "首页",
     "services": "服务",
-    "pricing": "价格",
-    "support": "支持", 
-    "contact": "联系",
+    "pricing": "订阅套餐",
+    "support": "支持",
+    "contact": "联系我们",
     "login": "登录",
     "register": "注册",
     "hello": "您好",
-    "profile": "个人资料",
+    "profile": "个人信息",
     "settings": "设置",
-    "logout": "登出"
+    "logout": "退出登录",
+    "logoTitle": "ICS 智能仪表板",
+    "logoSubtitle": "智能仪表板",
+    "customers": "客户",
+    "news": "新闻",
+    "hotline": "热线：0707.806.860",
+    "language": "语言",
+    "altText": "智能仪表板标志",
+    "comments": {
+      "initAuth": "组件挂载时初始化认证",
+      "handleScroll": "处理 URL 中 hash 的滚动",
+      "removeHash": "移除 '#' 字符",
+      "delayLoad": "小延迟确保页面已加载",
+      "smoothScroll": "平滑滚动到部分",
+      "navigateSection": "滚动到部分，如果不在首页则先返回首页",
+      "notHomePage": "如果不在首页，带 hash 跳转到首页",
+      "alreadyHome": "如果已在首页，直接滚动",
+      "scrollToTop": "滚动到页面顶部",
+      "logo": "标志",
+      "desktopNav": "桌面导航",
+      "authSection": "认证部分",
+      "mobileMenuButton": "移动菜单按钮",
+      "mobileMenu": "移动菜单"
+    }
   },
   "common": {
-    "loading": "加载中..."
+    "loading": "加载中...",
+    "logoutSuccess": "退出登录成功！"
+  },
+  "checkout": {
+    "title": "支付",
+    "backButton": "返回",
+    "packageInfo": "服务套餐信息",
+    "packageName": "套餐名称",
+    "description": "描述",
+    "packageType": "套餐类型",
+    "features": "包含功能",
+    "totalAmount": "总金额",
+    "paymentQR": "二维码支付",
+    "scanQR": "使用银行应用扫描二维码进行支付",
+    "bankName": "银行",
+    "accountNumber": "账户号码",
+    "amount": "金额",
+    "content": "内容",
+    "copyInfo": "复制转账信息",
+    "copiedSuccess": "已复制转账信息",
+    "note": "注意：请按指定内容转账，系统将自动激活服务。",
+    "contactSupport": "联系支持"
+  },
+  "footer": {
+    "companyName": "ICS 智能仪表板",
+    "companySlogan": "智能仪表板解决方案",
+    "companyDescription": "越南领先的智能仪表板解决方案，为您的企业提供智能仪表板系统。",
+    "servicesTitle": "服务",
+    "services": {
+      "building": "建筑智能仪表板",
+      "iot": "IoT 设备管理",
+      "digital": "建筑数字化解决方案",
+      "monitor": "运营数据监控与分析",
+      "energy": "智能能源管理",
+      "security": "安全与访问控制"
+    },
+    "supportTitle": "支持",
+    "support": {
+      "docs": "技术文档",
+      "video": "视频教程",
+      "forum": "社区论坛",
+      "ticket": "支持工单",
+      "training": "培训与认证",
+      "api": "API 文档"
+    },
+    "contactTitle": "联系",
+    "companyFull": "国际网络安全股份公司 - ICS",
+    "office": "办公室：TT3-5 大金新城市，定工，河内",
+    "phone": "电话：0931.487.231 - 热线：0707.806.860",
+    "email": "邮箱：info@icss.com.vn - www.icss.com.vn",
+    "newsletterTitle": "订阅新闻",
+    "newsletterPlaceholder": "您的邮箱",
+    "newsletterButton": "订阅",
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "sla": "SLA",
+    "sitemap": "网站地图",
+    "copyright": "© 2025 国际网络安全股份公司 - ICS。保留所有权利。"
+  },
+  "services": {
+    "dataIntegration": {
+      "title": "数据集成",
+      "description": "连接并收集企业不同系统的数据",
+      "features": [
+        "实时连接多个数据源",
+        "支持传统数据（SQL、Excel）和 IOT/SCADA 数据",
+        "数据清洗、标准化和同步",
+        "开放 API，便于扩展集成"
+      ]
+    },
+    "visualReporting": {
+      "title": "可视化与报告",
+      "description": "提供直观仪表板和动态图表、报告，帮助用户快速掌握运营状况",
+      "features": [
+        "KPI 图表、热力图、仪表盘、多维度分析表",
+        "按需求定制仪表板",
+        "自动报告导出",
+        "按部门详细数据"
+      ]
+    },
+    "monitoringAlerts": {
+      "title": "监控与告警",
+      "description": "实时监控数据，在检测到异常或超限时立即发出警告",
+      "features": [
+        "进度监控",
+        "通过 Email、SMS 等系统的告警",
+        "灵活阈值设置",
+        "事件日志用于问题追踪"
+      ]
+    },
+    "collaborationRemote": {
+      "title": "协作与远程访问",
+      "description": "允许各部门的在同一平台协作，并随时随地访问数据",
+      "features": [
+        "远程访问",
+        "按角色、部门分享仪表板",
+        "实时数据",
+        "FastConnect"
+      ]
+    },
+    "securityGovernance": {
+      "title": "安全与治理",
+      "description": "确保数据管理全过程的安全、权限控制和合规性",
+      "features": [
+        "按角色权限控制",
+        "数据和通信安全加密",
+        "访问管理、活动审计",
+        "符合安全标准"
+      ]
+    },
+    "analyticsAI": {
+      "title": "分析与 AI",
+      "description": "应用智能数据分析和 AI 预测趋势，提供战略决策建议",
+      "features": [
+        "业务、生产趋势分析",
+        "机器学习异常检测",
+        "需求预测（人员、原材料、能源）",
+        "基于数据的行动建议"
+      ]
+    },
+    "additionalBenefits": {
+      "deploymentTime": "平均部署时间",
+      "dataSources": "支持集成的数据库源",
+      "security": "加密与安全合规",
+      "costSaving": "运营成本节省",
+      "mainFeatures": "主要功能",
+      "deploymentTimeUnit": "天 +"
+    }
+  },
+  "pricing": {
+    "title": "服务价格表",
+    "subtitle": "从基础解决方案到 3D 交互模型，我们为各种规模的建筑提供合适的套餐",
+    "savingPlan": {
+      "title": "整套购买",
+      "subtitle": "优惠套餐",
+      "selected": "已选择",
+      "dropdownTitle": "💡 整套购买（优惠套餐）",
+      "dropdownDescription": "专为全套需求和独立运营设计 - 一次性付款并完整交付系统"
+    },
+    "payAsYouGo": {
+      "title": "按年租用",
+      "subtitle": "按年付费",
+      "selected": "已选择",
+      "dropdownTitle": "⚡ 按年租用（按年付费）",
+      "dropdownDescription": "适合灵活需求和持续技术支持 - 按 12、24、36 个月套餐付费"
+    },
+    "popular": "最优选择",
+    "featuresTitle": "包含功能：",
+    "collapse": "收起",
+    "expand": "查看更多 {{count}} 个功能",
+    "contactSupport": "需要咨询选择合适套餐？联系我们获得免费支持",
+    "hotline": "支持热线",
+    "plans": {
+      "Business": {
+        "title": "商业版",
+        "description": "中小企业的基础解决方案",
+        "price": "联系我们",
+        "period": "",
+        "buttonText": "立即开始",
+        "features": {
+          "0": "基础仪表板显示关键指标",
+          "1": "24/7 实时监控",
+          "2": "每周自动报告",
+          "3": "工作时间邮件支持",
+          "4": "最多集成 5 个系统",
+          "5": "数据存储 6 个月",
+          "6": "网页和移动端访问",
+          "7": "邮件和 SMS 告警"
+        }
+      },
+      "Dashboard 2D": {
+        "title": "2D 仪表板",
+        "description": "专业 2D 界面数据可视化",
+        "price": "联系我们",
+        "period": "",
+        "buttonText": "选择热门套餐",
+        "features": {
+          "0": "商业版所有功能",
+          "1": "带建筑图的交互式 2D 仪表板",
+          "2": "高级数据可视化",
+          "3": "按区域详细报告",
+          "4": "24/7 电话支持",
+          "5": "无限系统集成",
+          "6": "数据存储 2 年",
+          "7": "定制 API 集成",
+          "8": "免费使用培训",
+          "9": "AI 智能告警"
+        }
+      },
+      "Dashboard 3D": {
+        "title": "3D 仪表板",
+        "description": "生动 3D 模型的优化体验",
+        "price": "联系我们",
+        "period": "",
+        "buttonText": "联系咨询",
+        "features": {
+          "0": "2D 仪表板所有功能",
+          "1": "交互式 3D 建筑模型",
+          "2": "虚拟现实（VR）和增强现实（AR）",
+          "3": "紧急情况模拟",
+          "4": "AI/ML 预测分析",
+          "5": "无限 IoT 集成",
+          "6": "永久数据存储",
+          "7": "专属支持经理",
+          "8": "按需求定制界面",
+          "9": "团队深度培训",
+          "10": "99.9% 正常运行时间保证"
+        }
+      }
+    }
+  },
+  "industries": {
+    "title": "应用领域",
+    "subtitle": "智能仪表板为各行业提供卓越效果",
+    "government": {
+      "title": "政府 - 政府部门",
+      "description": "全面跟踪宏观经济指标如 GDP 增长速度、通货膨胀、失业率、国际收支平衡，以及预算收支数据、KPI、项目进度和瓶颈。",
+      "benefits": {
+        "0": "实时 KPI 监控",
+        "1": "项目进度跟踪",
+        "2": "预算详细分析"
+      }
+    },
+    "finance": {
+      "title": "金融 - 银行 - 保险",
+      "description": "帮助管理者全面掌握运营全貌：现金流、各分行 KPI、ATM、坏账、收债效率和新账户数量，24/7 直观显示和即时更新。",
+      "benefits": {
+        "0": "增长 20-30%",
+        "1": "24/7 现金流监控",
+        "2": "优化商业决策"
+      }
+    },
+    "manufacturing": {
+      "title": "工业 - 制造",
+      "description": "通过实时能源和 KPI 监控提升生产效率，通过运营优化减少 20-30% 成本，提高安全并迈向绿色工业、净零排放。",
+      "benefits": {
+        "0": "减少 20-30% 成本",
+        "1": "实时能源监控",
+        "2": "迈向净零排放"
+      }
+    },
+    "building": {
+      "title": "智能建筑",
+      "description": "全面管理建筑系统从 HVAC、电力、水务、安全到各种设施。通过 24/7 实时监控优化能源、降低运营成本并提升用户体验。",
+      "benefits": {
+        "0": "节能 30-40%",
+        "1": "运营成本降低 25%",
+        "2": "提升安全和保密"
+      }
+    },
+    "seaport": {
+      "title": "智能港口",
+      "description": "将港口转变为数字指挥中心，配备 3D 数字孪生、实时 KPI 监控、运营流程自动化，装卸生产力提升 30%。优化物流并降低运输成本。",
+      "benefits": {
+        "0": "生产力提升 30%",
+        "1": "实时 KPI 监控",
+        "2": "安全提升 40%"
+      }
+    }
+  },
+  "applications": {
+    "title": "广泛应用",
+    "factory": {
+      "name": "工厂",
+      "stats": "150+ 工厂已应用",
+      "description": "全面监控从原材料到成品的生产流程。实时跟踪机器性能、能源消耗和产品质量。"
+    },
+    "port": {
+      "name": "港口",
+      "stats": "25+ 港口信赖",
+      "description": "管理货物装卸作业，跟踪船只进出，优化物流并减少等待时间。"
+    },
+    "bank": {
+      "name": "银行",
+      "stats": "80+ 银行分行",
+      "description": "监控交易，分析现金流，管理信贷风险并优化全系统客户服务。"
+    },
+    "government": {
+      "name": "公共行政",
+      "stats": "200+ 政府机构",
+      "description": "数字化行政流程，跟踪文件处理进度，提高透明度并改善公共服务。"
+    },
+    "building": {
+      "name": "建筑",
+      "stats": "500+ 智能建筑",
+      "description": "管理 HVAC、电力、水务、安全和建筑设施以优化能源并提升体验。"
+    },
+    "logistics": {
+      "name": "仓储物流",
+      "stats": "300+ 仓库连接",
+      "description": "跟踪库存，优化运输路线，管理保质温度并自动化物流流程。"
+    },
+    "pinned": "已固定"
+  },
+  "customRegistrationForm": {
+    "title": "注册定制套餐",
+    "description": "我们将立即联系您提供解决方案。",
+    "selectedPlan": "已选套餐",
+    "priceLabel": "价格",
+    "fields": {
+      "userName": {
+        "label": "用户名 *",
+        "placeholder": "输入您的姓名"
+      },
+      "email": {
+        "label": "邮箱 *",
+        "placeholder": "example@company.com"
+      },
+      "phoneNumber": {
+        "label": "电话号码 *",
+        "placeholder": "0987654321"
+      },
+      "company": {
+        "label": "公司名称",
+        "placeholder": "ABC 公司"
+      },
+      "additionalNotes": {
+        "label": "附加说明",
+        "placeholder": "描述特殊需求、实施时间、预期预算..."
+      }
+    },
+    "hotlineText": "或直接联系热线：",
+    "cancelButton": "取消",
+    "submitButton": "注册",
+    "toast": {
+      "success": {
+        "title": "注册成功！",
+        "description": "我们将尽快联系您。注册邮件附赠电子书将发送至您的邮箱。"
+      },
+      "error": {
+        "title": "发生错误",
+        "description": "请稍后重试或联系支持。"
+      }
+    },
+    "validation": {
+      "userName": {
+        "min": "用户名至少需要 2 个字符"
+      },
+      "email": {
+        "invalid": "邮箱格式无效"
+      },
+      "phoneNumber": {
+        "min": "电话号码至少需要 10 位数字",
+        "max": "电话号码不能超过 20 位数字"
+      }
+    }
+  },
+  "image": {
+    "modal": {
+      "closeButton": "关闭",
+      "instructions": "按住 Ctrl 并滚动鼠标滚轮缩放。按住鼠标左键拖动移动图片。"
+    }
+  },
+  "building": {
+    "slideshow": {
+      "slide1Alt": "智能仪表板应用 - 第一部分",
+      "slide2Alt": "智能仪表板应用 - 第二部分"
+    },
+    "hero": {
+      "title": "智能仪表板 - 智能建筑",
+      "description": "全面管理建筑系统从 HVAC、电力、水务、安全到各种设施。通过 24/7 实时监控优化能源、降低运营成本并提升用户体验。"
+    },
+    "introduction": {
+      "overview": "在城市化和数字化的背景下，现代建筑特别是<span class=\"font-semibold text-blue-700\">数据中心</span>等关键基础设施，已发展成<span class=\"font-semibold text-blue-700\">复杂的技术生态系统</span>。它们不再是静态结构，而是由多种系统组合运行的<span class=\"font-semibold text-blue-700\">活的组织</span>。",
+      "imageAlt": "建筑与数据中心管理介绍",
+      "systems": "这些系统包括<span class=\"font-semibold text-blue-700\">建筑管理系统（BMS）</span>、电力（Electrical）、<span class=\"font-semibold text-blue-700\">通风和空调（HVAC）</span>，以及安全系统如<span class=\"font-semibold text-blue-700\">监控摄像头（CCTV）</span>和门禁控制。"
+    },
+    "challenges": {
+      "title": "建筑与数据中心管理的现实挑战",
+      "description": "使用传统方法管理这些基础设施正面临严重挑战，源于系统复杂性和缺乏连接。",
+      "imageAlt": "建筑与数据中心管理的现实挑战",
+      "dataFragmentation": {
+        "title": "数据碎片化，缺乏统一视野",
+        "description": "这是固有问题。来自能源管理系统（EMS）、建筑管理系统（BMS）和安全系统的數據通常在独立的\"信息孤岛\"（Data Silos）中运行。",
+        "example": "管理者无法获得全景视图，无法看到服务器机房温度升高（BMS 数据）与电力消耗激增（EMS 数据）之间的关联。"
+      },
+      "reactiveManagement": {
+        "title": "\"反应式\"运营管理",
+        "description": "由于缺乏集中数据和分析能力，运营团队通常只有在问题发生后才采取行动。他们进行\"救火式\"管理，而不是主动行动。"
+      },
+      "energyWaste": {
+        "title": "能源浪费和高成本",
+        "description": "无法全面监控和分析使得识别能源浪费区域变得困难。HVAC 系统可能在非最佳功率下运行。"
+      },
+      "slowResponse": {
+        "title": "事件响应时间缓慢",
+        "description": "当发生故障（断电、水漏或非法入侵）时，由于需要从多个离散系统检查信息，确定根本原因和准确位置会延迟。这增加了风险和损失。"
+      }
+    },
+    "strategicBenefits": {
+      "title": "战略和量化收益",
+      "description": "为建筑和数据中心部署智能仪表板带来具体收益，完全改变管理与运营方式。",
+      "imageAlt": "战略和量化收益"
+    },
+    "features": {
+      "energySaving": {
+        "title": "节能 30-40%",
+        "description": "通过 AI 和智能 IoT 优化 HVAC、照明和空调系统。"
+      },
+      "security": {
+        "title": "提升安全和保密",
+        "description": "24/7 安全监控，自动门禁控制和早期风险检测。"
+      },
+      "automation": {
+        "title": "自动化管理",
+        "description": "智能控制建筑系统，减少人工干预并优化运营。"
+      }
+    },
+    "metrics": {
+      "title": "已验证效果",
+      "energySaving": "节能",
+      "costReduction": "运营成本降低",
+      "efficiency": "工作效率提升",
+      "safety": "安全改善"
+    },
+    "featuresSection": {
+      "title": "突出功能",
+      "subtitle": "智能建筑的全面解决方案"
+    },
+    "systemsManagement": {
+      "title": "管理系統"
+    },
+    "benefitsSection": {
+      "title": "带来的收益"
+    },
+    "benefits": {
+      "monitoring": "24/7/365 建筑系统监控",
+      "automation": "85% 管理流程自动化",
+      "satisfaction": "用户满意度提升 45%",
+      "maintenance": "维护和维修时间减少 60%"
+    },
+    "services": {
+      "hvac": "HVAC 系统",
+      "lighting": "智能照明",
+      "security": "安全 - 摄像头",
+      "accessControl": "门禁控制",
+      "energyManagement": "能源管理",
+      "fireSystem": "消防报警系统"
+    },
+    "cta": {
+      "title": "将您的建筑转变为智能建筑",
+      "subtitle": "优化能源，提升安全，改善用户体验",
+      "contactButton": "立即联系",
+      "homeButton": "返回首页"
+    },
+    "applications": {
+      "title": "智能仪表板在实际中的详细应用",
+      "subtitle": "智能仪表板在建筑和数据中心管理领域作为\"虚拟指挥中心\"（Virtual Command Center），集中所有关于运营、环境和性能的信息。",
+      "realityLabel": "现实",
+      "applicationLabel": "应用",
+      "digitalTwin": {
+        "title": "创建带有数字孪生（Digital Twin）的\"虚拟指挥中心\"",
+        "reality": "管理者不再需要查看技术图纸或多个单独屏幕，而是与整个建筑或数据中心的详细 3D 模型交互。",
+        "application": "这个 3D 模型是与实时传感器和系统数据链接的\"数字副本\"。用户可以\"深入\"模型，点击服务器机房、机柜或特定冷却设备查看运营参数。"
+      },
+      "environmentalMonitoring": {
+        "title": "智能环境和能源监控",
+        "reality": "关键环境和能源指标被持续跟踪并以易懂方式可视化。",
+        "application": "仪表板集成 IoT 传感器数据监控温度、空气质量。使用热力图等工具显示数据中心异常高温区域并监控能源消耗指标。"
+      },
+      "securityManagement": {
+        "title": "集成安全与防护管理",
+        "reality": "安全事件通过结合多个信息源得到更快验证和处理。",
+        "application": "系统在 3D 模型上集成实时 CCTV 图像。当有警报（例如：服务器房门非法打开），仪表板自动显示最近摄像头的图像。"
+      },
+      "maintenanceSupport": {
+        "title": "主动运营和维护支持",
+        "reality": "最小化突然停机风险，这对数据中心至关重要。",
+        "application": "仪表板集成 AI 对关键设备如冷却系统或 UPS 进行预测性维护。AI 可提前警告故障风险，允许在问题发生前计划维护。"
+      }
+    }
+  },
+  "finance": {
+    "slideshow": {
+      "image1Alt": "智能仪表板应用 - 第一部分",
+      "image2Alt": "智能仪表板应用 - 第二部分"
+    },
+    "features": {
+      "growth": {
+        "title": "增长 20-30%",
+        "description": "通过准确及时的数据分析优化收入和利润。"
+      },
+      "monitoring": {
+        "title": "24/7 现金流监控",
+        "description": "实时跟踪所有分行、ATM 和交易渠道的现金流。"
+      },
+      "decisions": {
+        "title": "优化商业决策",
+        "description": "基于智能分析和准确预测快速决策。"
+      }
+    },
+    "metrics": {
+      "title": "令人印象深刻的数据",
+      "realTimeDebt": "实时坏账",
+      "recoveryEfficiency": "收债效率",
+      "newAccountsDaily": "每日新账户",
+      "transactionsProcessed": "已处理交易"
+    },
+    "benefits": {
+      "creditRisk": "信贷风险管理效率提升 25%",
+      "reportProcessing": "报告处理时间减少 40%",
+      "cashFlowAccuracy": "现金流预测准确度提升 30%",
+      "customerExperience": "客户体验改善 50%"
+    },
+    "hero": {
+      "title": "智能仪表板 - 金融/银行/保险行业",
+      "description": "帮助管理者全面掌握运营全貌：现金流、各分行 KPI、ATM、坏账、收债效率和新账户数量，24/7 直观显示和即时更新。"
+    },
+    "challenges": {
+      "title": "金融银行业实际挑战",
+      "description": "金融银行业在高度复杂、风险和合规要求的环境中运营。核心挑战包括：",
+      "imageAlt": "金融银行业实际挑战",
+      "challenge1": {
+        "title": "决策延迟",
+        "content": "传统管理方法通常基于月度或季度的手工报告进行决策。这造成巨大延迟，使领导层必须\"反应\"过时数据。"
+      },
+      "challenge2": {
+        "title": "数据碎片化",
+        "content": "数据通常分散在独立系统中（Data Silos）如核心银行系统、CRM、交易数据。缺乏统一平台使得获得 360 度全景视图变得困难。"
+      },
+      "challenge3": {
+        "title": "合规和安全压力",
+        "content": "必须遵守严格的数据安全和金融法规如 GDPR、HIPAA、ISO 27001。同时面临网络攻击和数据泄露风险。"
+      },
+      "challenge4": {
+        "title": "复杂风险管理",
+        "content": "面对多种风险如信贷风险、市场风险、金融欺诈。在每天数百万交易中早期检测异常迹象是巨大挑战。"
+      }
+    },
+    "applications": {
+      "title": "智能仪表板在实际中的详细应用",
+      "description": "为解决上述挑战，智能仪表板作为\"指挥中心\"或\"数字大脑\"，将数据转化为主动管理工具。",
+      "realityLabel": "现实",
+      "applicationLabel": "应用",
+      "application1": {
+        "title": "为管理层构建\"虚拟指挥中心\"",
+        "reality": "CEO 和管理层不再等待纸质报告，可访问实时显示核心金融 KPI 的管理仪表板。",
+        "application": "仪表板可视化关键指标如坏账率、资产回报率（ROA）和客户满意度指数（NPS），允许与目标和去年同期比较。"
+      },
+      "application2": {
+        "title": "集成 AI 主动风险管理",
+        "reality": "金融集团使用集成 AI 的仪表板不仅监控还预测风险。",
+        "application": "AI 系统分析市场趋势预测利率波动，早期检测欺诈并预测客户信贷风险。"
+      },
+      "application3": {
+        "title": "智能网络安全中心（SOC）",
+        "reality": "网络安全团队每天面对数百万警报，导致\"警报疲劳\"。",
+        "application": "智能仪表板聚合 SIEM 和 SOAR 数据，使用 AI 自动分类并仅突出真正严重威胁。"
+      },
+      "application4": {
+        "title": "优化运营和合规",
+        "reality": "审计和合规报告流程通常非常费力。",
+        "application": "仪表板自动化合规报告生成，持续监控并提供审计日志，使组织\"随时准备审计\"。"
+      }
+    },
+    "strategicBenefits": {
+      "title": "战略和量化收益",
+      "description": "有效应用智能仪表板带来巨大可衡量价值：",
+      "imageAlt": "战略和量化收益",
+      "benefit1": {
+        "title": "加速和提升决策质量",
+        "intro": "这是最直接的收益。使用仪表板的银行已记录：",
+        "point1": "减少数据处理时间",
+        "point2": "改善金融决策速度"
+      },
+      "benefit2": {
+        "title": "节省成本和提升性能",
+        "content": "自动化数据收集、汇总和报告流程释放人力脱离手工工作，不仅节省人力成本，还让他们专注于更高价值的战略分析任务。"
+      },
+      "benefit3": {
+        "title": "增强安全和恢复能力",
+        "content": "提供威胁的全面实时视图，帮助金融机构减少事件检测和响应时间，更好保护资产和客户数据。"
+      },
+      "benefit4": {
+        "title": "风险透明化和量化",
+        "content": "高级智能仪表板能\"将网络风险转化为美元和美分\"。它帮助 CISO 证明安全投资回报（ROSI），为预算辩护并用商业语言向董事会传达安全价值。"
+      }
+    },
+    "featuresSection": {
+      "title": "突出功能",
+      "subtitle": "金融银行业的全面解决方案"
+    },
+    "benefitsSection": {
+      "title": "带来的收益"
+    },
+    "cta": {
+      "title": "立即优化金融效率",
+      "description": "联系我们获得合适的智能仪表板解决方案咨询",
+      "contactButton": "立即联系",
+      "homeButton": "返回首页"
+    }
+  },
+  "government": {
+    "slideshow": {
+      "image1Alt": "智能仪表板应用 - 第一部分",
+      "image2Alt": "智能仪表板应用 - 第二部分"
+    },
+    "modal": {
+      "instructions": "按住 Ctrl 并滚动鼠标滚轮缩放。按住鼠标左键拖动移动图片。"
+    },
+    "features": {
+      "monitoring": {
+        "title": "实时 KPI 监控",
+        "description": "直观即时跟踪各部门、项目的关键绩效指标。"
+      },
+      "projectTracking": {
+        "title": "项目进度跟踪",
+        "description": "管理和监控公共投资项目、发展计划的执行进度。"
+      },
+      "budgetAnalysis": {
+        "title": "详细预算分析",
+        "description": "按项目、部门高精度分析预算收支。"
+      }
+    },
+    "benefits": {
+      "efficiency": "政府管理效率提升 40%",
+      "reportingTime": "定期报告时间减少 30%",
+      "transparency": "信息透明度提升 50%",
+      "decisionProcess": "决策流程改善 60%"
+    },
+    "hero": {
+      "title": "智能仪表板 - 政府/政府部门",
+      "description": "全面跟踪宏观经济指标如 GDP 增长速度、通货膨胀、失业率、国际收支平衡，以及预算收支数据、KPI、项目进度和瓶颈。"
+    },
+    "challenges": {
+      "title": "公共行政行业的现实挑战",
+      "description": "传统运营方式暴露诸多限制，阻碍政府机构的有效管理和指挥。",
+      "imageAlt": "公共行政行业的现实挑战",
+      "challenge1": {
+        "title": "\"反应式\"管理和信息延迟",
+        "content": "决策通常基于月度、季度、年度报告。这种方式使管理具有\"反应性\"，难以应对突发问题或快速变化如自然灾害、疫情或安全问题。"
+      },
+      "challenge2": {
+        "title": "离散数据和缺乏同步",
+        "content": "政府机构通常处理来自多个来源的大量离散数据。手工汇总不仅耗时还容易出错，导致缺乏宏观决策的全景视图。最大挑战是整合各部门的旧信息系统数据。"
+      },
+      "challenge3": {
+        "title": "缺乏透明度和问责",
+        "content": "传统报告流程通常缺乏公开性和可访问性，可能降低公众对政府的信任。"
+      },
+      "challenge4": {
+        "title": "安全和隐私风险",
+        "content": "集中公民和企业敏感数据创建吸引网络攻击的\"弱点\"。在透明和安全之间取得平衡是重大挑战。"
+      },
+      "challenge5": {
+        "title": "变革管理挑战",
+        "content": "从手工纸质报告习惯转变为数据驱动工作环境是文化挑战，需要干部、公务员的系统培训。"
+      }
+    },
+    "applications": {
+      "title": "智能仪表板在实际中的详细应用",
+      "description": "在越南和全球，智能仪表板作为\"数字大脑\"解决上述挑战，突出模型是<span className=\"font-semibold text-blue-700\">智能运营中心（IOC）</span>。",
+      "realityLabel": "现实",
+      "applicationLabel": "应用",
+      "application1": {
+        "title": "构建全面智能运营中心（IOC）",
+        "reality": "各部门不再独立运作，省市领导拥有集中信息指挥中心。",
+        "application": "IOC 如同\"数字大脑\"，整合各部门数据至统一中心，创建经济-社会、安全秩序到公共服务的全景视图。",
+        "evidenceTitle": "越南实例",
+        "dalat": {
+          "title": "大叻",
+          "description": "首个启用 IOC 的城市，整合近 300 个高清摄像头监控安全和交通，领导可从整体到细节管理。"
+        },
+        "binhduong": {
+          "title": "平阳",
+          "description": "全面模型收集整合 27 个领域 1000+ 指标，专注预算收支、公共投资拨款和 1022 热线。已在开放数据门户发布 13 套数据。"
+        }
+      },
+      "application2": {
+        "title": "多维度监控和即时决策支持",
+        "reality": "领导可立即掌握情况并及时下达指令，无需等待报告。",
+        "application": "仪表板允许跟踪系统各方面，从公共财政、拨款进度到行政服务中心文件处理数量。"
+      },
+      "application3": {
+        "title": "改善公共服务质量",
+        "reality": "服务民众流程问题更快发现和解决。",
+        "application": "仪表板跟踪分析民众满意度、等待时间和按时解决文件比率数据，帮助公共机构识别瓶颈并改善流程。"
+      },
+      "application4": {
+        "title": "增强与民众互动和透明度",
+        "reality": "民众可轻松监控政府运作并提交反馈。",
+        "application": "仪表板是政府公开数据（Open Government Data）的强大工具。允许民众提交基础设施、安全问题反馈，推动透明高效的行政工作。"
+      }
+    },
+    "strategicBenefits": {
+      "title": "战略和量化收益",
+      "description": "在公共行政中部署智能仪表板带来巨大可衡量影响，有助于构建现代行政体系。",
+      "imageAlt": "战略和量化收益",
+      "benefit1": {
+        "title": "转向主动治理模式",
+        "benefitsLabel": "收益",
+        "content": "这是最大战略收益。仪表板帮助政府从\"反应式\"转向\"主动式\"管理。集成 AI 和机器学习时，系统可分析历史数据预测未来场景，支持基于证据的政策规划。"
+      },
+      "benefit2": {
+        "title": "提升效率和节省成本",
+        "evidenceLabel": "实例",
+        "evidence": "在线纳税等数字化项目可将平均时间减少高达 25%。",
+        "benefitsLabel": "收益",
+        "benefits": "自动化报告生成流程减少手工工作，大幅节省时间和人力，提高生产力和减少错误。"
+      },
+      "benefit3": {
+        "title": "增强透明度和公众信任",
+        "benefitsLabel": "收益",
+        "content": "公开数据增强公众监督，提高民众信任和满意度。创建客观对话环境，推动更高效的行政工作。"
+      },
+      "benefit4": {
+        "title": "优化公共资源",
+        "benefitsLabel": "收益",
+        "content": "通过提供预算和性能概览，仪表板帮助政府更有效地监控和协调资源，特别是在公共投资拨款方面。"
+      }
+    },
+    "whyChooseUs": {
+      "title": "为什么选择我们？",
+      "featuresTitle": "主要功能",
+      "featuresSubtitle": "高效政府治理的全面解决方案",
+      "benefitsTitle": "带来的收益",
+      "benefitsSubtitle": "高效政府治理的全面解决方案"
+    },
+    "cta": {
+      "title": "准备现代化政府治理？",
+      "description": "联系我们获得合适解决方案咨询",
+      "contactButton": "立即联系",
+      "homeButton": "返回首页"
+    }
+  },
+  "manufacturing": {
+    "slideshow": {
+      "alt1": "智能仪表板应用 - 第一部分",
+      "alt2": "智能仪表板应用 - 第二部分"
+    },
+    "features": {
+      "costReduction": {
+        "title": "成本降低 20-30%",
+        "description": "高效优化生产流程和资源管理，减少浪费。"
+      },
+      "energyMonitoring": {
+        "title": "实时能源监控",
+        "description": "跟踪和调整每台机器、生产线的能源消耗。"
+      },
+      "netZero": {
+        "title": "迈向净零排放",
+        "description": "通过环境监控和能源优化实现零碳排放目标。"
+      }
+    },
+    "metrics": {
+      "costReduction": "运营成本降低",
+      "productivityIncrease": "生产效率提升",
+      "co2Reduction": "CO2 排放减少",
+      "energyOptimization": "能源优化"
+    },
+    "benefits": {
+      "productivity": "整体生产效率提升 25%",
+      "maintenance": "简单维护时间减少 30%",
+      "safety": "劳动安全改善 40%",
+      "inventory": "物料库存管理优化 50%"
+    },
+    "applications": {
+      "automotive": "汽车生产流水线",
+      "food": "食品加工厂",
+      "textile": "纺织工业园区",
+      "chemical": "化工厂",
+      "electronics": "电子产品制造基地",
+      "mechanical": "机械制造车间"
+    },
+    "hero": {
+      "title": "智能仪表板 - 工业/制造行业",
+      "description": "通过实时能源和 KPI 监控提升生产效率，通过运营优化减少 20-30% 成本，提高安全并迈向绿色工业、净零排放。"
+    },
+    "introduction": {
+      "paragraph1": "在第四次工业革命（工业 4.0）的背景下，制造业和工业园区处于深刻全面转型的核心。工厂不再仅仅是装配场所，已成为 IoT 设备、智能传感器和自动化系统带来的\"海量数据矿\"。",
+      "imageAlt": "工业园区、工厂介绍",
+      "paragraph2": "数据如今被视为\"新石油\"，成为智能工厂（Smart Factory）的战略资产和生命线。",
+      "paragraph3": "智能工业园区（Smart Industrial Park）是更进一步，在整个园区规模应用智能工厂原则，集成管理基础设施、生产、能源、环境、安全和物流。"
+    },
+    "challenges": {
+      "title": "工业园区与工厂的现实挑战",
+      "description": "拥有大量数据但无法有效利用会将潜力变成负担。工厂和工业园区面临系统性障碍。",
+      "imageAlt": "工业园区与工厂的现实挑战",
+      "challenge1": {
+        "title": "数据碎片化和\"信息孤岛\"（Data Silos）",
+        "description": "这是首要挑战。来自 OT 系统（SCADA、PLC）和 IT 系统（ERP、MES）的数据通常由不同部门管理且互不通信。",
+        "exampleTitle": "典型示例：",
+        "exampleContent": "维护团队在 CMMS 系统查看机器振动数据，生产团队在 MES 跟踪产量，设施管理团队在 BMS 监控同一机器的能源消耗。结果无人获得全景视图，导致决策延迟和效率低下。"
+      },
+      "challenge2": {
+        "title": "集成困难和缺乏标准化",
+        "description": "将 20 年老式 CNC 机床与现代 IoT 传感器连接需要复杂昂贵的协议转换解决方案，因供应商和技术多样性。"
+      },
+      "challenge3": {
+        "title": "数据质量差",
+        "description": "决策质量取决于输入数据质量。问题包括：网络连接错误导致数据缺失、传感器偏差导致不准确，或手工输入导致不一致。"
+      },
+      "challenge4": {
+        "title": "安全和保密",
+        "description": "当 OT 系统连接到 IT 网络和互联网时，面临网络安全风险。攻击不仅泄露数据，还可能破坏机器造成生产中断。"
+      },
+      "challenge5": {
+        "title": "技能缺口",
+        "description": "将数据转化为洞察需要跨学科技能团队：既深谙机器又精通数据科学。这种人才短缺是重大障碍。"
+      }
+    },
+    "smartDashboard": {
+      "title": "智能仪表板在实际中的详细应用",
+      "description": "智能仪表板作为工厂和工业园区的\"指挥中心\"或\"数字大脑\"，彻底解决上述挑战。",
+      "application1": {
+        "title": "使用数字孪生（Digital Twin）构建\"虚拟指挥中心\"",
+        "practiceTitle": "现实：",
+        "practiceContent": "管理者不再通过单独 SCADA 屏幕或电子表格管理，而是与整个工厂或工业园区的生动 3D 模型交互。",
+        "applicationTitle": "应用：",
+        "applicationContent": "这个 3D 模型是活的\"数字副本\"，每台机器与实时数据流链接。当传感器报警时，3D 模型对应机器会变色、闪烁或显示警告。"
+      },
+      "application2": {
+        "title": "通过关键 KPI 全面性能监控",
+        "practiceTitle": "现实：",
+        "practiceContent": "最重要的性能指标持续跟踪，帮助领导立即掌握生产运营\"健康状况\"。",
+        "applicationTitle": "应用：",
+        "oee": "(整体设备效率)",
+        "mtbf": "(平均故障间隔时间)",
+        "mttr": "(平均修复时间)",
+        "other": "废品率和能源消耗"
+      },
+      "application3": {
+        "title": "集成 AI/ML 预测性维护",
+        "practiceTitle": "现实：",
+        "practiceContent": "从\"故障才修\"的救火式维护转变为主动维护。",
+        "applicationTitle": "应用：",
+        "applicationContent": "系统集成机器学习算法分析振动、温度、压力历史数据。仪表板可预测故障可能性，允许在问题发生前计划维护。"
+      },
+      "application4": {
+        "title": "智能告警系统，减少\"警报噪音\"",
+        "practiceTitle": "现实：",
+        "practiceContent": "运营人员不再被数百无关紧要警报淹没，避免\"警报疲劳\"。",
+        "applicationTitle": "应用：",
+        "applicationContent": "系统使用复杂逻辑关联多个事件。例如：警报仅在同时出现（1）温度升高、（2）振动增加 AND（3）产量下降时触发 - 表明严重问题而非临时波动。"
+      }
+    },
+    "strategicBenefits": {
+      "title": "战略和量化收益",
+      "description": "部署智能仪表板不仅是技术升级，而是带来卓越商业成果的战略决策。",
+      "imageAlt": "战略和量化收益",
+      "benefit1": {
+        "title": "优化运营和提升性能",
+        "evidenceTitle": "实例：",
+        "evidenceContent": "整体设备效率（OEE）提升高达 30%",
+        "benefitsTitle": "收益：",
+        "downtimeReduction": "停机时间减少：73%",
+        "troubleshootingTime": "故障处理时间减少：90%",
+        "reportingTime": "报告从 1-2 天 → 即时"
+      },
+      "benefit2": {
+        "title": "显著成本节省",
+        "evidenceTitle": "实例：",
+        "evidenceContent": "工业园区运营成本减少高达 60%",
+        "benefitsTitle": "收益：",
+        "laborCost": "人力成本节省：20%",
+        "energyCost": "显著减少能源成本",
+        "automation": "自动化报告和数据收集"
+      },
+      "benefit3": {
+        "title": "管理文化转型",
+        "description": "智能仪表板将管理文化从基于经验的反应式（\"救火\"）转变为基于数据的主动式（\"智能治理\"）。创建性能\"通用语言\"，促进透明度和协作。"
+      },
+      "benefit4": {
+        "title": "增强竞争力",
+        "description": "高效、安全、可持续管理的工业园区对国际投资者更具吸引力，特别是对 ESG 标准要求高的企业。这是数字时代建立可持续竞争优势的关键。"
+      }
+    },
+    "metricsSection": {
+      "title": "已验证效果"
+    },
+    "featuresSection": {
+      "title": "主要功能",
+      "subtitle": "工业制造行业的全面解决方案"
+    },
+    "applicationsSection": {
+      "title": "实际应用"
+    },
+    "benefitsSection": {
+      "title": "带来的收益"
+    },
+    "ctaSection": {
+      "title": "为您的工厂数字化转型",
+      "subtitle": "开启迈向工业 4.0 和净零排放之旅",
+      "contactButton": "立即联系",
+      "homeButton": "返回首页"
+    }
+  },
+  "seaport": {
+    "slideshow": {
+      "digitalTwin": "港口 3D 数字孪生",
+      "realTimeKPIs": "实时 KPI 监控",
+      "automation": "运营流程自动化"
+    },
+    "features": {
+      "productivity": {
+        "title": "生产力提升 30%",
+        "description": "通过智能管理优化货物装卸效率和减少船舶周转时间。"
+      },
+      "monitoring": {
+        "title": "实时 KPI 监控",
+        "description": "24/7 跟踪港口效率、货物吞吐量和码头状态。"
+      },
+      "safety": {
+        "title": "提升安全和安保",
+        "description": "减少 40% 严重事故并加强全面安保控制。"
+      }
+    },
+    "metrics": {
+      "productivity": "装卸生产力提升",
+      "turnaroundTime": "船舶周转时间减少",
+      "safetyImprovement": "严重事故减少",
+      "operationalEfficiency": "运营效率提升"
+    },
+    "benefits": {
+      "automation": "85% 运营流程自动化",
+      "logisticsCost": "物流总成本减少 30%",
+      "accuracy": "盘点准确度提升 40%",
+      "customerExperience": "客户体验改善 50%"
+    },
+    "hero": {
+      "title": "智能仪表板 - 港口行业",
+      "description": "将港口转变为数字指挥中心，配备 3D 数字孪生、实时 KPI 监控、运营流程自动化，装卸生产力提升 30%。"
+    },
+    "introduction": {
+      "paragraph1": "港口行业是全球贸易的\"血脉\"，是国际供应链不可或缺的环节。在货物流通量不断增加和速度、准确性压力日益加大的背景下，港口不再是静态码头，而是决定整个经济节奏的复杂运营生态系统。",
+      "imageAlt": "港口行业介绍",
+      "paragraph2": "在越南，凭借战略地理位置，港口系统被视为经济增长的重要动力。然而，行业也面临后港连接基础设施和物流成本高的重大挑战，需要管理革命来提升竞争力。"
+    },
+    "challenges": {
+      "title": "港口行业的现实挑战",
+      "description": "传统运营模式的港口面临固有\"瓶颈\"，阻碍数字时代发展：",
+      "imageAlt": "港口行业的现实挑战",
+      "challenge1": {
+        "title": "数据碎片化和\"信息孤岛\"",
+        "description": "这是最大挑战。一批货物的信息可能在业务部门邮件中，船舶时刻表在另一软件中，而进出大门车辆信息手工记录。",
+        "impact": "这种缺乏连接的运营环境使无人获得全景视图，导致决策延迟和效率低下。"
+      },
+      "challenge2": {
+        "title": "缺乏实时全景视野",
+        "description": "直接后果是管理层无法快速回答关键运营问题如：\"哪个码头空闲？\"、\"货车在哪里拥堵？\"或\"当前装卸效率如何？\"。决策通常基于经验或延迟报告。"
+      },
+      "challenge3": {
+        "title": "运营效率低下和长时间拥堵",
+        "description": "缺乏同步数据不可避免导致效率下降。船舶长时间等待靠泊，集装箱卡车因手工文件程序在门外排长队，设备调度不优化。这种情况不仅浪费还严重增加运营成本，降低竞争力。"
+      },
+      "challenge4": {
+        "title": "安全、安保和人为错误风险",
+        "description": "手工运营环境存在高劳动安全和安保风险。进出控制松散和对火灾等事件反应迟缓是痛点。依赖纸质文件也增加人为错误风险，造成财务和货物损失。"
+      }
+    },
+    "applications": {
+      "title": "智能仪表板在实际中的详细应用",
+      "description": "港口领域智能仪表板不仅是显示工具，而是整个智能港口（Smart Port）生态系统的\"数字指挥中心\"（Digital Command Center），扮演大脑角色。",
+      "digitalTwin": {
+        "title": "构建港口数字孪生（Digital Twin）",
+        "realityTitle": "现实：",
+        "realityContent": "管理者不再查看纸质地图或电子表格，而是与整个港口的生动 3D 模型交互。",
+        "applicationTitle": "应用：",
+        "applicationContent": "这个 3D 模型是基于实地地图和勘测的精确数字副本。允许实时监控所有对象（船舶、车辆、起重机）的位置和状态。"
+      },
+      "kpiMonitoring": {
+        "title": "全面 KPI 监控系统",
+        "realityTitle": "现实：",
+        "realityContent": "性能指标科学汇总并易懂显示。",
+        "applicationTitle": "应用：",
+        "applicationContent": "围绕 3D 模型是持续更新的 KPI 系统：港口运营效率、货物吞吐量、船舶周转时间和码头状态。"
+      },
+      "incidentManagement": {
+        "title": "智能自动事件处理",
+        "realityTitle": "现实：",
+        "realityContent": "紧急事件如火灾的处理流程自动化以最小化响应时间。",
+        "applicationTitle": "应用：",
+        "applicationContent": "系统自动警报、导航至现场，集成 CCTV 并支持紧急决策。"
+      },
+      "automation": {
+        "title": "运营流程自动化",
+        "realityTitle": "现实：",
+        "realityContent": "手工文件程序完全消除。",
+        "applicationTitle": "应用：",
+        "applicationContent": "自动大门系统使用 AI 摄像头和 RFID，结合移动应用即时同步数据。"
+      }
+    },
+    "strategicBenefits": {
+      "title": "战略和量化收益",
+      "description": "在智能港口模型中部署智能仪表板带来突破性成果，已通过釜山港等实际案例验证。",
+      "imageAlt": "战略和量化收益",
+      "benefit1": {
+        "title": "生产力和效率爆发",
+        "evidenceTitle": "实例：",
+        "evidenceContent": "釜山港采用智能运营系统使货物装卸生产力比传统码头提升 30%。",
+        "benefitsTitle": "收益：",
+        "benefitsContent": "船舶停留时间（turnaround time）减少 20%，帮助船公司节省燃料成本并提高运营效率。"
+      },
+      "benefit2": {
+        "title": "卓越安全和安保提升",
+        "evidenceTitle": "实例：",
+        "evidenceContent": "自动化和集中监控使釜山港严重港口事故减少高达 40%。",
+        "benefitsTitle": "收益：",
+        "benefitsContent": "工作环境更安全，减少人为错误，同时智能监控和警报系统快速响应事件。"
+      },
+      "benefit3": {
+        "title": "可持续增长和竞争力提升",
+        "evidenceTitle": "实例：",
+        "evidenceContent": "即使在充满挑战的一年，釜山港仍创集装箱历史最高产量，自动化码头贡献巨大。",
+        "benefitsTitle": "收益：",
+        "benefitsContent": "领导层可基于真实数据而非经验做出战略决策，分析性能、识别瓶颈并精确制定长期投资计划。"
+      },
+      "benefit4": {
+        "title": "提升客户体验和满意度",
+        "content": "客户可轻松注册服务、跟踪请求状态和在线支付。这种透明和便利显著提升服务体验，创造可持续竞争优势。"
+      }
+    },
+    "metricsSection": {
+      "title": "已验证效果"
+    },
+    "featuresSection": {
+      "title": "突出功能",
+      "subtitle": "智能港口的全面解决方案"
+    },
+    "benefitsSection": {
+      "title": "带来的收益"
+    },
+    "cta": {
+      "title": "将港口转变为智能港口",
+      "subtitle": "使用智能仪表板优化运营并提升竞争力",
+      "contactButton": "立即联系",
+      "homeButton": "返回首页"
+    }
+  },
+  "applicationAreas": {
+    "title": "应用领域",
+    "finance": {
+      "title": "金融 - 银行 - 保险",
+      "description": "金融、银行、保险行业的仪表板解决方案..."
+    },
+    "government": {
+      "title": "政府 - 政府部门",
+      "description": "政府机构、智慧城市的数据监控和管理..."
+    },
+    "manufacturing": {
+      "title": "工业 - 制造",
+      "description": "运营优化、生产管理、质量、维护..."
+    },
+    "building": {
+      "title": "建筑",
+      "description": "基础设施、服务、电信行业客户管理..."
+    },
+    "seaport": {
+      "title": "港口",
+      "description": "港口运营管理、监控、物流、船舶管理解决方案..."
+    }
+  },
+  "contactInfo": {
+    "hero": {
+      "title": "联系我们",
+      "description": "越南领先的智能仪表板解决方案，24/7 随时为您服务"
+    },
+    "companyInfo": {
+      "title": "公司信息",
+      "companyName": "国际网络安全股份公司 - ICS",
+      "office": "河内办公室",
+      "officeAddress": "TT3-5 大金新城市，定工，河内"
+    },
+    "contactDetails": {
+      "title": "联系信息",
+      "phoneHotline": "电话 & 热线",
+      "phoneNumber": "0931.487.231",
+      "emailLabel": "邮箱",
+      "email": "info@icss.com.vn",
+      "websiteLabel": "网站",
+      "website": "www.icss.com.vn"
+    },
+    "mapSection": {
+      "title": "地图位置",
+      "description": "查找我们办公室的路线",
+      "mapTitle": "ICS Google 地图"
+    }
+  },
+  "articlesList": {
+    "title": "新闻 & 文章",
+    "description": "ICS 智能仪表板的技术和服务最新信息更新",
+    "searchPlaceholder": "搜索文章...",
+    "loading": "加载文章中...",
+    "noResults": "未找到文章",
+    "noArticles": "暂无已发布文章",
+    "author": "作者 #{{id}}",
+    "status": {
+      "published": "已发布",
+      "draft": "草稿",
+      "archived": "存档"
+    },
+    "pagination": {
+      "previous": "上一页",
+      "next": "下一页",
+      "pageInfo": "第 {{current}} 页 / 共 {{total}} 页"
+    },
+    "errors": {
+      "errorTitle": "错误",
+      "fetchError": "无法加载文章列表"
+    }
   }
 }

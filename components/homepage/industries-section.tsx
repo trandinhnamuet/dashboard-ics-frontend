@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button"
 import { Building2, Banknote, Factory, Building, Ship, Users2 } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
+import { useTranslation } from 'react-i18next';
 
 export function IndustriesSection() {
+  const { t } = useTranslation();
   const router = useRouter()
   const [hoveredApp, setHoveredApp] = useState<string | null>(null)
   const [pinnedApp, setPinnedApp] = useState<string | null>(null)
@@ -13,100 +15,115 @@ export function IndustriesSection() {
   const industries = [
     {
       icon: Building2,
-      title: "Chính phủ - Cơ quan ban ngành",
-      description:
-        "Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn.",
-      benefits: ["Giám sát KPIs thời gian thực", "Theo dõi tiến độ dự án", "Phân tích ngân sách chi tiết"],
-      link: "/application-areas/government",
-      image: "/application-areas/government/thumbnail.jpg"
+      title: t('industries.government.title'),
+      description: t('industries.government.description'),
+      benefits: [
+        t('industries.government.benefits.0'),
+        t('industries.government.benefits.1'),
+        t('industries.government.benefits.2')
+      ],
+      link: '/application-areas/government',
+      image: '/application-areas/government/thumbnail.jpg'
     },
     {
       icon: Banknote,
-      title: "Tài chính - Ngân hàng - Bảo hiểm",
-      description:
-        "Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7.",
-      benefits: ["Tăng trưởng 20-30%", "Giám sát dòng tiền 24/7", "Tối ưu quyết định kinh doanh"],
-      link: "/application-areas/finance",
-      image: "/application-areas/finance/thumbnail.jpg"
+      title: t('industries.finance.title'),
+      description: t('industries.finance.description'),
+      benefits: [
+        t('industries.finance.benefits.0'),
+        t('industries.finance.benefits.1'),
+        t('industries.finance.benefits.2')
+      ],
+      link: '/application-areas/finance',
+      image: '/application-areas/finance/thumbnail.jpg'
     },
     {
       icon: Factory,
-      title: "Công nghiệp - Sản xuất",
-      description:
-        "Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, giảm 20-30% chi phí nhờ tối ưu vận hành, cải thiện an toàn và hướng đến công nghiệp xanh, net-zero.",
-      benefits: ["Giảm 20-30% chi phí", "Giám sát năng lượng thời gian thực", "Hướng đến net-zero"],
-      link: "/application-areas/manufacturing",
-      image: "/application-areas/manufacturing/thumbnail.jpg"
+      title: t('industries.manufacturing.title'),
+      description: t('industries.manufacturing.description'),
+      benefits: [
+        t('industries.manufacturing.benefits.0'),
+        t('industries.manufacturing.benefits.1'),
+        t('industries.manufacturing.benefits.2')
+      ],
+      link: '/application-areas/manufacturing',
+      image: '/application-areas/manufacturing/thumbnail.jpg'
     },
     {
       icon: Building,
-      title: "Tòa nhà thông minh",
-      description:
-        "Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. Tối ưu năng lượng, giảm chi phí vận hành và nâng cao trải nghiệm người dùng thông qua giám sát thời gian thực 24/7.",
-      benefits: ["Tiết kiệm năng lượng 30-40%", "Giảm chi phí vận hành 25%", "Tăng an toàn và bảo mật"],
-      link: "/application-areas/building",
-      image: "/application-areas/building/thumbnail.jpg"
+      title: t('industries.building.title'),
+      description: t('industries.building.description'),
+      benefits: [
+        t('industries.building.benefits.0'),
+        t('industries.building.benefits.1'),
+        t('industries.building.benefits.2')
+      ],
+      link: '/application-areas/building',
+      image: '/application-areas/building/thumbnail.jpg'
     },
     {
       icon: Ship,
-      title: "Cảng biển thông minh",
-      description:
-        "Biến cảng biển thành trung tâm chỉ huy số với bản sao số 3D, giám sát KPIs thời gian thực, tự động hóa quy trình vận hành và nâng cao năng suất bốc dỡ lên 30%. Tối ưu logistics và giảm chi phí vận chuyển.",
-      benefits: ["Tăng năng suất 30%", "Giám sát KPIs thời gian thực", "Nâng cao an toàn 40%"],
-      link: "/application-areas/seaport",
-      image: "/application-areas/seaport/thumbnail.jpg"
-    },
+      title: t('industries.seaport.title'),
+      description: t('industries.seaport.description'),
+      benefits: [
+        t('industries.seaport.benefits.0'),
+        t('industries.seaport.benefits.1'),
+        t('industries.seaport.benefits.2')
+      ],
+      link: '/application-areas/seaport',
+      image: '/application-areas/seaport/thumbnail.jpg'
+    }
   ]
 
   const applications = [
     { 
       icon: Factory, 
-      name: "Nhà máy",
+      name: t('applications.factory.name'),
       id: "factory",
       image: "/homepage/factory.webp",
-      stats: "150+ nhà máy đã áp dụng",
-      description: "Giám sát toàn bộ quy trình sản xuất từ nguyên liệu đến thành phẩm. Theo dõi hiệu suất máy móc, năng lượng tiêu thụ và chất lượng sản phẩm theo thời gian thực."
+      stats: t('applications.factory.stats'),
+      description: t('applications.factory.description')
     },
     { 
       icon: Ship, 
-      name: "Cảng biển",
+      name: t('applications.port.name'),
       id: "port",
       image: "/homepage/seaport.jpg", 
-      stats: "25+ cảng biển tin dùng",
-      description: "Quản lý hoạt động bốc xếp hàng hóa, theo dõi tàu thuyền ra vào cảng, tối ưu hóa logistics và giảm thời gian chờ đợi."
+      stats: t('applications.port.stats'),
+      description: t('applications.port.description')
     },
     { 
       icon: Banknote, 
-      name: "Ngân hàng",
+      name: t('applications.bank.name'),
       id: "bank",
       image: "/homepage/bank.webp",
-      stats: "80+ chi nhánh ngân hàng", 
-      description: "Giám sát giao dịch, phân tích dòng tiền, quản lý rủi ro tín dụng và tối ưu hóa dịch vụ khách hàng trên toàn hệ thống."
+      stats: t('applications.bank.stats'),
+      description: t('applications.bank.description')
     },
     { 
       icon: Users2, 
-      name: "Hành chính công",
+      name: t('applications.government.name'),
       id: "government",
       image: "/homepage/public-administration.jpg",
-      stats: "200+ cơ quan nhà nước",
-      description: "Số hóa quy trình hành chính, theo dõi tiến độ xử lý hồ sơ, tăng tính minh bạch và cải thiện dịch vụ công."
+      stats: t('applications.government.stats'),
+      description: t('applications.government.description')
     },
     { 
       icon: Building, 
-      name: "Tòa nhà",
+      name: t('applications.building.name'),
       id: "building",
       image: "/homepage/factory.webp",
-      stats: "500+ tòa nhà thông minh",
-      description: "Quản lý hệ thống HVAC, điện, nước, an ninh và các tiện ích trong tòa nhà để tối ưu năng lượng và nâng cao trải nghiệm."
+      stats: t('applications.building.stats'),
+      description: t('applications.building.description')
     },
     { 
       icon: Building2, 
-      name: "Kho vận",
+      name: t('applications.logistics.name'),
       id: "logistics",
       image: "/homepage/seaport.jpg",
-      stats: "300+ kho hàng được kết nối",
-      description: "Theo dõi tồn kho, tối ưu tuyến vận chuyển, quản lý nhiệt độ bảo quản và tự động hóa quy trình logistics."
-    },
+      stats: t('applications.logistics.stats'),
+      description: t('applications.logistics.description')
+    }
   ]
 
   return (
@@ -114,10 +131,10 @@ export function IndustriesSection() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl text-center mb-16">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-            Lĩnh vực ứng dụng
+            {t('industries.title')}
           </h2>
           <p className="text-lg text-muted-foreground text-pretty">
-            Smart Dashboard phục vụ đa dạng các ngành nghề với hiệu quả vượt trội
+            {t('industries.subtitle')}
           </p>
         </div>
 
@@ -165,7 +182,7 @@ export function IndustriesSection() {
         </div>
 
         <div className="text-center relative">
-          <h3 className="mb-6 sm:mb-8 text-xl sm:text-2xl font-bold text-foreground">Ứng dụng rộng rãi</h3>
+          <h3 className="mb-6 sm:mb-8 text-xl sm:text-2xl font-bold text-foreground">{t('applications.title')}</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-6 max-w-6xl mx-auto">
             {applications.map((app, index) => (
               <div
@@ -255,7 +272,7 @@ export function IndustriesSection() {
                       </h4>
                       {pinnedApp && (
                         <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full animate-bounce-in">
-                          📌 Đã ghim
+                          📌 {t('applications.pinned')}
                         </span>
                       )}
                     </div>
