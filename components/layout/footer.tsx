@@ -1,9 +1,13 @@
+'use client'
+
 import React from "react"
+import { useTranslation } from "react-i18next"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Cloud, Mail, Phone, MapPin, Facebook, Linkedin, Youtube } from "lucide-react"
 
 export function Footer() {
+  const { t } = useTranslation()
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -16,11 +20,11 @@ export function Footer() {
               </div>
               <div>
                 <h3 className="text-xl font-bold"> ICS Smart Dashboard</h3>
-                <p className="text-sm opacity-80">Giái pháp bảng điều khiển thông minh</p>
+                <p className="text-sm opacity-80">{t('footer.description')}</p>
               </div>
             </div>
             <p className="text-sm opacity-80 leading-relaxed">
-              Giải pháp Smart Dashboard hàng đầu tại Việt Nam, cung cấp hệ thống bảng điều khiển thông minh cho doanh nghiệp của bạn.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
                     <a href="https://www.facebook.com/ICS.anninhmangquocte/" target="_blank" rel="noopener noreferrer">
@@ -41,36 +45,36 @@ export function Footer() {
 
           {/* Services */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold">Dịch vụ</h4>
+            <h4 className="text-lg font-semibold">{t('footer.services.title')}</h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Smart Dashboard cho tòa nhà
+                  {t('footer.services.buildingDashboard')}
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Quản lý thiết bị IoT
+                  {t('footer.services.iotManagement')}
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Giải pháp chuyển đổi số tòa nhà
+                  {t('footer.services.digitalTransformation')}
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Giám sát & phân tích dữ liệu vận hành
+                  {t('footer.services.energyManagement')}
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Quản lý năng lượng thông minh
+                  {t('footer.services.securitySolution')}
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  An ninh & kiểm soát truy cập
+                  {t('footer.services.maintenanceManagement')}
                 </a>
               </li>
             </ul>
@@ -78,26 +82,26 @@ export function Footer() {
 
           {/* Support */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold">Hỗ trợ</h4>
+            <h4 className="text-lg font-semibold">{t('footer.support.title')}</h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Tài liệu kỹ thuật
+                  {t('footer.support.documentation')}
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Video hướng dẫn
+                  {t('footer.support.tutorial')}
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Diễn đàn cộng đồng
+                  {t('footer.support.faq')}
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Ticket hỗ trợ
+                  {t('footer.support.contact')}
                 </a>
               </li>
               <li>
@@ -115,7 +119,7 @@ export function Footer() {
 
           {/* Contact & Newsletter */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold">Liên hệ</h4>
+            <h4 className="text-lg font-semibold">{t('footer.contact.title')}</h4>
             <div className="space-y-4 text-sm">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 mt-1 opacity-80" />

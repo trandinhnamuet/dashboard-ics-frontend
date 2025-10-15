@@ -1,0 +1,481 @@
+{
+  "homepage": {
+    "hero": {
+      "title": "베트남 최고의 스마트대시보드 솔루션",
+      "subtitle": "정부 결의안 57-NQ/TW 대응 솔루션",
+      "description": "포괄적인 스마트 대시보드 솔루션을 제공하여 기업과 조직의 운영 프로세스를 최적화하고 업무 성능을 향상시키도록 지원합니다.",
+      "getStarted": "지금 시작하기",
+      "dashboard": "대시보드 보기",
+      "contact": "컨설팅 문의",
+      "features": {
+        "dataVisualization": {
+          "title": "데이터 시각화",
+          "description": "2D/3D 대시보드 인터페이스"
+        },
+        "operationOptimization": {
+          "title": "운영 최적화",
+          "description": "탁월한 속도"
+        },
+        "multiPlatform": {
+          "title": "멀티플랫폼 통합",
+          "description": "시스템 통합 지원"
+        }
+      },
+      "stats": {
+        "customers": "고객",
+        "realtime": "실시간",
+        "support": "지원"
+      }
+    },
+    "services": {
+      "title": "포괄적인 스마트 대시보드 솔루션",
+      "subtitle": "운영 데이터부터 지능형 분석까지, 기업의 중앙집중 관리, 시각적 모니터링, 신속한 의사결정을 돕는 스마트 대시보드 솔루션을 제공합니다.",
+      "stats": {
+        "deploymentTime": "평균 배포 시간",
+        "dataSources": "통합 지원 데이터 소스",
+        "security": "암호화 및 보안 준수",
+        "costSaving": "운영 비용 절감"
+      }
+    },
+    "industries": {
+      "title": "적용 분야",
+      "subtitle": "스마트 대시보드는 다양한 산업 분야에서 뛰어난 효율성으로 서비스를 제공합니다",
+      "government": {
+        "title": "정부 - 정부기관",
+        "description": "GDP 성장률, 인플레이션, 실업률, 국제수지와 같은 거시경제 지표와 예산 수입 및 지출 데이터, KPI, 프로젝트 구현 진행상황 및 병목현상을 포괄적으로 모니터링합니다.",
+        "benefits": [
+          "실시간 KPI 모니터링",
+          "프로젝트 진행 추적",
+          "상세 예산 분석"
+        ]
+      },
+      "finance": {
+        "title": "금융 - 은행 - 보험",
+        "description": "관리자가 운영 전체를 파악할 수 있도록 지원: 현금흐름, 각 지점의 KPI, ATM, 미수채권, 채권회수 효율성 및 신규 계좌 수를 모두 시각적으로 표시하고 24/7 실시간 업데이트합니다.",
+        "benefits": [
+          "20-30% 성장",
+          "24/7 현금흐름 모니터링",
+          "비즈니스 의사결정 최적화"
+        ]
+      },
+      "manufacturing": {
+        "title": "산업 - 제조",
+        "description": "실시간 에너지 및 KPI 모니터링을 통한 생산 효율성 향상, 운영 최적화를 통한 20-30% 비용 절감, 안전성 개선 및 녹색 산업, 넷제로 추진.",
+        "benefits": [
+          "20-30% 비용 절감",
+          "실시간 에너지 모니터링",
+          "넷제로 추진"
+        ]
+      },
+      "building": {
+        "title": "스마트 빌딩",
+        "description": "HVAC, 전력, 물, 보안부터 각종 시설까지 건물 시스템의 종합 관리. 24/7 실시간 모니터링을 통한 에너지 최적화, 운영비용 절감 및 사용자 경험 향상.",
+        "benefits": [
+          "30-40% 에너지 절약",
+          "운영비용 25% 절감",
+          "안전 및 보안 강화"
+        ]
+      },
+      "seaport": {
+        "title": "스마트 항만",
+        "description": "3D 디지털 트윈, 실시간 KPI 모니터링, 운영 프로세스 자동화로 항만을 디지털 지휘센터로 변환하고 하역 생산성을 30% 향상. 물류 최적화 및 운송비용 절감.",
+        "benefits": [
+          "생산성 30% 향상",
+          "실시간 KPI 모니터링",
+          "안전성 40% 개선"
+        ]
+      },
+      "applications": {
+        "title": "광범위한 적용",
+        "factory": {
+          "name": "공장",
+          "stats": "150+ 공장에서 구현",
+          "description": "원자재부터 완제품까지 전체 생산 프로세스를 모니터링. 기계 성능, 에너지 소비, 제품 품질을 실시간으로 추적합니다."
+        },
+        "port": {
+          "name": "항만",
+          "stats": "25+ 신뢰받는 항만",
+          "description": "화물 하역 작업 관리, 입출항 선박 추적, 물류 최적화 및 대기시간 단축."
+        },
+        "bank": {
+          "name": "은행",
+          "stats": "80+ 은행 지점",
+          "description": "거래 모니터링, 현금흐름 분석, 신용위험 관리 및 전체 시스템에서의 고객 서비스 최적화."
+        },
+        "government": {
+          "name": "공공행정",
+          "stats": "200+ 국가기관",
+          "description": "행정 프로세스 디지털화, 파일 처리 진행상황 추적, 투명성 증대 및 공공서비스 개선."
+        },
+        "building": {
+          "name": "빌딩",
+          "stats": "500+ 스마트 빌딩",
+          "description": "건물 내 HVAC, 전력, 물, 보안 및 유틸리티 시스템을 관리하여 에너지를 최적화하고 경험을 향상시킵니다."
+        },
+        "logistics": {
+          "name": "물류",
+          "stats": "300+ 연결 창고",
+          "description": "재고 추적, 운송 경로 최적화, 보관 온도 관리 및 물류 프로세스 자동화."
+        }
+      }
+    },
+    "pricing": {
+      "title": "가격표",
+      "subtitle": "모든 규모의 기업에 적합한 서비스 패키지",
+      "plans": {
+        "starter": "스탠다드",
+        "professional": "프리미엄",
+        "enterprise": "엔터프라이즈",
+        "custom": "커스텀"
+      }
+    }
+  },
+  "header": {
+    "home": "홈",
+    "services": "서비스",
+    "pricing": "구독 패키지",
+    "support": "지원",
+    "contact": "연락처",
+    "login": "로그인",
+    "register": "회원가입",
+    "hello": "안녕하세요",
+    "profile": "개인정보",
+    "settings": "설정",
+    "logout": "로그아웃",
+    "customers": "고객",
+    "news": "뉴스",
+    "language": "언어",
+    "tagline": "스마트 대시보드"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "logoutSuccess": "로그아웃되었습니다!"
+  },
+  "checkout": {
+    "title": "결제",
+    "backButton": "뒤로 가기",
+    "packageInfo": "서비스 패키지 정보",
+    "packageName": "패키지명",
+    "description": "설명",
+    "packageType": "패키지 유형",
+    "features": "포함된 기능",
+    "totalAmount": "총 금액",
+    "paymentQR": "QR 결제",
+    "scanQR": "은행 앱으로 QR 코드를 스캔하여 결제하세요",
+    "bankName": "은행",
+    "accountNumber": "계좌번호",
+    "amount": "금액",
+    "content": "내용",
+    "copyInfo": "송금 정보 복사",
+    "copiedSuccess": "송금 정보가 복사되었습니다",
+    "note": "참고: 시스템이 자동으로 서비스를 활성화하도록 정확한 내용으로 송금해 주세요.",
+    "contactSupport": "지원팀 문의"
+  },
+  "services": {
+    "dataIntegration": {
+      "title": "데이터 통합",
+      "description": "기업의 다양한 시스템에서 데이터 연결 및 수집",
+      "features": [
+        "여러 소스에서 실시간 데이터 연결",
+        "기존 데이터(SQL, Excel)와 IoT/SCADA 데이터 모두 지원",
+        "데이터 변환 및 정규화 자동화",
+        "고성능 데이터 처리 엔진",
+        "보안 데이터 전송 프로토콜"
+      ]
+    },
+    "security": {
+      "title": "보안 및 컴플라이언스",
+      "description": "엔터프라이즈 레벨의 데이터 보안",
+      "features": [
+        "엔드투엔드 암호화",
+        "다중 인증(MFA)",
+        "역할 기반 액세스 제어",
+        "감사 로그 및 컴플라이언스",
+        "데이터 백업 및 복구"
+      ]
+    },
+    "realtime": {
+      "title": "실시간 모니터링",
+      "description": "라이브 대시보드 및 즉시 알림",
+      "features": [
+        "실시간 데이터 시각화",
+        "사용자 정의 가능한 대시보드",
+        "스마트 알림 및 트리거",
+        "모바일 알림",
+        "성능 모니터링"
+      ]
+    },
+    "scaling": {
+      "title": "확장 가능한 아키텍처",
+      "description": "성장에 대응하는 클라우드 기반 솔루션",
+      "features": [
+        "자동 스케일링",
+        "고가용성 보장",
+        "부하 분산",
+        "글로벌 CDN",
+        "재해 복구 기능"
+      ]
+    },
+    "analytics": {
+      "title": "고급 분석",
+      "description": "AI/ML 탑재 비즈니스 인텔리전스",
+      "features": [
+        "머신러닝 예측 분석",
+        "트렌드 분석 및 이상 탐지",
+        "커스텀 리포트 생성",
+        "데이터 마이닝 기능",
+        "비즈니스 인사이트 제공"
+      ]
+    },
+    "integration": {
+      "title": "시스템 통합",
+      "description": "기존 시스템과의 원활한 통합",
+      "features": [
+        "REST/GraphQL API",
+        "웹훅 지원",
+        "서드파티 통합",
+        "레거시 시스템 연결",
+        "커스텀 통합 개발"
+      ]
+    }
+  },
+  "pricing": {
+    "title": "서비스 가격표",
+    "subtitle": "기본 솔루션부터 3D 인터랙티브 모델까지, 모든 규모의 건물에 적합한 서비스 패키지 제공",
+    "pricingModes": {
+      "saving": {
+        "title": "일괄 구매",
+        "subtitle": "시스템 일괄 이전",
+        "description": "종합적인 요구사항과 독립 운영에 적합하게 설계 - 일회성 결제로 전체 시스템 이전"
+      },
+      "payAsYouGo": {
+        "title": "연간 계약",
+        "subtitle": "연간 결제",
+        "description": "유연한 요구사항과 기술 지원 유지에 적합 - 12, 24, 36개월 패키지의 연간 결제"
+      }
+    },
+    "plans": {
+      "business": {
+        "name": "비즈니스",
+        "description": "중소기업을 위한 완전한 기능 패키지",
+        "features": [
+          "실시간 대시보드",
+          "기본 리포트 기능",
+          "이메일 및 SMS 알림",
+          "최대 5개 시스템 통합",
+          "6개월 데이터 저장",
+          "웹 및 모바일 액세스",
+          "이메일 및 SMS 알림"
+        ],
+        "buttonText": "지금 시작하기"
+      },
+      "dashboard2D": {
+        "name": "2D 대시보드",
+        "description": "전문적인 2D 인터페이스로 데이터 시각화",
+        "features": [
+          "비즈니스 패키지의 모든 기능",
+          "건물 도면과 함께하는 2D 인터랙티브 대시보드",
+          "고급 데이터 시각화",
+          "구역별 상세 리포트",
+          "24/7 전화 지원",
+          "무제한 시스템 통합",
+          "2년 데이터 저장",
+          "커스텀 통합 API",
+          "무료 사용 교육",
+          "AI 스마트 알림"
+        ],
+        "buttonText": "인기 패키지 선택"
+      },
+      "dashboard3D": {
+        "name": "3D 대시보드",
+        "description": "생생한 3D 모델로 최적의 경험",
+        "features": [
+          "2D 대시보드의 모든 기능",
+          "인터랙티브 건물 3D 모델",
+          "가상현실(VR) 및 증강현실(AR)",
+          "비상상황 시뮬레이션",
+          "AI/ML 예측 분석",
+          "무제한 IoT 통합",
+          "영구 데이터 저장",
+          "전담 지원 매니저",
+          "요구사항에 따른 인터페이스 커스터마이징",
+          "팀을 위한 전문 교육",
+          "99.9% SLA 가동시간 보장"
+        ],
+        "buttonText": "컨설팅 문의"
+      },
+      "package12": {
+        "name": "12개월 패키지",
+        "description": "유연한 결제의 단기 프로젝트에 적합",
+        "originalPrice": "240,000,000 VND",
+        "price": "198,000,000 VND",
+        "period": "/12개월",
+        "discount": "17%",
+        "features": [
+          "2D 대시보드의 모든 기능",
+          "24/7 기술 지원",
+          "무료 교육 및 구축",
+          "정기 소프트웨어 업데이트",
+          "자동 데이터 백업",
+          "상세 분석 리포트",
+          "무제한 API 통합",
+          "모바일 앱 지원"
+        ],
+        "buttonText": "12개월 패키지 선택"
+      },
+      "package24": {
+        "name": "24개월 패키지",
+        "description": "중장기 기업을 위한 최적 솔루션",
+        "originalPrice": "480,000,000 VND",
+        "price": "358,000,000 VND",
+        "period": "/24개월",
+        "discount": "25%",
+        "popular": true,
+        "features": [
+          "3D 대시보드의 모든 기능",
+          "고급 3D 인터랙티브 모델",
+          "AI/ML 예측 분석",
+          "전담 지원 매니저",
+          "요구사항에 따른 인터페이스 커스터마이징",
+          "팀을 위한 전문 교육",
+          "99.9% SLA 가동시간",
+          "우선 기술 지원",
+          "임원 대시보드 리포트",
+          "VR/AR 액세스"
+        ],
+        "buttonText": "최적 패키지 선택"
+      },
+      "package36": {
+        "name": "36개월 패키지",
+        "description": "장기 전략적 투자로 최대 비용 효율성",
+        "originalPrice": "720,000,000 VND",
+        "price": "468,000,000 VND",
+        "period": "/36개월",
+        "discount": "35%",
+        "features": [
+          "24개월 패키지의 모든 기능",
+          "커스텀 AI 모델 개발",
+          "고급 예측 분석",
+          "우선 커스터마이징 개발",
+          "월간 전략 검토",
+          "무제한 교육 세션",
+          "24/7 전담 지원팀",
+          "풀시스템 커스터마이징",
+          "업계 전문 컨설팅",
+          "우선 신기능 액세스"
+        ],
+        "buttonText": "최대 절약 패키지 선택"
+      }
+    },
+    "features": "포함된 기능:",
+    "showMore": "더 보기",
+    "showLess": "줄이기",
+    "mostOptimal": "최적",
+    "contactSupport": "지원 문의:",
+    "hotline": "핫라인:"
+  },
+  "contactInfo": {
+    "title": "연락처 정보",
+    "companyInfo": {
+      "companyName": "ICS 스마트 대시보드",
+      "name": "회사명",
+      "address": "주소",
+      "phone": "전화번호",
+      "email": "이메일",
+      "businessLicense": "사업자등록증",
+      "taxCode": "세무등록번호",
+      "workingHours": "영업시간"
+    },
+    "subtitle": "베트남 최고의 스마트대시보드 솔루션, 24/7 지원으로 고객을 도와드립니다"
+  },
+  "applicationAreas": {
+    "government": {
+      "title": "스마트 대시보드 - 정부/기관 부문",
+      "description": "GDP 성장률, 인플레이션, 실업률, 국제수지와 같은 거시경제 지표와 예산 수입 및 지출 데이터, KPI, 프로젝트 구현 진행상황 및 병목현상을 포괄적으로 모니터링합니다.",
+      "content": "정부기관, 공공관리부문, 국유기업 등에 포괄적인 운영 모니터링 솔루션을 제공합니다. 실시간 데이터 통합과 지능형 분석을 통해 관리 효율성, 투명성, 공공서비스 품질을 향상시킵니다.",
+      "challenges": {
+        "title": "공공행정의 실제 과제",
+        "subtitle": "전통적인 운영 방식은 많은 한계를 드러내고 있으며, 정부기관의 관리 및 거버넌스 효율성을 저해하고 있습니다."
+      },
+      "applications": {
+        "title": "실무에서 스마트 대시보드의 세부 적용",
+        "subtitle": "베트남과 전 세계에서 스마트 대시보드는 위의 과제들을 해결하는 '디지털 두뇌'로 배치되고 있으며, 두드러진 모델은 지능형 운영 센터(IOC)입니다."
+      },
+      "benefits": {
+        "title": "전략적 및 정량적 이익",
+        "subtitle": "공공행정에서 스마트 대시보드 구현은 중요하고 측정 가능한 영향을 가져와 현대적인 행정 시스템 구축에 기여합니다."
+      },
+      "whyChooseUs": "왜 저희를 선택해야 하나요?",
+      "mainFeatures": "주요 기능",
+      "keyBenefits": "제공되는 이익",
+      "mainFeaturesSubtitle": "효과적인 정부 행정을 위한 포괄적 솔루션",
+      "keyBenefitsSubtitle": "실무를 통해 입증된 효과",
+      "features": [
+        {
+          "title": "실시간 KPI 모니터링",
+          "description": "각 부서, 프로젝트의 핵심 성과 지표를 시각적이고 즉각적으로 추적합니다."
+        },
+        {
+          "title": "프로젝트 진행 추적",
+          "description": "공공투자 프로젝트와 개발 프로그램의 구현 진행상황을 관리하고 모니터링합니다."
+        },
+        {
+          "title": "상세 예산 분석",
+          "description": "항목별, 부서별로 높은 정확도로 예산 수입 및 지출을 분석합니다."
+        }
+      ],
+      "benefitsList": [
+        "정부 관리 효율성 40% 증가",
+        "정기 보고 시간 30% 단축",
+        "정보 투명성 50% 증가",
+        "의사결정 프로세스 60% 개선"
+      ],
+      "cta": {
+        "title": "정부 행정 현대화 준비가 되셨나요?",
+        "subtitle": "적합한 솔루션 컨설팅을 위해 저희에게 연락하세요",
+        "contactNow": "지금 연락하기",
+        "backHome": "홈으로 돌아가기"
+      }
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "회사",
+      "about": "회사 소개",
+      "team": "팀",
+      "careers": "채용",
+      "news": "뉴스"
+    },
+    "services": {
+      "title": "서비스",
+      "buildingDashboard": "건물용 스마트 대시보드",
+      "iotManagement": "IoT 기기 관리",
+      "digitalTransformation": "건물 디지털 혁신 솔루션",
+      "energyManagement": "에너지 관리 시스템",
+      "securitySolution": "통합 보안 솔루션",
+      "maintenanceManagement": "예방적 유지보수 관리"
+    },
+    "support": {
+      "title": "지원",
+      "documentation": "문서",
+      "tutorial": "튜토리얼",
+      "faq": "자주 묻는 질문",
+      "contact": "연락처"
+    },
+    "legal": {
+      "title": "법적 사항",
+      "privacy": "개인정보 처리방침",
+      "terms": "이용약관",
+      "security": "보안"
+    },
+    "contact": {
+      "title": "연락처",
+      "address": "주소",
+      "phone": "전화번호",
+      "email": "이메일",
+      "workingHours": "영업시간"
+    },
+    "copyright": "© 2024 ICS Smart Dashboard. 모든 권리 보유.",
+    "description": "베트남을 선도하는 스마트 대시보드 솔루션 - 기업과 조직이 디지털 혁신을 달성하고 운영 효율성을 최적화하도록 지원합니다."
+  }
+}

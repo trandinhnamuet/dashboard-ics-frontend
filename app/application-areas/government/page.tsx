@@ -7,8 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Link from "next/link"
+import { useTranslation } from "react-i18next"
 
 export default function GovernmentPage() {
+  const { t } = useTranslation()
+  
   // Slideshow state
   const [currentSlide, setCurrentSlide] = useState(0)
   
@@ -98,30 +101,12 @@ export default function GovernmentPage() {
     setCurrentSlide((prev) => (prev - 1 + slideshowImages.length) % slideshowImages.length)
   }
 
-  const features = [
-    {
-      icon: BarChart3,
-      title: "Giám sát KPIs thời gian thực",
-      description: "Theo dõi các chỉ số hiệu suất chính của từng phòng ban, dự án một cách trực quan và tức thì."
-    },
-    {
-      icon: Clock,
-      title: "Theo dõi tiến độ dự án",
-      description: "Quản lý và giám sát tiến độ thực hiện các dự án đầu tư công, chương trình phát triển."
-    },
-    {
-      icon: Users,
-      title: "Phân tích ngân sách chi tiết",
-      description: "Phân tích thu - chi ngân sách theo từng khoản mục, phòng ban với độ chính xác cao."
-    }
-  ]
+  const features = t('applicationAreas.government.features', { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
 
-  const benefits = [
-    "Tăng 40% hiệu quả quản lý nhà nước",
-    "Giảm 30% thời gian báo cáo định kỳ", 
-    "Tăng 50% độ minh bạch thông tin",
-    "Cải thiện 60% quy trình ra quyết định"
-  ]
+  const benefits = t('applicationAreas.government.benefitsList', { returnObjects: true }) as string[];
 
   return (
     <div className="min-h-screen">
@@ -169,11 +154,10 @@ export default function GovernmentPage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Smart Dashboard - Chính phủ / Cơ quan ban ngành
+              {t('applicationAreas.government.title')}
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl leading-relaxed">
-              Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, 
-              cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn.
+              {t('applicationAreas.government.description')}
             </p>
           </div>
         </div>
@@ -185,9 +169,9 @@ export default function GovernmentPage() {
           <div className="max-w-6xl mx-auto">
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Thách thức thực tế của ngành Hành chính công</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">{t('applicationAreas.government.challenges.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Việc vận hành theo phương thức truyền thống đang bộc lộ nhiều hạn chế, cản trở hiệu quả quản lý và điều hành của các cơ quan nhà nước.
+                {t('applicationAreas.government.challenges.subtitle')}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -266,10 +250,9 @@ export default function GovernmentPage() {
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">{t('applicationAreas.government.applications.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Tại Việt Nam và trên thế giới, Smart Dashboard được triển khai như một "bộ não số" để giải quyết các thách thức trên, 
-                với mô hình nổi bật là các <span className="font-semibold text-blue-700">Trung tâm Điều hành Thông minh (IOC)</span>.
+                {t('applicationAreas.government.applications.subtitle')}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -443,10 +426,9 @@ export default function GovernmentPage() {
 
             {/* Lợi ích chiến lược */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Lợi ích chiến lược và định lượng</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">{t('applicationAreas.government.benefits.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Việc triển khai Smart Dashboard trong hành chính công mang lại những tác động to lớn và có thể đo lường được, 
-                góp phần xây dựng một nền hành chính hiện đại.
+                {t('applicationAreas.government.benefits.subtitle')}
               </p>
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Cột ảnh bên trái */}
@@ -527,37 +509,41 @@ export default function GovernmentPage() {
       {/* Features & Benefits Section - 2 columns */}
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <h3 className="text-4xl font-bold text-blue-700 dark:text-blue-400 mb-10 text-center">Tại sao chọn chúng tôi?</h3>
+          <h3 className="text-4xl font-bold text-blue-700 dark:text-blue-400 mb-10 text-center">{t('applicationAreas.government.whyChooseUs')}</h3>
           <div className="grid md:grid-cols-2 gap-10 items-start">
             {/* Tính năng chính - cột trái */}
             <div>
               <div className="mb-8 text-center">
-                <h2 className="text-xl font-semibold text-red-600 dark:text-red-400 mb-4">Tính năng chính</h2>
-                <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho quản trị nhà nước hiệu quả</p>
+                <h2 className="text-xl font-semibold text-red-600 dark:text-red-400 mb-4">{t('applicationAreas.government.mainFeatures')}</h2>
+                <p className="text-lg text-gray-600 dark:text-gray-400">{t('applicationAreas.government.mainFeaturesSubtitle')}</p>
               </div>
               <div className="space-y-4">
                 <Accordion type="multiple" className="space-y-4">
-                  {features.map((feature, index) => (
-                    <AccordionItem key={index} value={`feature-${index}`} className="border rounded-lg">
-                      <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        <div className="bg-blue-100 p-3 rounded-lg w-fit mr-4">
-                          <feature.icon className="h-6 w-6 text-blue-600" />
-                        </div>
-                        {feature.title}
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-4">
-                        <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
+                  {features.map((feature, index) => {
+                    const icons = [BarChart3, Clock, Users];
+                    const IconComponent = icons[index] || BarChart3;
+                    return (
+                      <AccordionItem key={index} value={`feature-${index}`} className="border rounded-lg">
+                        <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
+                          <div className="bg-blue-100 p-3 rounded-lg w-fit mr-4">
+                            <IconComponent className="h-6 w-6 text-blue-600" />
+                          </div>
+                          {feature.title}
+                        </AccordionTrigger>
+                        <AccordionContent className="px-6 pb-4">
+                          <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
+                        </AccordionContent>
+                      </AccordionItem>
+                    )
+                  })}
                 </Accordion>
               </div>
             </div>
             {/* Lợi ích mang lại - cột phải */}
             <div>
               <div className="mb-8 text-center">
-                <h2 className="text-xl font-semibold text-red-600 dark:text-red-400 mb-4">Lợi ích mang lại</h2>
-                <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho quản trị nhà nước hiệu quả</p>
+                <h2 className="text-xl font-semibold text-red-600 dark:text-red-400 mb-4">{t('applicationAreas.government.keyBenefits')}</h2>
+                <p className="text-lg text-gray-600 dark:text-gray-400">{t('applicationAreas.government.keyBenefitsSubtitle')}</p>
               </div>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -577,14 +563,14 @@ export default function GovernmentPage() {
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 dark:bg-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Sẵn sàng hiện đại hóa quản trị nhà nước?</h2>
-          <p className="text-xl mb-8">Liên hệ với chúng tôi để được tư vấn giải pháp phù hợp</p>
+          <h2 className="text-3xl font-bold mb-4">{t('applicationAreas.government.cta.title')}</h2>
+          <p className="text-xl mb-8">{t('applicationAreas.government.cta.subtitle')}</p>
           <div className="space-x-4">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Link href="/contact-info">Liên hệ ngay</Link>
+              <Link href="/contact-info">{t('applicationAreas.government.cta.contactNow')}</Link>
             </Button>
             <Button variant="outline" size="lg" className="border-white text-white hover:bg-white text-blue-600">
-              <Link href="/">Về trang chủ</Link>
+              <Link href="/">{t('applicationAreas.government.cta.backHome')}</Link>
             </Button>
           </div>
         </div>

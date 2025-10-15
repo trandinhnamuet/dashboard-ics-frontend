@@ -111,7 +111,7 @@ export function Header() {
             />
             <div>
               <h1 className="text-xl font-bold text-foreground">ICS Smart Dashboard</h1>
-              <p className="text-xs text-muted-foreground">Bảng điều khiển thông minh </p>
+              <p className="text-xs text-muted-foreground">{t('header.tagline')}</p>
             </div>
           </Link>
 
@@ -143,7 +143,7 @@ export function Header() {
               className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
               onClick={() => handleNavigateToSection('industries')}
             >
-              Khách hàng
+              {t('header.customers')}
             </button>
             <button
               type="button"
@@ -157,7 +157,7 @@ export function Header() {
               className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0"
               onClick={() => router.push('/articles/articles-list')}
             >
-              Tin tức
+              {t('header.news')}
             </button>
             <button
               type="button"
@@ -214,7 +214,7 @@ export function Header() {
                 className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0 text-left"
                 onClick={() => { setIsMenuOpen(false); handleNavigateToSection('industries') }}
               >
-                Khách hàng
+                {t('header.customers')}
               </button>
               <button
                 type="button"
@@ -228,7 +228,7 @@ export function Header() {
                 className="text-foreground hover:text-primary transition-colors font-medium bg-transparent border-none px-0 text-left"
                 onClick={() => { setIsMenuOpen(false); router.push('/articles/articles-list') }}
               >
-                Tin tức
+                {t('header.news')}
               </button>
               <button
                 type="button"
@@ -240,7 +240,7 @@ export function Header() {
             </nav>
             <div className="mt-4 pt-4 border-t border-border space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">Ngôn ngữ</span>
+                <span className="text-sm text-muted-foreground">{t('header.language')}</span>
                 <div className="flex items-center space-x-2">
                   <LanguageSelector />
                   <ThemeToggle />

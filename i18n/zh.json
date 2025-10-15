@@ -1,19 +1,126 @@
 {
   "homepage": {
     "hero": {
-      "title": "越南领先的Smartdashboard云解决方案",
-      "subtitle": "Smartdashboard在越南的官方合作伙伴",
-      "description": "我们通过Smartdashboard云基础设施(OCI)提供全面的云计算解决方案，帮助企业优化成本并提高性能。",
+      "title": "越南领先的智能仪表板解决方案",
+      "subtitle": "政府决议57-NQ/TW对应解决方案",
+      "description": "我们提供全面的智能仪表板解决方案，支持企业和组织优化运营流程，提升工作性能。",
       "getStarted": "立即开始",
       "dashboard": "查看仪表板",
-      "contact": "联系咨询"
+      "contact": "联系咨询",
+      "features": {
+        "dataVisualization": {
+          "title": "数据可视化",
+          "description": "2D/3D仪表板界面"
+        },
+        "operationOptimization": {
+          "title": "运营优化",
+          "description": "卓越速度"
+        },
+        "multiPlatform": {
+          "title": "多平台集成",
+          "description": "系统集成支持"
+        }
+      },
+      "stats": {
+        "customers": "客户",
+        "realtime": "实时",
+        "support": "支持"
+      }
     },
     "services": {
-      "title": "服务",
-      "subtitle": "全面的云解决方案"
+      "title": "全面的智能仪表板解决方案",
+      "subtitle": "从运营数据到智能分析，我们提供智能仪表板解决方案，帮助企业集中管理、可视化监控和快速决策。",
+      "stats": {
+        "deploymentTime": "平均部署时间",
+        "dataSources": "支持集成的数据源",
+        "security": "加密和安全合规",
+        "costSaving": "运营成本节省"
+      }
+    },
+    "industries": {
+      "title": "应用领域",
+      "subtitle": "智能仪表板为各行各业提供卓越效率的服务",
+      "government": {
+        "title": "政府 - 政府机构",
+        "description": "全面监控宏观经济指标，如GDP增长率、通胀率、失业率、国际收支，以及预算收支数据、关键绩效指标、项目实施进度和瓶颈。",
+        "benefits": [
+          "实时KPI监控",
+          "项目进度跟踪",
+          "详细预算分析"
+        ]
+      },
+      "finance": {
+        "title": "金融 - 银行 - 保险",
+        "description": "帮助管理者掌握运营全貌：现金流、各分行KPI、ATM、未偿债务、债务回收效率和新账户数量，所有数据可视化显示并24/7实时更新。",
+        "benefits": [
+          "增长20-30%",
+          "24/7现金流监控",
+          "优化业务决策"
+        ]
+      },
+      "manufacturing": {
+        "title": "工业 - 制造",
+        "description": "通过实时能源和KPI监控提高生产效率，通过运营优化降低20-30%成本，改善安全性并向绿色工业、净零排放迈进。",
+        "benefits": [
+          "降低20-30%成本",
+          "实时能源监控",
+          "迈向净零排放"
+        ]
+      },
+      "building": {
+        "title": "智能建筑",
+        "description": "从HVAC、电力、水、安防到各种设施的建筑系统综合管理。通过24/7实时监控优化能源、降低运营成本并提升用户体验。",
+        "benefits": [
+          "节能30-40%",
+          "运营成本降低25%",
+          "增强安全保障"
+        ]
+      },
+      "seaport": {
+        "title": "智能港口",
+        "description": "将港口转变为数字指挥中心，配备3D数字孪生、实时KPI监控、自动化运营流程，将装卸生产力提高30%。优化物流并降低运输成本。",
+        "benefits": [
+          "生产力提高30%",
+          "实时KPI监控",
+          "安全改善40%"
+        ]
+      },
+      "applications": {
+        "title": "广泛应用",
+        "factory": {
+          "name": "工厂",
+          "stats": "150+工厂已实施",
+          "description": "监控从原材料到成品的整个生产过程。实时跟踪机器性能、能耗和产品质量。"
+        },
+        "port": {
+          "name": "港口",
+          "stats": "25+可信赖港口",
+          "description": "管理货物装卸操作，跟踪进出港船舶，优化物流并减少等待时间。"
+        },
+        "bank": {
+          "name": "银行",
+          "stats": "80+银行分行",
+          "description": "监控交易，分析现金流，管理信贷风险，优化整个系统的客户服务。"
+        },
+        "government": {
+          "name": "公共行政",
+          "stats": "200+国家机构",
+          "description": "数字化行政流程，跟踪文件处理进度，提高透明度并改善公共服务。"
+        },
+        "building": {
+          "name": "建筑",
+          "stats": "500+智能建筑",
+          "description": "管理建筑中的HVAC、电力、水、安防和公用设施系统，优化能源并提升体验。"
+        },
+        "logistics": {
+          "name": "物流",
+          "stats": "300+连接仓库",
+          "description": "跟踪库存，优化运输路线，管理储存温度并自动化物流流程。"
+        }
+      }
     },
     "pricing": {
-      "title": "价格",
+      "title": "价格表",
       "subtitle": "适合各种规模企业的服务套餐",
       "plans": {
         "starter": "标准版",
@@ -26,7 +133,7 @@
   "header": {
     "home": "首页",
     "services": "服务",
-    "pricing": "价格",
+    "pricing": "订阅套餐",
     "support": "支持", 
     "contact": "联系",
     "login": "登录",
@@ -34,9 +141,341 @@
     "hello": "您好",
     "profile": "个人资料",
     "settings": "设置",
-    "logout": "登出"
+    "logout": "登出",
+    "customers": "客户",
+    "news": "新闻",
+    "language": "语言",
+    "tagline": "智能仪表板"
   },
   "common": {
-    "loading": "加载中..."
+    "loading": "加载中...",
+    "logoutSuccess": "登出成功！"
+  },
+  "checkout": {
+    "title": "结算",
+    "backButton": "返回",
+    "packageInfo": "服务套餐信息",
+    "packageName": "套餐名称",
+    "description": "描述",
+    "packageType": "套餐类型",
+    "features": "包含功能",
+    "totalAmount": "总金额",
+    "paymentQR": "二维码支付",
+    "scanQR": "使用银行APP扫描二维码进行支付",
+    "bankName": "银行",
+    "accountNumber": "账号",
+    "amount": "金额",
+    "content": "内容",
+    "copyInfo": "复制转账信息",
+    "copiedSuccess": "已复制转账信息",
+    "note": "注意：请按照准确内容转账，以便系统自动激活服务。",
+    "contactSupport": "联系客服"
+  },
+  "services": {
+    "dataIntegration": {
+      "title": "数据集成",
+      "description": "连接和收集企业各种系统的数据",
+      "features": [
+        "来自多个源的实时数据连接",
+        "支持传统数据（SQL、Excel）和IoT/SCADA数据",
+        "自动化数据转换和标准化",
+        "高性能数据处理引擎",
+        "安全数据传输协议"
+      ]
+    },
+    "security": {
+      "title": "安全与合规",
+      "description": "企业级数据安全",
+      "features": [
+        "端到端加密",
+        "多重身份验证（MFA）",
+        "基于角色的访问控制",
+        "审计日志与合规",
+        "数据备份与恢复"
+      ]
+    },
+    "realtime": {
+      "title": "实时监控",
+      "description": "实时仪表板和即时警报",
+      "features": [
+        "实时数据可视化",
+        "可自定义仪表板",
+        "智能警报和触发器",
+        "移动通知",
+        "性能监控"
+      ]
+    },
+    "scaling": {
+      "title": "可扩展架构",
+      "description": "随您成长的云端解决方案",
+      "features": [
+        "自动扩展能力",
+        "高可用性保证",
+        "负载均衡",
+        "全球CDN",
+        "灾难恢复功能"
+      ]
+    },
+    "analytics": {
+      "title": "高级分析",
+      "description": "AI/ML驱动的商业智能",
+      "features": [
+        "机器学习预测分析",
+        "趋势分析和异常检测",
+        "自定义报告生成",
+        "数据挖掘功能",
+        "业务洞察交付"
+      ]
+    },
+    "integration": {
+      "title": "系统集成",
+      "description": "与现有系统无缝集成",
+      "features": [
+        "REST/GraphQL API",
+        "Webhook支持",
+        "第三方集成",
+        "遗留系统连接",
+        "自定义集成开发"
+      ]
+    }
+  },
+  "pricing": {
+    "title": "服务价格表",
+    "subtitle": "从基础解决方案到3D交互模型，我们为各种规模的建筑提供合适的服务套餐",
+    "pricingModes": {
+      "saving": {
+        "title": "一次性购买",
+        "subtitle": "系统整体转让",
+        "description": "专为全面需求和独立运营设计 - 一次性付款并完整转让系统"
+      },
+      "payAsYouGo": {
+        "title": "按年租用",
+        "subtitle": "按年付费",
+        "description": "适合灵活需求和技术支持维护 - 12、24、36个月套餐的年度付费"
+      }
+    },
+    "plans": {
+      "business": {
+        "name": "商务版",
+        "description": "中小企业全功能套餐",
+        "features": [
+          "实时仪表板",
+          "基础报告功能",
+          "邮件和短信警报",
+          "最多5个系统集成",
+          "6个月数据存储",
+          "网页和移动访问",
+          "邮件和短信警报"
+        ],
+        "buttonText": "立即开始"
+      },
+      "dashboard2D": {
+        "name": "2D仪表板",
+        "description": "专业2D界面数据可视化",
+        "features": [
+          "商务套餐的所有功能",
+          "带建筑图纸的2D交互式仪表板",
+          "高级数据可视化",
+          "分区域详细报告",
+          "24/7电话支持",
+          "无限系统集成",
+          "2年数据存储",
+          "自定义集成API",
+          "免费使用培训",
+          "AI智能警报"
+        ],
+        "buttonText": "选择热门套餐"
+      },
+      "dashboard3D": {
+        "name": "3D仪表板",
+        "description": "生动3D模型的最佳体验",
+        "features": [
+          "2D仪表板套餐的所有功能",
+          "交互式建筑3D模型",
+          "虚拟现实（VR）和增强现实（AR）",
+          "紧急情况模拟",
+          "AI/ML预测分析",
+          "无限IoT集成",
+          "永久数据存储",
+          "专属支持经理",
+          "按需界面定制",
+          "团队深度培训",
+          "99.9% SLA正常运行时间保证"
+        ],
+        "buttonText": "联系咨询"
+      },
+      "package12": {
+        "name": "12个月套餐",
+        "description": "适合短期项目的灵活付费",
+        "originalPrice": "240,000,000 VND",
+        "price": "198,000,000 VND",
+        "period": "/12个月",
+        "discount": "17%",
+        "features": [
+          "2D仪表板的所有功能",
+          "24/7技术支持",
+          "免费培训和部署",
+          "定期软件更新",
+          "自动数据备份",
+          "详细分析报告",
+          "无限API集成",
+          "移动应用支持"
+        ],
+        "buttonText": "选择12个月套餐"
+      },
+      "package24": {
+        "name": "24个月套餐",
+        "description": "中长期企业的最佳解决方案",
+        "originalPrice": "480,000,000 VND",
+        "price": "358,000,000 VND",
+        "period": "/24个月",
+        "discount": "25%",
+        "popular": true,
+        "features": [
+          "3D仪表板的所有功能",
+          "高级3D交互模型",
+          "AI/ML预测分析",
+          "专属支持经理",
+          "按需界面定制",
+          "团队深度培训",
+          "99.9% SLA正常运行时间",
+          "优先技术支持",
+          "执行仪表板报告",
+          "VR/AR访问"
+        ],
+        "buttonText": "选择最佳套餐"
+      },
+      "package36": {
+        "name": "36个月套餐",
+        "description": "长期战略投资的最大成本效益",
+        "originalPrice": "720,000,000 VND",
+        "price": "468,000,000 VND",
+        "period": "/36个月",
+        "discount": "35%",
+        "features": [
+          "24个月套餐的所有功能",
+          "自定义AI模型开发",
+          "高级预测分析",
+          "优先定制开发",
+          "月度战略回顾",
+          "无限培训课程",
+          "24/7专属支持团队",
+          "全系统定制",
+          "行业专家咨询",
+          "新功能抢先体验"
+        ],
+        "buttonText": "选择最大节省套餐"
+      }
+    },
+    "features": "包含功能：",
+    "showMore": "显示更多",
+    "showLess": "收起",
+    "mostOptimal": "最优选择",
+    "contactSupport": "联系客服：",
+    "hotline": "热线："
+  },
+  "contactInfo": {
+    "title": "联系信息",
+    "companyInfo": {
+      "companyName": "ICS智能仪表板",
+      "name": "公司名称",
+      "address": "地址",
+      "phone": "电话",
+      "email": "邮箱",
+      "businessLicense": "营业执照",
+      "taxCode": "税号",
+      "workingHours": "工作时间"
+    },
+    "subtitle": "越南领先的智能仪表板解决方案，随时为您提供24/7支持"
+  },
+  "applicationAreas": {
+    "government": {
+      "title": "智能仪表板 - 政府/机关部门",
+      "description": "全面监控宏观经济指标，如GDP增长率、通胀率、失业率、国际收支，以及预算收支数据、关键绩效指标、项目实施进度和瓶颈。",
+      "content": "为政府机关、公共管理部门、国有企业等提供全面的运营监控解决方案。通过实时数据集成和智能分析，提高管理效率、透明度和公共服务质量。",
+      "challenges": {
+        "title": "公共行政的实际挑战",
+        "subtitle": "传统运营方式暴露出许多局限性，阻碍了政府机构的管理和治理效率。"
+      },
+      "applications": {
+        "title": "智能仪表板在实践中的详细应用",
+        "subtitle": "在越南和世界各地，智能仪表板被部署为'数字大脑'来解决上述挑战，其中突出的模式是智能运营中心（IOC）。"
+      },
+      "benefits": {
+        "title": "战略和量化效益",
+        "subtitle": "在公共管理中实施智能仪表板带来重大且可衡量的影响，有助于构建现代行政体系。"
+      },
+      "whyChooseUs": "为什么选择我们？",
+      "mainFeatures": "主要功能",
+      "keyBenefits": "带来的益处",
+      "mainFeaturesSubtitle": "政府治理有效的全面解决方案",
+      "keyBenefitsSubtitle": "通过实践证明的有效性",
+      "features": [
+        {
+          "title": "实时KPI监控",
+          "description": "可视化即时跟踪各部门、项目的关键绩效指标。"
+        },
+        {
+          "title": "项目进度跟踪",
+          "description": "管理和监控公共投资项目和发展计划的实施进度。"
+        },
+        {
+          "title": "详细预算分析",
+          "description": "按项目和部门高精度分析预算收支。"
+        }
+      ],
+      "benefitsList": [
+        "政府管理效率提高40%",
+        "定期报告时间减少30%",
+        "信息透明度提高50%",
+        "决策过程改善60%"
+      ],
+      "cta": {
+        "title": "准备好实现政府管理现代化了吗？",
+        "subtitle": "联系我们获取合适的解决方案咨询",
+        "contactNow": "立即联系",
+        "backHome": "返回首页"
+      }
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "公司",
+      "about": "关于我们",
+      "team": "团队",
+      "careers": "招聘",
+      "news": "新闻"
+    },
+    "services": {
+      "title": "服务",
+      "buildingDashboard": "建筑智能仪表板",
+      "iotManagement": "物联网设备管理",
+      "digitalTransformation": "建筑数字化转型解决方案",
+      "energyManagement": "能源管理系统",
+      "securitySolution": "集成安全解决方案",
+      "maintenanceManagement": "预防性维护管理"
+    },
+    "support": {
+      "title": "支持",
+      "documentation": "文档",
+      "tutorial": "教程",
+      "faq": "常见问题",
+      "contact": "联系我们"
+    },
+    "legal": {
+      "title": "法律",
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "security": "安全"
+    },
+    "contact": {
+      "title": "联系我们",
+      "address": "地址",
+      "phone": "电话",
+      "email": "邮箱",
+      "workingHours": "工作时间"
+    },
+    "copyright": "© 2024 ICS Smart Dashboard. 版权所有。",
+    "description": "越南领先的智能仪表板解决方案 - 支持企业和组织实现数字化转型并优化运营效率。"
   }
 }

@@ -6,12 +6,38 @@
       "description": "Chúng tôi cung cấp giải pháp bảng điều khiển thông minh toàn diện, hỗ trợ doanh nghiệp và tổ chức tối ưu hóa quy trình vận hành, đồng thời nâng cao hiệu suất làm việc.",
       "getStarted": "Bắt đầu ngay",
       "dashboard": "Xem Dashboard",
-      "contact": "Liên hệ tư vấn"
+      "contact": "Liên hệ tư vấn",
+      "features": {
+        "dataVisualization": {
+          "title": "Trực quan hóa dữ liệu",
+          "description": "Giao diện bảng điều khiển 2D/3D"
+        },
+        "operationOptimization": {
+          "title": "Tối ưu vận hành",
+          "description": "Tốc độ vượt trội"
+        },
+        "multiPlatform": {
+          "title": "Tích hợp đa nền tảng",
+          "description": "Hỗ trợ tích hợp các hệ thống"
+        }
+      },
+      "stats": {
+        "customers": "Khách hàng",
+        "realtime": "Thời gian thực",
+        "support": "Hỗ trợ"
+      }
     },
     "services": {
-      "title": "Dịch vụ",
-      "subtitle": "Giải pháp Smart Dashboard toàn diện"
+      "title": "Giải pháp Smart Dashboard toàn diện",
+      "subtitle": "Từ dữ liệu vận hành đến phân tích thông minh, chúng tôi mang đến giải pháp Smart Dashboard giúp doanh nghiệp quản trị tập trung, giám sát trực quan và ra quyết định nhanh chóng.",
+      "stats": {
+        "deploymentTime": "Thời gian triển khai trung bình",
+        "dataSources": "Nguồn dữ liệu hỗ trợ tích hợp",
+        "security": "Mã hóa & tuân thủ bảo mật",
+        "costSaving": "Tiết kiệm chi phí vận hành"
+      }
     },
+
     "pricing": {
       "title": "Bảng giá",
       "subtitle": "Gói dịch vụ phù hợp với mọi quy mô doanh nghiệp",
@@ -20,6 +46,67 @@
         "professional": "Cao cấp", 
         "enterprise": "Doanh nghiệp",
         "custom": "Tùy chỉnh"
+      }
+    },
+    "industries": {
+      "title": "Lĩnh vực ứng dụng",
+      "subtitle": "Giải pháp dashboard thông minh cho mọi ngành nghề",
+      "government": {
+        "title": "Chính phủ - Cơ quan ban ngành",
+        "description": "Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn.",
+        "benefits": ["Giám sát KPIs thời gian thực", "Theo dõi tiến độ dự án", "Phân tích ngân sách chi tiết"]
+      },
+      "finance": {
+        "title": "Tài chính - Ngân hàng - Bảo hiểm",
+        "description": "Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7.",
+        "benefits": ["Tăng trưởng 20-30%", "Giám sát dòng tiền 24/7", "Tối ưu quyết định kinh doanh"]
+      },
+      "manufacturing": {
+        "title": "Công nghiệp - Sản xuất",
+        "description": "Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, giảm 20-30% chi phí nhờ tối ưu vận hành, cải thiện an toàn và hướng đến công nghiệp xanh, net-zero.",
+        "benefits": ["Giảm 20-30% chi phí", "Giám sát năng lượng thời gian thực", "Hướng đến net-zero"]
+      },
+      "building": {
+        "title": "Tòa nhà thông minh",
+        "description": "Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. Tối ưu năng lượng, giảm chi phí vận hành và nâng cao trải nghiệm người dùng thông qua giám sát thời gian thực 24/7.",
+        "benefits": ["Tiết kiệm năng lượng 30-40%", "Giảm chi phí vận hành 25%", "Tăng an toàn và bảo mật"]
+      },
+      "seaport": {
+        "title": "Cảng biển thông minh",
+        "description": "Biến cảng biển thành trung tâm chỉ huy số với bản sao số 3D, giám sát KPIs thời gian thực, tự động hóa quy trình vận hành và nâng cao năng suất bốc dỡ lên 30%. Tối ưu logistics và giảm chi phí vận chuyển.",
+        "benefits": ["Tăng năng suất 30%", "Giám sát KPIs thời gian thực", "Nâng cao an toàn 40%"]
+      },
+      "applications": {
+        "factory": {
+          "name": "Nhà máy",
+          "stats": "150+ nhà máy đã áp dụng",
+          "description": "Giám sát toàn bộ quy trình sản xuất từ nguyên liệu đến thành phẩm. Theo dõi hiệu suất máy móc, năng lượng tiêu thụ và chất lượng sản phẩm theo thời gian thực."
+        },
+        "port": {
+          "name": "Cảng biển",
+          "stats": "25+ cảng biển tin dùng",
+          "description": "Quản lý hoạt động bốc xếp hàng hóa, theo dõi tàu thuyền ra vào cảng, tối ưu hóa logistics và giảm thời gian chờ đợi."
+        },
+        "bank": {
+          "name": "Ngân hàng",
+          "stats": "80+ chi nhánh ngân hàng",
+          "description": "Giám sát giao dịch, phân tích dòng tiền, quản lý rủi ro tín dụng và tối ưu hóa dịch vụ khách hàng trên toàn hệ thống."
+        },
+        "government": {
+          "name": "Hành chính công",
+          "stats": "200+ cơ quan nhà nước",
+          "description": "Số hóa quy trình hành chính, theo dõi tiến độ xử lý hồ sơ, tăng tính minh bạch và cải thiện dịch vụ công."
+        },
+        "building": {
+          "name": "Tòa nhà",
+          "stats": "500+ tòa nhà thông minh",
+          "description": "Quản lý hệ thống HVAC, điện, nước, an ninh và các tiện ích trong tòa nhà để tối ưu năng lượng và nâng cao trải nghiệm."
+        },
+        "logistics": {
+          "name": "Kho vận",
+          "stats": "300+ kho hàng được kết nối",
+          "description": "Theo dõi tồn kho, tối ưu tuyến vận chuyển, quản lý nhiệt độ bảo quản và tự động hóa quy trình logistics."
+        }
       }
     }
   },
@@ -34,11 +121,32 @@
     "hello": "Xin chào",
     "profile": "Thông tin cá nhân",
     "settings": "Cài đặt",
-    "logout": "Đăng xuất"
+    "logout": "Đăng xuất",
+    "customers": "Khách hàng",
+    "news": "Tin tức",
+    "language": "Ngôn ngữ",
+    "tagline": "Bảng điều khiển thông minh"
   },
   "common": {
     "loading": "Đang tải...",
     "logoutSuccess": "Đăng xuất thành công!"
+  },
+  "forms": {
+    "validation": {
+      "userNameMin": "Tên người dùng phải có ít nhất 2 ký tự",
+      "emailInvalid": "Email không hợp lệ", 
+      "phoneMin": "Số điện thoại phải có ít nhất 10 số",
+      "phoneMax": "Số điện thoại không được quá 20 số"
+    },
+    "errors": {
+      "title": "Có lỗi xảy ra",
+      "description": "Vui lòng thử lại sau hoặc liên hệ hỗ trợ."
+    },
+    "customRegistration": {
+      "title": "Đăng ký gói tùy chỉnh",
+      "description": "Chúng tôi sẽ liên hệ với bạn ngay để cung cấp giải pháp.",
+      "selectedPlan": "Gói đã chọn"
+    }
   },
   "checkout": {
     "title": "Thanh toán",
@@ -59,5 +167,351 @@
     "copiedSuccess": "Đã sao chép thông tin chuyển khoản",
     "note": "Lưu ý: Vui lòng chuyển khoản đúng nội dung để hệ thống tự động kích hoạt dịch vụ.",
     "contactSupport": "Liên hệ hỗ trợ"
+  },
+  "services": {
+    "dataIntegration": {
+      "title": "Data Integration",
+      "description": "Kết nối và thu thập dữ liệu từ nhiều hệ thống khác nhau của doanh nghiệp",
+      "features": [
+        "Kết nối dữ liệu thời gian thực từ nhiều nguồn",
+        "Hỗ trợ cả dữ liệu truyền thống (SQL, Excel) và dữ liệu IOT/SCADA",
+        "Tự động hóa việc chuyển đổi và chuẩn hóa dữ liệu",
+        "Engine xử lý dữ liệu hiệu suất cao",
+        "Giao thức truyền dữ liệu bảo mật"
+      ]
+    },
+    "security": {
+      "title": "Bảo mật và tuân thủ",
+      "description": "Bảo mật dữ liệu cấp doanh nghiệp",
+      "features": [
+        "Mã hóa end-to-end",
+        "Xác thực đa yếu tố (MFA)",
+        "Kiểm soát truy cập dựa trên vai trò",
+        "Audit log và tuân thủ quy định",
+        "Sao lưu và khôi phục dữ liệu"
+      ]
+    },
+    "realtime": {
+      "title": "Giám sát thời gian thực",
+      "description": "Dashboard trực tiếp và cảnh báo tức thì",
+      "features": [
+        "Trực quan hóa dữ liệu thời gian thực",
+        "Dashboard có thể tùy chỉnh",
+        "Cảnh báo thông minh và trigger",
+        "Thông báo mobile",
+        "Giám sát hiệu suất"
+      ]
+    },
+    "scaling": {
+      "title": "Kiến trúc có thể mở rộng",
+      "description": "Giải pháp cloud đáp ứng sự phát triển",
+      "features": [
+        "Tự động scale up/down",
+        "Đảm bảo tính sẵn sàng cao",
+        "Cân bằng tải",
+        "CDN toàn cầu",
+        "Tính năng khôi phục sau thảm họa"
+      ]
+    },
+    "analytics": {
+      "title": "Phân tích nâng cao",
+      "description": "Trí tuệ kinh doanh tích hợp AI/ML",
+      "features": [
+        "Phân tích dự đoán bằng machine learning",
+        "Phân tích xu hướng và phát hiện bất thường",
+        "Tạo báo cáo tùy chỉnh",
+        "Tính năng data mining",
+        "Cung cấp thông tin kinh doanh chi tiết"
+      ]
+    },
+    "integration": {
+      "title": "Tích hợp hệ thống",
+      "description": "Tích hợp liền mạch với hệ thống hiện có",
+      "features": [
+        "REST/GraphQL API",
+        "Hỗ trợ Webhook",
+        "Tích hợp bên thứ ba",
+        "Kết nối hệ thống legacy",
+        "Phát triển tích hợp tùy chỉnh"
+      ]
+    }
+  },
+  "pricing": {
+    "title": "Bảng giá dịch vụ",
+    "subtitle": "Từ giải pháp cơ bản đến mô hình 3D tương tác, chúng tôi có gói dịch vụ phù hợp cho mọi quy mô tòa nhà",
+    "pricingModes": {
+      "saving": {
+        "title": "Mua đứt",
+        "subtitle": "Chuyển giao hệ thống một lần",
+        "description": "Được thiết kế phù hợp với nhu cầu bao trọn gói và vận hành độc lập - thanh toán một lần duy nhất và chuyển giao toàn bộ hệ thống"
+      },
+      "payAsYouGo": {
+        "title": "Thuê theo năm",
+        "subtitle": "Thanh toán theo năm",
+        "description": "Phù hợp nhu cầu linh hoạt và duy trì hỗ trợ kĩ thuật - thanh toán theo từng năm các gói 12, 24, 36 tháng"
+      }
+    },
+    "plans": {
+      "business": {
+        "name": "Doanh nghiệp",
+        "description": "Gói đầy đủ tính năng cho doanh nghiệp vừa và nhỏ",
+        "features": [
+          "Dashboard thời gian thực",
+          "Tính năng báo cáo cơ bản",
+          "Cảnh báo qua email và SMS",
+          "Tích hợp tối đa 5 hệ thống",
+          "Lưu trữ dữ liệu 6 tháng",
+          "Truy cập trên web và mobile",
+          "Cảnh báo qua email và SMS"
+        ],
+        "buttonText": "Bắt đầu ngay"
+      },
+      "dashboard2D": {
+        "name": "Dashboard 2D",
+        "description": "Trực quan hóa dữ liệu với giao diện 2D chuyên nghiệp",
+        "features": [
+          "Tất cả tính năng của gói Doanh nghiệp",
+          "Dashboard 2D tương tác với sơ đồ tòa nhà",
+          "Trực quan hóa dữ liệu nâng cao",
+          "Báo cáo chi tiết theo từng khu vực",
+          "Hỗ trợ 24/7 qua điện thoại",
+          "Tích hợp không giới hạn hệ thống",
+          "Lưu trữ dữ liệu 2 năm",
+          "API tùy chỉnh cho tích hợp",
+          "Đào tạo sử dụng miễn phí",
+          "Cảnh báo thông minh với AI"
+        ],
+        "buttonText": "Chọn gói phổ biến"
+      },
+      "dashboard3D": {
+        "name": "Dashboard 3D",
+        "description": "Trải nghiệm tối ưu với mô hình 3D sinh động",
+        "features": [
+          "Tất cả tính năng của gói Dashboard 2D",
+          "Mô hình 3D tòa nhà tương tác",
+          "Thực tế ảo (VR) và thực tế tăng cường (AR)",
+          "Mô phỏng tình huống khẩn cấp",
+          "Phân tích dự đoán với AI/ML",
+          "Tích hợp IoT không giới hạn",
+          "Lưu trữ dữ liệu vĩnh viễn",
+          "Dedicated support manager",
+          "Tùy chỉnh giao diện theo yêu cầu",
+          "Đào tạo chuyên sâu cho team",
+          "SLA 99.9% uptime guarantee"
+        ],
+        "buttonText": "Liên hệ tư vấn"
+      },
+      "package12": {
+        "name": "Gói 12 tháng",
+        "description": "Phù hợp cho dự án ngắn hạn với linh hoạt thanh toán",
+        "originalPrice": "240,000,000 VNĐ",
+        "price": "198,000,000 VNĐ",
+        "period": "/12 tháng",
+        "discount": "17%",
+        "features": [
+          "Tất cả tính năng Dashboard 2D",
+          "Hỗ trợ kỹ thuật 24/7",
+          "Đào tạo và triển khai miễn phí",
+          "Cập nhật phần mềm định kỳ",
+          "Backup dữ liệu tự động",
+          "Báo cáo phân tích chi tiết",
+          "Tích hợp API không giới hạn",
+          "Hỗ trợ mobile app"
+        ],
+        "buttonText": "Chọn gói 12 tháng"
+      },
+      "package24": {
+        "name": "Gói 24 tháng",
+        "description": "Giải pháp tối ưu cho doanh nghiệp trung hạn",
+        "originalPrice": "480,000,000 VNĐ",
+        "price": "358,000,000 VNĐ",
+        "period": "/24 tháng",
+        "discount": "25%",
+        "popular": true,
+        "features": [
+          "Tất cả tính năng Dashboard 3D",
+          "Mô hình 3D tương tác nâng cao",
+          "AI/ML phân tích dự đoán",
+          "Dedicated support manager",
+          "Tùy chỉnh giao diện theo yêu cầu",
+          "Đào tạo chuyên sâu cho team",
+          "SLA 99.9% uptime",
+          "Ưu tiên hỗ trợ kỹ thuật",
+          "Báo cáo executive dashboard",
+          "Truy cập VR/AR"
+        ],
+        "buttonText": "Chọn gói tối ưu"
+      },
+      "package36": {
+        "name": "Gói 36 tháng",
+        "description": "Đầu tư chiến lược dài hạn với hiệu quả chi phí tối đa",
+        "originalPrice": "720,000,000 VNĐ",
+        "price": "468,000,000 VNĐ",
+        "period": "/36 tháng",
+        "discount": "35%",
+        "features": [
+          "Tất cả tính năng gói 24 tháng",
+          "Phát triển AI model tùy chỉnh",
+          "Phân tích dự đoán nâng cao",
+          "Ưu tiên phát triển tùy chỉnh",
+          "Review chiến lược hàng tháng",
+          "Đào tạo không giới hạn",
+          "Đội ngũ hỗ trợ riêng 24/7",
+          "Tùy chỉnh toàn hệ thống",
+          "Tư vấn chuyên gia ngành",
+          "Truy cập sớm tính năng mới"
+        ],
+        "buttonText": "Chọn gói tiết kiệm tối đa"
+      }
+    },
+    "features": "Tính năng bao gồm:",
+    "showMore": "Xem thêm",
+    "showLess": "Thu gọn",
+    "mostOptimal": "Tối ưu nhất",
+    "contactSupport": "Liên hệ hỗ trợ:",
+    "hotline": "Hotline:"
+  },
+  "contactInfo": {
+    "title": "Liên hệ với chúng tôi",
+    "subtitle": "Giải pháp Smart Dashboard hàng đầu tại Việt Nam, sẵn sàng hỗ trợ bạn 24/7",
+    "companyInfo": {
+      "title": "Thông tin công ty",
+      "name": "CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS",
+      "office": "Văn phòng tại Hà Nội",
+      "address": "TT3-5 Khu đô thị Đại Kim mới, Định Công, Hà Nội"
+    },
+    "contact": {
+      "title": "Thông tin liên hệ",
+      "phone": "Điện thoại & Hotline",
+      "email": "Email",
+      "website": "Website"
+    },
+    "map": {
+      "title": "Vị trí trên bản đồ",
+      "description": "Tìm đường đến văn phòng của chúng tôi"
+    }
+  },
+  "applicationAreas": {
+    "government": {
+      "title": "Smart Dashboard - Chính phủ / Cơ quan ban ngành",
+      "description": "Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn.",
+      "challenges": {
+        "title": "Thách thức thực tế của ngành Hành chính công",
+        "subtitle": "Việc vận hành theo phương thức truyền thống đang bộc lộ nhiều hạn chế, cản trở hiệu quả quản lý và điều hành của các cơ quan nhà nước."
+      },
+      "applications": {
+        "title": "Ứng dụng chi tiết của Smart Dashboard trong thực tế",
+        "subtitle": "Tại Việt Nam và trên thế giới, Smart Dashboard được triển khai như một \"bộ não số\" để giải quyết các thách thức trên, với mô hình nổi bật là các Trung tâm Điều hành Thông minh (IOC)."
+      },
+      "benefits": {
+        "title": "Lợi ích chiến lược và định lượng",
+        "subtitle": "Việc triển khai Smart Dashboard trong hành chính công mang lại những tác động to lớn và có thể đo lường được, góp phần xây dựng một nền hành chính hiện đại."
+      },
+      "whyChooseUs": "Tại sao chọn chúng tôi?",
+      "mainFeatures": "Tính năng chính",
+      "keyBenefits": "Lợi ích mang lại",
+      "mainFeaturesSubtitle": "Giải pháp toàn diện cho quản trị nhà nước hiệu quả",
+      "keyBenefitsSubtitle": "Hiệu quả được chứng minh qua thực tiễn",
+      "features": [
+        {
+          "title": "Giám sát KPIs thời gian thực",
+          "description": "Theo dõi các chỉ số hiệu suất chính của từng phòng ban, dự án một cách trực quan và tức thì."
+        },
+        {
+          "title": "Theo dõi tiến độ dự án",
+          "description": "Quản lý và giám sát tiến độ thực hiện các dự án đầu tư công, chương trình phát triển."
+        },
+        {
+          "title": "Phân tích ngân sách chi tiết",
+          "description": "Phân tích thu - chi ngân sách theo từng khoản mục, phòng ban với độ chính xác cao."
+        }
+      ],
+      "benefitsList": [
+        "Tăng 40% hiệu quả quản lý nhà nước",
+        "Giảm 30% thời gian báo cáo định kỳ",
+        "Tăng 50% độ minh bạch thông tin",
+        "Cải thiện 60% quy trình ra quyết định"
+      ],
+      "cta": {
+        "title": "Sẵn sàng hiện đại hóa quản trị nhà nước?",
+        "subtitle": "Liên hệ với chúng tôi để được tư vấn giải pháp phù hợp",
+        "contactNow": "Liên hệ ngay",
+        "backHome": "Về trang chủ"
+      }
+    },
+    "finance": {
+      "title": "Smart Dashboard - Ngành Tài chính / Ngân hàng / Bảo hiểm",
+      "description": "Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7.",
+      "challenges": {
+        "title": "Thách thức thực tế của ngành Tài chính - Ngân hàng",
+        "subtitle": "Ngành tài chính ngân hàng vận hành trong một môi trường có độ phức tạp, rủi ro và yêu cầu tuân thủ cực kỳ cao."
+      },
+      "features": [
+        {
+          "title": "Tăng trưởng 20-30%",
+          "description": "Tối ưu hóa doanh thu và lợi nhuận thông qua phân tích dữ liệu chính xác và kịp thời."
+        },
+        {
+          "title": "Giám sát dòng tiền 24/7",
+          "description": "Theo dõi dòng tiền thời gian thực từ tất cả các chi nhánh, ATM và kênh giao dịch."
+        },
+        {
+          "title": "Tối ưu quyết định kinh doanh",
+          "description": "Ra quyết định nhanh chóng dựa trên dữ liệu phân tích thông minh và dự báo chính xác."
+        }
+      ],
+      "metrics": [
+        { "label": "Dư nợ theo thời gian thực", "value": "100%" },
+        { "label": "Hiệu suất thu hồi nợ", "value": "95%" },
+        { "label": "Tài khoản mới mỗi ngày", "value": "500+" },
+        { "label": "Giao dịch được xử lý", "value": "1M+" }
+      ],
+      "benefits": [
+        "Tăng 25% hiệu quả quản lý rủi ro tín dụng",
+        "Giảm 40% thời gian xử lý báo cáo",
+        "Tăng 30% độ chính xác dự báo dòng tiền",
+        "Cải thiện 50% trải nghiệm khách hàng"
+      ]
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Công ty",
+      "about": "Về chúng tôi",
+      "team": "Đội ngũ",
+      "careers": "Tuyển dụng",
+      "news": "Tin tức"
+    },
+    "services": {
+      "title": "Dịch vụ",
+      "buildingDashboard": "Smart Dashboard cho tòa nhà",
+      "iotManagement": "Quản lý thiết bị IoT",
+      "digitalTransformation": "Giải pháp chuyển đổi số tòa nhà",
+      "energyManagement": "Hệ thống quản lý năng lượng",
+      "securitySolution": "Giải pháp an ninh tích hợp",
+      "maintenanceManagement": "Quản lý bảo trì dự phòng"
+    },
+    "support": {
+      "title": "Hỗ trợ",
+      "documentation": "Tài liệu",
+      "tutorial": "Hướng dẫn",
+      "faq": "Câu hỏi thường gặp",
+      "contact": "Liên hệ"
+    },
+    "legal": {
+      "title": "Pháp lý",
+      "privacy": "Chính sách bảo mật",
+      "terms": "Điều khoản sử dụng",
+      "security": "Bảo mật"
+    },
+    "contact": {
+      "title": "Liên hệ",
+      "address": "Địa chỉ",
+      "phone": "Số điện thoại",
+      "email": "Email",
+      "workingHours": "Giờ làm việc"
+    },
+    "copyright": "© 2024 ICS Smart Dashboard. Tất cả quyền được bảo lưu.",
+    "description": "Giải pháp Smart Dashboard hàng đầu tại Việt Nam - Hỗ trợ doanh nghiệp và tổ chức đạt được chuyển đổi số và tối ưu hóa hiệu quả vận hành."
   }
 }

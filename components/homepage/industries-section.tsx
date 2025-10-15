@@ -3,121 +3,48 @@ import { Button } from "@/components/ui/button"
 import { Building2, Banknote, Factory, Building, Ship, Users2 } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 
 export function IndustriesSection() {
+  const { t } = useTranslation()
   const router = useRouter()
   const [hoveredApp, setHoveredApp] = useState<string | null>(null)
   const [pinnedApp, setPinnedApp] = useState<string | null>(null)
   const [expandedApp, setExpandedApp] = useState<string | null>(null)
   
-  const industries = [
-    {
-      icon: Building2,
-      title: "Chính phủ - Cơ quan ban ngành",
-      description:
-        "Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn.",
-      benefits: ["Giám sát KPIs thời gian thực", "Theo dõi tiến độ dự án", "Phân tích ngân sách chi tiết"],
-      link: "/application-areas/government",
-      image: "/application-areas/government/thumbnail.jpg"
-    },
-    {
-      icon: Banknote,
-      title: "Tài chính - Ngân hàng - Bảo hiểm",
-      description:
-        "Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7.",
-      benefits: ["Tăng trưởng 20-30%", "Giám sát dòng tiền 24/7", "Tối ưu quyết định kinh doanh"],
-      link: "/application-areas/finance",
-      image: "/application-areas/finance/thumbnail.jpg"
-    },
-    {
-      icon: Factory,
-      title: "Công nghiệp - Sản xuất",
-      description:
-        "Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, giảm 20-30% chi phí nhờ tối ưu vận hành, cải thiện an toàn và hướng đến công nghiệp xanh, net-zero.",
-      benefits: ["Giảm 20-30% chi phí", "Giám sát năng lượng thời gian thực", "Hướng đến net-zero"],
-      link: "/application-areas/manufacturing",
-      image: "/application-areas/manufacturing/thumbnail.jpg"
-    },
-    {
-      icon: Building,
-      title: "Tòa nhà thông minh",
-      description:
-        "Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. Tối ưu năng lượng, giảm chi phí vận hành và nâng cao trải nghiệm người dùng thông qua giám sát thời gian thực 24/7.",
-      benefits: ["Tiết kiệm năng lượng 30-40%", "Giảm chi phí vận hành 25%", "Tăng an toàn và bảo mật"],
-      link: "/application-areas/building",
-      image: "/application-areas/building/thumbnail.jpg"
-    },
-    {
-      icon: Ship,
-      title: "Cảng biển thông minh",
-      description:
-        "Biến cảng biển thành trung tâm chỉ huy số với bản sao số 3D, giám sát KPIs thời gian thực, tự động hóa quy trình vận hành và nâng cao năng suất bốc dỡ lên 30%. Tối ưu logistics và giảm chi phí vận chuyển.",
-      benefits: ["Tăng năng suất 30%", "Giám sát KPIs thời gian thực", "Nâng cao an toàn 40%"],
-      link: "/application-areas/seaport",
-      image: "/application-areas/seaport/thumbnail.jpg"
-    },
-  ]
+  const industriesKeys = ['government', 'finance', 'manufacturing', 'building', 'seaport']
+  const industries = industriesKeys.map(key => ({
+    icon: key === 'government' ? Building2 : key === 'finance' ? Banknote : key === 'manufacturing' ? Factory : key === 'building' ? Building : Ship,
+    title: t(`homepage.industries.${key}.title`),
+    description: t(`homepage.industries.${key}.description`),
+    benefits: [
+      t(`homepage.industries.${key}.benefits.0`),
+      t(`homepage.industries.${key}.benefits.1`),
+      t(`homepage.industries.${key}.benefits.2`)
+    ],
+    link: `/application-areas/${key}`,
+    image: `/application-areas/${key}/thumbnail.jpg`
+  }))
 
-  const applications = [
-    { 
-      icon: Factory, 
-      name: "Nhà máy",
-      id: "factory",
-      image: "/homepage/factory.webp",
-      stats: "150+ nhà máy đã áp dụng",
-      description: "Giám sát toàn bộ quy trình sản xuất từ nguyên liệu đến thành phẩm. Theo dõi hiệu suất máy móc, năng lượng tiêu thụ và chất lượng sản phẩm theo thời gian thực."
-    },
-    { 
-      icon: Ship, 
-      name: "Cảng biển",
-      id: "port",
-      image: "/homepage/seaport.jpg", 
-      stats: "25+ cảng biển tin dùng",
-      description: "Quản lý hoạt động bốc xếp hàng hóa, theo dõi tàu thuyền ra vào cảng, tối ưu hóa logistics và giảm thời gian chờ đợi."
-    },
-    { 
-      icon: Banknote, 
-      name: "Ngân hàng",
-      id: "bank",
-      image: "/homepage/bank.webp",
-      stats: "80+ chi nhánh ngân hàng", 
-      description: "Giám sát giao dịch, phân tích dòng tiền, quản lý rủi ro tín dụng và tối ưu hóa dịch vụ khách hàng trên toàn hệ thống."
-    },
-    { 
-      icon: Users2, 
-      name: "Hành chính công",
-      id: "government",
-      image: "/homepage/public-administration.jpg",
-      stats: "200+ cơ quan nhà nước",
-      description: "Số hóa quy trình hành chính, theo dõi tiến độ xử lý hồ sơ, tăng tính minh bạch và cải thiện dịch vụ công."
-    },
-    { 
-      icon: Building, 
-      name: "Tòa nhà",
-      id: "building",
-      image: "/homepage/factory.webp",
-      stats: "500+ tòa nhà thông minh",
-      description: "Quản lý hệ thống HVAC, điện, nước, an ninh và các tiện ích trong tòa nhà để tối ưu năng lượng và nâng cao trải nghiệm."
-    },
-    { 
-      icon: Building2, 
-      name: "Kho vận",
-      id: "logistics",
-      image: "/homepage/seaport.jpg",
-      stats: "300+ kho hàng được kết nối",
-      description: "Theo dõi tồn kho, tối ưu tuyến vận chuyển, quản lý nhiệt độ bảo quản và tự động hóa quy trình logistics."
-    },
-  ]
+  const applicationsKeys = ['factory', 'port', 'bank', 'government', 'building', 'logistics']
+  const applications = applicationsKeys.map(key => ({
+    icon: key === 'factory' ? Factory : key === 'port' ? Ship : key === 'bank' ? Banknote : key === 'government' ? Users2 : key === 'building' ? Building : Building2,
+    name: t(`homepage.industries.applications.${key}.name`),
+    id: key,
+    image: key === 'factory' ? "/homepage/factory.webp" : key === 'port' ? "/homepage/seaport.jpg" : key === 'bank' ? "/homepage/bank.webp" : key === 'government' ? "/homepage/public-administration.jpg" : key === 'building' ? "/homepage/factory.webp" : "/homepage/seaport.jpg",
+    stats: t(`homepage.industries.applications.${key}.stats`),
+    description: t(`homepage.industries.applications.${key}.description`)
+  }))
 
   return (
     <section id="industries" className="py-20 bg-gray-50/50 dark:bg-gray-900/20">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl text-center mb-16">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-            Lĩnh vực ứng dụng
+            {t('homepage.industries.title')}
           </h2>
           <p className="text-lg text-muted-foreground text-pretty">
-            Smart Dashboard phục vụ đa dạng các ngành nghề với hiệu quả vượt trội
+            {t('homepage.industries.subtitle')}
           </p>
         </div>
 

@@ -63,8 +63,8 @@ export function HeroSection() {
                   <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="font-semibold text-xs sm:text-sm text-foreground">Trực quan hóa dữ liệu</p>
-                  <p className="text-xs text-muted-foreground">2D/3D Dashboard interface</p>
+                  <p className="font-semibold text-xs sm:text-sm text-foreground">{t('homepage.hero.features.dataVisualization.title')}</p>
+                  <p className="text-xs text-muted-foreground">{t('homepage.hero.features.dataVisualization.description')}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3 p-3 sm:p-4 rounded-lg bg-card border border-border">
@@ -72,8 +72,8 @@ export function HeroSection() {
                   <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="font-semibold text-xs sm:text-sm text-foreground">Tối ưu vận hành</p>
-                  <p className="text-xs text-muted-foreground">Tốc độ vượt trội</p>
+                  <p className="font-semibold text-xs sm:text-sm text-foreground">{t('homepage.hero.features.operationOptimization.title')}</p>
+                  <p className="text-xs text-muted-foreground">{t('homepage.hero.features.operationOptimization.description')}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3 p-3 sm:p-4 rounded-lg bg-card border border-border">
@@ -81,8 +81,8 @@ export function HeroSection() {
                   <Globe className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="font-semibold text-xs sm:text-sm text-foreground">Tích hợp đa nền tảng</p>
-                  <p className="text-xs text-muted-foreground">Hỗ trợ tích hợp các hệ thống</p>
+                  <p className="font-semibold text-xs sm:text-sm text-foreground">{t('homepage.hero.features.multiPlatform.title')}</p>
+                  <p className="text-xs text-muted-foreground">{t('homepage.hero.features.multiPlatform.description')}</p>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@ export function HeroSection() {
                   />
                   <span className="ml-1">+</span>
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground">Khách hàng</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">{t('homepage.hero.stats.customers')}</p>
               </div>
               <div className="text-center">
                 <div className="text-xl sm:text-2xl font-bold text-primary flex items-center justify-center">
@@ -152,7 +152,7 @@ export function HeroSection() {
                   />
                   <span className="ml-1">%</span>
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground">Real time</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">{t('homepage.hero.stats.realtime')}</p>
               </div>
               <div className="text-center">
                 <div className="text-xl sm:text-2xl font-bold text-primary flex items-center justify-center">
@@ -182,7 +182,7 @@ export function HeroSection() {
                     }}
                   />
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground">Hỗ trợ</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">{t('homepage.hero.stats.support')}</p>
               </div>
             </div>
           </div>

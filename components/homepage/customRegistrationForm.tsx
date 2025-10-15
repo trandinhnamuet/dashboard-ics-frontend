@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
+import { useTranslation } from 'react-i18next'
 import {
   Dialog,
   DialogContent,
@@ -28,15 +29,16 @@ import useAuthStore from '@/hooks/use-auth-store'
 import { RegistrationRequestsService } from '@/services/registration-requests.service'
 import axios from 'axios'
 
-const formSchema = z.object({
-  userName: z.string().min(2, 'Tên người dùng phải có ít nhất 2 ký tự'),
-  email: z.string().email('Email không hợp lệ'),
-  phoneNumber: z.string().min(10, 'Số điện thoại phải có ít nhất 10 số').max(20, 'Số điện thoại không được quá 20 số'),
+// Tạo formSchema sử dụng function để có thể truy cập t()
+const getFormSchema = (t: (key: string) => string) => z.object({
+  userName: z.string().min(2, t('forms.validation.userNameMin')),
+  email: z.string().email(t('forms.validation.emailInvalid')),
+  phoneNumber: z.string().min(10, t('forms.validation.phoneMin')).max(20, t('forms.validation.phoneMax')),
   company: z.string().optional(),
   additionalNotes: z.string().optional(),
 })
 
-type FormValues = z.infer<typeof formSchema>
+type FormValues = z.infer<ReturnType<typeof getFormSchema>>
 
 interface CustomRegistrationFormProps {
   open: boolean
@@ -49,9 +51,12 @@ interface CustomRegistrationFormProps {
 }
 
 export default function CustomRegistrationForm({ open, onOpenChange, selectedPlan }: CustomRegistrationFormProps) {
+  const { t } = useTranslation()
   const [isLoading, setIsLoading] = useState(false)
   const { toast } = useToast()
   const { user, isAuthenticated } = useAuthStore()
+  
+  const formSchema = getFormSchema(t)
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -107,8 +112,8 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
     } catch (error) {
       console.error('Registration error:', error)
       toast({
-        title: 'Có lỗi xảy ra',
-        description: 'Vui lòng thử lại sau hoặc liên hệ hỗ trợ.',
+        title: t('forms.errors.title'),
+        description: t('forms.errors.description'),
         variant: 'destructive',
       })
     } finally {
@@ -121,9 +126,9 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
 
         <DialogHeader>
-          <DialogTitle>Đăng ký gói tùy chỉnh</DialogTitle>
+          <DialogTitle>{t('forms.customRegistration.title')}</DialogTitle>
           <DialogDescription>
-            Chúng tôi sẽ liên hệ với bạn ngay để cung cấp giải pháp.
+            {t('forms.customRegistration.description')}
           </DialogDescription>
           {selectedPlan && (
             <div className="my-4 p-4 rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 border-2 border-primary/20 shadow-sm">
@@ -131,7 +136,7 @@ export default function CustomRegistrationForm({ open, onOpenChange, selectedPla
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-sm font-medium text-primary uppercase tracking-wide">Gói đã chọn</span>
+                    <span className="text-sm font-medium text-primary uppercase tracking-wide">{t('forms.customRegistration.selectedPlan')}</span>
                   </div>
                   <h3 className="font-bold text-lg text-foreground mb-1">{selectedPlan.name}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{selectedPlan.description}</p>

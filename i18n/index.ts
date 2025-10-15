@@ -3,15 +3,19 @@ import { initReactI18next } from 'react-i18next'
 import vi from './vi.json'
 import en from './en.json'
 import zh from './zh.json'
+import ja from './ja.json'
+import ko from './ko.json'
 
-// Khởi tạo i18n
+// Khởi tạo i18n với 5 ngôn ngữ
 i18n
   .use(initReactI18next)
   .init({
     resources: {
       vi: { translation: vi },
       en: { translation: en },
-      zh: { translation: zh }
+      zh: { translation: zh },
+      ja: { translation: ja },
+      ko: { translation: ko }
     },
     lng: 'vi', // Ngôn ngữ mặc định
     fallbackLng: 'vi',
