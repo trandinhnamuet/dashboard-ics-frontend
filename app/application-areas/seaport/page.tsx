@@ -7,8 +7,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import Image from "@/components/common/Image"
 import Link from "next/link"
 import { useState, useRef, useEffect, useCallback } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function SeaportPage() {
+  const { t } = useTranslation()
   // Slideshow state
   const [currentSlide, setCurrentSlide] = useState(0)
   
@@ -37,33 +39,42 @@ export default function SeaportPage() {
   const features = [
     {
       icon: TrendingUp,
-      title: "Tăng năng suất 30%",
-      description: "Tối ưu hóa hiệu suất bốc dỡ hàng hóa và giảm thời gian quay vòng tàu thông qua quản lý thông minh."
+      title: t('applicationAreas.seaport.features.0.title'),
+      description: t('applicationAreas.seaport.features.0.description')
     },
     {
       icon: BarChart3,
-      title: "Giám sát KPIs thời gian thực",
-      description: "Theo dõi hiệu quả cảng, thông lượng hàng hóa và tình trạng bến cảng 24/7."
+      title: t('applicationAreas.seaport.features.1.title'),
+      description: t('applicationAreas.seaport.features.1.description')
     },
     {
       icon: Shield,
-      title: "Nâng cao an toàn và an ninh",
-      description: "Giảm 40% tai nạn nghiêm trọng và tăng cường kiểm soát an ninh toàn diện."
+      title: t('applicationAreas.seaport.features.2.title'),
+      description: t('applicationAreas.seaport.features.2.description')
     }
   ]
 
   const metrics = [
-    { label: "Tăng năng suất bốc dỡ", value: "30%" },
-    { label: "Giảm thời gian quay vòng tàu", value: "20%" },
-    { label: "Giảm tai nạn nghiêm trọng", value: "40%" },
-    { label: "Tăng hiệu quả vận hành", value: "35%" }
+    { label: t('applicationAreas.seaport.metrics.0.label'), value: t('applicationAreas.seaport.metrics.0.value') },
+    { label: t('applicationAreas.seaport.metrics.1.label'), value: t('applicationAreas.seaport.metrics.1.value') },
+    { label: t('applicationAreas.seaport.metrics.2.label'), value: t('applicationAreas.seaport.metrics.2.value') },
+    { label: t('applicationAreas.seaport.metrics.3.label'), value: t('applicationAreas.seaport.metrics.3.value') }
   ]
 
   const benefits = [
-    "Tự động hóa 85% quy trình vận hành",
-    "Giảm 30% chi phí logistics tổng thể", 
-    "Tăng 40% độ chính xác trong kiểm đếm",
-    "Cải thiện 50% trải nghiệm khách hàng"
+    t('applicationAreas.seaport.benefits.0'),
+    t('applicationAreas.seaport.benefits.1'),
+    t('applicationAreas.seaport.benefits.2'),
+    t('applicationAreas.seaport.benefits.3')
+  ]
+
+  const applications = [
+    t('applicationAreas.seaport.applications.0'),
+    t('applicationAreas.seaport.applications.1'),
+    t('applicationAreas.seaport.applications.2'),
+    t('applicationAreas.seaport.applications.3'),
+    t('applicationAreas.seaport.applications.4'),
+    t('applicationAreas.seaport.applications.5')
   ]
 
   return (
@@ -91,11 +102,10 @@ export default function SeaportPage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Smart Dashboard - Ngành cảng biển
+              {t('applicationAreas.seaport.title')}
             </h1>
             <p className="text-xl text-blue-100 max-w-xl leading-relaxed">
-              Biến cảng biển thành trung tâm chỉ huy số với bản sao số 3D, giám sát KPIs thời gian thực, 
-              tự động hóa quy trình vận hành và nâng cao năng suất bốc dỡ lên 30%.
+              {t('applicationAreas.seaport.description')}
             </p>
           </div>
         </div>
@@ -139,7 +149,7 @@ export default function SeaportPage() {
 
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Thách thức thực tế của ngành Cảng biển</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">{t('applicationAreas.seaport.challenges.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Các cảng biển vận hành theo mô hình truyền thống đang phải đối mặt với những "nút thắt" cố hữu, 
                 cản trở sự phát triển trong kỷ nguyên số:
@@ -220,7 +230,7 @@ export default function SeaportPage() {
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <h3 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-6 text-center">{t('applicationAreas.seaport.applications.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 Smart Dashboard trong lĩnh vực cảng biển không chỉ là một công cụ hiển thị, mà là một 
                 <span className="font-semibold text-blue-700 dark:text-blue-400">"trung tâm chỉ huy số"</span> (Digital Command Center), 
@@ -559,14 +569,14 @@ export default function SeaportPage() {
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Chuyển đổi cảng biển thành cảng thông minh</h2>
-          <p className="text-xl mb-8">Tối ưu hóa vận hành và nâng cao năng lực cạnh tranh với Smart Dashboard</p>
+          <h2 className="text-3xl font-bold mb-4">{t('applicationAreas.seaport.cta.title')}</h2>
+          <p className="text-xl mb-8">{t('applicationAreas.seaport.cta.subtitle')}</p>
           <div className="space-x-4">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Link href="/contact-info">Liên hệ ngay</Link>
+              <Link href="/contact-info">{t('applicationAreas.seaport.cta.contactNow')}</Link>
             </Button>
             <Button variant="outline" size="lg" className="border-white text-white text-blue-600 hover:bg-gray-100">
-              <Link href="/">Về trang chủ</Link>
+              <Link href="/">{t('applicationAreas.seaport.cta.backHome')}</Link>
             </Button>
           </div>
         </div>

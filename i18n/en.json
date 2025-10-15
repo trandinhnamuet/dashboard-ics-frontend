@@ -39,73 +39,73 @@
     },
 
     "pricing": {
-      "title": "Bảng giá",
-      "subtitle": "Gói dịch vụ phù hợp với mọi quy mô doanh nghiệp",
+      "title": "Pricing",
+      "subtitle": "Service packages suitable for all business sizes",
       "plans": {
-        "starter": "Tiêu chuẩn",
-        "professional": "Cao cấp", 
-        "enterprise": "Doanh nghiệp",
-        "custom": "Tùy chỉnh"
+        "starter": "Standard",
+        "professional": "Premium", 
+        "enterprise": "Enterprise",
+        "custom": "Custom"
       }
     },
     "industries": {
-      "title": "Lĩnh vực ứng dụng",
+      "title": "Application Areas",
       "subtitle": "Smart dashboard solutions for all industries",
       "government": {
-        "title": "Chính phủ - Cơ quan ban ngành",
-        "description": "Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn.",
-        "benefits": ["Giám sát KPIs thời gian thực", "Theo dõi tiến độ dự án", "Phân tích ngân sách chi tiết"]
+        "title": "Government - Government Agencies",
+        "description": "Comprehensive monitoring of macroeconomic indicators such as GDP growth rate, inflation, unemployment rate, balance of payments, along with budget revenue and expenditure data, KPIs, project implementation progress and bottlenecks.",
+        "benefits": ["Real-time KPI monitoring", "Project progress tracking", "Detailed budget analysis"]
       },
       "finance": {
-        "title": "Tài chính - Ngân hàng - Bảo hiểm",
-        "description": "Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7.",
-        "benefits": ["Tăng trưởng 20-30%", "Giám sát dòng tiền 24/7", "Tối ưu quyết định kinh doanh"]
+        "title": "Finance - Banking - Insurance",
+        "description": "Help managers grasp the complete operational picture: cash flow, KPIs from each branch, ATMs, outstanding debt, debt recovery efficiency and number of new accounts, all displayed visually and updated instantly 24/7.",
+        "benefits": ["20-30% growth", "24/7 cash flow monitoring", "Optimized business decisions"]
       },
       "manufacturing": {
-        "title": "Công nghiệp - Sản xuất",
-        "description": "Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, giảm 20-30% chi phí nhờ tối ưu vận hành, cải thiện an toàn và hướng đến công nghiệp xanh, net-zero.",
-        "benefits": ["Giảm 20-30% chi phí", "Giám sát năng lượng thời gian thực", "Hướng đến net-zero"]
+        "title": "Industry - Manufacturing",
+        "description": "Enhance production efficiency through real-time energy and KPI monitoring, reduce 20-30% costs through operational optimization, improve safety and move towards green industry, net-zero.",
+        "benefits": ["20-30% cost reduction", "Real-time energy monitoring", "Towards net-zero"]
       },
       "building": {
-        "title": "Tòa nhà thông minh",
-        "description": "Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. Tối ưu năng lượng, giảm chi phí vận hành và nâng cao trải nghiệm người dùng thông qua giám sát thời gian thực 24/7.",
-        "benefits": ["Tiết kiệm năng lượng 30-40%", "Giảm chi phí vận hành 25%", "Tăng an toàn và bảo mật"]
+        "title": "Smart Buildings",
+        "description": "Comprehensive management of building systems from HVAC, electricity, water, security to utilities. Optimize energy, reduce operating costs and enhance user experience through 24/7 real-time monitoring.",
+        "benefits": ["30-40% energy savings", "25% operating cost reduction", "Enhanced safety and security"]
       },
       "seaport": {
-        "title": "Cảng biển thông minh",
-        "description": "Biến cảng biển thành trung tâm chỉ huy số với bản sao số 3D, giám sát KPIs thời gian thực, tự động hóa quy trình vận hành và nâng cao năng suất bốc dỡ lên 30%. Tối ưu logistics và giảm chi phí vận chuyển.",
-        "benefits": ["Tăng năng suất 30%", "Giám sát KPIs thời gian thực", "Nâng cao an toàn 40%"]
+        "title": "Smart Seaports",
+        "description": "Transform seaports into digital command centers with 3D digital twins, real-time KPI monitoring, automated operational processes and increase loading/unloading productivity by 30%. Optimize logistics and reduce transportation costs.",
+        "benefits": ["30% productivity increase", "Real-time KPI monitoring", "40% safety improvement"]
       },
       "applications": {
         "factory": {
-          "name": "Nhà máy",
-          "stats": "150+ nhà máy đã áp dụng",
-          "description": "Giám sát toàn bộ quy trình sản xuất từ nguyên liệu đến thành phẩm. Theo dõi hiệu suất máy móc, năng lượng tiêu thụ và chất lượng sản phẩm theo thời gian thực."
+          "name": "Factories",
+          "stats": "150+ factories implemented",
+          "description": "Monitor the entire production process from raw materials to finished products. Track machine performance, energy consumption and product quality in real time."
         },
         "port": {
-          "name": "Cảng biển",
-          "stats": "25+ cảng biển tin dùng",
-          "description": "Quản lý hoạt động bốc xếp hàng hóa, theo dõi tàu thuyền ra vào cảng, tối ưu hóa logistics và giảm thời gian chờ đợi."
+          "name": "Seaports",
+          "stats": "25+ trusted seaports",
+          "description": "Manage cargo loading and unloading operations, track ships entering and leaving ports, optimize logistics and reduce waiting times."
         },
         "bank": {
-          "name": "Ngân hàng",
-          "stats": "80+ chi nhánh ngân hàng",
-          "description": "Giám sát giao dịch, phân tích dòng tiền, quản lý rủi ro tín dụng và tối ưu hóa dịch vụ khách hàng trên toàn hệ thống."
+          "name": "Banks",
+          "stats": "80+ bank branches",
+          "description": "Monitor transactions, analyze cash flow, manage credit risk and optimize customer service across the entire system."
         },
         "government": {
-          "name": "Hành chính công",
-          "stats": "200+ cơ quan nhà nước",
-          "description": "Số hóa quy trình hành chính, theo dõi tiến độ xử lý hồ sơ, tăng tính minh bạch và cải thiện dịch vụ công."
+          "name": "Public Administration",
+          "stats": "200+ government agencies",
+          "description": "Digitize administrative processes, track document processing progress, increase transparency and improve public services."
         },
         "building": {
-          "name": "Tòa nhà",
-          "stats": "500+ tòa nhà thông minh",
-          "description": "Quản lý hệ thống HVAC, điện, nước, an ninh và các tiện ích trong tòa nhà để tối ưu năng lượng và nâng cao trải nghiệm."
+          "name": "Buildings",
+          "stats": "500+ smart buildings",
+          "description": "Manage HVAC, electricity, water, security and utility systems in buildings to optimize energy and enhance experience."
         },
         "logistics": {
-          "name": "Kho vận",
-          "stats": "300+ kho hàng được kết nối",
-          "description": "Theo dõi tồn kho, tối ưu tuyến vận chuyển, quản lý nhiệt độ bảo quản và tự động hóa quy trình logistics."
+          "name": "Logistics",
+          "stats": "300+ connected warehouses",
+          "description": "Track inventory, optimize transportation routes, manage storage temperature and automate logistics processes."
         }
       }
     }
@@ -169,224 +169,224 @@
     }
   },
   "checkout": {
-    "title": "Thanh toán",
-    "backButton": "Quay lại",
-    "packageInfo": "Thông tin gói dịch vụ",
-    "packageName": "Tên gói",
-    "description": "Mô tả",
-    "packageType": "Loại gói",
-    "features": "Tính năng bao gồm",
-    "totalAmount": "Tổng tiền",
-    "paymentQR": "Thanh toán qua QR",
-    "scanQR": "Quét mã QR bằng app ngân hàng để thanh toán",
-    "bankName": "Ngân hàng",
-    "accountNumber": "Số tài khoản",
-    "amount": "Số tiền",
-    "content": "Nội dung",
-    "copyInfo": "Sao chép thông tin chuyển khoản",
-    "copiedSuccess": "Đã sao chép thông tin chuyển khoản",
-    "note": "Lưu ý: Vui lòng chuyển khoản đúng nội dung để hệ thống tự động kích hoạt dịch vụ.",
-    "contactSupport": "Liên hệ hỗ trợ"
+    "title": "Checkout",
+    "backButton": "Back",
+    "packageInfo": "Service Package Information",
+    "packageName": "Package Name",
+    "description": "Description",
+    "packageType": "Package Type",
+    "features": "Included Features",
+    "totalAmount": "Total Amount",
+    "paymentQR": "QR Payment",
+    "scanQR": "Scan QR code with banking app to pay",
+    "bankName": "Bank",
+    "accountNumber": "Account Number",
+    "amount": "Amount",
+    "content": "Content",
+    "copyInfo": "Copy transfer information",
+    "copiedSuccess": "Transfer information copied",
+    "note": "Note: Please transfer with exact content for automatic service activation.",
+    "contactSupport": "Contact Support"
   },
   "services": {
     "dataIntegration": {
       "title": "Data Integration",
-      "description": "Kết nối và thu thập dữ liệu từ nhiều hệ thống khác nhau của doanh nghiệp",
+      "description": "Connect and collect data from various enterprise systems",
       "features": [
-        "Kết nối dữ liệu thời gian thực từ nhiều nguồn",
-        "Hỗ trợ cả dữ liệu truyền thống (SQL, Excel) và dữ liệu IOT/SCADA",
-        "Tự động hóa việc chuyển đổi và chuẩn hóa dữ liệu",
-        "Engine xử lý dữ liệu hiệu suất cao",
-        "Giao thức truyền dữ liệu bảo mật"
+        "Real-time data connection from multiple sources",
+        "Support both traditional data (SQL, Excel) and IoT/SCADA data",
+        "Automated data transformation and standardization",
+        "High-performance data processing engine",
+        "Secure data transmission protocols"
       ]
     },
     "security": {
-      "title": "Bảo mật và tuân thủ",
-      "description": "Bảo mật dữ liệu cấp doanh nghiệp",
+      "title": "Security and Compliance",
+      "description": "Enterprise-grade data security",
       "features": [
-        "Mã hóa end-to-end",
-        "Xác thực đa yếu tố (MFA)",
-        "Kiểm soát truy cập dựa trên vai trò",
-        "Audit log và tuân thủ quy định",
-        "Sao lưu và khôi phục dữ liệu"
+        "End-to-end encryption",
+        "Multi-factor authentication (MFA)",
+        "Role-based access control",
+        "Audit logs and compliance",
+        "Data backup and recovery"
       ]
     },
     "realtime": {
-      "title": "Giám sát thời gian thực",
-      "description": "Dashboard trực tiếp và cảnh báo tức thì",
+      "title": "Real-time Monitoring",
+      "description": "Live dashboards and instant alerts",
       "features": [
-        "Trực quan hóa dữ liệu thời gian thực",
-        "Dashboard có thể tùy chỉnh",
-        "Cảnh báo thông minh và trigger",
-        "Thông báo mobile",
-        "Giám sát hiệu suất"
+        "Real-time data visualization",
+        "Customizable dashboards",
+        "Smart alerts and triggers",
+        "Mobile notifications",
+        "Performance monitoring"
       ]
     },
     "scaling": {
-      "title": "Kiến trúc có thể mở rộng",
+      "title": "Scalable Architecture",
       "description": "Cloud solution that grows with your business",
       "features": [
-        "Tự động scale up/down",
-        "Đảm bảo tính sẵn sàng cao",
-        "Cân bằng tải",
-        "CDN toàn cầu",
-        "Tính năng khôi phục sau thảm họa"
+        "Auto scale up/down",
+        "High availability guarantee",
+        "Load balancing",
+        "Global CDN",
+        "Disaster recovery capabilities"
       ]
     },
     "analytics": {
-      "title": "Phân tích nâng cao",
-      "description": "Business Intelligence tích hợp AI/ML",
+      "title": "Advanced Analytics",
+      "description": "AI/ML integrated Business Intelligence",
       "features": [
-        "Phân tích dự đoán bằng machine learning",
-        "Phân tích xu hướng và phát hiện bất thường",
-        "Tạo báo cáo tùy chỉnh",
-        "Tính năng data mining",
-        "Cung cấp business insights"
+        "Predictive analytics with machine learning",
+        "Trend analysis and anomaly detection",
+        "Custom report generation",
+        "Data mining capabilities",
+        "Business insights delivery"
       ]
     },
     "integration": {
-      "title": "Tích hợp hệ thống",
-      "description": "Tích hợp liền mạch với hệ thống hiện có",
+      "title": "System Integration",
+      "description": "Seamless integration with existing systems",
       "features": [
         "REST/GraphQL API",
-        "Hỗ trợ Webhook",
-        "Tích hợp bên thứ ba",
-        "Kết nối hệ thống legacy",
-        "Phát triển tích hợp tùy chỉnh"
+        "Webhook support",
+        "Third-party integrations",
+        "Legacy system connections",
+        "Custom integration development"
       ]
     }
   },
   "pricing": {
-    "title": "Bảng giá dịch vụ",
+    "title": "Service Pricing",
     "subtitle": "From basic solutions to interactive 3D models, we have suitable service packages for buildings of all sizes",
     "pricingModes": {
       "saving": {
-        "title": "Mua đứt",
-        "subtitle": "Chuyển giao hệ thống một lần",
-        "description": "Được thiết kế phù hợp với nhu cầu bao trọn gói và vận hành độc lập - thanh toán một lần duy nhất và chuyển giao toàn bộ hệ thống"
+        "title": "One-time Purchase",
+        "subtitle": "Complete system transfer",
+        "description": "Designed for comprehensive needs and independent operation - one-time payment with complete system transfer"
       },
       "payAsYouGo": {
-        "title": "Thuê theo năm",
-        "subtitle": "Thanh toán theo năm",
-        "description": "Phù hợp nhu cầu linh hoạt và duy trì hỗ trợ kĩ thuật - thanh toán theo từng năm các gói 12, 24, 36 tháng"
+        "title": "Annual Rental",
+        "subtitle": "Pay per year",
+        "description": "Suitable for flexible needs and technical support maintenance - annual payment for 12, 24, 36-month packages"
       }
     },
     "plans": {
       "business": {
         "name": "Business",
-        "description": "Gói đầy đủ tính năng cho doanh nghiệp vừa và nhỏ",
+        "description": "Full-featured package for small and medium enterprises",
         "features": [
-          "Dashboard thời gian thực",
-          "Tính năng báo cáo cơ bản",
-          "Cảnh báo qua email và SMS",
-          "Tích hợp tối đa 5 hệ thống",
-          "Lưu trữ dữ liệu 6 tháng",
-          "Truy cập trên web và mobile",
-          "Cảnh báo qua email và SMS"
+          "Real-time Dashboard",
+          "Basic reporting features",
+          "Email and SMS alerts",
+          "Up to 5 system integrations",
+          "6-month data storage",
+          "Web and mobile access",
+          "Email and SMS alerts"
         ],
-        "buttonText": "Bắt đầu ngay"
+        "buttonText": "Get Started"
       },
       "dashboard2D": {
         "name": "Dashboard 2D",
-        "description": "Trực quan hóa dữ liệu với giao diện 2D chuyên nghiệp",
+        "description": "Data visualization with professional 2D interface",
         "features": [
-          "Tất cả tính năng của gói Business",
-          "Dashboard 2D tương tác với sơ đồ tòa nhà",
-          "Trực quan hóa dữ liệu nâng cao",
-          "Báo cáo chi tiết theo từng khu vực",
-          "Hỗ trợ 24/7 qua điện thoại",
-          "Tích hợp không giới hạn hệ thống",
-          "Lưu trữ dữ liệu 2 năm",
-          "API tùy chỉnh cho tích hợp",
-          "Đào tạo sử dụng miễn phí",
-          "Cảnh báo thông minh với AI"
+          "All Business package features",
+          "Interactive 2D dashboard with building schematics",
+          "Advanced data visualization",
+          "Detailed reports by area",
+          "24/7 phone support",
+          "Unlimited system integrations",
+          "2-year data storage",
+          "Custom API for integration",
+          "Free usage training",
+          "AI smart alerts"
         ],
-        "buttonText": "Chọn gói phổ biến"
+        "buttonText": "Choose Popular Package"
       },
       "dashboard3D": {
         "name": "Dashboard 3D",
-        "description": "Trải nghiệm tối ưu với mô hình 3D sinh động",
+        "description": "Optimal experience with vivid 3D models",
         "features": [
-          "Tất cả tính năng của gói Dashboard 2D",
-          "Mô hình 3D tòa nhà tương tác",
-          "Thực tế ảo (VR) và thực tế tăng cường (AR)",
-          "Mô phỏng tình huống khẩn cấp",
-          "Phân tích dự đoán với AI/ML",
-          "Tích hợp IoT không giới hạn",
-          "Lưu trữ dữ liệu vĩnh viễn",
+          "All Dashboard 2D package features",
+          "Interactive building 3D model",
+          "Virtual Reality (VR) and Augmented Reality (AR)",
+          "Emergency situation simulation",
+          "Predictive analysis with AI/ML",
+          "Unlimited IoT integration",
+          "Permanent data storage",
           "Dedicated support manager",
-          "Tùy chỉnh giao diện theo yêu cầu",
-          "Đào tạo chuyên sâu cho team",
+          "Interface customization on demand",
+          "In-depth team training",
           "SLA 99.9% uptime guarantee"
         ],
-        "buttonText": "Liên hệ tư vấn"
+        "buttonText": "Contact for Consultation"
       },
       "package12": {
-        "name": "Gói 12 tháng",
-        "description": "Phù hợp cho dự án ngắn hạn với linh hoạt thanh toán",
-        "originalPrice": "240,000,000 VNĐ",
-        "price": "198,000,000 VNĐ",
-        "period": "/12 tháng",
+        "name": "12-month Package",
+        "description": "Suitable for short-term projects with flexible payment",
+        "originalPrice": "240,000,000 VND",
+        "price": "198,000,000 VND",
+        "period": "/12 months",
         "discount": "17%",
         "features": [
-          "Tất cả tính năng Dashboard 2D",
-          "Hỗ trợ kỹ thuật 24/7",
-          "Đào tạo và triển khai miễn phí",
-          "Cập nhật phần mềm định kỳ",
-          "Backup dữ liệu tự động",
-          "Báo cáo phân tích chi tiết",
-          "Tích hợp API không giới hạn",
-          "Hỗ trợ mobile app"
+          "All Dashboard 2D features",
+          "24/7 technical support",
+          "Free training and deployment",
+          "Regular software updates",
+          "Automatic data backup",
+          "Detailed analytics reports",
+          "Unlimited API integration",
+          "Mobile app support"
         ],
-        "buttonText": "Chọn gói 12 tháng"
+        "buttonText": "Choose 12-month Package"
       },
       "package24": {
-        "name": "Gói 24 tháng",
+        "name": "24-month Package",
         "description": "Optimal solution for mid-term enterprises",
-        "originalPrice": "480,000,000 VNĐ",
-        "price": "358,000,000 VNĐ",
-        "period": "/24 tháng",
+        "originalPrice": "480,000,000 VND",
+        "price": "358,000,000 VND",
+        "period": "/24 months",
         "discount": "25%",
         "popular": true,
         "features": [
-          "Tất cả tính năng Dashboard 3D",
-          "Mô hình 3D tương tác nâng cao",
-          "AI/ML phân tích dự đoán",
+          "All Dashboard 3D features",
+          "Advanced interactive 3D models",
+          "AI/ML predictive analytics",
           "Dedicated support manager",
-          "Tùy chỉnh giao diện theo yêu cầu",
-          "Đào tạo chuyên sâu cho team",
+          "Interface customization on demand",
+          "In-depth team training",
           "SLA 99.9% uptime",
-          "Ưu tiên hỗ trợ kỹ thuật",
-          "Báo cáo executive dashboard",
-          "Truy cập VR/AR"
+          "Priority technical support",
+          "Executive dashboard reports",
+          "VR/AR access"
         ],
-        "buttonText": "Chọn gói tối ưu"
+        "buttonText": "Choose Optimal Package"
       },
       "package36": {
-        "name": "Gói 36 tháng",
-        "description": "Đầu tư chiến lược dài hạn với hiệu quả chi phí tối đa",
-        "originalPrice": "720,000,000 VNĐ",
-        "price": "468,000,000 VNĐ",
-        "period": "/36 tháng",
+        "name": "36-month Package",
+        "description": "Long-term strategic investment with maximum cost efficiency",
+        "originalPrice": "720,000,000 VND",
+        "price": "468,000,000 VND",
+        "period": "/36 months",
         "discount": "35%",
         "features": [
-          "Tất cả tính năng gói 24 tháng",
-          "Phát triển AI model tùy chỉnh",
-          "Phân tích dự đoán nâng cao",
-          "Ưu tiên phát triển tùy chỉnh",
-          "Review chiến lược hàng tháng",
-          "Đào tạo không giới hạn",
-          "Đội ngũ hỗ trợ riêng 24/7",
-          "Tùy chỉnh toàn hệ thống",
-          "Tư vấn chuyên gia ngành",
-          "Truy cập sớm tính năng mới"
+          "All 24-month package features",
+          "Custom AI model development",
+          "Advanced predictive analytics",
+          "Priority custom development",
+          "Monthly strategic reviews",
+          "Unlimited training courses",
+          "Dedicated 24/7 support team",
+          "Full system customization",
+          "Industry expert consultation",
+          "Early access to new features"
         ],
-        "buttonText": "Chọn gói tiết kiệm tối đa"
+        "buttonText": "Choose Maximum Savings Package"
       }
     },
-    "features": "Tính năng bao gồm:",
-    "showMore": "Xem thêm",
-    "showLess": "Thu gọn",
+    "features": "Included Features:",
+    "showMore": "Show More",
+    "showLess": "Show Less",
     "mostOptimal": "Most Optimal",
     "contactSupport": "Contact Support:",
     "hotline": "Hotline:"
@@ -438,6 +438,308 @@
         "contactNow": "Contact Now",
         "backHome": "Back to Home"
       }
+    },
+    "finance": {
+      "title": "Smart Dashboard - Finance / Banking / Insurance",
+      "description": "Help managers grasp the complete operational picture: cash flow, KPIs from each branch, ATMs, outstanding debt, debt recovery efficiency and number of new accounts, all displayed visually and updated instantly 24/7.",
+      "challenges": {
+        "title": "Real Challenges in Finance - Banking Industry",
+        "subtitle": "The finance and banking industry operates in an environment with extremely high complexity, risk and compliance requirements."
+      },
+      "features": [
+        {
+          "title": "20-30% Growth",
+          "description": "Optimize revenue and profit through accurate and timely data analysis."
+        },
+        {
+          "title": "24/7 Cash Flow Monitoring",
+          "description": "Track real-time cash flow from all branches, ATMs and transaction channels."
+        },
+        {
+          "title": "Optimized Business Decisions",
+          "description": "Make quick decisions based on intelligent analytics and accurate forecasting."
+        }
+      ],
+      "metrics": [
+        { "label": "Real-time Outstanding Debt", "value": "100%" },
+        { "label": "Debt Recovery Efficiency", "value": "95%" },
+        { "label": "New Accounts Daily", "value": "500+" },
+        { "label": "Transactions Processed", "value": "1M+" }
+      ],
+      "benefits": [
+        "25% increase in credit risk management efficiency",
+        "40% reduction in report processing time",
+        "30% increase in cash flow forecasting accuracy",
+        "50% improvement in customer experience"
+      ],
+      "whyChooseUs": "Why Choose Us?",
+      "mainFeatures": "Key Features",
+      "keyBenefits": "Benefits Delivered",
+      "applications": {
+        "title": "Detailed Applications of Smart Dashboard in Practice",
+        "subtitle": "To solve the above challenges, Smart Dashboard is applied as a 'command center' or 'digital brain', turning data into proactive management tools."
+      },
+      "strategicBenefits": {
+        "title": "Strategic and Quantitative Benefits",
+        "subtitle": "Effective implementation of Smart Dashboard brings tremendous, measurable value:"
+      },
+      "metricsTitle": "Impressive Metrics",
+      "featuresTitle": "Outstanding Features",
+      "featuresSubtitle": "Comprehensive solution for finance and banking industry",
+      "benefitsTitle": "Benefits Delivered",
+      "cta": {
+        "title": "Optimize Financial Efficiency Today",
+        "subtitle": "Contact us for suitable Smart Dashboard solution consultation",
+        "contactNow": "Contact Now",
+        "backHome": "Back to Home"
+      }
+    },
+    "manufacturing": {
+      "title": "Smart Dashboard - Industry / Manufacturing",
+      "description": "Enhance production efficiency through real-time energy and KPI monitoring, reduce 20-30% costs through operational optimization, improve safety and move towards green industry, net-zero.",
+      "introduction": {
+        "industryRevolution": "Fourth Industrial Revolution (Industry 4.0)",
+        "dataMining": "giant data mines",
+        "newOil": "new oil",
+        "smartFactory": "Smart Factory",
+        "smartIndustrialPark": "Smart Industrial Park",
+        "paragraph1": "In the context of the {industryRevolution}, manufacturing and industrial parks are at the epicenter of a profound and comprehensive transformation. Factories are no longer merely assembly sites, but have become {dataMining} due to the explosion of IoT devices, smart sensors, and automation systems.",
+        "paragraph2": "Data is now likened to {newOil}, becoming strategic assets and the lifeblood that sustains all operations of a {smartFactory}.",
+        "paragraph3": "{smartIndustrialPark} is a further step forward, applying Smart Factory principles on a park-wide scale, managing in an integrated manner from infrastructure, production, energy, environment to security and logistics."
+      },
+      "challenges": {
+        "title": "Real Challenges of Industrial Parks & Factories",
+        "subtitle": "Having massive data but unable to exploit it effectively turns potential into burden. Factories and industrial parks face systematic barriers.",
+        "items": [
+          {
+            "title": "Fragmented Data and \"Information Silos\" (Data Silos)",
+            "description": "This is the top challenge. Data from OT systems (SCADA, PLC) and IT systems (ERP, MES) are usually managed by different departments and don't \"talk\" to each other.",
+            "example": "The maintenance team views machine vibration data on CMMS, production team monitors output on MES, and facility management tracks energy consumption of the same machine on BMS. The result is no one has a comprehensive view, leading to delayed and ineffective decisions."
+          },
+          {
+            "title": "Integration Difficulties and Lack of Standardization",
+            "description": "Connecting a 20-year-old CNC lathe with a modern IoT sensor requires complex and expensive protocol conversion solutions due to diversity in vendors and technologies."
+          },
+          {
+            "title": "Poor Data Quality",
+            "description": "Decision quality depends on input data quality. Issues include: missing data due to network connection errors, inaccuracy due to miscalibrated sensors, or inconsistency due to manual data entry."
+          },
+          {
+            "title": "Dependence on \"Individual Experts\" and Lack of Predictive Capability",
+            "description": "When an experienced machinist retires, an entire repository of knowledge about machinery and processes disappears. This creates dangerous \"knowledge gaps\"."
+          },
+          {
+            "title": "High Maintenance Costs and Unpredictable Downtime",
+            "description": "Current preventive maintenance models are often either too conservative (wasteful costs) or too lax (causing unexpected failures)."
+          }
+        ]
+      },
+      "applications": {
+        "title": "Detailed Applications of Smart Dashboard in Practice",
+        "subtitle": "Smart Dashboard serves as the 'command center' or 'digital brain' of factories and industrial parks, thoroughly solving the above challenges."
+      },
+      "strategicBenefits": {
+        "title": "Strategic and Quantitative Benefits",
+        "subtitle": "Implementing Smart Dashboard is not just a technology upgrade, but a strategic decision that brings outstanding and measurable business results."
+      },
+      "features": [
+        {
+          "title": "20-30% Cost Reduction",
+          "description": "Optimize production processes and efficient resource management, minimize waste."
+        },
+        {
+          "title": "Real-time Energy Monitoring", 
+          "description": "Monitor and adjust energy consumption of each machine and production line."
+        },
+        {
+          "title": "Towards Net-Zero",
+          "description": "Achieve zero carbon emission goals through environmental monitoring and energy optimization."
+        }
+      ],
+      "metrics": [
+        { "label": "Reduced Operating Costs", "value": "30%" },
+        { "label": "Increased Production Efficiency", "value": "25%" },
+        { "label": "Reduced CO2 Emissions", "value": "40%" },
+        { "label": "Energy Optimization", "value": "35%" }
+      ],
+      "benefits": [
+        "25% increase in overall production efficiency",
+        "30% reduction in simple maintenance time",
+        "40% improvement in workplace safety",
+        "50% optimization in inventory management"
+      ],
+      "applicationsList": [
+        "Automotive production lines",
+        "Food processing plants",
+        "Textile industrial zones", 
+        "Chemical plants",
+        "Electronics manufacturing facilities",
+        "Mechanical engineering workshops"
+      ],
+      "metricsTitle": "Proven Effectiveness",
+      "featuresTitle": "Key Features",
+      "featuresSubtitle": "Comprehensive solution for manufacturing industry",
+      "applicationsTitle": "Real Applications",
+      "benefitsTitle": "Benefits Delivered",
+      "cta": {
+        "title": "Digital transformation for your factory",
+        "subtitle": "Start the journey towards Industry 4.0 and Net-Zero",
+        "contactNow": "Contact Now",
+        "backHome": "Back to Home"
+      }
+    },
+    "building": {
+      "title": "Smart Dashboard - Smart Building",
+      "description": "Smart building management solution with 30-40% energy savings, enhanced security, and complete automation management.",
+      "introduction": {
+        "smartBuilding": "Smart Building",
+        "paragraph1": "In the era of Industry 4.0, {smartBuilding} is not just a trend but has become the new standard for modern constructions. The integration of IoT, AI, and automated management systems helps optimize operational efficiency, save costs, and enhance user experience.",
+        "paragraph2": "Smart Dashboard acts as the \"central brain\" of the building, connecting and controlling all systems from HVAC, lighting, security to energy management in a unified and intelligent manner."
+      },
+      "challenges": {
+        "title": "Challenges in traditional building management",
+        "subtitle": "Traditional buildings often face operational efficiency and management issues:",
+        "items": [
+          {
+            "title": "Serious energy waste",
+            "description": "HVAC and lighting systems operate inefficiently, consuming unnecessary energy even when not in use."
+          },
+          {
+            "title": "Complex manual management",
+            "description": "Requires multiple personnel to monitor and adjust different systems, prone to errors and slow response."
+          },
+          {
+            "title": "Lack of operational transparency",
+            "description": "No comprehensive view of building performance, making it difficult to detect and resolve issues."
+          },
+          {
+            "title": "High maintenance costs",
+            "description": "Scheduled maintenance instead of condition-based maintenance leads to unnecessary costs and risk of unexpected failures."
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "30-40% Energy Savings",
+          "description": "Optimize HVAC, lighting and air conditioning systems through intelligent AI and IoT."
+        },
+        {
+          "title": "Enhanced Safety & Security",
+          "description": "24/7 security monitoring, automated access control and early detection of potential risks."
+        },
+        {
+          "title": "Automation Management",
+          "description": "Smart control of building systems, minimizing manual intervention and optimizing operations."
+        }
+      ],
+      "metrics": [
+        { "label": "Energy Savings", "value": "40%" },
+        { "label": "Operating Cost Reduction", "value": "35%" },
+        { "label": "Management Efficiency Increase", "value": "50%" },
+        { "label": "Safety Improvement", "value": "60%" }
+      ],
+      "benefits": [
+        "Minimize carbon footprint and environmental friendliness",
+        "Enhance workplace quality",
+        "Automate complex operational processes",
+        "Real-time performance monitoring and reporting"
+      ],
+      "applications": [
+        "High-rise office buildings",
+        "Shopping centers and malls",
+        "Hotels and resorts",
+        "Hospitals and healthcare facilities",
+        "Schools and universities",
+        "Factories and industrial complexes"
+      ],
+      "metricsTitle": "Proven Results",
+      "featuresTitle": "Key Features",
+      "featuresSubtitle": "Comprehensive solution for smart buildings",
+      "applicationsTitle": "Real Applications",
+      "benefitsTitle": "Benefits Delivered",
+      "cta": {
+        "title": "Transform your building into a Smart Building",
+        "subtitle": "Let us help you save costs and improve operational efficiency",
+        "contactNow": "Contact Now",
+        "backHome": "Back to Home"
+      }
+    },
+    "seaport": {
+      "title": "Smart Dashboard - Smart Seaport",
+      "description": "Smart seaport management solution with logistics optimization, 30% reduction in ship processing time, enhanced operational efficiency and 24/7 real-time safety monitoring.",
+      "introduction": {
+        "smartSeaport": "Smart Seaport",
+        "digitalization": "comprehensive digitalization",
+        "paragraph1": "In the context of increasingly developing global trade, {smartSeaport} has become a key factor in the international supply chain. The application of modern technology and {digitalization} helps seaports improve productivity, reduce costs and ensure safety.",
+        "paragraph2": "Smart Dashboard acts as an intelligent control center, integrating all activities from ship management, containers, personnel to security and environment in a unified system."
+      },
+      "challenges": {
+        "title": "Challenges in traditional seaport management",
+        "subtitle": "Traditional seaports often face difficulties in optimizing operations:",
+        "items": [
+          {
+            "title": "Complex logistics management",
+            "description": "Coordinating thousands of containers, trucks and port equipment without an integrated system leads to congestion and inefficiency."
+          },
+          {
+            "title": "Long ship processing time",
+            "description": "Manual processes in inspection, loading/unloading and paperwork cause ships to berth longer, increasing operating costs."
+          },
+          {
+            "title": "Difficulty in safety monitoring",
+            "description": "Port environment with many risks requires continuous monitoring but traditional systems cannot meet the requirements."
+          },
+          {
+            "title": "Lack of forecasting and planning",
+            "description": "No real-time data to predict ship traffic and optimize port resources."
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "30% reduction in ship processing time",
+          "description": "Automate processes from docking to paperwork and cargo handling."
+        },
+        {
+          "title": "Optimize logistics and transportation",
+          "description": "Smart management of containers, trucks and port equipment to increase overall efficiency."
+        },
+        {
+          "title": "24/7 safety monitoring",
+          "description": "Comprehensive monitoring system ensuring safety for port staff and assets."
+        }
+      ],
+      "metrics": [
+        { "label": "Processing time reduction", "value": "30%" },
+        { "label": "Logistics efficiency increase", "value": "45%" },
+        { "label": "Safety improvement", "value": "60%" },
+        { "label": "Operating cost reduction", "value": "25%" }
+      ],
+      "benefits": [
+        "Automate 80% of docking and paperwork processes",
+        "Real-time tracking of location and status of all containers",
+        "Accurate forecasting of ship traffic and resource planning",
+        "Minimize workplace accidents and cargo losses"
+      ],
+      "applications": [
+        "International container ports",
+        "Bulk cargo ports",
+        "Oil, gas and chemical ports",
+        "Tourism and passenger ports",
+        "Multi-purpose comprehensive ports",
+        "Seaport logistics zones"
+      ],
+      "metricsTitle": "Proven Results",
+      "featuresTitle": "Key Features",
+      "featuresSubtitle": "Comprehensive solution for modern seaports",
+      "applicationsTitle": "Real Applications",
+      "benefitsTitle": "Benefits Delivered",
+      "cta": {
+        "title": "Modernize your seaport",
+        "subtitle": "Enhance operational efficiency and ensure safety with advanced technology",
+        "contactNow": "Contact Now",
+        "backHome": "Back to Home"
+      }
     }
   },
   "footer": {
@@ -468,7 +770,9 @@
       "title": "Legal",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
-      "security": "Security"
+      "security": "Security",
+      "sla": "Service Level Agreement",
+      "sitemap": "Sitemap"
     },
     "contact": {
       "title": "Contact",
@@ -477,7 +781,25 @@
       "email": "Email",
       "workingHours": "Working Hours"
     },
-    "copyright": "© 2024 ICS Smart Dashboard. All rights reserved.",
-    "description": "Leading Smart Dashboard solutions in Vietnam - Supporting businesses and organizations to achieve digital transformation and optimize operational efficiency."
+    "newsletter": {
+      "title": "Newsletter Signup",
+      "emailPlaceholder": "Your email",
+      "subscribe": "Subscribe"
+    },
+    "training": {
+      "title": "Training & Certification",
+      "apiDocumentation": "API Documentation"
+    },
+    "companyFullInfo": {
+      "name": "INTERNATIONAL CYBERSECURITY JOINT STOCK COMPANY - ICS",
+      "office": "Office: TT3-5 Dai Kim New Urban Area, Dinh Cong, Hanoi",
+      "phone": "Phone: 0931.487.231",
+      "hotline": "Hotline: 0707.806.860",
+      "email": "E-mail: info@icss.com.vn",
+      "website": "www.icss.com.vn"
+    },
+    "copyright": "© 2025 INTERNATIONAL CYBERSECURITY JOINT STOCK COMPANY - ICS. All rights reserved.",
+    "description": "Leading Smart Dashboard solutions in Vietnam - Supporting businesses and organizations to achieve digital transformation and optimize operational efficiency.",
+    "wideApplication": "Wide Applications"
   }
 }

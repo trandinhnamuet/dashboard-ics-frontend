@@ -7,8 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Link from "next/link"
 import Image from "@/components/common/Image"
+import { useTranslation } from "react-i18next"
 
 export default function FinancePage() {
+  const { t } = useTranslation()
+  
   // Slideshow state
   const [currentSlide, setCurrentSlide] = useState(0)
   
@@ -35,33 +38,33 @@ export default function FinancePage() {
   const features = [
     {
       icon: TrendingUp,
-      title: "Tăng trưởng 20-30%",
-      description: "Tối ưu hóa doanh thu và lợi nhuận thông qua phân tích dữ liệu chính xác và kịp thời."
+      title: t('applicationAreas.finance.features.0.title'),
+      description: t('applicationAreas.finance.features.0.description')
     },
     {
       icon: BarChart3,
-      title: "Giám sát dòng tiền 24/7",
-      description: "Theo dõi dòng tiền thời gian thực từ tất cả các chi nhánh, ATM và kênh giao dịch."
+      title: t('applicationAreas.finance.features.1.title'),
+      description: t('applicationAreas.finance.features.1.description')
     },
     {
       icon: Shield,
-      title: "Tối ưu quyết định kinh doanh",
-      description: "Ra quyết định nhanh chóng dựa trên dữ liệu phân tích thông minh và dự báo chính xác."
+      title: t('applicationAreas.finance.features.2.title'),
+      description: t('applicationAreas.finance.features.2.description')
     }
   ]
 
   const metrics = [
-    { label: "Dư nợ theo thời gian thực", value: "100%" },
-    { label: "Hiệu suất thu hồi nợ", value: "95%" },
-    { label: "Tài khoản mới mỗi ngày", value: "500+" },
-    { label: "Giao dịch được xử lý", value: "1M+" }
+    { label: t('applicationAreas.finance.metrics.0.label'), value: t('applicationAreas.finance.metrics.0.value') },
+    { label: t('applicationAreas.finance.metrics.1.label'), value: t('applicationAreas.finance.metrics.1.value') },
+    { label: t('applicationAreas.finance.metrics.2.label'), value: t('applicationAreas.finance.metrics.2.value') },
+    { label: t('applicationAreas.finance.metrics.3.label'), value: t('applicationAreas.finance.metrics.3.value') }
   ]
 
   const benefits = [
-    "Tăng 25% hiệu quả quản lý rủi ro tín dụng",
-    "Giảm 40% thời gian xử lý báo cáo",
-    "Tăng 30% độ chính xác dự báo dòng tiền",
-    "Cải thiện 50% trải nghiệm khách hàng"
+    t('applicationAreas.finance.benefits.0'),
+    t('applicationAreas.finance.benefits.1'),
+    t('applicationAreas.finance.benefits.2'),
+    t('applicationAreas.finance.benefits.3')
   ]
 
   return (
@@ -88,11 +91,10 @@ export default function FinancePage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Smart Dashboard - Ngành Tài chính / Ngân hàng / Bảo hiểm
+              {t('applicationAreas.finance.title')}
             </h1>
             <p className="text-xl text-green-100 max-w-3xl leading-relaxed">
-              Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, 
-              hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7.
+              {t('applicationAreas.finance.description')}
             </p>
           </div>
         </div>
@@ -105,9 +107,9 @@ export default function FinancePage() {
 
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6 text-center">Thách thức thực tế của ngành Tài chính - Ngân hàng</h3>
+              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6 text-center">{t('applicationAreas.finance.challenges.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Ngành tài chính ngân hàng vận hành trong một môi trường có độ phức tạp, rủi ro và yêu cầu tuân thủ cực kỳ cao. Các thách thức cốt lõi bao gồm:
+                {t('applicationAreas.finance.challenges.subtitle')}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -169,9 +171,9 @@ export default function FinancePage() {
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">{t('applicationAreas.finance.applications.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Để giải quyết các thách thức trên, Smart Dashboard được ứng dụng như một "trung tâm chỉ huy" hay "bộ não số", biến dữ liệu thành công cụ quản trị chủ động.
+                {t('applicationAreas.finance.applications.subtitle')}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -320,9 +322,9 @@ export default function FinancePage() {
 
             {/* Lợi ích chiến lược */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">Lợi ích chiến lược và định lượng</h3>
+              <h3 className="text-4xl font-semibold text-green-700 dark:text-green-400 mb-6  text-center">{t('applicationAreas.finance.strategicBenefits.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Việc ứng dụng Smart Dashboard một cách hiệu quả mang lại những giá trị to lớn, có thể đo lường được:
+                {t('applicationAreas.finance.strategicBenefits.subtitle')}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -400,7 +402,7 @@ export default function FinancePage() {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Số liệu ấn tượng</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t('applicationAreas.finance.metricsTitle')}</h2>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
@@ -418,8 +420,8 @@ export default function FinancePage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Tính năng nổi bật</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho ngành tài chính ngân hàng</p>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t('applicationAreas.finance.featuresTitle')}</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400">{t('applicationAreas.finance.featuresSubtitle')}</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -445,7 +447,7 @@ export default function FinancePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Lợi ích mang lại</h2>
+              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t('applicationAreas.finance.benefitsTitle')}</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -465,14 +467,14 @@ export default function FinancePage() {
       {/* CTA Section */}
       <section className="py-16 bg-green-600 dark:bg-green-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Tối ưu hóa hiệu quả tài chính ngay hôm nay</h2>
-          <p className="text-xl mb-8">Liên hệ để được tư vấn giải pháp Smart Dashboard phù hợp</p>
+          <h2 className="text-3xl font-bold mb-4">{t('applicationAreas.finance.cta.title')}</h2>
+          <p className="text-xl mb-8">{t('applicationAreas.finance.cta.subtitle')}</p>
           <div className="space-x-4">
             <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100" asChild>
-              <Link href="/contact-info">Liên hệ ngay</Link>
+              <Link href="/contact-info">{t('applicationAreas.finance.cta.contactNow')}</Link>
             </Button>
             <Button variant="outline" size="lg" className="border-white text-green-600 hover:bg-white hover:text-green-600" asChild>
-              <Link href="/">Về trang chủ</Link>
+              <Link href="/">{t('applicationAreas.finance.cta.backHome')}</Link>
             </Button>
           </div>
         </div>

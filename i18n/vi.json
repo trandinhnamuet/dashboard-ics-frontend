@@ -5,7 +5,7 @@
       "subtitle": "Giải pháp cho Nghị quyết 57-NQ/TW của chính phủ",
       "description": "Chúng tôi cung cấp giải pháp bảng điều khiển thông minh toàn diện, hỗ trợ doanh nghiệp và tổ chức tối ưu hóa quy trình vận hành, đồng thời nâng cao hiệu suất làm việc.",
       "getStarted": "Bắt đầu ngay",
-      "dashboard": "Xem Dashboard",
+      "dashboard": "Xem Bảng điều khiển",
       "contact": "Liên hệ tư vấn",
       "features": {
         "dataVisualization": {
@@ -28,8 +28,8 @@
       }
     },
     "services": {
-      "title": "Giải pháp Smart Dashboard toàn diện",
-      "subtitle": "Từ dữ liệu vận hành đến phân tích thông minh, chúng tôi mang đến giải pháp Smart Dashboard giúp doanh nghiệp quản trị tập trung, giám sát trực quan và ra quyết định nhanh chóng.",
+      "title": "Giải pháp Bảng điều khiển thông minh toàn diện",
+      "subtitle": "Từ dữ liệu vận hành đến phân tích thông minh, chúng tôi mang đến giải pháp Bảng điều khiển thông minh giúp doanh nghiệp quản trị tập trung, giám sát trực quan và ra quyết định nhanh chóng.",
       "stats": {
         "deploymentTime": "Thời gian triển khai trung bình",
         "dataSources": "Nguồn dữ liệu hỗ trợ tích hợp",
@@ -50,7 +50,7 @@
     },
     "industries": {
       "title": "Lĩnh vực ứng dụng",
-      "subtitle": "Giải pháp dashboard thông minh cho mọi ngành nghề",
+      "subtitle": "Giải pháp bảng điều khiển thông minh cho mọi ngành nghề",
       "government": {
         "title": "Chính phủ - Cơ quan ban ngành",
         "description": "Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn.",
@@ -170,13 +170,13 @@
   },
   "services": {
     "dataIntegration": {
-      "title": "Data Integration",
+      "title": "Tích hợp dữ liệu",
       "description": "Kết nối và thu thập dữ liệu từ nhiều hệ thống khác nhau của doanh nghiệp",
       "features": [
         "Kết nối dữ liệu thời gian thực từ nhiều nguồn",
-        "Hỗ trợ cả dữ liệu truyền thống (SQL, Excel) và dữ liệu IOT/SCADA",
+        "Hỗ trợ cả dữ liệu truyền thống (SQL, Excel) và dữ liệu IoT/SCADA",
         "Tự động hóa việc chuyển đổi và chuẩn hóa dữ liệu",
-        "Engine xử lý dữ liệu hiệu suất cao",
+        "Công cụ xử lý dữ liệu hiệu suất cao",
         "Giao thức truyền dữ liệu bảo mật"
       ]
     },
@@ -193,10 +193,10 @@
     },
     "realtime": {
       "title": "Giám sát thời gian thực",
-      "description": "Dashboard trực tiếp và cảnh báo tức thì",
+      "description": "Bảng điều khiển trực tiếp và cảnh báo tức thì",
       "features": [
         "Trực quan hóa dữ liệu thời gian thực",
-        "Dashboard có thể tùy chỉnh",
+        "Bảng điều khiển có thể tùy chỉnh",
         "Cảnh báo thông minh và trigger",
         "Thông báo mobile",
         "Giám sát hiệu suất"
@@ -294,10 +294,10 @@
           "Phân tích dự đoán với AI/ML",
           "Tích hợp IoT không giới hạn",
           "Lưu trữ dữ liệu vĩnh viễn",
-          "Dedicated support manager",
+          "Quản lý hỗ trợ chuyên biệt",
           "Tùy chỉnh giao diện theo yêu cầu",
-          "Đào tạo chuyên sâu cho team",
-          "SLA 99.9% uptime guarantee"
+          "Đào tạo chuyên sâu cho đội ngũ",
+          "Cam kết SLA 99.9% thời gian hoạt động"
         ],
         "buttonText": "Liên hệ tư vấn"
       },
@@ -331,11 +331,11 @@
         "features": [
           "Tất cả tính năng Dashboard 3D",
           "Mô hình 3D tương tác nâng cao",
-          "AI/ML phân tích dự đoán",
-          "Dedicated support manager",
+          "Phân tích dự đoán AI/ML",
+          "Quản lý hỗ trợ chuyên biệt",
           "Tùy chỉnh giao diện theo yêu cầu",
-          "Đào tạo chuyên sâu cho team",
-          "SLA 99.9% uptime",
+          "Đào tạo chuyên sâu cho đội ngũ",
+          "Cam kết SLA 99.9% thời gian hoạt động",
           "Ưu tiên hỗ trợ kỹ thuật",
           "Báo cáo executive dashboard",
           "Truy cập VR/AR"
@@ -351,7 +351,7 @@
         "discount": "35%",
         "features": [
           "Tất cả tính năng gói 24 tháng",
-          "Phát triển AI model tùy chỉnh",
+          "Phát triển mô hình AI tùy chỉnh",
           "Phân tích dự đoán nâng cao",
           "Ưu tiên phát triển tùy chỉnh",
           "Review chiến lược hàng tháng",
@@ -471,7 +471,275 @@
         "Giảm 40% thời gian xử lý báo cáo",
         "Tăng 30% độ chính xác dự báo dòng tiền",
         "Cải thiện 50% trải nghiệm khách hàng"
-      ]
+      ],
+      "whyChooseUs": "Tại sao chọn chúng tôi?",
+      "mainFeatures": "Tính năng chính",
+      "keyBenefits": "Lợi ích mang lại",
+      "applications": {
+        "title": "Ứng dụng chi tiết của Smart Dashboard trong thực tế",
+        "subtitle": "Để giải quyết các thách thức trên, Smart Dashboard được ứng dụng như một \"trung tâm chỉ huy\" hay \"bộ não số\", biến dữ liệu thành công cụ quản trị chủ động."
+      },
+      "strategicBenefits": {
+        "title": "Lợi ích chiến lược và định lượng",
+        "subtitle": "Việc ứng dụng Smart Dashboard một cách hiệu quả mang lại những giá trị to lớn, có thể đo lường được:"
+      },
+      "metricsTitle": "Số liệu ấn tượng",
+      "featuresTitle": "Tính năng nổi bật",
+      "featuresSubtitle": "Giải pháp toàn diện cho ngành tài chính ngân hàng",
+      "benefitsTitle": "Lợi ích mang lại",
+      "cta": {
+        "title": "Tối ưu hóa hiệu quả tài chính ngay hôm nay",
+        "subtitle": "Liên hệ để được tư vấn giải pháp Smart Dashboard phù hợp",
+        "contactNow": "Liên hệ ngay",
+        "backHome": "Về trang chủ"
+      }
+    },
+    "manufacturing": {
+      "title": "Smart Dashboard - Ngành Công nghiệp / Sản xuất",
+      "description": "Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, giảm 20-30% chi phí nhờ tối ưu vận hành, cải thiện an toàn và hướng đến công nghiệp xanh, net-zero.",
+      "introduction": {
+        "industryRevolution": "Cách mạng Công nghiệp lần thứ tư (Công nghiệp 4.0)",
+        "dataMining": "mỏ dữ liệu khổng lồ",
+        "newOil": "dầu mỏ mới",
+        "smartFactory": "Nhà máy thông minh (Smart Factory)",
+        "smartIndustrialPark": "Khu Công nghiệp Thông minh (Smart Industrial Park)",
+        "paragraph1": "Trong bối cảnh của cuộc {industryRevolution}, ngành sản xuất và các khu công nghiệp (KCN) đang đứng ở tâm điểm của một cuộc chuyển đổi sâu sắc và toàn diện. Các nhà máy không còn đơn thuần là nơi lắp ráp, mà đã trở thành những {dataMining} do sự bùng nổ của các thiết bị IoT, cảm biến thông minh và hệ thống tự động hóa.",
+        "paragraph2": "Dữ liệu giờ đây được ví như {newOil}, trở thành tài sản chiến lược và là huyết mạch nuôi sống mọi hoạt động của một {smartFactory}.",
+        "paragraph3": "{smartIndustrialPark} là một bước tiến xa hơn, áp dụng các nguyên tắc của Smart Factory trên quy mô toàn khu, quản lý một cách tích hợp từ hạ tầng, sản xuất, năng lượng, môi trường cho đến an ninh và logistics."
+      },
+      "challenges": {
+        "title": "Thách thức thực tế của Khu Công nghiệp & Nhà máy",
+        "subtitle": "Sở hữu nhiều dữ liệu nhưng không thể khai thác hiệu quả sẽ biến tiềm năng thành gánh nặng. Các nhà máy và KCN đang đối mặt với những rào cản mang tính hệ thống.",
+        "items": [
+          {
+            "title": "Dữ liệu phân mảnh và \"Ốc đảo thông tin\" (Data Silos)",
+            "description": "Đây là thách thức hàng đầu. Dữ liệu từ các hệ thống OT (SCADA, PLC) và IT (ERP, MES) thường do các bộ phận khác nhau quản lý và không \"nói chuyện\" với nhau.",
+            "example": "Đội bảo trì xem dữ liệu về độ rung của máy trên hệ thống CMMS, đội sản xuất theo dõi sản lượng trên MES, và đội quản lý cơ sở vật chất giám sát mức tiêu thụ năng lượng của chính cái máy đó trên hệ thống BMS. Hậu quả là không ai có được cái nhìn toàn cảnh, dẫn đến quyết định chậm trễ và kém hiệu quả."
+          },
+          {
+            "title": "Khó khăn tích hợp và thiếu chuẩn hóa",
+            "description": "Việc kết nối một máy tiện CNC 20 năm tuổi với một cảm biến IoT hiện đại đòi hỏi các giải pháp chuyển đổi giao thức phức tạp và tốn kém do sự đa dạng về nhà cung cấp và công nghệ."
+          },
+          {
+            "title": "Chất lượng dữ liệu kém",
+            "description": "Chất lượng của quyết định phụ thuộc vào chất lượng của dữ liệu đầu vào. Các vấn đề: dữ liệu thiếu do lỗi kết nối mạng, không chính xác do cảm biến lệch chuẩn, hoặc không nhất quán do nhập liệu thủ công."
+          },
+          {
+            "title": "Phụ thuộc vào \"Chuyên gia cá nhân\" và thiếu khả năng dự báo",
+            "description": "Khi một thợ máy lão luyện nghỉ hưu, cả một kho kiến thức về máy móc và quy trình sẽ biến mất theo. Điều này tạo ra những \"khoảng trống kiến thức\" nguy hiểm."
+          },
+          {
+            "title": "Chi phí bảo trì cao và downtime không lường trước",
+            "description": "Mô hình bảo trì dự phòng (preventive maintenance) hiện tại thường quá thận trọng (lãng phí chi phí) hoặc quá lơ là (gây ra sự cố bất ngờ)."
+          }
+        ]
+      },
+      "applications": {
+        "title": "Ứng dụng chi tiết của Smart Dashboard trong thực tế",
+        "subtitle": "Smart Dashboard đóng vai trò là \"trung tâm chỉ huy\" hoặc \"bộ não số\" của nhà máy và KCN, giải quyết triệt để các thách thức trên."
+      },
+      "strategicBenefits": {
+        "title": "Lợi ích chiến lược và định lượng",
+        "subtitle": "Việc triển khai Smart Dashboard không chỉ là một nâng cấp công nghệ, mà là một quyết định chiến lược mang lại những kết quả kinh doanh vượt trội và có thể đo lường được."
+      },
+      "features": [
+        {
+          "title": "Giảm 20-30% chi phí",
+          "description": "Tối ưu hóa quy trình sản xuất và quản lý nguồn lực hiệu quả, giảm thiểu lãng phí."
+        },
+        {
+          "title": "Giám sát năng lượng thời gian thực", 
+          "description": "Theo dõi và điều chỉnh mức tiêu thụ năng lượng của từng máy móc, dây chuyền sản xuất."
+        },
+        {
+          "title": "Hướng đến Net-Zero",
+          "description": "Đạt mục tiêu phát thải carbon bằng 0 thông qua giám sát môi trường và tối ưu năng lượng."
+        }
+      ],
+      "metrics": [
+        { "label": "Giảm chi phí vận hành", "value": "30%" },
+        { "label": "Tăng hiệu suất sản xuất", "value": "25%" },
+        { "label": "Giảm phát thải CO2", "value": "40%" },
+        { "label": "Tối ưu năng lượng", "value": "35%" }
+      ],
+      "benefits": [
+        "Tăng 25% hiệu quả sản xuất tổng thể",
+        "Giảm 30% thời gian simple maintenance",
+        "Cải thiện 40% an toàn lao động",
+        "Tối ưu 50% quản lý kho vật tư"
+      ],
+      "applicationsList": [
+        "Dây chuyền sản xuất ô tô",
+        "Nhà máy chế biến thực phẩm",
+        "Khu công nghiệp dệt may", 
+        "Nhà máy hóa chất",
+        "Cơ sở sản xuất điện tử",
+        "Xưởng cơ khí chế tạo"
+      ],
+      "metricsTitle": "Hiệu quả đã chứng minh",
+      "featuresTitle": "Tính năng chính",
+      "featuresSubtitle": "Giải pháp toàn diện cho ngành công nghiệp sản xuất",
+      "applicationsTitle": "Ứng dụng thực tế",
+      "benefitsTitle": "Lợi ích mang lại",
+      "cta": {
+        "title": "Chuyển đổi số cho nhà máy của bạn",
+        "subtitle": "Bắt đầu hành trình hướng đến công nghiệp 4.0 và Net-Zero",
+        "contactNow": "Liên hệ ngay",
+        "backHome": "Về trang chủ"
+      }
+    },
+    "building": {
+      "title": "Smart Dashboard - Tòa nhà thông minh",
+      "description": "Giải pháp quản lý tòa nhà thông minh với tiết kiệm năng lượng 30-40%, tăng cường an toàn bảo mật, và quản lý tự động hóa hoàn toàn.",
+      "introduction": {
+        "smartBuilding": "Tòa nhà thông minh (Smart Building)",
+        "paragraph1": "Trong thời đại công nghệ 4.0, {smartBuilding} không chỉ là một xu hướng mà đã trở thành tiêu chuẩn mới cho các công trình hiện đại. Việc tích hợp các công nghệ IoT, AI và hệ thống quản lý tự động giúp tối ưu hóa hiệu quả vận hành, tiết kiệm chi phí và nâng cao trải nghiệm người dùng.",
+        "paragraph2": "Smart Dashboard đóng vai trò như \"bộ não trung tâm\" của tòa nhà, kết nối và điều khiển mọi hệ thống từ HVAC, chiếu sáng, an ninh đến quản lý năng lượng một cách thống nhất và thông minh."
+      },
+      "challenges": {
+        "title": "Thách thức trong quản lý tòa nhà truyền thống",
+        "subtitle": "Các tòa nhà truyền thống thường gặp phải những vấn đề về hiệu quả vận hành và quản lý:",
+        "items": [
+          {
+            "title": "Lãng phí năng lượng nghiêm trọng",
+            "description": "Hệ thống HVAC và chiếu sáng hoạt động không hiệu quả, tiêu thụ năng lượng không cần thiết ngay cả khi không có người sử dụng."
+          },
+          {
+            "title": "Quản lý thủ công phức tạp",
+            "description": "Cần nhiều nhân sự để giám sát và điều chỉnh các hệ thống khác nhau, dễ xảy ra sai sót và phản ứng chậm."
+          },
+          {
+            "title": "Thiếu tính minh bạch trong vận hành",
+            "description": "Không có cái nhìn tổng quan về hiệu suất hoạt động của tòa nhà, khó khăn trong việc phát hiện và xử lý sự cố."
+          },
+          {
+            "title": "Chi phí bảo trì cao",
+            "description": "Bảo trì theo lịch định kỳ thay vì dựa trên tình trạng thực tế, dẫn đến chi phí không cần thiết và nguy cơ hỏng hóc bất ngờ."
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "Tiết kiệm năng lượng 30-40%",
+          "description": "Tối ưu hóa hệ thống HVAC, chiếu sáng và điều hòa thông qua AI và IoT thông minh."
+        },
+        {
+          "title": "Tăng an toàn và bảo mật",
+          "description": "Giám sát an ninh 24/7, kiểm soát ra vào tự động và phát hiện sớm các rủi ro tiềm ẩn."
+        },
+        {
+          "title": "Quản lý tự động hóa",
+          "description": "Điều khiển thông minh các hệ thống tòa nhà, giảm thiểu can thiệp thủ công và tối ưu vận hành."
+        }
+      ],
+      "metrics": [
+        { "label": "Tiết kiệm năng lượng", "value": "40%" },
+        { "label": "Giảm chi phí vận hành", "value": "35%" },
+        { "label": "Tăng hiệu quả quản lý", "value": "50%" },
+        { "label": "Cải thiện an toàn", "value": "60%" }
+      ],
+      "benefits": [
+        "Giảm thiểu carbon footprint và thân thiện môi trường",
+        "Nâng cao chất lượng không gian làm việc",
+        "Tự động hóa các quy trình vận hành phức tạp",
+        "Giám sát và báo cáo hiệu suất real-time"
+      ],
+      "applications": [
+        "Tòa nhà văn phòng cao tầng",
+        "Trung tâm thương mại và mua sắm",
+        "Khách sạn và resort",
+        "Bệnh viện và cơ sở y tế",
+        "Trường học và đại học",
+        "Nhà máy và khu công nghiệp"
+      ],
+      "metricsTitle": "Hiệu quả đã chứng minh",
+      "featuresTitle": "Tính năng nổi bật",
+      "featuresSubtitle": "Giải pháp toàn diện cho tòa nhà thông minh",
+      "applicationsTitle": "Ứng dụng thực tế",
+      "benefitsTitle": "Lợi ích mang lại",
+      "cta": {
+        "title": "Biến tòa nhà của bạn thành Smart Building",
+        "subtitle": "Hãy để chúng tôi giúp bạn tiết kiệm chi phí và nâng cao hiệu quả vận hành",
+        "contactNow": "Liên hệ ngay",
+        "backHome": "Về trang chủ"
+      }
+    },
+    "seaport": {
+      "title": "Smart Dashboard - Cảng biển thông minh",
+      "description": "Giải pháp quản lý cảng biển thông minh với tối ưu hóa logistics, giảm thời gian xử lý tàu 30%, tăng hiệu quả vận hành và giám sát an toàn real-time 24/7.",
+      "introduction": {
+        "smartSeaport": "Cảng biển thông minh (Smart Seaport)",
+        "digitalization": "số hóa toàn diện",
+        "paragraph1": "Trong bối cảnh thương mại toàn cầu ngày càng phát triển, {smartSeaport} đã trở thành yếu tố then chốt trong chuỗi cung ứng quốc tế. Việc áp dụng công nghệ hiện đại và {digitalization} giúp các cảng biển nâng cao năng suất, giảm chi phí và đảm bảo an toàn.",
+        "paragraph2": "Smart Dashboard đóng vai trò là trung tâm điều khiển thông minh, tích hợp tất cả các hoạt động từ quản lý tàu bè, container, nhân sự đến an ninh và môi trường trong một hệ thống thống nhất."
+      },
+      "challenges": {
+        "title": "Thách thức trong quản lý cảng biển truyền thống",
+        "subtitle": "Các cảng biển truyền thống thường gặp những khó khăn trong việc tối ưu hóa hoạt động:",
+        "items": [
+          {
+            "title": "Quản lý logistics phức tạp",
+            "description": "Điều phối hàng nghìn container, xe tải và thiết bị cảng mà không có hệ thống tích hợp dẫn đến tắc nghẽn và thiếu hiệu quả."
+          },
+          {
+            "title": "Thời gian xử lý tàu dài",
+            "description": "Quy trình thủ công trong kiểm tra, bốc dỡ và làm thủ tục khiến tàu phải neo đậu lâu, tăng chi phí vận hành."
+          },
+          {
+            "title": "Khó khăn trong theo dõi an toàn",
+            "description": "Môi trường cảng biển với nhiều rủi ro cần giám sát liên tục nhưng hệ thống truyền thống không đáp ứng được."
+          },
+          {
+            "title": "Thiếu dự báo và kế hoạch",
+            "description": "Không có dữ liệu real-time để dự đoán lưu lượng tàu và tối ưu hóa tài nguyên cảng."
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "Giảm 30% thời gian xử lý tàu",
+          "description": "Tự động hóa quy trình từ cập cảng đến làm thủ tục và bốc dỡ hàng hóa."
+        },
+        {
+          "title": "Tối ưu logistics và vận chuyển",
+          "description": "Quản lý thông minh container, xe tải và thiết bị cảng để tăng hiệu suất tổng thể."
+        },
+        {
+          "title": "Giám sát an toàn 24/7",
+          "description": "Hệ thống giám sát toàn diện bảo đảm an toàn cho nhân viên và tài sản cảng."
+        }
+      ],
+      "metrics": [
+        { "label": "Giảm thời gian xử lý", "value": "30%" },
+        { "label": "Tăng hiệu quả logistics", "value": "45%" },
+        { "label": "Cải thiện an toàn", "value": "60%" },
+        { "label": "Giảm chi phí vận hành", "value": "25%" }
+      ],
+      "benefits": [
+        "Tự động hóa 80% quy trình cập cảng và làm thủ tục",
+        "Theo dõi real-time vị trí và trạng thái tất cả container",
+        "Dự báo chính xác lưu lượng tàu và kế hoạch tài nguyên",
+        "Giảm thiểu tai nạn lao động và tổn thất hàng hóa"
+      ],
+      "applications": [
+        "Cảng container quốc tế",
+        "Cảng hàng rời (bulk cargo)",
+        "Cảng dầu khí và hóa chất",
+        "Cảng du lịch và hành khách",
+        "Cảng đa năng tổng hợp",
+        "Khu logistics cảng biển"
+      ],
+      "metricsTitle": "Hiệu quả đã chứng minh",
+      "featuresTitle": "Tính năng chính",
+      "featuresSubtitle": "Giải pháp toàn diện cho cảng biển hiện đại",
+      "applicationsTitle": "Ứng dụng thực tế",
+      "benefitsTitle": "Lợi ích đem lại",
+      "cta": {
+        "title": "Hiện đại hóa cảng biển của bạn",
+        "subtitle": "Nâng cao hiệu quả vận hành và đảm bảo an toàn với công nghệ tiên tiến",
+        "contactNow": "Liên hệ ngay",
+        "backHome": "Về trang chủ"
+      }
     }
   },
   "footer": {
@@ -502,7 +770,9 @@
       "title": "Pháp lý",
       "privacy": "Chính sách bảo mật",
       "terms": "Điều khoản sử dụng",
-      "security": "Bảo mật"
+      "security": "Bảo mật",
+      "sla": "Thỏa thuận mức độ dịch vụ",
+      "sitemap": "Sơ đồ trang web"
     },
     "contact": {
       "title": "Liên hệ",
@@ -511,7 +781,25 @@
       "email": "Email",
       "workingHours": "Giờ làm việc"
     },
-    "copyright": "© 2024 ICS Smart Dashboard. Tất cả quyền được bảo lưu.",
-    "description": "Giải pháp Smart Dashboard hàng đầu tại Việt Nam - Hỗ trợ doanh nghiệp và tổ chức đạt được chuyển đổi số và tối ưu hóa hiệu quả vận hành."
+    "newsletter": {
+      "title": "Đăng ký nhận tin",
+      "emailPlaceholder": "Email của bạn",
+      "subscribe": "Đăng ký"
+    },
+    "training": {
+      "title": "Đào tạo & Chứng chỉ",
+      "apiDocumentation": "Tài liệu API"
+    },
+    "companyFullInfo": {
+      "name": "CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS",
+      "office": "Văn phòng: TT3-5 Khu đô thị Đại Kim mới, Định Công, Hà Nội",
+      "phone": "Điện thoại: 0931.487.231",
+      "hotline": "Hotline: 0707.806.860",
+      "email": "E-mail: info@icss.com.vn",
+      "website": "www.icss.com.vn"
+    },
+    "copyright": "© 2025 CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS. Tất cả quyền được bảo lưu.",
+    "description": "Giải pháp Smart Dashboard hàng đầu tại Việt Nam - Hỗ trợ doanh nghiệp và tổ chức đạt được chuyển đổi số và tối ưu hóa hiệu quả vận hành.",
+    "wideApplication": "Ứng dụng rộng rãi"
   }
 }

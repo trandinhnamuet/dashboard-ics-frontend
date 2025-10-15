@@ -7,8 +7,10 @@ import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Link from "next/link"
 import Image from "@/components/common/Image"
+import { useTranslation } from "react-i18next"
 
 export default function BuildingPage() {
+  const { t } = useTranslation()
   // Slideshow state
   const [currentSlide, setCurrentSlide] = useState(0)
   
@@ -36,33 +38,42 @@ export default function BuildingPage() {
   const features = [
     {
       icon: TrendingDown,
-      title: "Tiết kiệm năng lượng 30-40%",
-      description: "Tối ưu hóa hệ thống HVAC, chiếu sáng và điều hòa thông qua AI và IoT thông minh."
+      title: t('applicationAreas.building.features.0.title'),
+      description: t('applicationAreas.building.features.0.description')
     },
     {
       icon: Shield,
-      title: "Tăng an toàn và bảo mật",
-      description: "Giám sát an ninh 24/7, kiểm soát ra vào tự động và phát hiện sớm các rủi ro tiềm ẩn."
+      title: t('applicationAreas.building.features.1.title'),
+      description: t('applicationAreas.building.features.1.description')
     },
     {
       icon: Settings,
-      title: "Quản lý tự động hóa",
-      description: "Điều khiển thông minh các hệ thống tòa nhà, giảm thiểu can thiệp thủ công và tối ưu vận hành."
+      title: t('applicationAreas.building.features.2.title'),
+      description: t('applicationAreas.building.features.2.description')
     }
   ]
 
   const metrics = [
-    { label: "Tiết kiệm năng lượng", value: "35%" },
-    { label: "Giảm chi phí vận hành", value: "25%" },
-    { label: "Tăng hiệu quả làm việc", value: "40%" },
-    { label: "Cải thiện an toàn", value: "50%" }
+    { label: t('applicationAreas.building.metrics.0.label'), value: t('applicationAreas.building.metrics.0.value') },
+    { label: t('applicationAreas.building.metrics.1.label'), value: t('applicationAreas.building.metrics.1.value') },
+    { label: t('applicationAreas.building.metrics.2.label'), value: t('applicationAreas.building.metrics.2.value') },
+    { label: t('applicationAreas.building.metrics.3.label'), value: t('applicationAreas.building.metrics.3.value') }
   ]
 
   const benefits = [
-    "Giám sát hệ thống tòa nhà 24/7/365",
-    "Tự động hóa 85% quy trình quản lý",
-    "Tăng 45% sự hài lòng của người dùng",
-    "Giảm 60% thời gian bảo trì và sửa chữa"
+    t('applicationAreas.building.benefits.0'),
+    t('applicationAreas.building.benefits.1'),
+    t('applicationAreas.building.benefits.2'),
+    t('applicationAreas.building.benefits.3')
+  ]
+
+  const applications = [
+    t('applicationAreas.building.applications.0'),
+    t('applicationAreas.building.applications.1'),
+    t('applicationAreas.building.applications.2'),
+    t('applicationAreas.building.applications.3'),
+    t('applicationAreas.building.applications.4'),
+    t('applicationAreas.building.applications.5')
   ]
 
   const services = [
@@ -99,11 +110,10 @@ export default function BuildingPage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Smart Dashboard - Tòa nhà thông minh
+              {t('applicationAreas.building.title')}
             </h1>
             <p className="text-xl text-gray-100 max-w-xl leading-relaxed">
-              Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. 
-              Tối ưu năng lượng, giảm chi phí vận hành và nâng cao trải nghiệm người dùng thông qua giám sát thời gian thực 24/7.
+              {t('applicationAreas.building.description')}
             </p>
           </div>
         </div>
@@ -491,7 +501,7 @@ export default function BuildingPage() {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Hiệu quả đã chứng minh</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t('applicationAreas.building.metricsTitle')}</h2>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
@@ -509,8 +519,8 @@ export default function BuildingPage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Tính năng nổi bật</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho tòa nhà thông minh</p>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t('applicationAreas.building.featuresTitle')}</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400">{t('applicationAreas.building.featuresSubtitle')}</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -609,14 +619,14 @@ export default function BuildingPage() {
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 dark:bg-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Chuyển đổi tòa nhà của bạn thành tòa nhà thông minh</h2>
-          <p className="text-xl mb-8">Tối ưu năng lượng, nâng cao an toàn và cải thiện trải nghiệm người dùng</p>
+          <h2 className="text-3xl font-bold mb-4">{t('applicationAreas.building.cta.title')}</h2>
+          <p className="text-xl mb-8">{t('applicationAreas.building.cta.subtitle')}</p>
           <div className="space-x-4">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Link href="/contact-info">Liên hệ ngay</Link>
+              <Link href="/contact-info">{t('applicationAreas.building.cta.contactNow')}</Link>
             </Button>
             <Button variant="outline" size="lg" className="border-white text-white hover:bg-white text-blue-600">
-              <Link href="/">Về trang chủ</Link>
+              <Link href="/">{t('applicationAreas.building.cta.backHome')}</Link>
             </Button>
           </div>
         </div>

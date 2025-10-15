@@ -7,8 +7,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "@/components/common/Image"
+import { useTranslation } from "react-i18next"
 
 export default function ManufacturingPage() {
+  const { t } = useTranslation()
   // Slideshow state
   const [currentSlide, setCurrentSlide] = useState(0)
   
@@ -36,42 +38,42 @@ export default function ManufacturingPage() {
   const features = [
     {
       icon: TrendingDown,
-      title: "Giảm 20-30% chi phí",
-      description: "Tối ưu hóa quy trình sản xuất và quản lý nguồn lực hiệu quả, giảm thiểu lãng phí."
+      title: t('applicationAreas.manufacturing.features.0.title'),
+      description: t('applicationAreas.manufacturing.features.0.description')
     },
     {
       icon: Zap,
-      title: "Giám sát năng lượng thời gian thực",
-      description: "Theo dõi và điều chỉnh mức tiêu thụ năng lượng của từng máy móc, dây chuyền sản xuất."
+      title: t('applicationAreas.manufacturing.features.1.title'),
+      description: t('applicationAreas.manufacturing.features.1.description')
     },
     {
       icon: Leaf,
-      title: "Hướng đến Net-Zero",
-      description: "Đạt mục tiêu phát thải carbon bằng 0 thông qua giám sát môi trường và tối ưu năng lượng."
+      title: t('applicationAreas.manufacturing.features.2.title'),
+      description: t('applicationAreas.manufacturing.features.2.description')
     }
   ]
 
   const metrics = [
-    { label: "Giảm chi phí vận hành", value: "30%" },
-    { label: "Tăng hiệu suất sản xuất", value: "25%" },
-    { label: "Giảm phát thải CO2", value: "40%" },
-    { label: "Tối ưu năng lượng", value: "35%" }
+    { label: t('applicationAreas.manufacturing.metrics.0.label'), value: t('applicationAreas.manufacturing.metrics.0.value') },
+    { label: t('applicationAreas.manufacturing.metrics.1.label'), value: t('applicationAreas.manufacturing.metrics.1.value') },
+    { label: t('applicationAreas.manufacturing.metrics.2.label'), value: t('applicationAreas.manufacturing.metrics.2.value') },
+    { label: t('applicationAreas.manufacturing.metrics.3.label'), value: t('applicationAreas.manufacturing.metrics.3.value') }
   ]
 
   const benefits = [
-    "Tăng 25% hiệu quả sản xuất tổng thể",
-    "Giảm 30% thời gian simple maintenance",
-    "Cải thiện 40% an toàn lao động",
-    "Tối ưu 50% quản lý kho vật tư"
+    t('applicationAreas.manufacturing.benefits.0'),
+    t('applicationAreas.manufacturing.benefits.1'),
+    t('applicationAreas.manufacturing.benefits.2'),
+    t('applicationAreas.manufacturing.benefits.3')
   ]
 
   const applications = [
-    "Dây chuyền sản xuất ô tô",
-    "Nhà máy chế biến thực phẩm", 
-    "Khu công nghiệp dệt may",
-    "Nhà máy hóa chất",
-    "Cơ sở sản xuất điện tử",
-    "Xưởng cơ khí chế tạo"
+    t('applicationAreas.manufacturing.applicationsList.0'),
+    t('applicationAreas.manufacturing.applicationsList.1'),
+    t('applicationAreas.manufacturing.applicationsList.2'),
+    t('applicationAreas.manufacturing.applicationsList.3'),
+    t('applicationAreas.manufacturing.applicationsList.4'),
+    t('applicationAreas.manufacturing.applicationsList.5')
   ]
 
   return (
@@ -96,11 +98,10 @@ export default function ManufacturingPage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Smart Dashboard - Ngành Công nghiệp / Sản xuất
+              {t('applicationAreas.manufacturing.title')}
             </h1>
             <p className="text-xl text-orange-100 max-w-3xl leading-relaxed">
-              Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, 
-              giảm 20-30% chi phí nhờ tối ưu vận hành, cải thiện an toàn và hướng đến công nghiệp xanh, net-zero.
+              {t('applicationAreas.manufacturing.description')}
             </p>
           </div>
         </div>
@@ -114,12 +115,12 @@ export default function ManufacturingPage() {
             {/* Giới thiệu chung */}
             <div className="mb-16">
               <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
-                <p>
-                  Trong bối cảnh của cuộc <span className="font-semibold text-orange-700">Cách mạng Công nghiệp lần thứ tư (Công nghiệp 4.0)</span>, 
-                  ngành sản xuất và các khu công nghiệp (KCN) đang đứng ở tâm điểm của một cuộc chuyển đổi sâu sắc và toàn diện. 
-                  Các nhà máy không còn đơn thuần là nơi lắp ráp, mà đã trở thành những <span className="font-semibold text-orange-700">"mỏ dữ liệu khổng lồ"</span> 
-                  do sự bùng nổ của các thiết bị IoT, cảm biến thông minh và hệ thống tự động hóa.
-                </p>
+                <p dangerouslySetInnerHTML={{
+                  __html: t('applicationAreas.manufacturing.introduction.paragraph1', {
+                    industryRevolution: `<span class="font-semibold text-orange-700">${t('applicationAreas.manufacturing.introduction.industryRevolution')}</span>`,
+                    dataMining: `<span class="font-semibold text-orange-700">"${t('applicationAreas.manufacturing.introduction.dataMining')}"</span>`
+                  })
+                }} />
 
                 <div className="mb-8 flex justify-center">
                   <Image 
@@ -130,27 +131,27 @@ export default function ManufacturingPage() {
                 </div>
                 
                 <div className="bg-gradient-to-r from-orange-50 to-cyan-50 dark:from-orange-900/30 dark:to-cyan-900/30 p-6 rounded-lg border-l-4 border-orange-500">
-                  <p className="text-gray-700 dark:text-gray-300">
-                    Dữ liệu giờ đây được ví như <span className="font-semibold text-orange-700">"dầu mỏ mới"</span>, 
-                    trở thành tài sản chiến lược và là huyết mạch nuôi sống mọi hoạt động của một 
-                    <span className="font-semibold text-orange-700"> Nhà máy thông minh (Smart Factory)</span>.
-                  </p>
+                  <p className="text-gray-700 dark:text-gray-300" dangerouslySetInnerHTML={{
+                    __html: t('applicationAreas.manufacturing.introduction.paragraph2', {
+                      newOil: `<span class="font-semibold text-orange-700">"${t('applicationAreas.manufacturing.introduction.newOil')}"</span>`,
+                      smartFactory: `<span class="font-semibold text-orange-700"> ${t('applicationAreas.manufacturing.introduction.smartFactory')}</span>`
+                    })
+                  }} />
                 </div>
                 
-                <p>
-                  <span className="font-semibold text-orange-700">Khu Công nghiệp Thông minh (Smart Industrial Park)</span> 
-                  là một bước tiến xa hơn, áp dụng các nguyên tắc của Smart Factory trên quy mô toàn khu, 
-                  quản lý một cách tích hợp từ hạ tầng, sản xuất, năng lượng, môi trường cho đến an ninh và logistics.
-                </p>
+                <p dangerouslySetInnerHTML={{
+                  __html: t('applicationAreas.manufacturing.introduction.paragraph3', {
+                    smartIndustrialPark: `<span class="font-semibold text-orange-700">${t('applicationAreas.manufacturing.introduction.smartIndustrialPark')}</span>`
+                  })
+                }} />
               </div>
             </div>
 
             {/* Thách thức thực tế */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">Thách thức thực tế của Khu Công nghiệp & Nhà máy</h3>
+              <h3 className="text-4xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">{t('applicationAreas.manufacturing.challenges.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Sở hữu nhiều dữ liệu nhưng không thể khai thác hiệu quả sẽ biến tiềm năng thành gánh nặng. 
-                Các nhà máy và KCN đang đối mặt với những rào cản mang tính hệ thống.
+                {t('applicationAreas.manufacturing.challenges.subtitle')}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -238,10 +239,9 @@ export default function ManufacturingPage() {
 
             {/* Ứng dụng Smart Dashboard */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">Ứng dụng chi tiết của Smart Dashboard trong thực tế</h3>
+              <h3 className="text-4xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">{t('applicationAreas.manufacturing.applications.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Smart Dashboard đóng vai trò là "trung tâm chỉ huy" hoặc "bộ não số" của nhà máy và KCN, 
-                giải quyết triệt để các thách thức trên.
+                {t('applicationAreas.manufacturing.applications.subtitle')}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -399,10 +399,9 @@ export default function ManufacturingPage() {
 
             {/* Lợi ích chiến lược */}
             <div className="mb-16">
-              <h3 className="text-4xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">Lợi ích chiến lược và định lượng</h3>
+              <h3 className="text-4xl font-semibold text-orange-700 dark:text-orange-400 mb-6 text-center">{t('applicationAreas.manufacturing.strategicBenefits.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                Việc triển khai Smart Dashboard không chỉ là một nâng cấp công nghệ, mà là một quyết định chiến lược 
-                mang lại những kết quả kinh doanh vượt trội và có thể đo lường được.
+                {t('applicationAreas.manufacturing.strategicBenefits.subtitle')}
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -502,7 +501,7 @@ export default function ManufacturingPage() {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Hiệu quả đã chứng minh</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t('applicationAreas.manufacturing.metricsTitle')}</h2>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
@@ -520,8 +519,8 @@ export default function ManufacturingPage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Tính năng chính</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">Giải pháp toàn diện cho ngành công nghiệp sản xuất</p>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t('applicationAreas.manufacturing.featuresTitle')}</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400">{t('applicationAreas.manufacturing.featuresSubtitle')}</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -546,7 +545,7 @@ export default function ManufacturingPage() {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Ứng dụng thực tế</h2>
+            <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t('applicationAreas.manufacturing.applicationsTitle')}</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -567,7 +566,7 @@ export default function ManufacturingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">Lợi ích mang lại</h2>
+              <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">{t('applicationAreas.manufacturing.benefitsTitle')}</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -587,14 +586,14 @@ export default function ManufacturingPage() {
       {/* CTA Section */}
       <section className="py-16 text-white bg-teal-500 dark:bg-teal-600">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Chuyển đổi số cho nhà máy của bạn</h2>
-          <p className="text-xl mb-8">Bắt đầu hành trình hướng đến công nghiệp 4.0 và Net-Zero</p>
+          <h2 className="text-3xl font-bold mb-4">{t('applicationAreas.manufacturing.cta.title')}</h2>
+          <p className="text-xl mb-8">{t('applicationAreas.manufacturing.cta.subtitle')}</p>
           <div className="space-x-4">
             <Button size="lg" className="bg-white text-teal-600 hover:bg-gray-100">
-              <Link href="/contact-info">Liên hệ ngay</Link>
+              <Link href="/contact-info">{t('applicationAreas.manufacturing.cta.contactNow')}</Link>
             </Button>
             <Button variant="outline" size="lg" className="border-white text-white hover:bg-white text-teal-600">
-              <Link href="/">Về trang chủ</Link>
+              <Link href="/">{t('applicationAreas.manufacturing.cta.backHome')}</Link>
             </Button>
           </div>
         </div>
