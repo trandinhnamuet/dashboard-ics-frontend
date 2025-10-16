@@ -31,6 +31,14 @@ export function LanguageSelector() {
     setIsOpen(false)
   }
 
+  // Tải ngôn ngữ đã lưu khi component mount
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('preferred-language')
+    if (savedLanguage && savedLanguage !== i18n.language) {
+      i18n.changeLanguage(savedLanguage)
+    }
+  }, [i18n])
+
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current)
