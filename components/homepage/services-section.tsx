@@ -35,7 +35,7 @@ const serviceKeys = [
 	{
 		icon: BarChart3,
 		key: "analytics",
-		image: "/service-section/analytics-and-ai.jpg",
+		image: "/service-section/ai.jpg",
 	},
 ]
 

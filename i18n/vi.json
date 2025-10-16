@@ -42,7 +42,7 @@
       "subtitle": "Gói dịch vụ phù hợp với mọi quy mô doanh nghiệp",
       "plans": {
         "starter": "Tiêu chuẩn",
-        "professional": "Cao cấp",
+        "professional": "Cao cấp", 
         "enterprise": "Doanh nghiệp",
         "custom": "Tùy chỉnh"
       }
@@ -53,47 +53,27 @@
       "government": {
         "title": "Chính phủ - Cơ quan ban ngành",
         "description": "Theo dõi toàn diện các chỉ số kinh tế vĩ mô như tốc độ tăng trưởng GDP, lạm phát, tỷ lệ thất nghiệp, cán cân thanh toán, cùng số liệu thu – chi ngân sách, KPIs, tiến độ triển khai các dự án và các nút nghẽn.",
-        "benefits": [
-          "Giám sát KPIs thời gian thực",
-          "Theo dõi tiến độ dự án",
-          "Phân tích ngân sách chi tiết"
-        ]
+        "benefits": ["Giám sát KPIs thời gian thực", "Theo dõi tiến độ dự án", "Phân tích ngân sách chi tiết"]
       },
       "finance": {
         "title": "Tài chính - Ngân hàng - Bảo hiểm",
         "description": "Giúp nhà quản lý nắm trọn bức tranh hoạt động: dòng tiền, KPI từng chi nhánh, ATM, dư nợ, hiệu suất thu hồi nợ và số lượng tài khoản mới, tất cả hiển thị trực quan và cập nhật tức thì 24/7.",
-        "benefits": [
-          "Tăng trưởng 20-30%",
-          "Giám sát dòng tiền 24/7",
-          "Tối ưu quyết định kinh doanh"
-        ]
+        "benefits": ["Tăng trưởng 20-30%", "Giám sát dòng tiền 24/7", "Tối ưu quyết định kinh doanh"]
       },
       "manufacturing": {
         "title": "Công nghiệp - Sản xuất",
         "description": "Tăng cường hiệu quả sản xuất thông qua giám sát năng lượng và KPI thời gian thực, giảm 20-30% chi phí nhờ tối ưu vận hành, cải thiện an toàn và hướng đến công nghiệp xanh, net-zero.",
-        "benefits": [
-          "Giảm 20-30% chi phí",
-          "Giám sát năng lượng thời gian thực",
-          "Hướng đến net-zero"
-        ]
+        "benefits": ["Giảm 20-30% chi phí", "Giám sát năng lượng thời gian thực", "Hướng đến net-zero"]
       },
       "building": {
         "title": "Tòa nhà thông minh",
         "description": "Quản lý tổng thể hệ thống tòa nhà từ HVAC, điện, nước, an ninh đến các tiện ích. Tối ưu năng lượng, giảm chi phí vận hành và nâng cao trải nghiệm người dùng thông qua giám sát thời gian thực 24/7.",
-        "benefits": [
-          "Tiết kiệm năng lượng 30-40%",
-          "Giảm chi phí vận hành 25%",
-          "Tăng an toàn và bảo mật"
-        ]
+        "benefits": ["Tiết kiệm năng lượng 30-40%", "Giảm chi phí vận hành 25%", "Tăng an toàn và bảo mật"]
       },
       "seaport": {
         "title": "Cảng biển thông minh",
         "description": "Biến cảng biển thành trung tâm chỉ huy số với bản sao số 3D, giám sát KPIs thời gian thực, tự động hóa quy trình vận hành và nâng cao năng suất bốc dỡ lên 30%. Tối ưu logistics và giảm chi phí vận chuyển.",
-        "benefits": [
-          "Tăng năng suất 30%",
-          "Giám sát KPIs thời gian thực",
-          "Nâng cao an toàn 40%"
-        ]
+        "benefits": ["Tăng năng suất 30%", "Giám sát KPIs thời gian thực", "Nâng cao an toàn 40%"]
       },
       "applications": {
         "factory": {
@@ -131,7 +111,7 @@
   },
   "header": {
     "home": "Trang chủ",
-    "services": "Dịch vụ",
+    "services": "Dịch vụ", 
     "pricing": "Gói đăng ký",
     "support": "Hỗ trợ",
     "contact": "Liên hệ",
@@ -153,7 +133,7 @@
   "forms": {
     "validation": {
       "userNameMin": "Tên người dùng phải có ít nhất 2 ký tự",
-      "emailInvalid": "Email không hợp lệ",
+      "emailInvalid": "Email không hợp lệ", 
       "phoneMin": "Số điện thoại phải có ít nhất 10 số",
       "phoneMax": "Số điện thoại không được quá 20 số"
     },
@@ -678,22 +658,10 @@
         }
       ],
       "metrics": [
-        {
-          "label": "Dư nợ theo thời gian thực",
-          "value": "100%"
-        },
-        {
-          "label": "Hiệu suất thu hồi nợ",
-          "value": "95%"
-        },
-        {
-          "label": "Tài khoản mới mỗi ngày",
-          "value": "500+"
-        },
-        {
-          "label": "Giao dịch được xử lý",
-          "value": "1M+"
-        }
+        { "label": "Dư nợ theo thời gian thực", "value": "100%" },
+        { "label": "Hiệu suất thu hồi nợ", "value": "95%" },
+        { "label": "Tài khoản mới mỗi ngày", "value": "500+" },
+        { "label": "Giao dịch được xử lý", "value": "1M+" }
       ],
       "benefits": [
         "Tăng 25% hiệu quả quản lý rủi ro tín dụng",
@@ -924,7 +892,7 @@
           "description": "Tối ưu hóa quy trình sản xuất và quản lý nguồn lực hiệu quả, giảm thiểu lãng phí."
         },
         {
-          "title": "Giám sát năng lượng thời gian thực",
+          "title": "Giám sát năng lượng thời gian thực", 
           "description": "Theo dõi và điều chỉnh mức tiêu thụ năng lượng của từng máy móc, dây chuyền sản xuất."
         },
         {
@@ -933,22 +901,10 @@
         }
       ],
       "metrics": [
-        {
-          "label": "Giảm chi phí vận hành",
-          "value": "30%"
-        },
-        {
-          "label": "Tăng hiệu suất sản xuất",
-          "value": "25%"
-        },
-        {
-          "label": "Giảm phát thải CO2",
-          "value": "40%"
-        },
-        {
-          "label": "Tối ưu năng lượng",
-          "value": "35%"
-        }
+        { "label": "Giảm chi phí vận hành", "value": "30%" },
+        { "label": "Tăng hiệu suất sản xuất", "value": "25%" },
+        { "label": "Giảm phát thải CO2", "value": "40%" },
+        { "label": "Tối ưu năng lượng", "value": "35%" }
       ],
       "benefits": [
         "Tăng 25% hiệu quả sản xuất tổng thể",
@@ -959,7 +915,7 @@
       "applicationsList": [
         "Dây chuyền sản xuất ô tô",
         "Nhà máy chế biến thực phẩm",
-        "Khu công nghiệp dệt may",
+        "Khu công nghiệp dệt may", 
         "Nhà máy hóa chất",
         "Cơ sở sản xuất điện tử",
         "Xưởng cơ khí chế tạo"
@@ -1062,22 +1018,10 @@
         }
       ],
       "metrics": [
-        {
-          "label": "Tiết kiệm năng lượng",
-          "value": "40%"
-        },
-        {
-          "label": "Giảm chi phí vận hành",
-          "value": "35%"
-        },
-        {
-          "label": "Tăng hiệu quả quản lý",
-          "value": "50%"
-        },
-        {
-          "label": "Cải thiện an toàn",
-          "value": "60%"
-        }
+        { "label": "Tiết kiệm năng lượng", "value": "40%" },
+        { "label": "Giảm chi phí vận hành", "value": "35%" },
+        { "label": "Tăng hiệu quả quản lý", "value": "50%" },
+        { "label": "Cải thiện an toàn", "value": "60%" }
       ],
       "benefits": [
         "Giảm thiểu carbon footprint và thân thiện môi trường",
@@ -1269,22 +1213,10 @@
         }
       ],
       "metrics": [
-        {
-          "label": "Giảm thời gian xử lý",
-          "value": "30%"
-        },
-        {
-          "label": "Tăng hiệu quả logistics",
-          "value": "45%"
-        },
-        {
-          "label": "Cải thiện an toàn",
-          "value": "60%"
-        },
-        {
-          "label": "Giảm chi phí vận hành",
-          "value": "25%"
-        }
+        { "label": "Giảm thời gian xử lý", "value": "30%" },
+        { "label": "Tăng hiệu quả logistics", "value": "45%" },
+        { "label": "Cải thiện an toàn", "value": "60%" },
+        { "label": "Giảm chi phí vận hành", "value": "25%" }
       ],
       "benefits": [
         "Tự động hóa 80% quy trình cập cảng và làm thủ tục",
