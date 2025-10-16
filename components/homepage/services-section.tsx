@@ -120,7 +120,7 @@ export function ServicesSection() {
 						{t('homepage.services.subtitle')}
 					</h2>
 					<p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
-						Từ dữ liệu vận hành đến phân tích thông minh, chúng tôi mang đến giải pháp Smart Dashboard giúp doanh nghiệp quản trị tập trung, giám sát trực quan và ra quyết định nhanh chóng.
+						{t('homepage.services.intro')}
 					</p>
 				</div>
 
