@@ -1174,5 +1174,36 @@
       "errorTitle": "Error",
       "fetchError": "Unable to load article list"
     }
+  },
+  "visitorStatistics": {
+    "loading": "Loading data...",
+    "title": "Visitor Statistics",
+    "description": "Track user count and website visits",
+    "refresh": "Refresh",
+    "cards": {
+      "totalHomePageAccess": "Total Homepage Access",
+      "homePageAccessDescription": "Number of times users accessed homepage",
+      "totalPageViews": "Total Page Views",
+      "pageViewsDescription": "Total number of pages viewed",
+      "totalUsers": "Total Users",
+      "uniqueUsersDescription": "Number of unique users"
+    },
+    "chart": {
+      "monthlyTrend": "Monthly Access Trends",
+      "monthsCount": "{{count}} months",
+      "month": "Month",
+      "homePageAccess": "Homepage Access",
+      "totalPageViews": "Total Page Views"
+    },
+    "table": {
+      "title": "User Details",
+      "userId": "User ID",
+      "homePageAccess": "Homepage Access",
+      "totalPageViews": "Total Page Views",
+      "firstAccess": "First Access",
+      "lastUpdate": "Last Update",
+      "youBadge": "You",
+      "noData": "No user data available"
+    }
   }
 }

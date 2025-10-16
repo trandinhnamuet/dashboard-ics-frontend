@@ -1174,5 +1174,36 @@
       "errorTitle": "エラー",
       "fetchError": "記事リストを読み込めませんでした"
     }
+  },
+  "visitorStatistics": {
+    "loading": "データを読み込み中...",
+    "title": "訪問者統計",
+    "description": "ユーザー数とウェブサイト訪問を追跡",
+    "refresh": "更新",
+    "cards": {
+      "totalHomePageAccess": "ホームページアクセス総数",
+      "homePageAccessDescription": "ユーザーがホームページにアクセスした回数",
+      "totalPageViews": "総ページビュー",
+      "pageViewsDescription": "閲覧されたページの総数",
+      "totalUsers": "総ユーザー数",
+      "uniqueUsersDescription": "ユニークユーザー数"
+    },
+    "chart": {
+      "monthlyTrend": "月間アクセス推移",
+      "monthsCount": "{{count}} ヶ月",
+      "month": "月",
+      "homePageAccess": "ホームページアクセス",
+      "totalPageViews": "総ページビュー"
+    },
+    "table": {
+      "title": "ユーザー詳細",
+      "userId": "ユーザーID",
+      "homePageAccess": "ホームページアクセス",
+      "totalPageViews": "総ページビュー",
+      "firstAccess": "初回アクセス",
+      "lastUpdate": "最終更新",
+      "youBadge": "あなた",
+      "noData": "ユーザーデータがありません"
+    }
   }
 }

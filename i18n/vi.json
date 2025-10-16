@@ -1175,6 +1175,36 @@
       "errorTitle": "Lỗi",
       "fetchError": "Không thể tải danh sách bài viết"
     }
+  },
+  "visitorStatistics": {
+    "loading": "Đang tải dữ liệu...",
+    "title": "Thống kê lượt truy cập",
+    "description": "Theo dõi số lượng người dùng và lượt truy cập trang web",
+    "refresh": "Làm mới",
+    "cards": {
+      "totalHomePageAccess": "Tổng lượt truy cập trang chủ",
+      "homePageAccessDescription": "Số lần người dùng truy cập trang chủ",
+      "totalPageViews": "Tổng lượt xem trang",
+      "pageViewsDescription": "Tổng số trang đã được xem",
+      "totalUsers": "Tổng số người dùng",
+      "uniqueUsersDescription": "Số lượng người dùng duy nhất"
+    },
+    "chart": {
+      "monthlyTrend": "Biến động truy cập theo tháng",
+      "monthsCount": "{{count}} tháng",
+      "month": "Tháng",
+      "homePageAccess": "Lượt truy cập trang chủ",
+      "totalPageViews": "Tổng lượt xem trang"
+    },
+    "table": {
+      "title": "Chi tiết người dùng",
+      "userId": "ID Người dùng",
+      "homePageAccess": "Lượt truy cập trang chủ",
+      "totalPageViews": "Tổng lượt xem trang",
+      "firstAccess": "Lần đầu truy cập",
+      "lastUpdate": "Lần cuối cập nhật",
+      "youBadge": "Bạn",
+      "noData": "Chưa có dữ liệu người dùng nào"
+    }
   }
-
 }

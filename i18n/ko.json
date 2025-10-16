@@ -1174,5 +1174,36 @@
       "errorTitle": "오류",
       "fetchError": "기사 목록을 로드할 수 없습니다"
     }
+  },
+  "visitorStatistics": {
+    "loading": "데이터 로딩 중...",
+    "title": "방문자 통계",
+    "description": "사용자 수와 웹사이트 방문을 추적",
+    "refresh": "새로고침",
+    "cards": {
+      "totalHomePageAccess": "총 홈페이지 접근",
+      "homePageAccessDescription": "사용자가 홈페이지에 접근한 횟수",
+      "totalPageViews": "총 페이지 조회수",
+      "pageViewsDescription": "조회된 총 페이지 수",
+      "totalUsers": "총 사용자 수",
+      "uniqueUsersDescription": "고유 사용자 수"
+    },
+    "chart": {
+      "monthlyTrend": "월별 접근 추이",
+      "monthsCount": "{{count}} 개월",
+      "month": "월",
+      "homePageAccess": "홈페이지 접근",
+      "totalPageViews": "총 페이지 조회수"
+    },
+    "table": {
+      "title": "사용자 세부정보",
+      "userId": "사용자 ID",
+      "homePageAccess": "홈페이지 접근",
+      "totalPageViews": "총 페이지 조회수",
+      "firstAccess": "첫 번째 접근",
+      "lastUpdate": "마지막 업데이트",
+      "youBadge": "당신",
+      "noData": "사용자 데이터가 없습니다"
+    }
   }
 }

@@ -1174,5 +1174,36 @@
       "errorTitle": "错误",
       "fetchError": "无法加载文章列表"
     }
+  },
+  "visitorStatistics": {
+    "loading": "正在加载数据...",
+    "title": "访问统计",
+    "description": "跟踪用户数量和网站访问量",
+    "refresh": "刷新",
+    "cards": {
+      "totalHomePageAccess": "主页访问总数",
+      "homePageAccessDescription": "用户访问主页的次数",
+      "totalPageViews": "总页面浏览量",
+      "pageViewsDescription": "已查看的页面总数",
+      "totalUsers": "总用户数",
+      "uniqueUsersDescription": "唯一用户数量"
+    },
+    "chart": {
+      "monthlyTrend": "月度访问趋势",
+      "monthsCount": "{{count}} 个月",
+      "month": "月份",
+      "homePageAccess": "主页访问",
+      "totalPageViews": "总页面浏览量"
+    },
+    "table": {
+      "title": "用户详情",
+      "userId": "用户ID",
+      "homePageAccess": "主页访问",
+      "totalPageViews": "总页面浏览量",
+      "firstAccess": "首次访问",
+      "lastUpdate": "最后更新",
+      "youBadge": "您",
+      "noData": "暂无用户数据"
+    }
   }
 }
