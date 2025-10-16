@@ -160,12 +160,16 @@
     "contact": {
       "title": "Contact Information",
       "phone": "Phone & Hotline",
+      "phoneNumber": "0931.487.231",
       "email": "Email",
-      "website": "Website"
+      "emailAddress": "info@icss.com.vn",
+      "website": "Website",
+      "websiteUrl": "www.icss.com.vn"
     },
     "map": {
       "title": "Location on Map",
-      "description": "Find directions to our office"
+      "description": "Find directions to our office",
+      "mapTitle": "ICS Google Map"
     }
   },
   "checkout": {
@@ -253,6 +257,39 @@
         "Third-party integrations",
         "Legacy system connections",
         "Custom integration development"
+      ]
+    },
+    "visualReporting": {
+      "title": "Visual Reporting",
+      "description": "Professional report generation with data visualization",
+      "features": [
+        "Custom dashboard creation",
+        "Interactive charts and graphs",
+        "Export to PDF/Excel formats",
+        "Scheduled report delivery",
+        "White-label reporting"
+      ]
+    },
+    "monitoring": {
+      "title": "Real-time Monitoring",
+      "description": "24/7 system monitoring and alerting",
+      "features": [
+        "Real-time status tracking",
+        "Automated alert notifications",
+        "Performance metrics monitoring",
+        "System health dashboards",
+        "Custom monitoring rules"
+      ]
+    },
+    "collaboration": {
+      "title": "Team Collaboration",
+      "description": "Enhanced collaboration tools for teams",
+      "features": [
+        "Shared dashboards and reports",
+        "Team workspace management",
+        "Role-based access control",
+        "Comment and annotation system",
+        "Real-time collaboration features"
       ]
     }
   },
@@ -397,15 +434,153 @@
       "description": "Comprehensive monitoring of macroeconomic indicators such as GDP growth rate, inflation, unemployment rate, balance of payments, along with budget revenue and expenditure data, KPIs, project implementation progress and bottlenecks.",
       "challenges": {
         "title": "Real Challenges in Public Administration",
-        "subtitle": "Operating with traditional methods is revealing many limitations, hindering the management and governance effectiveness of government agencies."
+        "subtitle": "Operating with traditional methods is revealing many limitations, hindering the management and governance effectiveness of government agencies.",
+        "details": {
+          "reactiveManagement": {
+            "title": "Reactive Management Instead of Proactive",
+            "description": "Leaders often receive information after incidents occur, making timely intervention difficult."
+          },
+          "fragmentedData": {
+            "title": "Fragmented and Non-integrated Data",
+            "description": "Information from various departments is scattered across different systems, lacking connectivity and comprehensive overview."
+          },
+          "transparency": {
+            "title": "Limited Public Service Transparency",
+            "description": "Citizens lack access to progress and quality information of public services, reducing trust in government."
+          },
+          "security": {
+            "title": "Information Security and Compliance",
+            "description": "High requirements for security and regulatory compliance create additional pressure on the management system."
+          },
+          "changeManagement": {
+            "title": "Difficulty in Change Management",
+            "description": "Traditional culture and processes in government make technology adoption and operational transformation challenging."
+          }
+        },
+        "detailedChallenges": [
+          {
+            "title": "Reactive Management and Information Delays",
+            "description": "Decisions are usually made based on monthly, quarterly, and annual reports. This approach makes management reactive to events that have already occurred.",
+            "detail": "Causing difficulties in responding to sudden issues or rapid changes such as natural disasters, epidemics or security issues."
+          },
+          {
+            "title": "Fragmented and Unsynchronized Data",
+            "description": "Government agencies often have to process large amounts of fragmented data from many different sources. Manual aggregation is not only time-consuming but also error-prone."
+          },
+          {
+            "title": "Lack of Transparency and Accountability",
+            "description": "Traditional reporting processes often lack publicity and accessibility, which can undermine public trust in government."
+          },
+          {
+            "title": "Security Risks and Change Management",
+            "description": "Centralizing sensitive citizen and business data creates attractive vulnerability points for cyberattacks. Transitioning from manual work habits to data-driven environments is a major cultural challenge."
+          }
+        ]
       },
       "applications": {
         "title": "Detailed Applications of Smart Dashboard in Practice",
-        "subtitle": "In Vietnam and worldwide, Smart Dashboard is deployed as a 'digital brain' to solve the above challenges, with the prominent model of Intelligent Operations Centers (IOC)."
+        "subtitle": "In Vietnam and worldwide, Smart Dashboard is deployed as a 'digital brain' to solve the above challenges, with the prominent model of Intelligent Operations Centers (IOC).",
+        "ioc": {
+          "title": "Intelligent Operations Center (IOC)",
+          "description": "Central command center integrating all operational data of the organization.",
+          "features": [
+            "Real-time monitoring of all KPIs and operational metrics",
+            "Early warning system for potential issues",
+            "Automated reporting and intelligent analytics",
+            "Integration with existing systems and databases"
+          ]
+        },
+        "monitoring": {
+          "title": "Comprehensive KPI and Project Monitoring System",
+          "description": "Monitor progress and performance of all projects and departments.",
+          "features": [
+            "Visual project progress tracking with Gantt charts and dashboards",
+            "Budget tracking and expenditure analysis by items",
+            "Resource allocation optimization",
+            "Automated progress reports and performance evaluations"
+          ]
+        },
+        "publicService": {
+          "title": "Citizen-Centric Public Service Platform",
+          "description": "Digital platform enhancing citizen experience with government services.",
+          "features": [
+            "Online service portal with progress tracking",
+            "Digital document submission and processing",
+            "Automated notifications and status updates",
+            "Citizen feedback collection and analysis system"
+          ]
+        },
+        "transparency": {
+          "title": "Government Transparency and Accountability Portal",
+          "description": "Public information platform enhancing government transparency.",
+          "features": [
+            "Public budget information and spending transparency",
+            "Project progress and outcome publication",
+            "Performance metrics and KPI transparency",
+            "Public consultation and feedback mechanisms"
+          ]
+        },
+        "realityLabel": "Current Reality",
+        "applicationLabel": "Smart Application",
+        "detailedSolutions": [
+          {
+            "title": "Build Intelligent Operations Center (IOC)",
+            "reality": "Instead of departments operating independently, provincial/city leaders have a central operations room where all information converges.",
+            "application": "IOC is likened to a \"digital brain\", integrating data from departments and agencies into a common center, creating a comprehensive view across all areas from socio-economics, security and order to public services.",
+            "evidence": {
+              "title": "Evidence in Vietnam",
+              "examples": [
+                {
+                  "location": "Da Lat",
+                  "description": "The first city to put IOC into operation, integrating nearly 300 high-resolution cameras for security and traffic monitoring, allowing leaders to manage from overall to detail."
+                },
+                {
+                  "location": "Binh Duong",
+                  "description": "A comprehensive model that has collected and integrated over 1,000 indicators in 27 fields, focusing on budget revenues and expenditures, public investment disbursement, and hotline 1022. Published 13 datasets on open data portal."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Multi-dimensional Monitoring and Decision Support",
+            "reality": "Leaders can grasp the situation immediately and make timely directives without waiting for reports.",
+            "application": "Dashboard allows monitoring all aspects of a system, from public finance, disbursement progress, to the number of records processed at administrative service centers."
+          },
+          {
+            "title": "Improve Public Service Quality",
+            "reality": "Issues in citizen service processes are detected and resolved faster.",
+            "application": "Dashboard monitors and analyzes indicators on citizen satisfaction, waiting times, and on-time file resolution rates."
+          },
+          {
+            "title": "Enhance Transparency with Citizens",
+            "reality": "Citizens can monitor government activities and send feedback easily.",
+            "application": "Dashboard is a powerful tool for Open Government Data, allowing citizens to send feedback on infrastructure and security issues."
+          }
+        ]
       },
       "benefits": {
         "title": "Strategic and Quantitative Benefits",
-        "subtitle": "Implementing Smart Dashboard in public administration brings significant and measurable impacts, contributing to building a modern administrative system."
+        "subtitle": "Implementing Smart Dashboard in public administration brings significant and measurable impacts, contributing to building a modern administrative system.",
+        "proactiveGovernance": {
+          "title": "Proactive Governance with Evidence-Based Decision Making",
+          "metrics": "40% improvement in response time to emerging issues",
+          "description": "Leaders can monitor all KPIs in real-time, enabling early intervention and evidence-based policy decisions."
+        },
+        "efficiency": {
+          "title": "Administrative Efficiency and Process Optimization",
+          "metrics": "35% reduction in administrative processing time",
+          "description": "Automation and digitization eliminate manual processes, reducing errors and significantly improving work efficiency."
+        },
+        "publicTrust": {
+          "title": "Enhanced Public Trust through Transparency",
+          "metrics": "60% increase in citizen satisfaction with government services",
+          "description": "Transparency in information and service processes builds stronger trust between government and citizens."
+        },
+        "resourceOptimization": {
+          "title": "Optimal Resource Allocation and Budget Management",
+          "metrics": "25% improvement in budget utilization efficiency",
+          "description": "Data-driven insights enable optimal resource allocation and more effective budget planning and execution."
+        }
       },
       "whyChooseUs": "Why Choose Us?",
       "mainFeatures": "Key Features",
@@ -432,6 +607,29 @@
         "50% increase in information transparency",
         "60% improvement in decision-making processes"
       ],
+      "strategicBenefits": {
+        "title": "Strategic Benefits",
+        "subtitle": "Key strategic advantages from implementing Smart Dashboard in government",
+        "evidenceLabel": "Evidence",
+        "benefitLabel": "Benefit",
+        "proactiveGovernance": {
+          "title": "Transition to Proactive Governance Model",
+          "benefit": "This is the greatest strategic benefit. Dashboard helps government transition from 'reactive' to 'proactive' management. When integrated with AI and Machine Learning, the system can analyze historical data to predict future scenarios, supporting evidence-based policy planning."
+        },
+        "efficiency": {
+          "title": "Enhanced Efficiency and Cost Savings",
+          "evidence": "Digital projects like online tax filing can reduce average processing time by up to 25%.",
+          "benefit": "Process automation in report generation reduces manual tasks, significantly saving time and human resources while increasing productivity and reducing errors."
+        },
+        "transparency": {
+          "title": "Enhanced Transparency and Public Trust",
+          "benefit": "Public data disclosure enhances citizen oversight, building trust and satisfaction while creating an objective dialogue environment that promotes effective governance."
+        },
+        "resourceOptimization": {
+          "title": "Public Resource Optimization",
+          "benefit": "Provides comprehensive view of budget and performance, enabling government to monitor and coordinate resources more effectively, particularly in public investment disbursement."
+        }
+      },
       "cta": {
         "title": "Ready to Modernize Government Administration?",
         "subtitle": "Contact us for suitable solution consultation",
@@ -444,7 +642,25 @@
       "description": "Help managers grasp the complete operational picture: cash flow, KPIs from each branch, ATMs, outstanding debt, debt recovery efficiency and number of new accounts, all displayed visually and updated instantly 24/7.",
       "challenges": {
         "title": "Real Challenges in Finance - Banking Industry",
-        "subtitle": "The finance and banking industry operates in an environment with extremely high complexity, risk and compliance requirements."
+        "subtitle": "The finance and banking industry operates in an environment with extremely high complexity, risk and compliance requirements.",
+        "details": {
+          "decisionDelay": {
+            "title": "Decision-making Delays",
+            "description": "According to traditional management methods, decisions are often made based on manual reports, periodic monthly or quarterly. This creates a large delay, forcing leadership to 'react' to outdated data."
+          },
+          "fragmentedData": {
+            "title": "Fragmented Data",
+            "description": "Data is often scattered across many independent systems (Data Silos) such as core banking systems, CRM, transaction data. The lack of a unified platform makes having a 360-degree view difficult."
+          },
+          "compliance": {
+            "title": "Compliance and Security Pressure",
+            "description": "Must comply with many strict regulations on data security and finance such as GDPR, HIPAA, ISO 27001. At the same time facing the risk of cyber attacks and data breaches."
+          },
+          "riskManagement": {
+            "title": "Strict Risk Management and Compliance",
+            "description": "Must comply with complex regulations like Basel III, AML, KYC, and internal risk management policies, requiring continuous monitoring and reporting."
+          }
+        }
       },
       "features": [
         {
@@ -477,11 +693,55 @@
       "keyBenefits": "Benefits Delivered",
       "applications": {
         "title": "Detailed Applications of Smart Dashboard in Practice",
-        "subtitle": "To solve the above challenges, Smart Dashboard is applied as a 'command center' or 'digital brain', turning data into proactive management tools."
+        "subtitle": "To solve the above challenges, Smart Dashboard is applied as a 'command center' or 'digital brain', turning data into proactive management tools.",
+        "realityLabel": "Reality",
+        "applicationLabel": "Application",
+        "detailedSolutions": [
+          {
+            "title": "Building a \"Virtual Command Center\" for Leadership",
+            "reality": "Instead of waiting for paper reports, CEOs and executives can access a Management Dashboard displaying core financial KPIs in real-time.",
+            "application": "Dashboard visualizes metrics like Non-performing loan ratio, Return on Assets (ROA), and Net Promoter Score (NPS), allowing comparison with targets and previous year figures."
+          },
+          {
+            "title": "AI Integration for Proactive Risk Management",
+            "reality": "Financial groups use AI-integrated Dashboard not only to monitor but also to predict risks.",
+            "application": "AI system analyzes market trends to forecast interest rate fluctuations, early fraud detection, and customer credit risk prediction."
+          },
+          {
+            "title": "Smart Security Operations Center (SOC)",
+            "reality": "Security teams face millions of alerts daily, leading to 'alert fatigue' syndrome.",
+            "application": "Smart Dashboard aggregates data from SIEM and SOAR, using AI to automatically classify and highlight only truly critical threats."
+          },
+          {
+            "title": "Operational and Compliance Optimization",
+            "reality": "Audit processes and compliance reporting are often very labor-intensive.",
+            "application": "Dashboard automates compliance report generation, continuous monitoring and provides audit logs, helping organizations stay 'audit-ready'."
+          }
+        ]
       },
       "strategicBenefits": {
         "title": "Strategic and Quantitative Benefits",
-        "subtitle": "Effective implementation of Smart Dashboard brings tremendous, measurable value:"
+        "subtitle": "Effective implementation of Smart Dashboard brings tremendous, measurable value:",
+        "decisionSpeed": {
+          "title": "Accelerated Decision Making and Strategic Agility",
+          "description": "Real-time data access enables executives to make informed decisions quickly, gaining competitive advantage in the dynamic financial market.",
+          "metrics": {
+            "dataProcessing": "30% - Reduce data processing time",
+            "decisionMaking": "40% - Improve financial decision-making speed"
+          }
+        },
+        "costSavings": {
+          "title": "Significant Operational Cost Savings",
+          "description": "Process automation, error reduction, and resource optimization lead to substantial cost savings across all business operations."
+        },
+        "securityResilience": {
+          "title": "Enhanced Security and Risk Resilience",
+          "description": "Advanced monitoring and AI-powered detection significantly improve security posture and reduce financial losses from fraud and cyber attacks."
+        },
+        "riskQuantification": {
+          "title": "Advanced Risk Quantification and Management",
+          "description": "Sophisticated analytics and modeling provide better risk assessment, enabling more accurate pricing and capital allocation decisions."
+        }
       },
       "metricsTitle": "Impressive Metrics",
       "featuresTitle": "Outstanding Features",
@@ -531,16 +791,143 @@
           {
             "title": "High Maintenance Costs and Unpredictable Downtime",
             "description": "Current preventive maintenance models are often either too conservative (wasteful costs) or too lax (causing unexpected failures)."
+          },
+          {
+            "title": "Cybersecurity and Data Protection",
+            "description": "With increasing connectivity and digitization, factories face growing cybersecurity threats that could disrupt operations or compromise sensitive data."
+          },
+          {
+            "title": "Skill Gap and Workforce Adaptation",
+            "description": "The transition to Industry 4.0 requires new skills and competencies that many existing workers lack, creating training and adaptation challenges."
+          }
+        ],
+        "detailedChallenges": [
+          {
+            "title": "Fragmented Data and \"Information Silos\"",
+            "description": "Data from OT systems (SCADA, PLC) and IT systems (ERP, MES) are usually managed by different departments and don't \"talk\" to each other.",
+            "detail": "The maintenance team views machine vibration data on CMMS, production team monitors output on MES, and facility management tracks energy consumption on BMS system."
+          },
+          {
+            "title": "Integration Difficulties and Lack of Standardization",
+            "description": "Connecting a 20-year-old CNC lathe with a modern IoT sensor requires complex and expensive protocol conversion solutions due to diversity in vendors and technologies."
+          },
+          {
+            "title": "Poor Data Quality and Expert Dependency",
+            "description": "Decision quality depends on input data quality. When an experienced machinist retires, an entire repository of knowledge about machinery and processes disappears with them."
+          },
+          {
+            "title": "Cybersecurity and High Maintenance Costs",
+            "description": "When OT systems are connected to IT networks and the Internet, they face cybersecurity risks. Current preventive maintenance models are often either too cautious or too lax."
+          },
+          {
+            "title": "Skills Gap",
+            "description": "Turning data into insights requires a multidisciplinary team: both deep understanding of machinery and expertise in data science. This talent shortage is a major barrier."
           }
         ]
       },
       "applications": {
         "title": "Detailed Applications of Smart Dashboard in Practice",
-        "subtitle": "Smart Dashboard serves as the 'command center' or 'digital brain' of factories and industrial parks, thoroughly solving the above challenges."
+        "subtitle": "Smart Dashboard serves as the 'command center' or 'digital brain' of factories and industrial parks, thoroughly solving the above challenges.",
+        "digitalTwin": {
+          "title": "Digital Twin - Virtual Control Room for the Entire Factory",
+          "description": "Complete digital replica of the factory with real-time synchronization.",
+          "features": [
+            "Virtual 3D factory with real-time data integration from all production lines",
+            "Live monitoring of all equipment status, performance metrics, and operational parameters",
+            "Predictive simulation capabilities for production planning and optimization",
+            "Remote monitoring and control capabilities for distributed operations",
+            "Historical data analysis with AI-powered insights and recommendations"
+          ]
+        },
+        "kpiMonitoring": {
+          "title": "Comprehensive KPI Monitoring and Management System",
+          "description": "Real-time tracking and analysis of all critical manufacturing KPIs.",
+          "features": [
+            "Production efficiency metrics (OEE, yield rates, cycle times)",
+            "Quality management indicators (defect rates, first-pass yield, customer complaints)",
+            "Energy consumption monitoring (per machine, line, and facility)",
+            "Cost analysis (production costs, material utilization, labor efficiency)",
+            "Automated reporting and performance benchmarking across facilities"
+          ]
+        },
+        "predictiveMaintenance": {
+          "title": "AI/ML-Powered Predictive Maintenance Platform",
+          "description": "Intelligent maintenance system preventing failures before they occur.",
+          "features": [
+            "Machine learning algorithms analyzing vibration, temperature, and performance data",
+            "Automated failure prediction with confidence intervals and time estimates",
+            "Maintenance scheduling optimization based on actual equipment condition",
+            "Spare parts inventory optimization with demand forecasting",
+            "Integration with CMMS and ERP systems for seamless workflow management"
+          ]
+        },
+        "smartAlerts": {
+          "title": "Smart Alert and Incident Management System",
+          "description": "Intelligent notification system for proactive issue resolution.",
+          "features": [
+            "Multi-level alert system with customizable thresholds and escalation rules",
+            "AI-powered anomaly detection for early problem identification",
+            "Automated incident response workflows with predefined action plans",
+            "Mobile notifications for critical alerts and emergency situations",
+            "Root cause analysis tools with historical data correlation"
+          ]
+        },
+        "realityLabel": "Current Reality",
+        "applicationLabel": "Smart Application",
+        "detailedSolutions": [
+          {
+            "title": "Building \"Virtual Control Room\" with Digital Twin",
+            "reality": "Instead of managing through separate SCADA screens or spreadsheets, managers interact with a visual 3D model of the entire factory or industrial park.",
+            "application": "This 3D model is a living \"digital replica\" where each machine is linked to real-time data streams. When sensors alarm, corresponding machinery on the 3D model changes color."
+          },
+          {
+            "title": "Comprehensive Performance Monitoring via Key KPIs",
+            "reality": "The most important performance indicators are continuously monitored, helping leadership grasp the \"health\" of production operations instantly.",
+            "application": "System tracks OEE, MTBF, MTTR, defect rates and energy consumption in real-time."
+          },
+          {
+            "title": "Predictive Maintenance through AI/ML Integration",
+            "reality": "Shift from \"firefighting\" maintenance model (fix when broken) to proactive maintenance.",
+            "application": "System integrates machine learning algorithms to analyze historical data on vibration, temperature, pressure. Dashboard can predict potential failures."
+          },
+          {
+            "title": "Smart Alert System, Minimizing \"Alert Fatigue\"",
+            "reality": "Operators are no longer overwhelmed by hundreds of unimportant alerts.",
+            "application": "System uses complex logic to correlate multiple events, only triggering alerts when multiple abnormal factors occur simultaneously."
+          }
+        ]
       },
       "strategicBenefits": {
         "title": "Strategic and Quantitative Benefits",
-        "subtitle": "Implementing Smart Dashboard is not just a technology upgrade, but a strategic decision that brings outstanding and measurable business results."
+        "subtitle": "Implementing Smart Dashboard is not just a technology upgrade, but a strategic decision that brings outstanding and measurable business results.",
+        "evidenceLabel": "Evidence",
+        "benefitLabel": "Benefits",
+        "operationalOptimization": {
+          "title": "Operational Optimization and Enhanced Performance",
+          "evidence": "Increase Overall Equipment Effectiveness (OEE) up to 30%",
+          "benefits": [
+            "Reduce downtime: 73%",
+            "Reduce incident response time: 90%",
+            "Reports from 1-2 days → instant"
+          ]
+        },
+        "costSavings": {
+          "title": "Significant Cost Savings",
+          "evidence": "Reduce industrial park operating costs up to 60%",
+          "benefits": [
+            "Save labor costs: 20%",
+            "Significantly reduce energy costs",
+            "Automate reporting and data collection"
+          ]
+        },
+        "managementTransformation": {
+          "title": "Management Culture Transformation",
+          "description": "Smart Dashboard transforms management culture from reactive, experience-based ('firefighting') to proactive, data-driven ('smart governance'). Creates a 'common language' about performance, promoting transparency and collaboration."
+        },
+        "competitiveAdvantage": {
+          "title": "Enhanced Competitiveness",
+          "description": "Industrial parks managed efficiently, safely and sustainably will be more attractive to international investors, especially enterprises with high ESG standards. This is the key to building sustainable competitive advantages in the digital age."
+        }
       },
       "features": [
         {
@@ -616,6 +1003,47 @@
             "title": "High maintenance costs",
             "description": "Scheduled maintenance instead of condition-based maintenance leads to unnecessary costs and risk of unexpected failures."
           }
+        ],
+        "detailedChallenges": [
+          {
+            "title": "Fragmented data, lack of unified vision",
+            "description": "This is an inherent problem. Data from Energy Management System (EMS), Building Management System (BMS), and security systems often operate in separate \"Data Silos\".",
+            "detail": "Managers cannot have a comprehensive view to see the relationship between temperature increase in server rooms (BMS data) and sudden power consumption spikes (EMS data)."
+          },
+          {
+            "title": "Reactive operational management",
+            "description": "Due to lack of centralized data and analytical capabilities, operations teams often only act when incidents have already occurred. They manage in a \"firefighting\" manner, instead of proactive action."
+          },
+          {
+            "title": "Energy waste and high costs",
+            "description": "The inability to monitor and analyze comprehensively makes it difficult to identify energy-wasting areas. HVAC systems may operate below optimal capacity."
+          },
+          {
+            "title": "Slow incident response time",
+            "description": "When an incident occurs (power outage, water leak, or unauthorized intrusion), identifying the root cause and exact location of the problem is delayed due to having to check information from multiple disconnected systems. This increases risk and damage."
+          }
+        ],
+        "detailedSolutions": [
+          {
+            "title": "Create \"Virtual Control Room\" with Digital Twin",
+            "reality": "Managers no longer have to look at technical drawings or multiple separate screens. Instead, they interact with a detailed 3D model of the entire building or data center.",
+            "application": "This 3D model is a \"digital replica\" linked to real-time data from sensors and systems. Users can \"dive deep\" into the model, click on a server room, a rack row, or a specific cooling device to view operating parameters."
+          },
+          {
+            "title": "Smart environmental and energy monitoring",
+            "reality": "Important environmental and energy indicators are continuously monitored and visualized in an easy-to-understand manner.",
+            "application": "Dashboard integrates data from IoT sensors to monitor temperature, air quality. It uses tools like heatmaps to display areas with abnormally high temperatures in data centers and monitor energy consumption metrics."
+          },
+          {
+            "title": "Integrated security and safety management",
+            "reality": "Security events are verified and processed faster through combining multiple information sources.",
+            "application": "System integrates live images from security cameras (CCTV) directly on the 3D model. When there's an alert (e.g., server room door opened without authorization), dashboard can automatically display images from the nearest camera at that location."
+          },
+          {
+            "title": "Proactive operations and maintenance support",
+            "reality": "Minimize the risk of sudden downtime, a vital factor for data centers.",
+            "application": "Dashboard integrates AI to perform predictive maintenance for critical equipment like cooling systems or UPS. AI can provide early warnings of potential failures, allowing maintenance planning before incidents occur."
+          }
         ]
       },
       "features": [
@@ -644,7 +1072,62 @@
         "Automate complex operational processes",
         "Real-time performance monitoring and reporting"
       ],
-      "applications": [
+      "applications": {
+        "title": "Detailed Applications of Smart Dashboard in Practice",
+        "subtitle": "Smart Dashboard acts as a 'nerve center', unifying all building and data center systems into a single interface, enabling smart and proactive management.",
+        "realityLabel": "Reality",
+        "applicationLabel": "Application",
+        "hvacSystem": {
+          "title": "Smart HVAC System",
+          "reality": "Instead of manually adjusting temperature based on experience, the system automatically optimizes the environment.",
+          "application": "AI analyzes sensor data, weather, and usage history to optimally adjust temperature, humidity and air quality, saving up to 40% energy."
+        },
+        "smartLighting": {
+          "title": "Smart and Energy-Saving Lighting",
+          "reality": "LED lights are automatically controlled based on natural light and human presence.",
+          "application": "Motion and light sensors combined with smart scheduling to optimize lighting, reducing electricity consumption by up to 60%."
+        },
+        "securitySystem": {
+          "title": "Security - Cameras and Access Control",
+          "reality": "AI-integrated security system for facial recognition and abnormal behavior detection.",
+          "application": "Smart cameras with AI video analysis, card/biometric access control, and automatic alerts for security incidents."
+        },
+        "energyManagement": {
+          "title": "Comprehensive Energy Management",
+          "reality": "Monitor and optimize building-wide energy consumption in real-time.",
+          "application": "Dashboard displays energy consumption by area, forecasts electricity costs, and suggests energy-saving measures."
+        },
+        "fireSystem": {
+          "title": "Smart Fire Alarm System",
+          "reality": "Early detection and rapid response to fire situations.",
+          "application": "Network-connected smoke, temperature and CO2 sensors, automatically activate fire suppression system and emergency notifications."
+        }
+      },
+      "strategicBenefits": {
+        "title": "Strategic and Quantitative Benefits",
+        "subtitle": "Implementing Smart Dashboard for buildings and data centers brings specific benefits, helping to completely transform management and operational methods.",
+        "evidenceLabel": "Evidence",
+        "benefitLabel": "Benefits",
+        "energySavings": {
+          "title": "Significant Energy Savings",
+          "evidence": "Smart buildings can save 20-30% energy costs compared to traditional buildings.",
+          "benefit": "Reduce carbon footprint, comply with green and sustainable standards, while reducing annual operating costs."
+        },
+        "efficiency": {
+          "title": "Enhanced Operational Efficiency",
+          "evidence": "Automate 80% of building management processes, reduce 50% of problem resolution time.",
+          "benefit": "Management staff can focus on higher-value work, improving service quality and user satisfaction."
+        },
+        "predictive": {
+          "title": "Ensure High Reliability and Availability (Uptime)",
+          "benefit": "For data centers, the greatest benefit is ensuring uptime. Through proactive monitoring and predictive maintenance, Smart Dashboard helps prevent serious incidents related to power supply and cooling systems, protecting continuous business operations."
+        },
+        "safety": {
+          "title": "Enhanced Security, Safety and Compliance",
+          "benefit": "A centralized monitoring system helps strengthen physical security, early detection of threats and faster coordinated response. It also helps ensure environmental conditions always comply with industry's strict operating standards."
+        }
+      },
+      "applicationsList": [
         "High-rise office buildings",
         "Shopping centers and malls",
         "Hotels and resorts",
@@ -652,6 +1135,18 @@
         "Schools and universities",
         "Factories and industrial complexes"
       ],
+      "managedSystems": {
+        "title": "Managed Systems",
+        "benefitsTitle": "Benefits Delivered",
+        "systems": [
+          "HVAC System",
+          "Smart Lighting",
+          "Security - Cameras",
+          "Access Control",
+          "Energy Management",
+          "Fire Alarm System"
+        ]
+      },
       "metricsTitle": "Proven Results",
       "featuresTitle": "Key Features",
       "featuresSubtitle": "Comprehensive solution for smart buildings",
@@ -693,6 +1188,47 @@
             "title": "Lack of forecasting and planning",
             "description": "No real-time data to predict ship traffic and optimize port resources."
           }
+        ],
+        "detailedChallenges": [
+          {
+            "title": "Fragmented data and Information Silos",
+            "description": "This is the biggest challenge. Information about a shipment may be in business department emails, ship schedules in another software, while port entry/exit vehicle information is manually recorded.",
+            "detail": "This lack of connectivity creates an operating environment where no one gets the big picture, leading to delayed and inefficient decisions."
+          },
+          {
+            "title": "Lack of real-time comprehensive visibility",
+            "description": "The direct consequence is that management cannot quickly answer important operational questions like: 'Which berth is empty?', 'Where are trucks congested?', or 'What is the current loading/unloading productivity?'. Decision making is usually based on experience or reports with large delays."
+          },
+          {
+            "title": "Poor operational performance and prolonged congestion",
+            "description": "When lacking synchronized data, performance degradation is inevitable. Ships must wait long to berth, container trucks queue long outside the port due to manual paperwork, and equipment coordination lacks optimization. This situation not only causes waste but also increases operating costs, seriously reducing competitiveness."
+          },
+          {
+            "title": "Safety, security and human error risks",
+            "description": "Manual operating environments hide high risks in occupational safety and security. Loose entry/exit control and slow response to incidents like fires are pressing issues. Dependence on paperwork also increases the risk of human error, causing financial and cargo losses."
+          }
+        ],
+        "detailedSolutions": [
+          {
+            "title": "Building Digital Twin of the seaport",
+            "reality": "Instead of looking at paper maps or spreadsheets, managers interact with a vivid 3D model of the entire port.",
+            "application": "This 3D model is an accurate digital replica, built from maps and field surveys. It allows real-time monitoring of the location and status of all objects (ships, vehicles, cranes)."
+          },
+          {
+            "title": "Comprehensive KPI monitoring system",
+            "reality": "Performance indicators are aggregated and displayed in a scientific, easy-to-understand manner.",
+            "application": "Around the 3D model is a continuously updated KPI system: Port operational efficiency, Cargo throughput, Ship turnaround time, and Berth status."
+          },
+          {
+            "title": "Smart automatic incident handling",
+            "reality": "Emergency incident handling processes like fires are automated to minimize response time.",
+            "application": "System provides automatic alerts, navigation to the scene, CCTV integration and emergency decision support."
+          },
+          {
+            "title": "Automation of operational processes",
+            "reality": "Manual paperwork is completely eliminated.",
+            "application": "Automatic gate system uses AI cameras and RFID, combined with mobile applications to synchronize data instantly."
+          }
         ]
       },
       "features": [
@@ -721,7 +1257,58 @@
         "Accurate forecasting of ship traffic and resource planning",
         "Minimize workplace accidents and cargo losses"
       ],
-      "applications": [
+      "applications": {
+        "title": "Detailed Applications of Smart Dashboard in Practice",
+        "subtitle": "Smart Dashboard in the seaport sector is not just a display tool, but a 'Digital Command Center', acting as the brain of the entire Smart Port ecosystem.",
+        "realityLabel": "Current Reality",
+        "applicationLabel": "Smart Application",
+        "digitalTwin": {
+          "title": "Building Digital Twin of the seaport",
+          "reality": "Instead of looking at paper maps or spreadsheets, managers interact with a vivid 3D model of the entire port.",
+          "application": "This 3D model is an accurate digital replica, built from maps and field surveys. It allows real-time monitoring of the location and status of all objects (ships, vehicles, cranes)."
+        },
+        "kpiMonitoring": {
+          "title": "Comprehensive KPI monitoring system",
+          "reality": "Performance indicators are aggregated and displayed in a scientific, easy-to-understand manner.",
+          "application": "Around the 3D model is a continuously updated KPI system: Port operational efficiency, Cargo throughput, Ship turnaround time, and Berth status."
+        },
+        "smartIncident": {
+          "title": "Smart automatic incident handling",
+          "reality": "Emergency incident handling processes like fires are automated to minimize response time.",
+          "application": "System provides automatic alerts, navigation to the scene, CCTV integration and emergency decision support."
+        },
+        "automation": {
+          "title": "Automation of operational processes",
+          "reality": "Manual paperwork is completely eliminated.",
+          "application": "Automatic gate system uses AI cameras and RFID, combined with mobile applications to synchronize data instantly."
+        }
+      },
+      "strategicBenefits": {
+        "title": "Strategic Benefits and Quantifiable Results",
+        "subtitle": "Implementing Smart Dashboard in Smart Port model brings breakthrough results, proven through real-world cases like Busan Port.",
+        "evidenceLabel": "Evidence",
+        "benefitLabel": "Benefits",
+        "productivity": {
+          "title": "Productivity and efficiency explosion",
+          "evidence": "At Busan Port, implementing intelligent operating systems helped increase cargo handling productivity by 30% compared to traditional terminals.",
+          "benefit": "Ship turnaround time reduced by 20%, helping shipping companies save fuel costs and increase operational efficiency."
+        },
+        "safety": {
+          "title": "Outstanding safety and security enhancement",
+          "evidence": "Automation and centralized monitoring helped reduce up to 40% of serious port accidents at Busan Port.",
+          "benefit": "Working environment becomes safer, minimizing human errors, while intelligent monitoring and alert systems help respond quickly to incidents."
+        },
+        "competitiveness": {
+          "title": "Sustainable growth and enhanced competitiveness",
+          "evidence": "Even in a challenging year, Busan Port still achieved the highest container volume in history, an achievement with significant contribution from automated terminals.",
+          "benefit": "Leadership can make strategic decisions based on real data instead of experience, thereby analyzing performance, finding bottlenecks and planning long-term investments accurately."
+        },
+        "customerExperience": {
+          "title": "Enhanced customer experience and satisfaction",
+          "benefit": "Customers can easily register for services, track request status and make online payments. This transparency and convenience significantly enhances service experience, creating sustainable competitive advantages."
+        }
+      },
+      "applicationsList": [
         "International container ports",
         "Bulk cargo ports",
         "Oil, gas and chemical ports",
@@ -809,6 +1396,8 @@
     },
     "copyright": "© 2025 INTERNATIONAL CYBERSECURITY JOINT STOCK COMPANY - ICS. All rights reserved.",
     "description": "Leading Smart Dashboard solutions in Vietnam - Supporting businesses and organizations to achieve digital transformation and optimize operational efficiency.",
-    "wideApplication": "Wide Applications"
+    "wideApplication": "Wide Applications",
+    "brandName": "ICS Smart Dashboard",
+    "tagline": "Smart Dashboard"
   }
 }

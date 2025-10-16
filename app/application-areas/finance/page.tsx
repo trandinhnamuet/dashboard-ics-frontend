@@ -128,40 +128,40 @@ export default function FinancePage() {
                     <AccordionItem value="challenge-1" className="border border-orange-200 bg-orange-50 rounded-lg">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Clock className="h-5 w-5 mr-2" />
-                        Độ trễ trong ra quyết định
+                        {t('applicationAreas.finance.challenges.details.decisionDelay.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Theo phương pháp quản lý truyền thống, các quyết định thường được đưa ra dựa trên các báo cáo thủ công, định kỳ theo tháng hoặc quý. Điều này tạo ra một độ trễ lớn, khiến ban lãnh đạo phải "phản ứng" với các dữ liệu đã lỗi thời.
+                        {t('applicationAreas.finance.challenges.details.decisionDelay.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-2" className="border border-red-200 bg-red-50 rounded-lg">
                       <AccordionTrigger className="text-red-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <BarChart3 className="h-5 w-5 mr-2" />
-                        Dữ liệu phân mảnh
+                        {t('applicationAreas.finance.challenges.details.fragmentedData.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Dữ liệu thường nằm rải rác ở nhiều hệ thống độc lập (Data Silos) như hệ thống lõi ngân hàng, CRM, dữ liệu giao dịch. Việc thiếu nền tảng hợp nhất khiến việc có cái nhìn 360 độ trở nên khó khăn.
+                        {t('applicationAreas.finance.challenges.details.fragmentedData.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-3" className="border border-purple-200 bg-purple-50 rounded-lg">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Shield className="h-5 w-5 mr-2" />
-                        Áp lực tuân thủ và bảo mật
+                        {t('applicationAreas.finance.challenges.details.compliance.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Phải tuân thủ nhiều quy định khắt khe về bảo mật dữ liệu và tài chính như GDPR, HIPAA, ISO 27001. Đồng thời đối mặt với nguy cơ tấn công mạng và rò rỉ dữ liệu.
+                        {t('applicationAreas.finance.challenges.details.compliance.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-4" className="border border-yellow-200 bg-yellow-50 rounded-lg">
                       <AccordionTrigger className="text-yellow-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <TrendingUp className="h-5 w-5 mr-2" />
-                        Quản lý rủi ro phức tạp
+                        {t('applicationAreas.finance.challenges.details.riskManagement.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Đối mặt với nhiều loại rủi ro như rủi ro tín dụng, rủi ro thị trường, gian lận tài chính. Việc phát hiện sớm dấu hiệu bất thường trong hàng triệu giao dịch hàng ngày là thách thức khổng lồ.
+                        {t('applicationAreas.finance.challenges.details.riskManagement.description')}
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -182,20 +182,20 @@ export default function FinancePage() {
                   <Accordion type="multiple" className="space-y-4">
                     <AccordionItem value="application-1" className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
                       <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🎯 Xây dựng "Phòng điều hành ảo" cho Ban lãnh đạo
+                        🎯 {t('applicationAreas.finance.applications.detailedSolutions.0.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-blue-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-blue-700 mb-2">{t('applicationAreas.finance.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Thay vì chờ báo cáo giấy, CEO và ban giám đốc có thể truy cập một Dashboard Quản lý hiển thị các KPI tài chính cốt lõi theo thời gian thực.
+                              {t('applicationAreas.finance.applications.detailedSolutions.0.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-blue-700 dark:text-blue-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-blue-700 dark:text-blue-400 mb-2">{t('applicationAreas.finance.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Dashboard trực quan hóa các chỉ số như Tỷ lệ nợ xấu, Tỷ suất lợi nhuận trên tài sản (ROA) và Chỉ số hài lòng khách hàng (NPS), cho phép so sánh với mục tiêu và cùng kỳ năm trước.
+                              {t('applicationAreas.finance.applications.detailedSolutions.0.application')}
                             </p>
                           </div>
                         </div>
@@ -204,20 +204,20 @@ export default function FinancePage() {
 
                     <AccordionItem value="application-2" className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
                       <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🤖 Tích hợp AI để quản lý rủi ro chủ động
+                        🤖 {t('applicationAreas.finance.applications.detailedSolutions.1.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-green-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-green-700 mb-2">{t('applicationAreas.finance.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Tập đoàn tài chính sử dụng Dashboard tích hợp AI để không chỉ theo dõi mà còn dự báo các rủi ro.
+                              {t('applicationAreas.finance.applications.detailedSolutions.1.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-green-700 dark:text-green-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-green-700 dark:text-green-400 mb-2">{t('applicationAreas.finance.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Hệ thống AI phân tích xu hướng thị trường để dự báo biến động lãi suất, phát hiện sớm gian lận và dự báo rủi ro tín dụng khách hàng.
+                              {t('applicationAreas.finance.applications.detailedSolutions.1.application')}
                             </p>
                           </div>
                         </div>
@@ -226,20 +226,20 @@ export default function FinancePage() {
 
                     <AccordionItem value="application-3" className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg border border-purple-200">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🛡️ Trung tâm An ninh Mạng (SOC) thông minh
+                        🛡️ {t('applicationAreas.finance.applications.detailedSolutions.2.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-purple-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-purple-700 mb-2">{t('applicationAreas.finance.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Các nhóm an ninh mạng phải đối mặt với hàng triệu cảnh báo mỗi ngày, dẫn đến tình trạng "mệt mỏi vì cảnh báo".
+                              {t('applicationAreas.finance.applications.detailedSolutions.2.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-purple-700 dark:text-purple-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-purple-700 dark:text-purple-400 mb-2">{t('applicationAreas.finance.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Smart Dashboard tổng hợp dữ liệu từ SIEM và SOAR, sử dụng AI để tự động phân loại và chỉ làm nổi bật các mối đe dọa thực sự nghiêm trọng.
+                              {t('applicationAreas.finance.applications.detailedSolutions.2.application')}
                             </p>
                           </div>
                         </div>
@@ -248,20 +248,20 @@ export default function FinancePage() {
 
                     <AccordionItem value="application-4" className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg border border-orange-200">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        📋 Tối ưu hóa hoạt động và tuân thủ
+                        📋 {t('applicationAreas.finance.applications.detailedSolutions.3.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-orange-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-orange-700 mb-2">{t('applicationAreas.finance.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Các quy trình kiểm toán và báo cáo tuân thủ thường rất tốn công sức.
+                              {t('applicationAreas.finance.applications.detailedSolutions.3.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-orange-700 dark:text-orange-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-orange-700 dark:text-orange-400 mb-2">{t('applicationAreas.finance.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Dashboard tự động hóa việc tạo báo cáo tuân thủ, giám sát liên tục và cung cấp nhật ký kiểm toán, giúp tổ chức "luôn sẵn sàng cho kiểm toán".
+                              {t('applicationAreas.finance.applications.detailedSolutions.3.application')}
                             </p>
                           </div>
                         </div>
@@ -342,20 +342,20 @@ export default function FinancePage() {
                     <AccordionItem value="benefit-1" className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg border">
                       <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <TrendingUp className="h-5 w-5 mr-2" />
-                        Tăng tốc độ và chất lượng ra quyết định
+                        {t('applicationAreas.finance.strategicBenefits.decisionSpeed.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
                         <p className="mb-3">
-                          Đây là lợi ích hữu hình nhất. Các ngân hàng sử dụng dashboard đã ghi nhận:
+                          {t('applicationAreas.finance.strategicBenefits.decisionSpeed.description')}
                         </p>
                         <ul className="space-y-2">
                           <li className="flex items-center">
                             <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">30%</span>
-                            Giảm thời gian xử lý dữ liệu
+                            {t('applicationAreas.finance.strategicBenefits.decisionSpeed.metrics.dataProcessing')}
                           </li>
                           <li className="flex items-center">
                             <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">40%</span>
-                            Cải thiện tốc độ ra quyết định tài chính
+                            {t('applicationAreas.finance.strategicBenefits.decisionSpeed.metrics.decisionMaking')}
                           </li>
                         </ul>
                       </AccordionContent>
@@ -364,30 +364,30 @@ export default function FinancePage() {
                     <AccordionItem value="benefit-2" className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg border">
                       <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <BarChart3 className="h-5 w-5 mr-2" />
-                        Tiết kiệm chi phí và nâng cao hiệu suất
+                        {t('applicationAreas.finance.strategicBenefits.costSavings.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
-                        Việc tự động hóa quá trình thu thập, tổng hợp dữ liệu và tạo báo cáo giúp giải phóng nhân lực khỏi các công việc thủ công. Điều này không chỉ tiết kiệm chi phí nhân sự mà còn cho phép họ tập trung vào các nhiệm vụ có giá trị cao hơn như phân tích chiến lược.
+                        {t('applicationAreas.finance.strategicBenefits.costSavings.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="benefit-3" className="bg-gradient-to-br from-purple-100 to-violet-100 rounded-lg border">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Shield className="h-5 w-5 mr-2" />
-                        Tăng cường an ninh và khả năng phục hồi
+                        {t('applicationAreas.finance.strategicBenefits.securityResilience.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
-                        Cung cấp một cái nhìn toàn diện và theo thời gian thực về các mối đe dọa, giúp các tổ chức tài chính giảm thiểu thời gian phát hiện và phản ứng sự cố, từ đó bảo vệ tài sản và dữ liệu khách hàng tốt hơn.
+                        {t('applicationAreas.finance.strategicBenefits.securityResilience.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="benefit-4" className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-lg border">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <CreditCard className="h-5 w-5 mr-2" />
-                        Minh bạch hóa và định lượng rủi ro
+                        {t('applicationAreas.finance.strategicBenefits.riskQuantification.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
-                        Một Smart Dashboard cao cấp có khả năng "dịch rủi ro mạng thành đô la và xu". Nó giúp CISO chứng minh được Lợi tức đầu tư an ninh (ROSI), biện minh cho ngân sách và truyền đạt giá trị của an ninh bằng ngôn ngữ kinh doanh tới hội đồng quản trị.
+                        {t('applicationAreas.finance.strategicBenefits.riskQuantification.description')}
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>

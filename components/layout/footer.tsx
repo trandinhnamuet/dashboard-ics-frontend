@@ -19,8 +19,8 @@ export function Footer() {
                 <Cloud className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold"> ICS Smart Dashboard</h3>
-                <p className="text-sm opacity-80">{t('footer.description')}</p>
+                <h3 className="text-xl font-bold">{t('footer.brandName')}</h3>
+                <p className="text-sm opacity-80">{t('footer.tagline')}</p>
               </div>
             </div>
             <p className="text-sm opacity-80 leading-relaxed">
@@ -106,12 +106,12 @@ export function Footer() {
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  Đào tạo & Chứng chỉ
+                  {t('footer.training.title')}
                 </a>
               </li>
               <li>
                 <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
-                  API Documentation
+                  {t('footer.training.apiDocumentation')}
                 </a>
               </li>
             </ul>
@@ -124,32 +124,32 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 mt-1 opacity-80" />
                 <div>
-                  <p className="opacity-80 font-semibold">CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS</p>
+                  <p className="opacity-80 font-semibold">{t('footer.companyFullInfo.name')}</p>
                   <div className="flex items-start space-x-2">
                     <MapPin className="h-4 w-4 mt-1 opacity-80" />
-                    <p className="opacity-80">Văn phòng: TT3-5 Khu đô thị Đại Kim mới, Định Công, Hà Nội</p>
+                    <p className="opacity-80">{t('footer.companyFullInfo.office')}</p>
                   </div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 opacity-80" />
-                <p className="opacity-80">Điện thoại: 0931.487.231 &nbsp; - &nbsp; Hotline: 0707.806.860</p>
+                <p className="opacity-80">{t('footer.companyFullInfo.phone')} - {t('footer.companyFullInfo.hotline')}</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 opacity-80" />
-                <p className="opacity-80">E-mail: info@icss.com.vn &nbsp; - &nbsp; www.icss.com.vn</p>
+                <p className="opacity-80">{t('footer.companyFullInfo.email')} - {t('footer.companyFullInfo.website')}</p>
               </div>
             </div>
 
             <div className="space-y-3">
-              <h5 className="font-medium">Đăng ký nhận tin</h5>
+              <h5 className="font-medium">{t('footer.newsletter.title')}</h5>
               <div className="flex space-x-2">
                 <Input
-                  placeholder="Email của bạn"
+                  placeholder={t('footer.newsletter.emailPlaceholder')}
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
                 />
                 <Button className="bg-primary hover:bg-primary/80 text-white" size="sm">
-                  Đăng ký
+                  {t('footer.newsletter.subscribe')}
                 </Button>
               </div>
             </div>

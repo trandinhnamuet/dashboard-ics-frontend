@@ -170,66 +170,60 @@ export default function ManufacturingPage() {
                     <AccordionItem value="challenge-1" className="border border-cyan-200 bg-cyan-50 rounded-lg">
                       <AccordionTrigger className="text-cyan-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <BarChart3 className="h-5 w-5 mr-2" />
-                        Dữ liệu phân mảnh và "Ốc đảo thông tin" (Data Silos)
+                        {t('applicationAreas.manufacturing.challenges.detailedChallenges.0.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
                         <p className="mb-3">
-                          Đây là thách thức hàng đầu. Dữ liệu từ các hệ thống OT (SCADA, PLC) và IT (ERP, MES) 
-                          thường do các bộ phận khác nhau quản lý và không "nói chuyện" với nhau.
+                          {t('applicationAreas.manufacturing.challenges.detailedChallenges.0.description')}
                         </p>
-                        <div className="bg-white dark:bg-gray-800 p-3 rounded border-l-4 border-cyan-300">
-                          <h5 className="font-medium text-cyan-700 dark:text-cyan-400 mb-2">Ví dụ điển hình:</h5>
-                          <p className="text-gray-700 dark:text-gray-300 text-sm">
-                            Đội bảo trì xem dữ liệu về độ rung của máy trên hệ thống CMMS, đội sản xuất theo dõi sản lượng trên MES, 
-                            và đội quản lý cơ sở vật chất giám sát mức tiêu thụ năng lượng của chính cái máy đó trên hệ thống BMS. 
-                            Hậu quả là không ai có được cái nhìn toàn cảnh, dẫn đến quyết định chậm trễ và kém hiệu quả.
-                          </p>
-                        </div>
+                        {t('applicationAreas.manufacturing.challenges.detailedChallenges.0.detail') && (
+                          <div className="bg-white dark:bg-gray-800 p-3 rounded border-l-4 border-cyan-300">
+                            <h5 className="font-medium text-cyan-700 dark:text-cyan-400 mb-2">Ví dụ điển hình:</h5>
+                            <p className="text-gray-700 dark:text-gray-300 text-sm">
+                              {t('applicationAreas.manufacturing.challenges.detailedChallenges.0.detail')}
+                            </p>
+                          </div>
+                        )}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-2" className="border border-yellow-200 bg-yellow-50 rounded-lg">
                       <AccordionTrigger className="text-yellow-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Settings className="h-5 w-5 mr-2" />
-                        Khó khăn tích hợp và thiếu chuẩn hóa
+                        {t('applicationAreas.manufacturing.challenges.detailedChallenges.1.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Việc kết nối một máy tiện CNC 20 năm tuổi với một cảm biến IoT hiện đại đòi hỏi các giải pháp 
-                        chuyển đổi giao thức phức tạp và tốn kém do sự đa dạng về nhà cung cấp và công nghệ.
+                        {t('applicationAreas.manufacturing.challenges.detailedChallenges.1.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-3" className="border border-purple-200 bg-purple-50 rounded-lg">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <TrendingDown className="h-5 w-5 mr-2" />
-                        Chất lượng dữ liệu kém
+                        {t('applicationAreas.manufacturing.challenges.detailedChallenges.2.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Chất lượng của quyết định phụ thuộc vào chất lượng của dữ liệu đầu vào. 
-                        Các vấn đề: dữ liệu thiếu do lỗi kết nối mạng, không chính xác do cảm biến lệch chuẩn, 
-                        hoặc không nhất quán do nhập liệu thủ công.
+                        {t('applicationAreas.manufacturing.challenges.detailedChallenges.2.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-4" className="border border-blue-200 bg-blue-50 rounded-lg">
                       <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Leaf className="h-5 w-5 mr-2" />
-                        An ninh và Bảo mật
+                        {t('applicationAreas.manufacturing.challenges.detailedChallenges.3.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Khi các hệ thống OT được kết nối với mạng IT và Internet, chúng đối mặt với nguy cơ an ninh mạng. 
-                        Tấn công không chỉ làm rò rỉ dữ liệu mà còn có thể phá hoại máy móc, gây ngừng trệ sản xuất.
+                        {t('applicationAreas.manufacturing.challenges.detailedChallenges.3.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-5" className="border border-green-200 bg-green-50 rounded-lg">
                       <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Zap className="h-5 w-5 mr-2" />
-                        Khoảng trống về kỹ năng
+                        {t('applicationAreas.manufacturing.challenges.detailedChallenges.4.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Việc biến dữ liệu thành insight đòi hỏi đội ngũ có kỹ năng đa ngành: vừa hiểu sâu về máy móc, 
-                        vừa có chuyên môn về khoa học dữ liệu. Sự thiếu hụt nhân sự này là rào cản lớn.
+                        {t('applicationAreas.manufacturing.challenges.detailedChallenges.4.description')}
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -250,22 +244,20 @@ export default function ManufacturingPage() {
                   <Accordion type="multiple" className="space-y-4">
                     <AccordionItem value="application-1" className="bg-gradient-to-r from-orange-50 to-cyan-50 rounded-lg border border-orange-200">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🏭 Xây dựng "Phòng điều hành ảo" với Bản sao số (Digital Twin)
+                        🏭 {t('applicationAreas.manufacturing.applications.detailedSolutions.0.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-orange-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-orange-700 mb-2">{t('applicationAreas.manufacturing.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Thay vì quản lý qua các màn hình SCADA riêng lẻ hoặc bảng tính, 
-                              người quản lý tương tác với một mô hình 3D trực quan của toàn bộ nhà máy hoặc KCN.
+                              {t('applicationAreas.manufacturing.applications.detailedSolutions.0.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-orange-700 dark:text-orange-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-orange-700 dark:text-orange-400 mb-2">{t('applicationAreas.manufacturing.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Mô hình 3D này là một "bản sao kỹ thuật số" sống động, nơi mỗi máy móc được liên kết với luồng dữ liệu thời gian thực. 
-                              Khi cảm biến báo động, máy móc tương ứng trên mô hình 3D sẽ thay đổi màu sắc, nhấp nháy hoặc hiển thị cảnh báo.
+                              {t('applicationAreas.manufacturing.applications.detailedSolutions.0.application')}
                             </p>
                           </div>
                         </div>
@@ -274,25 +266,21 @@ export default function ManufacturingPage() {
 
                     <AccordionItem value="application-2" className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
                       <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        📊 Giám sát hiệu suất toàn diện qua KPIs then chốt
+                        📊 {t('applicationAreas.manufacturing.applications.detailedSolutions.1.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-blue-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-blue-700 mb-2">{t('applicationAreas.manufacturing.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Các chỉ số hiệu suất quan trọng nhất được theo dõi liên tục, 
-                              giúp ban lãnh đạo nắm bắt "sức khỏe" của hoạt động sản xuất ngay lập tức.
+                              {t('applicationAreas.manufacturing.applications.detailedSolutions.1.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-blue-700 dark:text-blue-400 mb-2">Ứng dụng:</h5>
-                            <div className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
-                              <p>• <span className="font-medium">OEE</span> (Overall Equipment Effectiveness)</p>
-                              <p>• <span className="font-medium">MTBF</span> (Mean Time Between Failures)</p>
-                              <p>• <span className="font-medium">MTTR</span> (Mean Time To Repair)</p>
-                              <p>• Tỷ lệ phế phẩm và Tiêu thụ năng lượng</p>
-                            </div>
+                            <h5 className="font-medium text-blue-700 dark:text-blue-400 mb-2">{t('applicationAreas.manufacturing.applications.applicationLabel')}:</h5>
+                            <p className="text-gray-700 dark:text-gray-300 text-sm">
+                              {t('applicationAreas.manufacturing.applications.detailedSolutions.1.application')}
+                            </p>
                           </div>
                         </div>
                       </AccordionContent>
@@ -300,21 +288,20 @@ export default function ManufacturingPage() {
 
                     <AccordionItem value="application-3" className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
                       <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🤖 Bảo trì dự đoán nhờ tích hợp AI/ML
+                        🤖 {t('applicationAreas.manufacturing.applications.detailedSolutions.2.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-green-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-green-700 mb-2">{t('applicationAreas.manufacturing.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Chuyển đổi từ mô hình bảo trì "chữa cháy" (khi hỏng mới sửa) sang bảo trì chủ động.
+                              {t('applicationAreas.manufacturing.applications.detailedSolutions.2.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-green-700 dark:text-green-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-green-700 dark:text-green-400 mb-2">{t('applicationAreas.manufacturing.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Hệ thống tích hợp thuật toán học máy để phân tích dữ liệu lịch sử về độ rung, nhiệt độ, áp suất. 
-                              Dashboard có thể dự báo khả năng xảy ra hỏng hóc, cho phép lên kế hoạch bảo trì trước khi sự cố xảy ra.
+                              {t('applicationAreas.manufacturing.applications.detailedSolutions.2.application')}
                             </p>
                           </div>
                         </div>
@@ -323,22 +310,20 @@ export default function ManufacturingPage() {
 
                     <AccordionItem value="application-4" className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg border border-purple-200">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🚨 Hệ thống cảnh báo thông minh, giảm thiểu "nhiễu loạn"
+                        🚨 {t('applicationAreas.manufacturing.applications.detailedSolutions.3.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-purple-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-purple-700 mb-2">{t('applicationAreas.manufacturing.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Người vận hành không còn bị quá tải bởi hàng trăm cảnh báo không quan trọng, 
-                              tình trạng gọi là "nhiễu loạn cảnh báo" (Alert Fatigue).
+                              {t('applicationAreas.manufacturing.applications.detailedSolutions.3.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-purple-700 dark:text-purple-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-purple-700 dark:text-purple-400 mb-2">{t('applicationAreas.manufacturing.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Hệ thống sử dụng logic phức tạp để tương quan nhiều sự kiện. Ví dụ: cảnh báo chỉ kích hoạt khi có đồng thời 
-                              (1) nhiệt độ tăng, (2) độ rung tăng, VÀ (3) sản lượng giảm - cho thấy vấn đề nghiêm trọng thay vì biến động tạm thời.
+                              {t('applicationAreas.manufacturing.applications.detailedSolutions.3.application')}
                             </p>
                           </div>
                         </div>
@@ -419,22 +404,22 @@ export default function ManufacturingPage() {
                     <AccordionItem value="benefit-1" className="bg-gradient-to-br from-orange-100 to-cyan-100 rounded-lg border">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <TrendingDown className="h-5 w-5 mr-2" />
-                        Tối ưu hóa vận hành và nâng cao hiệu suất
+                        {t('applicationAreas.manufacturing.strategicBenefits.operationalOptimization.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
                         <div className="space-y-3">
                           <div className="bg-white dark:bg-gray-800 p-3 rounded border-l-4 border-orange-400">
-                            <p className="text-sm font-medium text-orange-700 dark:text-orange-400">Minh chứng:</p>
+                            <p className="text-sm font-medium text-orange-700 dark:text-orange-400">{t('applicationAreas.manufacturing.strategicBenefits.evidenceLabel')}:</p>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Tăng hiệu quả thiết bị tổng thể (OEE) lên đến <span className="font-bold text-orange-600">30%</span>
+                              {t('applicationAreas.manufacturing.strategicBenefits.operationalOptimization.evidence')}
                             </p>
                           </div>
                           <div className="bg-white dark:bg-gray-800 p-3 rounded border-l-4 border-orange-400">
-                            <p className="text-sm font-medium text-orange-700 dark:text-orange-400">Lợi ích:</p>
+                            <p className="text-sm font-medium text-orange-700 dark:text-orange-400">{t('applicationAreas.manufacturing.strategicBenefits.benefitLabel')}:</p>
                             <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
-                              <li>• Giảm thời gian ngừng hoạt động: <span className="font-bold text-orange-600">73%</span></li>
-                              <li>• Giảm thời gian xử lý sự cố: <span className="font-bold text-orange-600">90%</span></li>
-                              <li>• Báo cáo từ 1-2 ngày → tức thì</li>
+                              <li>• {t('applicationAreas.manufacturing.strategicBenefits.operationalOptimization.benefits.0')}</li>
+                              <li>• {t('applicationAreas.manufacturing.strategicBenefits.operationalOptimization.benefits.1')}</li>
+                              <li>• {t('applicationAreas.manufacturing.strategicBenefits.operationalOptimization.benefits.2')}</li>
                             </ul>
                           </div>
                         </div>
@@ -444,22 +429,22 @@ export default function ManufacturingPage() {
                     <AccordionItem value="benefit-2" className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg border">
                       <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <BarChart3 className="h-5 w-5 mr-2" />
-                        Tiết kiệm chi phí đáng kể
+                        {t('applicationAreas.manufacturing.strategicBenefits.costSavings.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
                         <div className="space-y-3">
                           <div className="bg-white dark:bg-gray-800 p-3 rounded border-l-4 border-green-400">
-                            <p className="text-sm font-medium text-green-700 dark:text-green-400">Minh chứng:</p>
+                            <p className="text-sm font-medium text-green-700 dark:text-green-400">{t('applicationAreas.manufacturing.strategicBenefits.evidenceLabel')}:</p>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Giảm chi phí vận hành KCN lên đến <span className="font-bold text-green-600">60%</span>
+                              {t('applicationAreas.manufacturing.strategicBenefits.costSavings.evidence')}
                             </p>
                           </div>
                           <div className="bg-white dark:bg-gray-800 p-3 rounded border-l-4 border-green-400">
-                            <p className="text-sm font-medium text-green-700 dark:text-green-400">Lợi ích:</p>
+                            <p className="text-sm font-medium text-green-700 dark:text-green-400">{t('applicationAreas.manufacturing.strategicBenefits.benefitLabel')}:</p>
                             <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
-                              <li>• Tiết kiệm chi phí nhân lực: <span className="font-bold text-green-600">20%</span></li>
-                              <li>• Giảm chi phí năng lượng đáng kể</li>
-                              <li>• Tự động hóa báo cáo và thu thập dữ liệu</li>
+                              <li>• {t('applicationAreas.manufacturing.strategicBenefits.costSavings.benefits.0')}</li>
+                              <li>• {t('applicationAreas.manufacturing.strategicBenefits.costSavings.benefits.1')}</li>
+                              <li>• {t('applicationAreas.manufacturing.strategicBenefits.costSavings.benefits.2')}</li>
                             </ul>
                           </div>
                         </div>
@@ -469,24 +454,20 @@ export default function ManufacturingPage() {
                     <AccordionItem value="benefit-3" className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg border">
                       <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Settings className="h-5 w-5 mr-2" />
-                        Chuyển đổi văn hóa quản lý
+                        {t('applicationAreas.manufacturing.strategicBenefits.managementTransformation.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
-                        Smart Dashboard thay đổi văn hóa quản lý từ phản ứng, dựa trên kinh nghiệm ("chữa cháy") 
-                        sang chủ động, dựa trên dữ liệu ("quản trị thông minh"). Tạo ra "ngôn ngữ chung" về hiệu suất, 
-                        thúc đẩy minh bạch và cộng tác.
+                        {t('applicationAreas.manufacturing.strategicBenefits.managementTransformation.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="benefit-4" className="bg-gradient-to-br from-purple-100 to-violet-100 rounded-lg border">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Leaf className="h-5 w-5 mr-2" />
-                        Tăng cường năng lực cạnh tranh
+                        {t('applicationAreas.manufacturing.strategicBenefits.competitiveAdvantage.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
-                        KCN được quản lý hiệu quả, an toàn và bền vững sẽ hấp dẫn hơn đối với các nhà đầu tư quốc tế, 
-                        đặc biệt những doanh nghiệp yêu cầu cao về tiêu chuẩn ESG. 
-                        Đây là chìa khóa xây dựng lợi thế cạnh tranh bền vững trong thời đại số.
+                        {t('applicationAreas.manufacturing.strategicBenefits.competitiveAdvantage.description')}
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>

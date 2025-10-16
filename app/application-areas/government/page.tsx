@@ -190,57 +190,49 @@ export default function GovernmentPage() {
                     <AccordionItem value="challenge-1" className="border border-red-200 bg-red-50 rounded-lg">
                       <AccordionTrigger className="text-red-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Clock className="h-5 w-5 mr-2" />
-                        Quản lý "phản ứng" và độ trễ thông tin
+                        {t('applicationAreas.government.challenges.detailedChallenges.0.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Các quyết định thường được đưa ra dựa trên các báo cáo theo tháng, quý, năm. 
-                        Phương thức này khiến việc quản lý mang tính chất "phản ứng" với các sự việc đã xảy ra, 
-                        gây khó khăn trong việc ứng phó với các vấn đề đột xuất hoặc thay đổi nhanh chóng như thiên tai, dịch bệnh hay các vấn đề an ninh.
+                        <p className="mb-3">
+                          {t('applicationAreas.government.challenges.detailedChallenges.0.description')}
+                        </p>
+                        {t('applicationAreas.government.challenges.detailedChallenges.0.detail') && (
+                          <div className="bg-white dark:bg-gray-800 p-3 rounded border-l-4 border-red-300">
+                            <p className="text-sm text-gray-600 dark:text-gray-400">
+                              {t('applicationAreas.government.challenges.detailedChallenges.0.detail')}
+                            </p>
+                          </div>
+                        )}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-2" className="border border-orange-200 bg-orange-50 rounded-lg">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <BarChart3 className="h-5 w-5 mr-2" />
-                        Dữ liệu rời rạc và thiếu đồng bộ
+                        {t('applicationAreas.government.challenges.detailedChallenges.1.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Các cơ quan nhà nước thường phải xử lý một lượng lớn dữ liệu rời rạc từ nhiều nguồn khác nhau. 
-                        Việc tổng hợp thủ công không chỉ tốn thời gian mà còn dễ sai sót, dẫn đến tình trạng thiếu một cái nhìn tổng thể để ra quyết định vĩ mô. 
-                        Thách thức lớn nhất là tích hợp dữ liệu từ các hệ thống thông tin cũ của các sở, ban, ngành.
+                        {t('applicationAreas.government.challenges.detailedChallenges.1.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-3" className="border border-purple-200 bg-purple-50 rounded-lg">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Users className="h-5 w-5 mr-2" />
-                        Thiếu minh bạch và trách nhiệm giải trình
+                        {t('applicationAreas.government.challenges.detailedChallenges.2.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Các quy trình báo cáo truyền thống thường thiếu tính công khai và khó tiếp cận, 
-                        có thể làm suy giảm niềm tin của công chúng vào chính phủ.
+                        {t('applicationAreas.government.challenges.detailedChallenges.2.description')}
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="challenge-4" className="border border-yellow-200 bg-yellow-50 rounded-lg">
                       <AccordionTrigger className="text-yellow-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Shield className="h-5 w-5 mr-2" />
-                        Rủi ro về bảo mật và quyền riêng tư
+                        {t('applicationAreas.government.challenges.detailedChallenges.3.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Việc tập trung dữ liệu nhạy cảm của người dân và doanh nghiệp tạo ra "điểm yếu" hấp dẫn đối với tấn công mạng. 
-                        Cân bằng giữa minh bạch và bảo mật là thách thức lớn.
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem value="challenge-5" className="border border-green-200 bg-green-50 rounded-lg">
-                      <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        <Target className="h-5 w-5 mr-2" />
-                        Thách thức về quản lý thay đổi
-                      </AccordionTrigger>
-                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-6 pb-4">
-                        Việc chuyển đổi từ thói quen làm việc thủ công, báo cáo giấy sang môi trường làm việc dựa trên dữ liệu 
-                        là một thách thức văn hóa lớn, đòi hỏi sự thay đổi trong tư duy và cần có kế hoạch đào tạo bài bản cho đội ngũ cán bộ, công chức.
+                        {t('applicationAreas.government.challenges.detailedChallenges.3.description')}
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -262,41 +254,36 @@ export default function GovernmentPage() {
                     {/* ...existing card AccordionItems... */}
                     <AccordionItem value="application-1" className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
                       <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🏛️ Xây dựng Trung tâm Điều hành Thông minh (IOC) toàn diện
+                        🏛️ {t('applicationAreas.government.applications.detailedSolutions.0.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6 mb-6">
                           <div>
-                            <h5 className="font-medium text-blue-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-blue-700 mb-2">{t('applicationAreas.government.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Thay vì các phòng ban hoạt động độc lập, lãnh đạo tỉnh/thành phố có một phòng điều hành trung tâm, 
-                              nơi mọi thông tin được hội tụ.
+                              {t('applicationAreas.government.applications.detailedSolutions.0.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-blue-700 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-blue-700 mb-2">{t('applicationAreas.government.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              IOC được ví như "bộ não số", tích hợp dữ liệu từ các sở, ngành về một trung tâm chung, 
-                              tạo ra một cái nhìn toàn cảnh trên mọi lĩnh vực từ kinh tế - xã hội, an ninh trật tự đến dịch vụ công.
+                              {t('applicationAreas.government.applications.detailedSolutions.0.application')}
                             </p>
                           </div>
                         </div>
                         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                          <h5 className="font-medium text-blue-700 dark:text-blue-400 mb-3">Minh chứng tại Việt Nam:</h5>
+                          <h5 className="font-medium text-blue-700 dark:text-blue-400 mb-3">{t('applicationAreas.government.applications.detailedSolutions.0.evidence.title')}:</h5>
                           <div className="space-y-3">
                             <div className="border-l-4 border-blue-300 pl-4">
-                              <h6 className="font-medium text-blue-600">Đà Lạt:</h6>
+                              <h6 className="font-medium text-blue-600">{t('applicationAreas.government.applications.detailedSolutions.0.evidence.examples.0.location')}:</h6>
                               <p className="text-gray-700 dark:text-gray-300 text-sm">
-                                Là thành phố đầu tiên đưa IOC vào hoạt động, đã tích hợp gần <Badge variant="outline" className="mx-1">300 camera</Badge> 
-                                độ phân giải cao để giám sát an ninh và giao thông, cho phép lãnh đạo quản lý từ tổng thể đến chi tiết.
+                                {t('applicationAreas.government.applications.detailedSolutions.0.evidence.examples.0.description')}
                               </p>
                             </div>
                             <div className="border-l-4 border-green-300 pl-4">
-                              <h6 className="font-medium text-green-600">Bình Dương:</h6>
+                              <h6 className="font-medium text-green-600">{t('applicationAreas.government.applications.detailedSolutions.0.evidence.examples.1.location')}:</h6>
                               <p className="text-gray-700 dark:text-gray-300 text-sm">
-                                Một mô hình toàn diện đã thu thập và tích hợp hơn <Badge variant="outline" className="mx-1">1,000 chỉ số</Badge> 
-                                ở <Badge variant="outline" className="mx-1">27 lĩnh vực</Badge>, tập trung vào thu chi ngân sách, giải ngân đầu tư công, và đường dây nóng 1022. 
-                                Đã công bố <Badge variant="outline" className="mx-1">13 bộ dữ liệu</Badge> trên cổng dữ liệu mở.
+                                {t('applicationAreas.government.applications.detailedSolutions.0.evidence.examples.1.description')}
                               </p>
                             </div>
                           </div>
@@ -305,21 +292,20 @@ export default function GovernmentPage() {
                     </AccordionItem>
                     <AccordionItem value="application-2" className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
                       <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        📊 Giám sát đa chiều và hỗ trợ ra quyết định tức thời
+                        📊 {t('applicationAreas.government.applications.detailedSolutions.1.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-green-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-green-700 mb-2">{t('applicationAreas.government.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Lãnh đạo có thể nắm bắt tình hình ngay lập tức và đưa ra chỉ đạo kịp thời mà không cần chờ báo cáo.
+                              {t('applicationAreas.government.applications.detailedSolutions.1.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-green-700 dark:text-green-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-green-700 dark:text-green-400 mb-2">{t('applicationAreas.government.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Dashboard cho phép theo dõi mọi khía cạnh của một hệ thống, từ tình hình tài chính công, tiến độ giải ngân, 
-                              đến số lượng hồ sơ được xử lý tại các trung tâm hành chính công.
+                              {t('applicationAreas.government.applications.detailedSolutions.1.application')}
                             </p>
                           </div>
                         </div>
@@ -327,21 +313,20 @@ export default function GovernmentPage() {
                     </AccordionItem>
                     <AccordionItem value="application-3" className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg border border-purple-200">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        🎯 Cải thiện chất lượng dịch vụ công
+                        🎯 {t('applicationAreas.government.applications.detailedSolutions.2.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-purple-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-purple-700 mb-2">{t('applicationAreas.government.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Các vấn đề trong quy trình phục vụ người dân được phát hiện và khắc phục nhanh hơn.
+                              {t('applicationAreas.government.applications.detailedSolutions.2.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-purple-700 dark:text-purple-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-purple-700 dark:text-purple-400 mb-2">{t('applicationAreas.government.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Dashboard theo dõi và phân tích các chỉ số về sự hài lòng của người dân, thời gian chờ đợi, và tỷ lệ giải quyết hồ sơ đúng hạn. 
-                              Dữ liệu này giúp các cơ quan công quyền xác định điểm nghẽn và cải thiện quy trình.
+                              {t('applicationAreas.government.applications.detailedSolutions.2.application')}
                             </p>
                           </div>
                         </div>
@@ -349,21 +334,20 @@ export default function GovernmentPage() {
                     </AccordionItem>
                     <AccordionItem value="application-4" className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg border border-orange-200">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
-                        📢 Tăng cường tương tác và minh bạch với người dân
+                        📢 {t('applicationAreas.government.applications.detailedSolutions.3.title')}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-medium text-orange-700 mb-2">Thực tế:</h5>
+                            <h5 className="font-medium text-orange-700 mb-2">{t('applicationAreas.government.applications.realityLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Người dân có thể giám sát hoạt động của chính quyền và gửi phản ánh một cách dễ dàng.
+                              {t('applicationAreas.government.applications.detailedSolutions.3.reality')}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-orange-700 dark:text-orange-400 mb-2">Ứng dụng:</h5>
+                            <h5 className="font-medium text-orange-700 dark:text-orange-400 mb-2">{t('applicationAreas.government.applications.applicationLabel')}:</h5>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Dashboard là công cụ mạnh mẽ để công khai dữ liệu chính phủ (Open Government Data). 
-                              Nó cho phép người dân gửi ý kiến phản ánh về các vấn đề hạ tầng, an ninh, từ đó thúc đẩy công tác điều hành diễn ra minh bạch và hiệu quả hơn.
+                              {t('applicationAreas.government.applications.detailedSolutions.3.application')}
                             </p>
                           </div>
                         </div>
@@ -445,32 +429,29 @@ export default function GovernmentPage() {
                     <AccordionItem value="benefit-1" className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg border">
                       <AccordionTrigger className="text-blue-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Target className="h-5 w-5 mr-2" />
-                        Chuyển đổi sang mô hình quản trị chủ động
+                        {t('applicationAreas.government.strategicBenefits.proactiveGovernance.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
-                        <span className="font-medium">Lợi ích:</span> Đây là lợi ích chiến lược lớn nhất. Dashboard giúp chính quyền chuyển đổi từ quản lý "phản ứng" sang "chủ động". 
-                        Khi được tích hợp AI và Học máy, hệ thống còn có thể phân tích dữ liệu lịch sử để dự báo các kịch bản trong tương lai, 
-                        hỗ trợ hoạch định chính sách dựa trên bằng chứng.
+                        <span className="font-medium">{t('applicationAreas.government.strategicBenefits.benefitLabel')}:</span> {t('applicationAreas.government.strategicBenefits.proactiveGovernance.benefit')}
                       </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="benefit-2" className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg border">
                       <AccordionTrigger className="text-green-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Clock className="h-5 w-5 mr-2" />
-                        Nâng cao hiệu quả và tiết kiệm chi phí
+                        {t('applicationAreas.government.strategicBenefits.efficiency.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 text-sm px-6 pb-4">
                         <div className="space-y-3">
                           <div className="bg-white dark:bg-gray-800 p-3 rounded border-l-4 border-green-400">
-                            <p className="text-sm font-medium text-green-700 dark:text-green-400">Minh chứng:</p>
+                            <p className="text-sm font-medium text-green-700 dark:text-green-400">{t('applicationAreas.government.strategicBenefits.evidenceLabel')}:</p>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Các dự án số hóa như nộp thuế trực tuyến có thể giảm thời gian trung bình lên tới <span className="font-bold text-green-600">25%</span>.
+                              {t('applicationAreas.government.strategicBenefits.efficiency.evidence')}
                             </p>
                           </div>
                           <div className="bg-white dark:bg-gray-800 p-3 rounded border-l-4 border-green-400">
-                            <p className="text-sm font-medium text-green-700 dark:text-green-400">Lợi ích:</p>
+                            <p className="text-sm font-medium text-green-700 dark:text-green-400">{t('applicationAreas.government.strategicBenefits.benefitLabel')}:</p>
                             <p className="text-gray-700 dark:text-gray-300 text-sm">
-                              Việc tự động hóa quy trình tạo báo cáo giúp giảm thiểu công việc thủ công, tiết kiệm đáng kể thời gian và nhân lực, 
-                              qua đó tăng năng suất làm việc và hạn chế sai sót.
+                              {t('applicationAreas.government.strategicBenefits.efficiency.benefit')}
                             </p>
                           </div>
                         </div>
@@ -479,22 +460,19 @@ export default function GovernmentPage() {
                     <AccordionItem value="benefit-3" className="bg-gradient-to-br from-purple-100 to-violet-100 rounded-lg border">
                       <AccordionTrigger className="text-purple-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <Users className="h-5 w-5 mr-2" />
-                        Tăng cường minh bạch và niềm tin công chúng
+                        {t('applicationAreas.government.strategicBenefits.transparency.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
-                        <span className="font-medium">Lợi ích:</span> Việc công khai dữ liệu giúp tăng cường sự giám sát từ công chúng, 
-                        từ đó nâng cao niềm tin và sự hài lòng của người dân. Điều này tạo ra một môi trường đối thoại khách quan, 
-                        thúc đẩy công tác điều hành hiệu quả hơn.
+                        <span className="font-medium">{t('applicationAreas.government.strategicBenefits.benefitLabel')}:</span> {t('applicationAreas.government.strategicBenefits.transparency.benefit')}
                       </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="benefit-4" className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-lg border">
                       <AccordionTrigger className="text-orange-800 flex items-center text-lg font-semibold px-6 py-4 hover:no-underline">
                         <BarChart3 className="h-5 w-5 mr-2" />
-                        Tối ưu hóa nguồn lực công
+                        {t('applicationAreas.government.strategicBenefits.resourceOptimization.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-700 dark:text-gray-300 text-sm px-6 pb-4">
-                        <span className="font-medium">Lợi ích:</span> Bằng cách cung cấp cái nhìn tổng quan về ngân sách và hiệu suất, 
-                        dashboard giúp chính phủ giám sát và điều phối tài nguyên hiệu quả hơn, đặc biệt trong việc giải ngân đầu tư công.
+                        <span className="font-medium">{t('applicationAreas.government.strategicBenefits.benefitLabel')}:</span> {t('applicationAreas.government.strategicBenefits.resourceOptimization.benefit')}
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>

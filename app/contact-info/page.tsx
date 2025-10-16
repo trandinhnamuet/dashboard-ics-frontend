@@ -107,7 +107,7 @@ export default function ContactPage() {
                     <Phone className="h-5 w-5 text-orange-600" />
                     <div>
                       <p className="font-semibold text-gray-900 mb-1">{t('contactInfo.contact.phone')}</p>
-                      <p className="text-gray-700">0931.487.231</p>
+                      <p className="text-gray-700">{t('contactInfo.contact.phoneNumber')}</p>
                     </div>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5 text-purple-600" />
                     <div>
                       <p className="font-semibold text-gray-900 mb-1">{t('contactInfo.contact.email')}</p>
-                      <p className="text-gray-700">info@icss.com.vn</p>
+                      <p className="text-gray-700">{t('contactInfo.contact.emailAddress')}</p>
                     </div>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                     <Globe className="h-5 w-5 text-indigo-600" />
                     <div>
                       <p className="font-semibold text-gray-900 mb-1">{t('contactInfo.contact.website')}</p>
-                      <p className="text-gray-700">www.icss.com.vn</p>
+                      <p className="text-gray-700">{t('contactInfo.contact.websiteUrl')}</p>
                     </div>
                   </div>
                 </div>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                     allowFullScreen={true}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="ICS Google Map"
+                    title={t('contactInfo.map.mapTitle')}
                     className="w-full"
                   ></iframe>
                 </div>

@@ -92,7 +92,7 @@ export function IndustriesSection() {
         </div>
 
         <div className="text-center relative">
-          <h3 className="mb-6 sm:mb-8 text-xl sm:text-2xl font-bold text-foreground">Ứng dụng rộng rãi</h3>
+          <h3 className="mb-6 sm:mb-8 text-xl sm:text-2xl font-bold text-foreground">{t('footer.wideApplication')}</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-6 max-w-6xl mx-auto">
             {applications.map((app, index) => (
               <div
