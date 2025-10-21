@@ -284,7 +284,7 @@
           "10": "SLA 99.9% uptime guarantee"
         }
       },
-      "plan12": {
+      "Gói 12 tháng": {
         "title": "Gói 12 tháng",
         "description": "Phù hợp cho dự án ngắn hạn với linh hoạt thanh toán",
         "buttonText": "Chọn gói 12 tháng",
@@ -299,7 +299,7 @@
           "7": "Hỗ trợ mobile app"
         }
       },
-      "plan24": {
+      "Gói 24 tháng": {
         "title": "Gói 24 tháng",
         "description": "Giải pháp tối ưu cho doanh nghiệp trung hạn",
         "buttonText": "Chọn gói 24 tháng",
@@ -316,7 +316,7 @@
           "9": "Tích hợp hệ thống ERP/CRM"
         }
       },
-      "plan36": {
+      "Gói 36 tháng": {
         "title": "Gói 36 tháng",
         "description": "Cam kết dài hạn với mức giá ưu đãi tốt nhất",
         "buttonText": "Chọn gói 36 tháng",

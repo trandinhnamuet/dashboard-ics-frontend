@@ -92,7 +92,7 @@ const savingPlans: BasePlan[] = [
 
 const payAsYouGoPlans: PayAsYouGoPlan[] = [
   {
-    name: "plan12",
+    name: "Gói 12 tháng",
     description: "Phù hợp cho dự án ngắn hạn với linh hoạt thanh toán",
     price: "Giá liên hệ",
     period: "",
@@ -114,7 +114,7 @@ const payAsYouGoPlans: PayAsYouGoPlan[] = [
     buttonVariant: "outline" as const,
   },
   {
-    name: "plan24",
+    name: "Gói 24 tháng",
     description: "Giải pháp tối ưu cho doanh nghiệp trung hạn",
     price: "Giá liên hệ",
     period: "/24 tháng",
@@ -138,7 +138,7 @@ const payAsYouGoPlans: PayAsYouGoPlan[] = [
     buttonVariant: "default" as const,
   },
   {
-    name: "plan36",
+    name: "Gói 36 tháng",
     description: "Cam kết dài hạn với mức giá ưu đãi tốt nhất",
     price: "Giá liên hệ",
     period: "/36 tháng",

@@ -3,14 +3,14 @@
     "hero": {
       "title": "Leading Smart Dashboard Solution in Vietnam",
       "subtitle": "Vietnam's Top Solution",
-      "description": "We provide a comprehensive smart dashboard solution, helping businesses and organizations optimize operational processes while enhancing work efficiency.",
+      "description": "We provide a comprehensive smart dashboard solution, helping businesses and organizations optimize operational processes while enhancing performance.",
       "features": {
         "visualization": "Data Visualization",
         "visualizationDescription": "2D/3D Dashboard Interface",
         "optimization": "Operational Optimization",
         "optimizationDescription": "Superior Speed",
         "integration": "Multi-Platform Integration",
-        "integrationDescription": "Support for System Integration"
+        "integrationDescription": "Supports integration with various systems"
       },
       "getStarted": "Get Started",
       "contact": "Contact for Consultation",
@@ -23,12 +23,12 @@
     },
     "services": {
       "title": "Services",
-      "subtitle": "Comprehensive Smart Dashboard Solution",
-      "intro": "From operational data to intelligent analytics, we provide Smart Dashboard solutions to help businesses manage centrally, monitor visually, and make quick decisions."
+      "subtitle": "Comprehensive Smart Dashboard Solutions",
+      "intro": "From operational data to intelligent analytics, we provide Smart Dashboard solutions that enable businesses to centrally manage, visually monitor, and make decisions quickly."
     },
     "pricing": {
       "title": "Pricing",
-      "subtitle": "Service Plans Suitable for All Business Sizes",
+      "subtitle": "Service packages suitable for all business sizes",
       "plans": {
         "starter": "Standard",
         "professional": "Premium",
@@ -43,24 +43,24 @@
     "pricing": "Subscription Plans",
     "support": "Support",
     "contact": "Contact",
-    "login": "Login",
-    "register": "Register",
+    "login": "Log In",
+    "register": "Sign Up",
     "hello": "Hello",
     "profile": "Profile",
     "settings": "Settings",
-    "logout": "Logout",
+    "logout": "Log Out",
     "logoTitle": "ICS Smart Dashboard",
     "logoSubtitle": "Smart Dashboard",
     "customers": "Customers",
     "news": "News",
-    "hotline": "Hotline: +84 707 806 860",
+    "hotline": "Hotline: 0707.806.860",
     "language": "Language",
     "altText": "Smart Dashboard Logo",
     "comments": {
       "initAuth": "Initialize auth when component mounts",
-      "handleScroll": "Handle scroll when there is a hash in the URL",
-      "removeHash": "Remove the '#' character",
-      "delayLoad": "Small delay to ensure page has loaded",
+      "handleScroll": "Handle scroll when URL contains hash",
+      "removeHash": "Remove '#' character",
+      "delayLoad": "Small delay to ensure page is loaded",
       "smoothScroll": "Smooth scroll to section",
       "navigateSection": "Scroll to section, if not on homepage, redirect to homepage first",
       "notHomePage": "If not on homepage, redirect to homepage with hash",
@@ -80,7 +80,7 @@
   "checkout": {
     "title": "Checkout",
     "backButton": "Back",
-    "packageInfo": "Package Information",
+    "packageInfo": "Service Package Information",
     "packageName": "Package Name",
     "description": "Description",
     "packageType": "Package Type",
@@ -88,25 +88,25 @@
     "totalAmount": "Total Amount",
     "paymentQR": "Pay via QR",
     "scanQR": "Scan the QR code with a banking app to make payment",
-    "bankName": "Bank Name",
+    "bankName": "Bank",
     "accountNumber": "Account Number",
     "amount": "Amount",
     "content": "Content",
     "copyInfo": "Copy Transfer Information",
     "copiedSuccess": "Transfer information copied successfully",
-    "note": "Note: Please transfer with the correct content for the system to automatically activate the service.",
+    "note": "Note: Please transfer with the exact content to ensure automatic service activation.",
     "contactSupport": "Contact Support"
   },
   "footer": {
     "companyName": "ICS Smart Dashboard",
-    "companySlogan": "Smart Dashboard Solution",
+    "companySlogan": "Smart Dashboard Solutions",
     "companyDescription": "Vietnam's leading Smart Dashboard solution, providing intelligent dashboard systems for your business.",
     "servicesTitle": "Services",
     "services": {
       "building": "Smart Dashboard for Buildings",
       "iot": "IoT Device Management",
-      "digital": "Digital Transformation Solutions for Buildings",
-      "monitor": "Operation Monitoring & Data Analysis",
+      "digital": "Building Digital Transformation Solutions",
+      "monitor": "Operational Data Monitoring & Analysis",
       "energy": "Smart Energy Management",
       "security": "Security & Access Control"
     },
@@ -122,8 +122,8 @@
     "contactTitle": "Contact",
     "companyFull": "INTERNATIONAL CYBERSECURITY JOINT STOCK COMPANY - ICS",
     "office": "Office: TT3-5 Dai Kim New Urban Area, Dinh Cong, Hanoi",
-    "phone": "Phone: +84 931 487 231   -   Hotline: +84 707 806 860",
-    "email": "Email: info@icss.com.vn   -   www.icss.com.vn",
+    "phone": "Phone: 0931.487.231   -   Hotline: 0707.806.860",
+    "email": "E-mail: info@icss.com.vn   -   www.icss.com.vn",
     "newsletterTitle": "Subscribe to Newsletter",
     "newsletterPlaceholder": "Your Email",
     "newsletterButton": "Subscribe",
@@ -139,14 +139,14 @@
       "description": "Connect and collect data from various enterprise systems",
       "features": [
         "Real-time data connection from multiple sources",
-        "Support for traditional data (SQL, Excel) and IoT/SCADA data",
+        "Supports both traditional data (SQL, Excel) and IoT/SCADA data",
         "Data cleaning, standardization, and synchronization",
-        "Open API for easy integration expansion"
+        "Open API for easy integration and expansion"
       ]
     },
     "visualReporting": {
       "title": "Visual & Reporting",
-      "description": "Provide intuitive dashboards with dynamic charts and reports to help users quickly grasp operational status",
+      "description": "Provides intuitive dashboards with dynamic charts and reports, enabling users to quickly grasp operational status",
       "features": [
         "KPI charts, heatmaps, gauge charts, multidimensional analysis tables",
         "Customizable dashboards based on needs",
@@ -160,13 +160,13 @@
       "features": [
         "Progress monitoring",
         "Alert system via Email, SMS, etc.",
-        "Flexible threshold settings",
-        "Event logs for incident tracking"
+        "Flexible threshold configuration",
+        "Event logs for issue tracking"
       ]
     },
     "collaborationRemote": {
       "title": "Collaboration & Remote Access",
-      "description": "Enable departments to collaborate on a single platform and access data anytime, anywhere",
+      "description": "Enables departments to collaborate on a single platform and access data anytime, anywhere",
       "features": [
         "Remote access",
         "Dashboard sharing by role or department",
@@ -176,42 +176,42 @@
     },
     "securityGovernance": {
       "title": "Security & Governance",
-      "description": "Ensure security, authorization, and compliance throughout the data governance process",
+      "description": "Ensures security, role-based access, and compliance throughout the data management process",
       "features": [
-        "Role-based authorization",
-        "Data encryption and secure communication",
+        "Role-based access control",
+        "Encrypted data and secure communication",
         "Access management and activity logging",
         "Compliance with security standards"
       ]
     },
     "analyticsAI": {
       "title": "Analytics & AI",
-      "description": "Apply intelligent data analytics and AI to forecast trends and suggest strategic decisions",
+      "description": "Applies intelligent data analytics and AI to forecast trends and suggest strategic decisions",
       "features": [
         "Business and production trend analysis",
         "Machine Learning for anomaly detection",
-        "Demand forecasting (human resources, materials, energy)",
-        "Actionable recommendations based on data"
+        "Demand forecasting (staff, materials, energy)",
+        "Action recommendations based on data"
       ]
     },
     "additionalBenefits": {
       "deploymentTime": "Average Deployment Time",
-      "dataSources": "Supported Data Sources",
+      "dataSources": "Supported Data Source Integration",
       "security": "Encryption & Security Compliance",
       "costSaving": "Operational Cost Savings",
-      "mainFeatures": "Main Features",
+      "mainFeatures": "Key Features",
       "deploymentTimeUnit": "days +"
     }
   },
   "pricing": {
     "title": "Service Pricing",
-    "subtitle": "From basic solutions to interactive 3D models, we offer plans suitable for all building scales",
+    "subtitle": "From basic solutions to interactive 3D models, we offer packages suitable for all building sizes",
     "savingPlan": {
       "title": "One-Time Purchase",
       "subtitle": "Saving Plan",
       "selected": "Selected",
       "dropdownTitle": "💡 One-Time Purchase (Saving Plan)",
-      "dropdownDescription": "Designed for comprehensive needs and independent operation - one-time payment and full system handover"
+      "dropdownDescription": "Designed for comprehensive needs and independent operation - one-time payment with full system handover"
     },
     "payAsYouGo": {
       "title": "Annual Subscription",
@@ -223,8 +223,8 @@
     "popular": "Most Optimal",
     "featuresTitle": "Included Features:",
     "collapse": "Collapse",
-    "expand": "View {{count}} More Features",
-    "contactSupport": "Need help choosing the right plan? Contact us for free consultation",
+    "expand": "View {{count}} more features",
+    "contactSupport": "Need help choosing the right package? Contact us for free consultation",
     "hotline": "Support Hotline",
     "plans": {
       "Business": {
@@ -246,19 +246,19 @@
       },
       "Dashboard 2D": {
         "title": "Dashboard 2D",
-        "description": "Professional 2D interface for data visualization",
+        "description": "Professional 2D data visualization interface",
         "price": "Contact Us",
         "period": "",
         "buttonText": "Choose Popular Plan",
         "features": {
           "0": "All features of the Business plan",
-          "1": "Interactive 2D dashboard with building layouts",
+          "1": "Interactive 2D dashboard with building layout",
           "2": "Advanced data visualization",
-          "3": "Detailed reports by area",
+          "3": "Detailed area-specific reports",
           "4": "24/7 phone support",
-          "5": "Unlimited system integration",
+          "5": "Unlimited system integrations",
           "6": "2-year data storage",
-          "7": "Custom API for integration",
+          "7": "Custom API integration",
           "8": "Free usage training",
           "9": "AI-powered smart alerts"
         }
@@ -278,19 +278,69 @@
           "5": "Unlimited IoT integration",
           "6": "Permanent data storage",
           "7": "Dedicated support manager",
-          "8": "Customizable interface",
+          "8": "Custom interface design",
           "9": "In-depth team training",
           "10": "SLA 99.9% uptime guarantee"
+        }
+      },
+      "Gói 12 tháng": {
+        "title": "12-Month Plan",
+        "description": "Suitable for short-term projects with flexible payment",
+        "buttonText": "Choose 12-Month Plan",
+        "features": {
+          "0": "All features of Dashboard 2D",
+          "1": "24/7 technical support",
+          "2": "Free training and deployment",
+          "3": "Periodic software updates",
+          "4": "Automated data backup",
+          "5": "Detailed analytics reports",
+          "6": "Unlimited API integration",
+          "7": "Mobile app support"
+        }
+      },
+      "Gói 24 tháng": {
+        "title": "24-Month Plan",
+        "description": "Optimal solution for medium-term enterprises",
+        "buttonText": "Choose 24-Month Plan",
+        "features": {
+          "0": "All features of Dashboard 3D",
+          "1": "Advanced interactive 3D model",
+          "2": "AI/ML predictive analytics",
+          "3": "Dedicated support manager",
+          "4": "Custom interface design",
+          "5": "In-depth team training",
+          "6": "SLA 99.9% uptime",
+          "7": "Priority technical support",
+          "8": "Executive dashboard reports",
+          "9": "ERP/CRM system integration"
+        }
+      },
+      "Gói 36 tháng": {
+        "title": "36-Month Plan",
+        "description": "Long-term commitment with the best discount",
+        "buttonText": "Choose 36-Month Plan",
+        "features": {
+          "0": "All features of the 24-Month Plan",
+          "1": "Full Virtual Reality (VR/AR)",
+          "2": "White-label solution",
+          "3": "Multi-tenant architecture",
+          "4": "Advanced analytics & BI",
+          "5": "Custom module development",
+          "6": "24/7 dedicated support team",
+          "7": "Quarterly business review",
+          "8": "Free system upgrades",
+          "9": "Unlimited user licenses",
+          "10": "Enterprise security features"
         }
       }
     }
   },
   "industries": {
     "title": "Application Fields",
-    "subtitle": "Smart Dashboard serves diverse industries with superior efficiency",
+    "subtitle": "Smart Dashboard serves various industries with outstanding efficiency",
     "government": {
-      "title": "Government - Public Agencies",
-      "description": "Comprehensive monitoring of macroeconomic indicators such as GDP growth, inflation, unemployment rate, balance of payments, budget revenue-expenditure, KPIs, project progress, and bottlenecks.",
+      "title": "Government - Public Sector",
+      "description": "Comprehensive monitoring of macroeconomic indicators such as GDP growth, inflation, unemployment rates, balance of payments, budget revenues and expenditures, KPIs, project progress, and bottlenecks.",
       "benefits": {
         "0": "Real-time KPI monitoring",
         "1": "Project progress tracking",
@@ -299,7 +349,7 @@
     },
     "finance": {
       "title": "Finance - Banking - Insurance",
-      "description": "Helps managers gain a complete view of operations: cash flow, branch KPIs, ATMs, outstanding loans, debt recovery efficiency, and new account openings, all displayed intuitively and updated instantly 24/7.",
+      "description": "Empowers managers to oversee operations comprehensively: cash flow, branch KPIs, ATMs, outstanding loans, debt recovery efficiency, and new account openings, all displayed intuitively and updated in real-time 24/7.",
       "benefits": {
         "0": "20-30% growth",
         "1": "24/7 cash flow monitoring",
@@ -308,29 +358,29 @@
     },
     "manufacturing": {
       "title": "Industry - Manufacturing",
-      "description": "Enhance production efficiency through real-time energy and KPI monitoring, reduce costs by 20-30% through operational optimization, improve safety, and aim for green industry and net-zero.",
+      "description": "Enhances production efficiency through real-time energy and KPI monitoring, reducing costs by 20-30% through operational optimization, improving safety, and advancing toward green, net-zero industry.",
       "benefits": {
         "0": "20-30% cost reduction",
         "1": "Real-time energy monitoring",
-        "2": "Net-zero alignment"
+        "2": "Advancing toward net-zero"
       }
     },
     "building": {
       "title": "Smart Buildings",
-      "description": "Comprehensive management of building systems from HVAC, electricity, water, and security to amenities. Optimize energy, reduce operating costs, and enhance user experience through 24/7 real-time monitoring.",
+      "description": "Manages entire building systems from HVAC, electricity, water, and security to amenities. Optimizes energy, reduces operational costs, and enhances user experience through 24/7 real-time monitoring.",
       "benefits": {
         "0": "30-40% energy savings",
-        "1": "25% reduction in operating costs",
+        "1": "25% operational cost reduction",
         "2": "Enhanced safety and security"
       }
     },
     "seaport": {
       "title": "Smart Seaports",
-      "description": "Transform seaports into digital command centers with 3D digital twins, real-time KPI monitoring, automated operations, and 30% increased loading/unloading productivity. Optimize logistics and reduce transportation costs.",
+      "description": "Transforms seaports into digital command centers with 3D digital twins, real-time KPI monitoring, automated operations, and up to 30% increased cargo handling productivity. Optimizes logistics and reduces transportation costs.",
       "benefits": {
         "0": "30% productivity increase",
         "1": "Real-time KPI monitoring",
-        "2": "40% improved safety"
+        "2": "40% safety improvement"
       }
     }
   },
@@ -338,38 +388,38 @@
     "title": "Wide Applications",
     "factory": {
       "name": "Factories",
-      "stats": "150+ factories implemented",
-      "description": "Monitor the entire production process from raw materials to finished products. Track machine performance, energy consumption, and product quality in real-time."
+      "stats": "150+ factories applied",
+      "description": "Monitors the entire production process from raw materials to finished products. Tracks machine performance, energy consumption, and product quality in real-time."
     },
     "port": {
       "name": "Seaports",
       "stats": "25+ trusted seaports",
-      "description": "Manage cargo handling operations, track vessel arrivals/departures, optimize logistics, and reduce waiting times."
+      "description": "Manages cargo handling, tracks vessel arrivals and departures, optimizes logistics, and reduces waiting times."
     },
     "bank": {
       "name": "Banks",
       "stats": "80+ bank branches",
-      "description": "Monitor transactions, analyze cash flow, manage credit risks, and optimize customer service across the system."
+      "description": "Monitors transactions, analyzes cash flow, manages credit risk, and optimizes customer service across the system."
     },
     "government": {
       "name": "Public Administration",
       "stats": "200+ government agencies",
-      "description": "Digitize administrative processes, track document processing progress, enhance transparency, and improve public services."
+      "description": "Digitizes administrative processes, tracks document processing progress, enhances transparency, and improves public services."
     },
     "building": {
       "name": "Buildings",
       "stats": "500+ smart buildings",
-      "description": "Manage HVAC, electricity, water, security, and building amenities to optimize energy and enhance user experience."
+      "description": "Manages HVAC, electricity, water, security, and amenities to optimize energy and enhance user experience."
     },
     "logistics": {
-      "name": "Warehousing",
+      "name": "Logistics",
       "stats": "300+ connected warehouses",
-      "description": "Track inventory, optimize transport routes, manage storage temperatures, and automate logistics processes."
+      "description": "Tracks inventory, optimizes transport routes, manages storage temperature, and automates logistics processes."
     },
     "pinned": "Pinned"
   },
   "customRegistrationForm": {
-    "title": "Custom Plan Registration",
+    "title": "Custom Package Registration",
     "description": "We will contact you promptly to provide a tailored solution.",
     "selectedPlan": "Selected Plan",
     "priceLabel": "Price",
@@ -384,7 +434,7 @@
       },
       "phoneNumber": {
         "label": "Phone Number *",
-        "placeholder": "+84 987 654 321"
+        "placeholder": "0987654321"
       },
       "company": {
         "label": "Company Name",
@@ -392,7 +442,7 @@
       },
       "additionalNotes": {
         "label": "Additional Notes",
-        "placeholder": "Describe specific requirements, deployment timeline, budget, etc."
+        "placeholder": "Describe any special requirements, deployment timeline, or budget..."
       }
     },
     "hotlineText": "Or contact our hotline directly:",
@@ -410,14 +460,14 @@
     },
     "validation": {
       "userName": {
-        "min": "Username must be at least 2 characters long"
+        "min": "Username must be at least 2 characters"
       },
       "email": {
-        "invalid": "Invalid email address"
+        "invalid": "Invalid email"
       },
       "phoneNumber": {
         "min": "Phone number must have at least 10 digits",
-        "max": "Phone number must not exceed 20 digits"
+        "max": "Phone number cannot exceed 20 digits"
       }
     }
   },
@@ -434,21 +484,21 @@
     },
     "hero": {
       "title": "Smart Dashboard - Smart Buildings",
-      "description": "Comprehensive management of building systems from HVAC, electricity, water, and security to amenities. Optimize energy, reduce operating costs, and enhance user experience through 24/7 real-time monitoring."
+      "description": "Manages entire building systems from HVAC, electricity, water, and security to amenities. Optimizes energy, reduces operational costs, and enhances user experience through 24/7 real-time monitoring."
     },
     "introduction": {
-      "overview": "In the context of urbanization and digitization, modern buildings, especially critical infrastructure like <span class=\"font-semibold text-blue-700\">data centers</span>, have evolved into complex <span class=\"font-semibold text-blue-700\">technological ecosystems</span>. They are no longer static structures but <span class=\"font-semibold text-blue-700\">living organizations</span>, driven by the integration of multiple systems.",
+      "overview": "In the context of urbanization and digitization, modern buildings, especially critical infrastructure like <span class=\"font-semibold text-blue-700\">data centers</span>, have evolved into <span class=\"font-semibold text-blue-700\">complex technological ecosystems</span>. They are no longer static structures but <span class=\"font-semibold text-blue-700\">living organizations</span>, powered by the integration of multiple systems.",
       "imageAlt": "Introduction to Building & Data Center Management",
-      "systems": "These systems include <span class=\"font-semibold text-blue-700\">Building Management Systems (BMS)</span>, electrical systems, <span class=\"font-semibold text-blue-700\">ventilation and air conditioning (HVAC)</span>, and security systems such as <span class=\"font-semibold text-blue-700\">CCTV</span> and access control."
+      "systems": "These systems include <span class=\"font-semibold text-blue-700\">Building Management Systems (BMS)</span>, electrical systems, <span class=\"font-semibold text-blue-700\">heating, ventilation, and air conditioning (HVAC)</span>, and security systems such as <span class=\"font-semibold text-blue-700\">CCTV</span> and access control."
     },
     "challenges": {
       "title": "Real-World Challenges in Building & Data Center Management",
-      "description": "Managing these infrastructures traditionally faces significant challenges stemming from complexity and lack of system connectivity.",
+      "description": "Managing these infrastructures using traditional methods faces significant challenges due to the complexity and lack of system integration.",
       "imageAlt": "Real-World Challenges in Building & Data Center Management",
       "dataFragmentation": {
-        "title": "Fragmented Data, Lack of Unified View",
+        "title": "Fragmented Data and Lack of Unified Vision",
         "description": "This is a persistent issue. Data from energy management systems (EMS), building management systems (BMS), and security systems often operate in separate \"data silos.\"",
-        "example": "Managers cannot see the correlation between rising server room temperatures (BMS data) and sudden spikes in electricity consumption (EMS data)."
+        "example": "Managers cannot get a holistic view to correlate, for instance, a temperature spike in a server room (BMS data) with a surge in power consumption (EMS data)."
       },
       "reactiveManagement": {
         "title": "Reactive Management",
@@ -456,22 +506,22 @@
       },
       "energyWaste": {
         "title": "Energy Waste and High Costs",
-        "description": "The inability to monitor and analyze comprehensively makes identifying energy waste difficult. HVAC systems may operate below optimal efficiency."
+        "description": "The inability to monitor and analyze comprehensively makes it difficult to identify areas of energy waste. HVAC systems may operate below optimal capacity."
       },
       "slowResponse": {
-        "title": "Slow Incident Response Time",
-        "description": "When an incident occurs (power outage, water leak, or unauthorized access), identifying the root cause and exact location is delayed due to checking fragmented systems, increasing risks and damages."
+        "title": "Slow Incident Response Times",
+        "description": "When an incident occurs (power outage, water leak, or unauthorized access), identifying the root cause and exact location is delayed due to checking information from multiple disconnected systems, increasing risks and damages."
       }
     },
     "strategicBenefits": {
       "title": "Strategic and Quantifiable Benefits",
-      "description": "Implementing Smart Dashboard for buildings and data centers delivers tangible benefits, transforming management and operations.",
+      "description": "Implementing Smart Dashboard for buildings and data centers delivers specific benefits, transforming management and operational approaches.",
       "imageAlt": "Strategic and Quantifiable Benefits"
     },
     "features": {
       "energySaving": {
         "title": "30-40% Energy Savings",
-        "description": "Optimize HVAC, lighting, and air conditioning systems through smart AI and IoT."
+        "description": "Optimizes HVAC, lighting, and air conditioning systems through smart AI and IoT."
       },
       "security": {
         "title": "Enhanced Safety and Security",
@@ -485,13 +535,13 @@
     "metrics": {
       "title": "Proven Efficiency",
       "energySaving": "Energy Savings",
-      "costReduction": "Operating Cost Reduction",
+      "costReduction": "Operational Cost Reduction",
       "efficiency": "Increased Work Efficiency",
       "safety": "Improved Safety"
     },
     "featuresSection": {
       "title": "Key Features",
-      "subtitle": "Comprehensive Solution for Smart Buildings"
+      "subtitle": "Comprehensive solution for smart buildings"
     },
     "systemsManagement": {
       "title": "Managed Systems"
@@ -500,18 +550,18 @@
       "title": "Benefits Delivered"
     },
     "benefits": {
-      "monitoring": "24/7/365 Building System Monitoring",
-      "automation": "85% Automated Management Processes",
-      "satisfaction": "45% Increase in User Satisfaction",
-      "maintenance": "60% Reduction in Maintenance and Repair Time"
+      "monitoring": "24/7/365 building system monitoring",
+      "automation": "85% automated management processes",
+      "satisfaction": "45% increase in user satisfaction",
+      "maintenance": "60% reduction in maintenance and repair time"
     },
     "services": {
-      "hvac": "HVAC Systems",
+      "hvac": "HVAC System",
       "lighting": "Smart Lighting",
       "security": "Security - Cameras",
       "accessControl": "Access Control",
       "energyManagement": "Energy Management",
-      "fireSystem": "Fire Alarm Systems"
+      "fireSystem": "Fire Alarm System"
     },
     "cta": {
       "title": "Transform Your Building into a Smart Building",
@@ -527,22 +577,22 @@
       "digitalTwin": {
         "title": "Create a \"Virtual Command Center\" with Digital Twin",
         "reality": "Managers no longer need to rely on technical drawings or multiple separate screens. Instead, they interact with a detailed 3D model of the entire building or data center.",
-        "application": "This 3D model is a \"digital twin\" linked to real-time data from sensors and systems. Users can \"dive into\" the model, clicking on a server room, a rack, or a specific cooling unit to view operational parameters."
+        "application": "This 3D model is a \"digital twin\" linked to real-time data from sensors and systems. Users can \"dive into\" the model, clicking on a server room, a rack row, or a specific cooling unit to view operational parameters."
       },
       "environmentalMonitoring": {
         "title": "Smart Environmental and Energy Monitoring",
-        "reality": "Key environmental and energy metrics are continuously monitored and visualized clearly.",
+        "reality": "Key environmental and energy metrics are continuously monitored and visualized in an easy-to-understand format.",
         "application": "The dashboard integrates data from IoT sensors to monitor temperature, air quality. It uses tools like heatmaps to highlight areas with abnormally high temperatures in data centers and track energy consumption metrics."
       },
       "securityManagement": {
         "title": "Integrated Security and Safety Management",
-        "reality": "Security events are verified and addressed faster by combining multiple information sources.",
-        "application": "The system integrates live footage from security cameras (CCTV) directly into the 3D model. When an alert occurs (e.g., unauthorized server room door opening), the dashboard automatically displays footage from the nearest camera at that location."
+        "reality": "Security events are verified and handled faster by combining multiple information sources.",
+        "application": "The system integrates live footage from security cameras (CCTV) directly into the 3D model. When an alert occurs (e.g., a server room door is opened unauthorizedly), the dashboard can automatically display footage from the nearest camera at that location."
       },
       "maintenanceSupport": {
-        "title": "Proactive Operation and Maintenance Support",
-        "reality": "Minimize unexpected downtime, a critical factor for data centers.",
-        "application": "The dashboard integrates AI for predictive maintenance of critical equipment like cooling systems or uninterruptible power supplies (UPS). AI can warn of potential failures early, allowing maintenance planning before issues arise."
+        "title": "Proactive Operations and Maintenance Support",
+        "reality": "Minimizes the risk of unexpected downtime, critical for data centers.",
+        "application": "The dashboard integrates AI for predictive maintenance of critical equipment like cooling systems or UPS. AI can provide early warnings of potential failures, enabling maintenance planning before issues occur."
       }
     }
   },
@@ -554,33 +604,33 @@
     "features": {
       "growth": {
         "title": "20-30% Growth",
-        "description": "Optimize revenue and profit through accurate and timely data analysis."
+        "description": "Optimizes revenue and profit through accurate and timely data analysis."
       },
       "monitoring": {
         "title": "24/7 Cash Flow Monitoring",
-        "description": "Track cash flow in real-time from all branches, ATMs, and transaction channels."
+        "description": "Tracks cash flow in real-time from all branches, ATMs, and transaction channels."
       },
       "decisions": {
         "title": "Optimized Business Decisions",
-        "description": "Make swift decisions based on intelligent analytics and accurate forecasts."
+        "description": "Makes rapid decisions based on intelligent analytics and accurate forecasts."
       }
     },
     "metrics": {
       "title": "Impressive Metrics",
       "realTimeDebt": "Real-Time Outstanding Debt",
       "recoveryEfficiency": "Debt Recovery Efficiency",
-      "newAccountsDaily": "New Accounts Daily",
+      "newAccountsDaily": "Daily New Accounts",
       "transactionsProcessed": "Processed Transactions"
     },
     "benefits": {
-      "creditRisk": "25% Improved Credit Risk Management",
-      "reportProcessing": "40% Reduced Report Processing Time",
-      "cashFlowAccuracy": "30% Improved Cash Flow Forecast Accuracy",
-      "customerExperience": "50% Improved Customer Experience"
+      "creditRisk": "25% improved credit risk management efficiency",
+      "reportProcessing": "40% reduction in report processing time",
+      "cashFlowAccuracy": "30% increase in cash flow forecast accuracy",
+      "customerExperience": "50% improved customer experience"
     },
     "hero": {
       "title": "Smart Dashboard - Finance / Banking / Insurance",
-      "description": "Helps managers gain a complete view of operations: cash flow, branch KPIs, ATMs, outstanding loans, debt recovery efficiency, and new account openings, all displayed intuitively and updated instantly 24/7."
+      "description": "Empowers managers to oversee operations comprehensively: cash flow, branch KPIs, ATMs, outstanding loans, debt recovery efficiency, and new account openings, all displayed intuitively and updated in real-time 24/7."
     },
     "challenges": {
       "title": "Real-World Challenges in Finance - Banking",
@@ -588,7 +638,7 @@
       "imageAlt": "Real-World Challenges in Finance - Banking",
       "challenge1": {
         "title": "Decision-Making Delays",
-        "content": "Traditional management relies on manual, periodic reports (monthly or quarterly), creating significant delays and forcing leadership to react to outdated data."
+        "content": "Traditional management methods rely on manual, monthly, or quarterly reports, creating significant delays and forcing leadership to react to outdated data."
       },
       "challenge2": {
         "title": "Fragmented Data",
@@ -596,27 +646,27 @@
       },
       "challenge3": {
         "title": "Compliance and Security Pressures",
-        "content": "Must comply with stringent data and financial regulations like GDPR, HIPAA, ISO 27001, while facing risks of cyberattacks and data breaches."
+        "content": "Must comply with strict data and financial regulations like GDPR, HIPAA, ISO 27001, while facing risks of cyberattacks and data leaks."
       },
       "challenge4": {
         "title": "Complex Risk Management",
-        "content": "Facing multiple risks like credit risk, market risk, and financial fraud. Detecting anomalies early in millions of daily transactions is a massive challenge."
+        "content": "Faces multiple risks like credit risk, market risk, and financial fraud. Detecting anomalies early in millions of daily transactions is a significant challenge."
       }
     },
     "applications": {
       "title": "Detailed Applications of Smart Dashboard in Practice",
-      "description": "To address these challenges, Smart Dashboard acts as a \"command center\" or \"digital brain,\" turning data into a proactive management tool.",
+      "description": "To address these challenges, Smart Dashboard acts as a \"command center\" or \"digital brain,\" transforming data into proactive management tools.",
       "realityLabel": "Reality",
       "applicationLabel": "Application",
       "application1": {
         "title": "Building a \"Virtual Command Center\" for Leadership",
-        "reality": "Instead of waiting for paper reports, CEOs and directors can access a Management Dashboard displaying core financial KPIs in real-time.",
-        "application": "The dashboard visualizes metrics like Non-Performing Loan Ratio, Return on Assets (ROA), and Net Promoter Score (NPS), allowing comparisons with targets and prior periods."
+        "reality": "Instead of waiting for paper reports, CEOs and boards can access a Management Dashboard displaying core financial KPIs in real-time.",
+        "application": "The dashboard visualizes metrics like non-performing loan ratios, return on assets (ROA), and customer satisfaction index (NPS), allowing comparisons with targets and prior periods."
       },
       "application2": {
-        "title": "AI Integration for Proactive Risk Management",
+        "title": "AI-Integrated Proactive Risk Management",
         "reality": "Financial institutions use AI-integrated dashboards to not only monitor but also predict risks.",
-        "application": "The AI system analyzes market trends to forecast interest rate fluctuations, detect fraud early, and predict customer credit risks."
+        "application": "AI systems analyze market trends to forecast interest rate fluctuations, detect fraud early, and predict customer credit risks."
       },
       "application3": {
         "title": "Smart Cybersecurity Operations Center (SOC)",
@@ -626,12 +676,12 @@
       "application4": {
         "title": "Optimized Operations and Compliance",
         "reality": "Audit and compliance reporting processes are often labor-intensive.",
-        "application": "The dashboard automates compliance report generation, continuous monitoring, and audit logging, ensuring organizations are \"always audit-ready.\""
+        "application": "The dashboard automates compliance report generation, continuous monitoring, and audit logs, ensuring organizations are \"always audit-ready.\""
       }
     },
     "strategicBenefits": {
       "title": "Strategic and Quantifiable Benefits",
-      "description": "Effective use of Smart Dashboard delivers significant, measurable value:",
+      "description": "Effective Smart Dashboard implementation delivers significant, measurable value:",
       "imageAlt": "Strategic and Quantifiable Benefits",
       "benefit1": {
         "title": "Faster and Higher-Quality Decision-Making",
@@ -641,27 +691,27 @@
       },
       "benefit2": {
         "title": "Cost Savings and Enhanced Efficiency",
-        "content": "Automating data collection, aggregation, and reporting frees up personnel from manual tasks, saving costs and allowing focus on high-value tasks like strategic analysis."
+        "content": "Automating data collection, aggregation, and reporting frees up staff from manual tasks, saving labor costs and allowing focus on high-value tasks like strategic analysis."
       },
       "benefit3": {
         "title": "Enhanced Security and Resilience",
         "content": "Provides a real-time, comprehensive view of threats, enabling financial institutions to reduce detection and response times, better protecting assets and customer data."
       },
       "benefit4": {
-        "title": "Transparent and Quantified Risk Management",
-        "content": "An advanced Smart Dashboard can \"translate cyber risks into dollars and cents.\" It helps CISOs justify Return on Security Investment (ROSI), rationalize budgets, and communicate security value in business terms to the board."
+        "title": "Transparency and Risk Quantification",
+        "content": "An advanced Smart Dashboard can \"translate cyber risks into dollars and cents.\" It helps CISOs demonstrate Return on Security Investment (ROSI), justify budgets, and communicate security value to the board in business language."
       }
     },
     "featuresSection": {
       "title": "Key Features",
-      "subtitle": "Comprehensive Solution for the Finance and Banking Industry"
+      "subtitle": "Comprehensive solution for the finance and banking industry"
     },
     "benefitsSection": {
       "title": "Benefits Delivered"
     },
     "cta": {
       "title": "Optimize Financial Performance Today",
-      "description": "Contact us for a tailored Smart Dashboard solution",
+      "description": "Contact us for tailored Smart Dashboard solutions",
       "contactButton": "Contact Now",
       "homeButton": "Back to Home"
     }
@@ -677,124 +727,124 @@
     "features": {
       "monitoring": {
         "title": "Real-Time KPI Monitoring",
-        "description": "Track key performance indicators for departments and projects intuitively and instantly."
+        "description": "Tracks key performance indicators of departments and projects intuitively and instantly."
       },
       "projectTracking": {
         "title": "Project Progress Tracking",
-        "description": "Manage and monitor the progress of public investment projects and development programs."
+        "description": "Manages and monitors the progress of public investment projects and development programs."
       },
       "budgetAnalysis": {
         "title": "Detailed Budget Analysis",
-        "description": "Analyze revenue and expenditure budgets by item and department with high accuracy."
+        "description": "Analyzes budget revenues and expenditures by item and department with high accuracy."
       }
     },
     "benefits": {
-      "efficiency": "40% Improved Public Administration Efficiency",
-      "reportingTime": "30% Reduced Periodic Reporting Time",
-      "transparency": "50% Increased Information Transparency",
-      "decisionProcess": "60% Improved Decision-Making Process"
+      "efficiency": "40% increased public administration efficiency",
+      "reportingTime": "30% reduced periodic reporting time",
+      "transparency": "50% increased information transparency",
+      "decisionProcess": "60% improved decision-making process"
     },
     "hero": {
-      "title": "Smart Dashboard - Government / Public Agencies",
-      "description": "Comprehensive monitoring of macroeconomic indicators like GDP growth, inflation, unemployment rate, balance of payments, budget revenue-expenditure, KPIs, project progress, and bottlenecks."
+      "title": "Smart Dashboard - Government / Public Sector",
+      "description": "Comprehensive monitoring of macroeconomic indicators such as GDP growth, inflation, unemployment rates, balance of payments, budget revenues and expenditures, KPIs, project progress, and bottlenecks."
     },
     "challenges": {
       "title": "Real-World Challenges in Public Administration",
-      "description": "Traditional operational methods reveal significant limitations, hindering the efficiency of public agency management and operations.",
+      "description": "Traditional operations reveal limitations that hinder the efficiency of government management and operations.",
       "imageAlt": "Real-World Challenges in Public Administration",
       "challenge1": {
         "title": "Reactive Management and Information Delays",
-        "content": "Decisions are often based on monthly, quarterly, or annual reports, leading to a \"reactive\" management approach that struggles to address sudden issues like natural disasters, pandemics, or security concerns."
+        "content": "Decisions are often based on monthly, quarterly, or annual reports, leading to reactive management that struggles to address sudden issues like natural disasters, pandemics, or security concerns."
       },
       "challenge2": {
         "title": "Fragmented and Unsynchronized Data",
-        "content": "Public agencies often handle vast amounts of fragmented data from various sources. Manual aggregation is time-consuming and error-prone, leading to a lack of a comprehensive view for macro decision-making."
+        "content": "Government agencies often handle large volumes of fragmented data from various sources. Manual aggregation is time-consuming and error-prone, lacking a comprehensive view for macro decision-making. Integrating data from legacy systems across departments is a major challenge."
       },
       "challenge3": {
         "title": "Lack of Transparency and Accountability",
-        "content": "Traditional reporting processes often lack transparency and accessibility, potentially eroding public trust in government."
+        "content": "Traditional reporting processes often lack transparency and accessibility, potentially reducing public trust in government."
       },
       "challenge4": {
         "title": "Security and Privacy Risks",
-        "content": "Centralizing sensitive citizen and business data creates an attractive target for cyberattacks. Balancing transparency and security is a major challenge."
+        "content": "Centralizing sensitive citizen and business data creates an attractive target for cyberattacks. Balancing transparency with security is a significant challenge."
       },
       "challenge5": {
         "title": "Change Management Challenges",
-        "content": "Transitioning from manual, paper-based processes to data-driven environments is a significant cultural challenge, requiring a shift in mindset and comprehensive training for staff."
+        "content": "Transitioning from manual, paper-based workflows to data-driven environments is a cultural challenge, requiring a shift in mindset and comprehensive training for staff."
       }
     },
     "applications": {
       "title": "Detailed Applications of Smart Dashboard in Practice",
-      "description": "In Vietnam and globally, Smart Dashboard is deployed as a \"digital brain\" to address these challenges, with a prominent model being the <span className=\"font-semibold text-blue-700\">Intelligent Operations Center (IOC)</span>.",
+      "description": "In Vietnam and globally, Smart Dashboard is implemented as a \"digital brain\" to address these challenges, with a prominent model being <span className=\"font-semibold text-blue-700\">Intelligent Operations Centers (IOC)</span>.",
       "realityLabel": "Reality",
       "applicationLabel": "Application",
       "application1": {
         "title": "Building a Comprehensive Intelligent Operations Center (IOC)",
-        "reality": "Instead of departments operating independently, provincial/city leaders have a central operations room where all information converges.",
-        "application": "The IOC acts as a \"digital brain,\" integrating data from various departments into a central hub, providing a holistic view across economic, social, security, and public service domains.",
+        "reality": "Instead of departments operating independently, provincial/city leaders have a centralized control room where all information converges.",
+        "application": "The IOC acts as a \"digital brain,\" integrating data from various departments into a single hub, providing a holistic view across economic, social, security, and public service domains.",
         "evidenceTitle": "Evidence in Vietnam",
         "dalat": {
           "title": "Da Lat",
-          "description": "The first city to implement an IOC, integrating nearly 300 high-resolution cameras for security and traffic monitoring, enabling leaders to manage from a macro to micro level."
+          "description": "The first city to implement an IOC, integrating nearly 300 high-resolution cameras for security and traffic monitoring, enabling leaders to manage from macro to micro levels."
         },
         "binhduong": {
           "title": "Binh Duong",
-          "description": "A comprehensive model collecting and integrating over 1,000 indicators across 27 fields, focusing on budget revenue-expenditure, public investment disbursement, and the 1022 hotline. Published 13 datasets on the open data portal."
+          "description": "A comprehensive model collecting over 1,000 metrics across 27 fields, focusing on budget revenues/expenses, public investment disbursement, and the 1022 hotline. Published 13 datasets on the open data portal."
         }
       },
       "application2": {
         "title": "Multidimensional Monitoring and Instant Decision Support",
         "reality": "Leaders can grasp situations instantly and issue timely directives without waiting for reports.",
-        "application": "The dashboard enables monitoring of all system aspects, from public finance, investment disbursement progress, to document processing at public administration centers."
+        "application": "The dashboard enables monitoring of all system aspects, from public finance, disbursement progress, to document processing at public administrative centers."
       },
       "application3": {
         "title": "Improved Public Service Quality",
         "reality": "Issues in public service processes are identified and resolved faster.",
-        "application": "The dashboard tracks and analyzes citizen satisfaction metrics, waiting times, and on-time document processing rates, helping agencies identify bottlenecks and improve processes."
+        "application": "The dashboard tracks and analyzes metrics like citizen satisfaction, waiting times, and on-time document processing rates, helping agencies identify bottlenecks and improve processes."
       },
       "application4": {
         "title": "Enhanced Citizen Interaction and Transparency",
         "reality": "Citizens can monitor government activities and provide feedback easily.",
-        "application": "The dashboard is a powerful tool for open government data, allowing citizens to submit feedback on infrastructure or security issues, promoting transparent and efficient governance."
+        "application": "The dashboard is a powerful tool for open government data, allowing citizens to submit feedback on infrastructure and security issues, promoting transparent and effective governance."
       }
     },
     "strategicBenefits": {
       "title": "Strategic and Quantifiable Benefits",
-      "description": "Implementing Smart Dashboard in public administration delivers significant, measurable impacts, contributing to a modern administrative system.",
+      "description": "Implementing Smart Dashboard in public administration delivers significant, measurable impacts, contributing to a modern administrative framework.",
       "imageAlt": "Strategic and Quantifiable Benefits",
       "benefit1": {
         "title": "Transition to Proactive Governance",
         "benefitsLabel": "Benefits",
-        "content": "This is the greatest strategic benefit. The dashboard shifts government from reactive to proactive management. When integrated with AI and Machine Learning, it analyzes historical data to forecast future scenarios, supporting evidence-based policy planning."
+        "content": "This is the greatest strategic benefit. The dashboard shifts government from reactive to proactive management. With AI and machine learning integration, it analyzes historical data to forecast future scenarios, supporting evidence-based policy planning."
       },
       "benefit2": {
-        "title": "Improved Efficiency and Cost Savings",
+        "title": "Increased Efficiency and Cost Savings",
         "evidenceLabel": "Evidence",
-        "evidence": "Digitization projects like online tax filing can reduce average processing time by up to 25%.",
+        "evidence": "Digitization projects like online tax filing can reduce processing time by up to 25%.",
         "benefitsLabel": "Benefits",
-        "benefits": "Automating report generation minimizes manual tasks, significantly saving time and labor, increasing productivity, and reducing errors."
+        "benefits": "Automating report generation reduces manual tasks, saving significant time and labor, increasing productivity, and minimizing errors."
       },
       "benefit3": {
         "title": "Enhanced Transparency and Public Trust",
         "benefitsLabel": "Benefits",
-        "content": "Public data disclosure enhances citizen oversight, boosting trust and satisfaction, creating an objective dialogue environment for more effective governance."
+        "content": "Public data disclosure increases public oversight, boosting trust and citizen satisfaction, fostering an objective dialogue environment for more effective governance."
       },
       "benefit4": {
         "title": "Optimized Public Resource Allocation",
         "benefitsLabel": "Benefits",
-        "content": "By providing a comprehensive view of budgets and performance, the dashboard helps governments monitor and allocate resources more effectively, especially in public investment disbursement."
+        "content": "By providing a comprehensive view of budgets and performance, the dashboard helps governments monitor and allocate resources more effectively, especially for public investment disbursement."
       }
     },
     "whyChooseUs": {
       "title": "Why Choose Us?",
       "featuresTitle": "Key Features",
-      "featuresSubtitle": "Comprehensive Solution for Effective Public Administration",
+      "featuresSubtitle": "Comprehensive solution for effective public administration",
       "benefitsTitle": "Benefits Delivered",
-      "benefitsSubtitle": "Comprehensive Solution for Effective Public Administration"
+      "benefitsSubtitle": "Comprehensive solution for effective public administration"
     },
     "cta": {
       "title": "Ready to Modernize Public Administration?",
-      "description": "Contact us for a tailored Smart Dashboard solution",
+      "description": "Contact us for tailored Smart Dashboard solutions",
       "contactButton": "Contact Now",
       "homeButton": "Back to Home"
     }
@@ -807,28 +857,28 @@
     "features": {
       "costReduction": {
         "title": "20-30% Cost Reduction",
-        "description": "Optimize production processes and resource management, minimizing waste."
+        "description": "Optimizes production processes and resource management, minimizing waste."
       },
       "energyMonitoring": {
         "title": "Real-Time Energy Monitoring",
-        "description": "Track and adjust energy consumption for each machine and production line."
+        "description": "Tracks and adjusts energy consumption for individual machines and production lines."
       },
       "netZero": {
-        "title": "Net-Zero Alignment",
-        "description": "Achieve zero carbon emissions through environmental monitoring and energy optimization."
+        "title": "Advancing Toward Net-Zero",
+        "description": "Achieves zero carbon emissions through environmental monitoring and energy optimization."
       }
     },
     "metrics": {
-      "costReduction": "Operating Cost Reduction",
+      "costReduction": "Operational Cost Reduction",
       "productivityIncrease": "Increased Production Efficiency",
       "co2Reduction": "CO2 Emissions Reduction",
       "energyOptimization": "Energy Optimization"
     },
     "benefits": {
-      "productivity": "25% Increased Overall Production Efficiency",
-      "maintenance": "30% Reduced Simple Maintenance Time",
-      "safety": "40% Improved Workplace Safety",
-      "inventory": "50% Optimized Inventory Management"
+      "productivity": "25% increased overall production efficiency",
+      "maintenance": "30% reduced simple maintenance time",
+      "safety": "40% improved workplace safety",
+      "inventory": "50% optimized inventory management"
     },
     "applications": {
       "automotive": "Automotive Production Lines",
@@ -836,31 +886,31 @@
       "textile": "Textile Industrial Zones",
       "chemical": "Chemical Plants",
       "electronics": "Electronics Manufacturing Facilities",
-      "mechanical": "Mechanical Fabrication Workshops"
+      "mechanical": "Mechanical Manufacturing Workshops"
     },
     "hero": {
       "title": "Smart Dashboard - Industry / Manufacturing",
-      "description": "Enhance production efficiency through real-time energy and KPI monitoring, reduce costs by 20-30% through operational optimization, improve safety, and aim for green industry and net-zero."
+      "description": "Enhances production efficiency through real-time energy and KPI monitoring, reducing costs by 20-30% through operational optimization, improving safety, and advancing toward green, net-zero industry."
     },
     "introduction": {
-      "paragraph1": "In the context of the Fourth Industrial Revolution (Industry 4.0), the manufacturing sector and industrial zones are at the forefront of a profound and comprehensive transformation. Factories are no longer mere assembly sites but have become \"data goldmines\" due to the proliferation of IoT devices, smart sensors, and automation systems.",
+      "paragraph1": "In the context of the Fourth Industrial Revolution (Industry 4.0), manufacturing and industrial zones are at the heart of a profound and comprehensive transformation. Factories are no longer mere assembly sites but have become \"data goldmines\" due to the proliferation of IoT devices, smart sensors, and automation systems.",
       "imageAlt": "Introduction to Industrial Zones and Factories",
-      "paragraph2": "Data is now considered the \"new oil,\" a strategic asset and the lifeblood of all Smart Factory operations.",
-      "paragraph3": "A Smart Industrial Park takes this further, applying Smart Factory principles across the entire zone, managing infrastructure, production, energy, environment, security, and logistics in an integrated manner."
+      "paragraph2": "Data is now considered the \"new oil,\" a strategic asset and the lifeblood of all operations in a Smart Factory.",
+      "paragraph3": "A Smart Industrial Park takes this further, applying Smart Factory principles on a larger scale, managing infrastructure, production, energy, environment, security, and logistics in an integrated manner."
     },
     "challenges": {
       "title": "Real-World Challenges in Industrial Zones & Factories",
-      "description": "Having abundant data but failing to leverage it effectively turns potential into a burden. Factories and industrial zones face systemic barriers.",
+      "description": "Possessing vast amounts of data but failing to leverage it effectively turns potential into a burden. Factories and industrial zones face systemic barriers.",
       "imageAlt": "Real-World Challenges in Industrial Zones & Factories",
       "challenge1": {
         "title": "Fragmented Data and \"Data Silos\"",
-        "description": "This is the primary challenge. Data from OT systems (SCADA, PLC) and IT systems (ERP, MES) are often managed by different departments and do not \"communicate.\"",
+        "description": "This is the top challenge. Data from OT systems (SCADA, PLC) and IT systems (ERP, MES) are often managed by different departments and do not \"communicate.\"",
         "exampleTitle": "Typical Example:",
-        "exampleContent": "The maintenance team monitors machine vibration data on CMMS, the production team tracks output on MES, and the facility team monitors energy consumption of the same machine on BMS. The result is no one has a holistic view, leading to delayed and inefficient decisions."
+        "exampleContent": "The maintenance team views machine vibration data on CMMS, the production team tracks output on MES, and the facility management team monitors energy consumption of the same machine on BMS. This results in no one having a holistic view, leading to delayed and inefficient decisions."
       },
       "challenge2": {
-        "title": "Integration and Standardization Difficulties",
-        "description": "Connecting a 20-year-old CNC lathe to a modern IoT sensor requires complex and costly protocol conversion due to diverse vendors and technologies."
+        "title": "Integration Difficulties and Lack of Standardization",
+        "description": "Connecting a 20-year-old CNC machine to a modern IoT sensor requires complex and costly protocol conversion due to diverse vendors and technologies."
       },
       "challenge3": {
         "title": "Poor Data Quality",
@@ -868,11 +918,11 @@
       },
       "challenge4": {
         "title": "Security and Cybersecurity",
-        "description": "When OT systems connect to IT networks and the internet, they face cybersecurity risks. Attacks can leak data or damage machinery, halting production."
+        "description": "When OT systems connect to IT networks and the internet, they face cybersecurity risks. Attacks can leak data or sabotage machinery, causing production halts."
       },
       "challenge5": {
         "title": "Skills Gap",
-        "description": "Turning data into insights requires a multidisciplinary team with deep machine knowledge and data science expertise. This talent shortage is a major barrier."
+        "description": "Turning data into insights requires multidisciplinary skills: deep machine knowledge and data science expertise. The shortage of such talent is a major barrier."
       }
     },
     "smartDashboard": {
@@ -881,19 +931,19 @@
       "application1": {
         "title": "Building a \"Virtual Command Center\" with Digital Twin",
         "practiceTitle": "Reality:",
-        "practiceContent": "Instead of managing through separate SCADA screens or spreadsheets, managers interact with a vivid 3D model of the entire factory or industrial zone.",
+        "practiceContent": "Instead of managing via separate SCADA screens or spreadsheets, managers interact with a 3D model of the entire factory or industrial zone.",
         "applicationTitle": "Application:",
-        "applicationContent": "This 3D model is a \"digital twin\" linked to real-time data streams. When a sensor triggers an alert, the corresponding machine in the 3D model changes color, flashes, or displays a warning."
+        "applicationContent": "This 3D model is a vivid \"digital twin,\" where each machine is linked to real-time data streams. When a sensor triggers an alert, the corresponding machine in the 3D model changes color, flashes, or displays a warning."
       },
       "application2": {
         "title": "Comprehensive Performance Monitoring via Key KPIs",
         "practiceTitle": "Reality:",
-        "practiceContent": "The most critical performance metrics are continuously monitored, enabling leadership to assess the \"health\" of production instantly.",
+        "practiceContent": "The most critical performance metrics are continuously tracked, enabling leadership to instantly assess the \"health\" of production activities.",
         "applicationTitle": "Application:",
         "oee": "(Overall Equipment Effectiveness)",
         "mtbf": "(Mean Time Between Failures)",
         "mttr": "(Mean Time To Repair)",
-        "other": "Defect Rate and Energy Consumption"
+        "other": "Defect rates and energy consumption"
       },
       "application3": {
         "title": "Predictive Maintenance with AI/ML Integration",
@@ -903,42 +953,42 @@
         "applicationContent": "The system integrates machine learning algorithms to analyze historical data on vibration, temperature, and pressure. The dashboard can predict potential failures, enabling maintenance planning before issues occur."
       },
       "application4": {
-        "title": "Smart Alert System to Reduce \"Alert Fatigue\"",
+        "title": "Smart Alert System to Minimize \"Alert Fatigue\"",
         "practiceTitle": "Reality:",
-        "practiceContent": "Operators are no longer overwhelmed by hundreds of insignificant alerts, a condition known as \"alert fatigue.\"",
+        "practiceContent": "Operators are no longer overwhelmed by hundreds of unimportant alerts, a condition known as \"alert fatigue.\"",
         "applicationTitle": "Application:",
-        "applicationContent": "The system uses complex logic to correlate multiple events. For example, an alert triggers only when (1) temperature rises, (2) vibration increases, AND (3) output drops - indicating a serious issue rather than a temporary fluctuation."
+        "applicationContent": "The system uses complex logic to correlate multiple events. For example, an alert is triggered only when (1) temperature rises, (2) vibration increases, AND (3) output drops—indicating a serious issue rather than temporary fluctuations."
       }
     },
     "strategicBenefits": {
       "title": "Strategic and Quantifiable Benefits",
-      "description": "Implementing Smart Dashboard is not just a technological upgrade but a strategic decision delivering measurable business outcomes.",
+      "description": "Implementing Smart Dashboard is not just a technological upgrade but a strategic decision delivering outstanding, measurable business results.",
       "imageAlt": "Strategic and Quantifiable Benefits",
       "benefit1": {
         "title": "Optimized Operations and Enhanced Efficiency",
         "evidenceTitle": "Evidence:",
-        "evidenceContent": "Up to 30% increase in Overall Equipment Effectiveness (OEE)",
+        "evidenceContent": "Up to 30% increase in overall equipment effectiveness (OEE)",
         "benefitsTitle": "Benefits:",
-        "downtimeReduction": "73% Reduced Downtime",
-        "troubleshootingTime": "90% Reduced Troubleshooting Time",
+        "downtimeReduction": "73% reduced downtime",
+        "troubleshootingTime": "90% reduced troubleshooting time",
         "reportingTime": "Reporting from 1-2 days to instant"
       },
       "benefit2": {
         "title": "Significant Cost Savings",
         "evidenceTitle": "Evidence:",
-        "evidenceContent": "Up to 60% reduction in industrial zone operating costs",
+        "evidenceContent": "Up to 60% reduced industrial zone operating costs",
         "benefitsTitle": "Benefits:",
-        "laborCost": "20% Labor Cost Savings",
-        "energyCost": "Significant Energy Cost Reduction",
-        "automation": "Automated Reporting and Data Collection"
+        "laborCost": "20% labor cost savings",
+        "energyCost": "Significant energy cost reduction",
+        "automation": "Automated reporting and data collection"
       },
       "benefit3": {
         "title": "Cultural Management Transformation",
-        "description": "Smart Dashboard shifts management culture from reactive, experience-based (\"firefighting\") to proactive, data-driven (\"smart governance\"). Creates a \"common language\" for performance, promoting transparency and collaboration."
+        "description": "Smart Dashboard shifts management culture from reactive, experience-based \"firefighting\" to proactive, data-driven \"smart governance.\" It creates a \"common language\" for performance, promoting transparency and collaboration."
       },
       "benefit4": {
-        "title": "Enhanced Competitive Advantage",
-        "description": "Efficiently managed, safe, and sustainable industrial zones are more attractive to international investors, especially those with high ESG standards. This is key to building sustainable competitive advantages in the digital era."
+        "title": "Enhanced Competitiveness",
+        "description": "Efficiently, safely, and sustainably managed industrial zones are more attractive to international investors, especially those with high ESG standards, building a sustainable competitive advantage in the digital era."
       }
     },
     "metricsSection": {
@@ -946,7 +996,7 @@
     },
     "featuresSection": {
       "title": "Key Features",
-      "subtitle": "Comprehensive Solution for the Manufacturing Industry"
+      "subtitle": "Comprehensive solution for the manufacturing industry"
     },
     "applicationsSection": {
       "title": "Practical Applications"
@@ -956,104 +1006,104 @@
     },
     "ctaSection": {
       "title": "Digitize Your Factory",
-      "subtitle": "Embark on the journey to Industry 4.0 and Net-Zero",
+      "subtitle": "Start the journey toward Industry 4.0 and Net-Zero",
       "contactButton": "Contact Now",
       "homeButton": "Back to Home"
     }
   },
   "seaport": {
     "slideshow": {
-      "digitalTwin": "3D Digital Twin of Seaport",
+      "digitalTwin": "3D Digital Twin of Seaports",
       "realTimeKPIs": "Real-Time KPI Monitoring",
       "automation": "Automated Operational Processes"
     },
     "features": {
       "productivity": {
         "title": "30% Productivity Increase",
-        "description": "Optimize cargo handling efficiency and reduce ship turnaround time through smart management."
+        "description": "Optimizes cargo handling efficiency and reduces vessel turnaround time through smart management."
       },
       "monitoring": {
         "title": "Real-Time KPI Monitoring",
-        "description": "Track port efficiency, cargo throughput, and berth status 24/7."
+        "description": "Tracks port efficiency, cargo throughput, and berth status 24/7."
       },
       "safety": {
         "title": "Enhanced Safety and Security",
-        "description": "Reduce serious accidents by 40% and strengthen comprehensive security control."
+        "description": "Reduces serious accidents by 40% and strengthens comprehensive security control."
       }
     },
     "metrics": {
       "productivity": "Increased Cargo Handling Productivity",
-      "turnaroundTime": "Reduced Ship Turnaround Time",
+      "turnaroundTime": "Reduced Vessel Turnaround Time",
       "safetyImprovement": "Reduced Serious Accidents",
       "operationalEfficiency": "Increased Operational Efficiency"
     },
     "benefits": {
-      "automation": "85% Automated Operational Processes",
-      "logisticsCost": "30% Reduced Overall Logistics Costs",
-      "accuracy": "40% Increased Counting Accuracy",
-      "customerExperience": "50% Improved Customer Experience"
+      "automation": "85% automated operational processes",
+      "logisticsCost": "30% reduced overall logistics costs",
+      "accuracy": "40% increased inventory accuracy",
+      "customerExperience": "50% improved customer experience"
     },
     "hero": {
       "title": "Smart Dashboard - Seaport Industry",
-      "description": "Transform seaports into digital command centers with 3D digital twins, real-time KPI monitoring, automated operations, and 30% increased cargo handling productivity."
+      "description": "Transforms seaports into digital command centers with 3D digital twins, real-time KPI monitoring, automated operations, and up to 30% increased cargo handling productivity."
     },
     "introduction": {
-      "paragraph1": "The seaport industry is the \"lifeblood\" of global trade and an indispensable link in international supply chains. With increasing cargo volumes and pressure for speed and accuracy, seaports are no longer static docks but complex operational ecosystems that dictate the pace of an entire economy.",
+      "paragraph1": "The seaport industry serves as the \"lifeblood\" of global trade and a critical link in international supply chains. With increasing cargo volumes and demands for speed and accuracy, seaports are no longer static docks but complex operational ecosystems driving the pace of entire economies.",
       "imageAlt": "Introduction to the Seaport Industry",
-      "paragraph2": "In Vietnam, with its strategic geographic position, the seaport system is a key driver of economic growth. However, the industry faces significant challenges with hinterland connectivity and high logistics costs, requiring a revolution in operational management to enhance competitiveness."
+      "paragraph2": "In Vietnam, with its strategic geographic position, the seaport system is a key driver of economic growth. However, the industry faces significant challenges in hinterland connectivity and high logistics costs, necessitating a revolution in operational management to enhance competitiveness."
     },
     "challenges": {
       "title": "Real-World Challenges in the Seaport Industry",
-      "description": "Seaports operating traditionally face persistent \"bottlenecks\" that hinder development in the digital era:",
+      "description": "Seaports operating under traditional models face persistent \"bottlenecks\" hindering development in the digital era:",
       "imageAlt": "Real-World Challenges in the Seaport Industry",
       "challenge1": {
         "title": "Fragmented Data and \"Data Silos\"",
-        "description": "This is the biggest challenge. Cargo information may reside in sales team emails, ship schedules in separate software, and vehicle gate records manually logged.",
+        "description": "This is the greatest challenge. Shipment information may reside in sales team emails, vessel schedules in separate software, and gate entry/exit data recorded manually.",
         "impact": "This lack of connectivity creates an operational environment where no one has a holistic view, leading to delayed and inefficient decisions."
       },
       "challenge2": {
-        "title": "Lack of Real-Time Holistic View",
-        "description": "The direct consequence is that management cannot quickly answer critical operational questions like: \"Which berth is available?\", \"Where are trucks congested?\", or \"What is the current loading/unloading productivity?\". Decisions often rely on experience or delayed reports."
+        "title": "Lack of Real-Time Comprehensive Visibility",
+        "description": "As a direct consequence, management cannot quickly answer critical operational questions like: \"Which berth is available?\", \"Where are trucks congested?\", or \"What is the current cargo handling productivity?\" Decisions are often based on experience or delayed reports."
       },
       "challenge3": {
-        "title": "Poor Operational Efficiency and Prolonged Congestion",
-        "description": "Without synchronized data, efficiency drops inevitably. Ships wait longer to berth, trucks queue outside gates due to manual paperwork, and equipment allocation is suboptimal, leading to waste and reduced competitiveness."
+        "title": "Low Operational Efficiency and Prolonged Congestion",
+        "description": "Without synchronized data, efficiency declines are inevitable. Vessels wait longer to berth, trucks queue outside gates due to manual paperwork, and equipment allocation is suboptimal. This causes waste, increases costs, and severely reduces competitiveness."
       },
       "challenge4": {
         "title": "Safety, Security, and Human Error Risks",
-        "description": "Manual operations pose high risks to workplace safety and security. Lax access control and slow incident response (e.g., fires) are persistent issues. Reliance on paperwork increases human error risks, causing financial and cargo losses."
+        "description": "Manual operations pose high risks to workplace safety and security. Lax gate control and slow incident response (e.g., fires) are persistent issues. Paper-based processes also increase human errors, causing financial and cargo losses."
       }
     },
     "applications": {
       "title": "Detailed Applications of Smart Dashboard in Practice",
-      "description": "Smart Dashboard in the seaport industry is not just a visualization tool but a \"digital command center,\" acting as the brain of the entire Smart Port ecosystem.",
+      "description": "Smart Dashboard in the seaport industry is not just a display tool but a \"digital command center,\" acting as the brain of the entire Smart Port ecosystem.",
       "digitalTwin": {
         "title": "Building a Digital Twin of the Seaport",
         "realityTitle": "Reality:",
         "realityContent": "Instead of relying on paper maps or spreadsheets, managers interact with a vivid 3D model of the entire port.",
         "applicationTitle": "Application:",
-        "applicationContent": "This 3D model is an accurate digital twin built from maps and field surveys, enabling real-time monitoring of the position and status of all objects (ships, vehicles, cranes)."
+        "applicationContent": "This 3D model is an accurate digital twin built from maps and field surveys. It enables real-time monitoring of the position and status of all objects (vessels, trucks, cranes)."
       },
       "kpiMonitoring": {
         "title": "Comprehensive KPI Monitoring System",
         "realityTitle": "Reality:",
         "realityContent": "Performance metrics are aggregated and displayed scientifically and clearly.",
         "applicationTitle": "Application:",
-        "applicationContent": "Surrounding the 3D model is a system of continuously updated KPIs: Port operational efficiency, Cargo throughput, Ship turnaround time, and Berth status."
+        "applicationContent": "Surrounding the 3D model is a system of continuously updated KPIs: Port operational efficiency, cargo throughput, vessel turnaround time, and berth status."
       },
       "incidentManagement": {
         "title": "Smart and Automated Incident Handling",
         "realityTitle": "Reality:",
         "realityContent": "Emergency incident handling processes, like fires, are automated to minimize response time.",
         "applicationTitle": "Application:",
-        "applicationContent": "The system automatically alerts, navigates to the incident site, integrates CCTV, and supports urgent decision-making."
+        "applicationContent": "The system automatically alerts, navigates to the scene, integrates CCTV, and supports emergency decision-making."
       },
       "automation": {
         "title": "Automated Operational Processes",
         "realityTitle": "Reality:",
         "realityContent": "Manual paperwork processes are completely eliminated.",
         "applicationTitle": "Application:",
-        "applicationContent": "Automated gate systems use AI cameras and RFID, combined with mobile apps to sync data instantly."
+        "applicationContent": "Automated gate systems use AI cameras and RFID, combined with mobile apps for instant data synchronization."
       }
     },
     "strategicBenefits": {
@@ -1061,14 +1111,14 @@
       "description": "Implementing Smart Dashboard in the Smart Port model delivers breakthrough results, proven through real-world cases like Busan Port.",
       "imageAlt": "Strategic and Quantifiable Benefits",
       "benefit1": {
-        "title": "Explosive Productivity and Efficiency",
+        "title": "Explosion in Productivity and Efficiency",
         "evidenceTitle": "Evidence:",
-        "evidenceContent": "At Busan Port, implementing a smart operations system increased cargo handling productivity by 30% compared to traditional terminals.",
+        "evidenceContent": "At Busan Port, implementing a smart control system increased cargo handling productivity by 30% compared to traditional terminals.",
         "benefitsTitle": "Benefits:",
-        "benefitsContent": "Ship turnaround time reduced by 20%, helping shipping companies save fuel costs and improve operational efficiency."
+        "benefitsContent": "Vessel turnaround time reduced by 20%, saving fuel costs and increasing operational efficiency for shipping companies."
       },
       "benefit2": {
-        "title": "Superior Safety and Security Enhancements",
+        "title": "Superior Safety and Security Enhancement",
         "evidenceTitle": "Evidence:",
         "evidenceContent": "Automation and centralized monitoring reduced serious port accidents by up to 40% at Busan Port.",
         "benefitsTitle": "Benefits:",
@@ -1077,13 +1127,13 @@
       "benefit3": {
         "title": "Sustainable Growth and Enhanced Competitiveness",
         "evidenceTitle": "Evidence:",
-        "evidenceContent": "Even in a challenging year, Busan Port achieved its highest container throughput in history, largely due to automated terminals.",
+        "evidenceContent": "Even in a challenging year, Busan Port achieved its highest-ever container throughput, largely due to automated terminals.",
         "benefitsTitle": "Benefits:",
         "benefitsContent": "Leadership can make strategic decisions based on real data, analyzing performance, identifying bottlenecks, and planning long-term investments accurately."
       },
       "benefit4": {
         "title": "Enhanced Customer Experience and Satisfaction",
-        "content": "Customers can easily register for services, track request statuses, and make online payments. This transparency and convenience significantly enhance the service experience, creating a sustainable competitive advantage."
+        "content": "Customers can easily register services, track request statuses, and make online payments. This transparency and convenience significantly enhance the service experience, creating a sustainable competitive advantage."
       }
     },
     "metricsSection": {
@@ -1091,7 +1141,7 @@
     },
     "featuresSection": {
       "title": "Key Features",
-      "subtitle": "Comprehensive Solution for Smart Seaports"
+      "subtitle": "Comprehensive solution for smart seaports"
     },
     "benefitsSection": {
       "title": "Benefits Delivered"
@@ -1107,19 +1157,19 @@
     "title": "Application Fields",
     "finance": {
       "title": "Finance - Banking - Insurance",
-      "description": "Dashboard solutions for the finance, banking, and insurance industries..."
+      "description": "Dashboard solutions for finance, banking, and insurance industries..."
     },
     "government": {
-      "title": "Government - Public Agencies",
+      "title": "Government - Public Sector",
       "description": "Data monitoring and governance for government agencies, smart cities..."
     },
     "manufacturing": {
       "title": "Industry - Manufacturing",
-      "description": "Optimize operations, production management, quality, and maintenance..."
+      "description": "Optimizes operations, production, quality, and maintenance..."
     },
     "building": {
       "title": "Buildings",
-      "description": "Manage infrastructure, services, and customers in the telecommunications industry..."
+      "description": "Manages infrastructure, services, and customers in telecommunications..."
     },
     "seaport": {
       "title": "Seaports",
@@ -1140,7 +1190,7 @@
     "contactDetails": {
       "title": "Contact Details",
       "phoneHotline": "Phone & Hotline",
-      "phoneNumber": "+84 931 487 231",
+      "phoneNumber": "0931.487.231",
       "emailLabel": "Email",
       "email": "info@icss.com.vn",
       "websiteLabel": "Website",
@@ -1148,7 +1198,7 @@
     },
     "mapSection": {
       "title": "Location on Map",
-      "description": "Find directions to our office",
+      "description": "Find the way to our office",
       "mapTitle": "ICS Google Map"
     }
   },
@@ -1178,27 +1228,27 @@
   "visitorStatistics": {
     "loading": "Loading data...",
     "title": "Visitor Statistics",
-    "description": "Track user count and website visits",
+    "description": "Track user numbers and website visits",
     "refresh": "Refresh",
     "cards": {
-      "totalHomePageAccess": "Total Homepage Access",
-      "homePageAccessDescription": "Number of times users accessed homepage",
+      "totalHomePageAccess": "Total Homepage Visits",
+      "homePageAccessDescription": "Number of user visits to the homepage",
       "totalPageViews": "Total Page Views",
       "pageViewsDescription": "Total number of pages viewed",
       "totalUsers": "Total Users",
       "uniqueUsersDescription": "Number of unique users"
     },
     "chart": {
-      "monthlyTrend": "Monthly Access Trends",
+      "monthlyTrend": "Monthly Visit Trends",
       "monthsCount": "{{count}} months",
       "month": "Month",
-      "homePageAccess": "Homepage Access",
+      "homePageAccess": "Homepage Visits",
       "totalPageViews": "Total Page Views"
     },
     "table": {
       "title": "User Details",
       "userId": "User ID",
-      "homePageAccess": "Homepage Access",
+      "homePageAccess": "Homepage Visits",
       "totalPageViews": "Total Page Views",
       "firstAccess": "First Access",
       "lastUpdate": "Last Update",
