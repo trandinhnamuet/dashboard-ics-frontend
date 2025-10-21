@@ -92,12 +92,12 @@ const savingPlans: BasePlan[] = [
 
 const payAsYouGoPlans: PayAsYouGoPlan[] = [
   {
-    name: "Gói 12 tháng",
+    name: "plan12",
     description: "Phù hợp cho dự án ngắn hạn với linh hoạt thanh toán",
-    price: "198,000,000 VNĐ",
-    period: "/12 tháng",
-    originalPrice: "240,000,000 VNĐ",
-    discount: "17%",
+    price: "Giá liên hệ",
+    period: "",
+    originalPrice: "",
+    discount: "",
     icon: Clock,
     popular: false,
     features: [
@@ -114,9 +114,9 @@ const payAsYouGoPlans: PayAsYouGoPlan[] = [
     buttonVariant: "outline" as const,
   },
   {
-    name: "Gói 24 tháng",
+    name: "plan24",
     description: "Giải pháp tối ưu cho doanh nghiệp trung hạn",
-    price: "358,000,000 VNĐ",
+    price: "Giá liên hệ",
     period: "/24 tháng",
     originalPrice: "480,000,000 VNĐ",
     discount: "25%",
@@ -138,9 +138,9 @@ const payAsYouGoPlans: PayAsYouGoPlan[] = [
     buttonVariant: "default" as const,
   },
   {
-    name: "Gói 36 tháng",
+    name: "plan36",
     description: "Cam kết dài hạn với mức giá ưu đãi tốt nhất",
-    price: "498,000,000 VNĐ",
+    price: "Giá liên hệ",
     period: "/36 tháng",
     originalPrice: "720,000,000 VNĐ",
     discount: "31%",
@@ -307,10 +307,19 @@ export function PricingSection() {
                 </div>
                 <CardTitle className="text-2xl font-bold">{t(`pricing.plans.${plan.name}.title`)}</CardTitle>
                 <CardDescription className="text-sm text-muted-foreground mt-2">{t(`pricing.plans.${plan.name}.description`)}</CardDescription>
-                {pricingMode === 'saving' && (
+                {pricingMode === 'saving' ? (
                   <div className="mt-6">
                     <div className="text-3xl font-bold text-primary">{t(`pricing.plans.${plan.name}.price`)}</div>
                     {plan.period && <div className="text-sm text-muted-foreground">{t(`pricing.plans.${plan.name}.period`)}</div>}
+                  </div>
+                ) : (
+                  <div className="mt-6">
+                    <div className="text-3xl font-bold text-primary">{(plan as PayAsYouGoPlan).price}</div>
+                    {/* <div className="text-sm text-muted-foreground">{(plan as PayAsYouGoPlan).period}</div> */}
+                    <div className="flex items-center justify-center mt-2">
+                      {/* <span className="text-sm text-muted-foreground line-through mr-2">{(plan as PayAsYouGoPlan).originalPrice}</span> */}
+                      {/* <span className="text-sm font-medium text-green-600 bg-green-100 px-2 py-1 rounded">-{(plan as PayAsYouGoPlan).discount}</span> */}
+                    </div>
                   </div>
                 )}
               </CardHeader>

@@ -283,6 +283,56 @@
           "9": "Đào tạo chuyên sâu cho team",
           "10": "SLA 99.9% uptime guarantee"
         }
+      },
+      "plan12": {
+        "title": "Gói 12 tháng",
+        "description": "Phù hợp cho dự án ngắn hạn với linh hoạt thanh toán",
+        "buttonText": "Chọn gói 12 tháng",
+        "features": {
+          "0": "Tất cả tính năng Dashboard 2D",
+          "1": "Hỗ trợ kỹ thuật 24/7",
+          "2": "Đào tạo và triển khai miễn phí",
+          "3": "Cập nhật phần mềm định kỳ",
+          "4": "Backup dữ liệu tự động",
+          "5": "Báo cáo phân tích chi tiết",
+          "6": "Tích hợp API không giới hạn",
+          "7": "Hỗ trợ mobile app"
+        }
+      },
+      "plan24": {
+        "title": "Gói 24 tháng",
+        "description": "Giải pháp tối ưu cho doanh nghiệp trung hạn",
+        "buttonText": "Chọn gói 24 tháng",
+        "features": {
+          "0": "Tất cả tính năng Dashboard 3D",
+          "1": "Mô hình 3D tương tác nâng cao",
+          "2": "AI/ML phân tích dự đoán",
+          "3": "Dedicated support manager",
+          "4": "Tùy chỉnh giao diện theo yêu cầu",
+          "5": "Đào tạo chuyên sâu cho team",
+          "6": "SLA 99.9% uptime",
+          "7": "Ưu tiên hỗ trợ kỹ thuật",
+          "8": "Báo cáo executive dashboard",
+          "9": "Tích hợp hệ thống ERP/CRM"
+        }
+      },
+      "plan36": {
+        "title": "Gói 36 tháng",
+        "description": "Cam kết dài hạn với mức giá ưu đãi tốt nhất",
+        "buttonText": "Chọn gói 36 tháng",
+        "features": {
+          "0": "Tất cả tính năng gói 24 tháng",
+          "1": "Thực tế ảo (VR/AR) đầy đủ",
+          "2": "White-label solution",
+          "3": "Multi-tenant architecture",
+          "4": "Advanced analytics & BI",
+          "5": "Custom module development",
+          "6": "24/7 dedicated support team",
+          "7": "Quarterly business review",
+          "8": "Free system upgrades",
+          "9": "Unlimited user licenses",
+          "10": "Enterprise security features"
+        }
       }
     }
   },
