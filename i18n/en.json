@@ -1240,8 +1240,13 @@
     },
     "chart": {
       "monthlyTrend": "Monthly Visit Trends",
+      "dailyTrend": "Daily Visit Trends",
+      "monthly": "Monthly",
+      "daily": "Daily",
       "monthsCount": "{{count}} months",
+      "daysCount": "{{count}} days",
       "month": "Month",
+      "date": "Date",
       "homePageAccess": "Homepage Visits",
       "totalPageViews": "Total Page Views"
     },

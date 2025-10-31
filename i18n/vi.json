@@ -1241,8 +1241,13 @@
     },
     "chart": {
       "monthlyTrend": "Biến động truy cập theo tháng",
+      "dailyTrend": "Biến động truy cập theo ngày",
+      "monthly": "Theo tháng",
+      "daily": "Theo ngày",
       "monthsCount": "{{count}} tháng",
+      "daysCount": "{{count}} ngày",
       "month": "Tháng",
+      "date": "Ngày",
       "homePageAccess": "Lượt truy cập trang chủ",
       "totalPageViews": "Tổng lượt xem trang"
     },
