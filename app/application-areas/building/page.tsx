@@ -124,12 +124,30 @@ export default function BuildingPage() {
                 </p>
 
                 {/* Ảnh minh họa */}
+              {/* Thay ảnh bằng video YouTube; ảnh cũ được comment để dự phòng */}
+              {/**
+               * <div className="mb-8 flex justify-center">
+               *   <Image 
+               *     src="/application-areas/15.png" 
+               *     alt={t('building.introduction.imageAlt')}
+               *     className="max-w-lg h-auto rounded-lg shadow-lg"
+               *   />
+               * </div>
+               */}
+
+              {/* YouTube responsive embed (video id: n2rH09hODbs) */}
               <div className="mb-8 flex justify-center">
-                <Image 
-                  src="/application-areas/15.png" 
-                  alt={t('building.introduction.imageAlt')}
-                  className="max-w-lg h-auto rounded-lg shadow-lg"
-                />
+                <div className="max-w-lg w-full rounded-lg shadow-lg overflow-hidden" style={{ maxWidth: '32rem' }}>
+                  <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                    <iframe
+                      src="https://www.youtube.com/embed/n2rH09hODbs"
+                      title={t('building.introduction.videoTitle') || 'Smart Dashboard - Building'}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                    />
+                  </div>
+                </div>
               </div>
                 
                 <div className="bg-gradient-to-r from-blue-50 to-gray-50 dark:from-blue-900/30 dark:to-gray-800/30 p-6 rounded-lg border-l-4 border-blue-500">

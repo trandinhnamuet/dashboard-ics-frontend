@@ -113,13 +113,30 @@ export default function FinancePage() {
               </p>
               
               <div className="grid md:grid-cols-2 gap-8">
-                {/* Ảnh minh họa thách thức - Cột trái */}
+                {/* Ảnh minh họa thách thức - trước đây là một ảnh, hiện đã thay bằng video YouTube. Ảnh cũ được comment để dự phòng. */}
+                {/**
+                 * <div className="h-full flex items-center justify-center">
+                 *   <Image 
+                 *     src="/application-areas/2.png" 
+                 *     alt={t("finance.challenges.imageAlt")} 
+                 *     className="object-contain max-h-80 md:max-h-96 w-auto rounded-lg shadow-lg"
+                 *   />
+                 * </div>
+                 */}
+
+                {/* YouTube responsive embed (video id: -Ju97IVFVFo) */}
                 <div className="h-full flex items-center justify-center">
-                  <Image 
-                    src="/application-areas/2.png" 
-                    alt={t("finance.challenges.imageAlt")} 
-                    className="object-contain max-h-80 md:max-h-96 w-auto rounded-lg shadow-lg"
-                  />
+                  <div className="max-w-lg w-full rounded-lg shadow-lg overflow-hidden" style={{ maxWidth: '32rem' }}>
+                    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                      <iframe
+                        src="https://www.youtube.com/embed/-Ju97IVFVFo"
+                        title={t("finance.challenges.videoTitle") || 'Smart Dashboard - Finance'}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                      />
+                    </div>
+                  </div>
                 </div>
                 
                 {/* Accordion cards - Cột phải */}

@@ -119,12 +119,30 @@ export default function ManufacturingPage() {
                   {t("manufacturing.introduction.paragraph1")}
                 </p>
 
+                {/* Thay ảnh cụ thể bằng video YouTube. Ảnh cũ được comment để dự phòng. */}
+                {/**
+                 * <div className="mb-8 flex justify-center">
+                 *   <Image 
+                 *     src="/application-areas/11.png" 
+                 *     alt={t("manufacturing.introduction.imageAlt")} 
+                 *     className="max-w-lg h-auto rounded-lg shadow-lg"
+                 *   />
+                 * </div>
+                 */}
+
+                {/* YouTube responsive embed (bắt đầu từ giây 8) */}
                 <div className="mb-8 flex justify-center">
-                  <Image 
-                    src="/application-areas/11.png" 
-                    alt={t("manufacturing.introduction.imageAlt")} 
-                    className="max-w-lg h-auto rounded-lg shadow-lg"
-                  />
+                  <div className="max-w-lg w-full rounded-lg shadow-lg overflow-hidden" style={{ maxWidth: '32rem' }}>
+                    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                      <iframe
+                        src="https://www.youtube.com/embed/9cy6t3Q1tRg?start=8"
+                        title={t("manufacturing.introduction.videoTitle") || 'Smart Dashboard - Manufacturing'}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                      />
+                    </div>
+                  </div>
                 </div>
                 
                 <div className="bg-gradient-to-r from-orange-50 to-cyan-50 dark:from-orange-900/30 dark:to-cyan-900/30 p-6 rounded-lg border-l-4 border-orange-500">
