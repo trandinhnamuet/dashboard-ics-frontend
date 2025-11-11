@@ -11,7 +11,7 @@ function Accordion({
 }: React.ComponentProps<typeof AccordionPrimitive.Root>) {
   return <AccordionPrimitive.Root data-slot="accordion" {...props} />
 }
-
+// uhnbnhnij
 function AccordionItem({
   className,
   ...props
