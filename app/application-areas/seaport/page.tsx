@@ -115,12 +115,30 @@ export default function SeaportPage() {
                   {t("seaport.introduction.paragraph1")}
                 </p>
 
+                {/* Thay ảnh bằng video YouTube; ảnh cũ được comment để dự phòng */}
+                {/**
+                 * <div className="mb-8 flex justify-center">
+                 *   <Image 
+                 *     src="/application-areas/6.png" 
+                 *     alt={t("seaport.introduction.imageAlt")} 
+                 *     className="max-w-lg h-auto rounded-lg shadow-lg"
+                 *   />
+                 * </div>
+                 */}
+
+                {/* YouTube responsive embed (video id: 4k1np1NXZdI) */}
                 <div className="mb-8 flex justify-center">
-                  <Image 
-                    src="/application-areas/6.png" 
-                    alt={t("seaport.introduction.imageAlt")} 
-                    className="max-w-lg h-auto rounded-lg shadow-lg"
-                  />
+                  <div className="max-w-lg w-full rounded-lg shadow-lg overflow-hidden" style={{ maxWidth: '32rem' }}>
+                    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                      <iframe
+                        src="https://www.youtube.com/embed/4k1np1NXZdI"
+                        title={t("seaport.introduction.videoTitle") || 'Smart Dashboard - Seaport'}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                      />
+                    </div>
+                  </div>
                 </div>
                 
                 <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/30 dark:to-cyan-900/30 p-6 rounded-lg border-l-4 border-blue-500 dark:border-blue-400">
