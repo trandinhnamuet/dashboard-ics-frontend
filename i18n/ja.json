@@ -775,7 +775,7 @@
     },
     "applications": {
       "title": "スマートダッシュボードの実践的適用",
-      "description": "ベトナムおよび世界中で、スマートダッシュボードはこれらの課題に対処する「デジタル脳」として導入されており、代表的なモデルは<span className=\"font-semibold text-blue-700\">インテリジェントオペレーションセンター（IOC）</span>です。",
+      "description": "ベトナムおよび世界中で、スマートダッシュボードはこれらの課題に対処する「デジタル脳」として導入されており、代表的なモデルはインテリジェントオペレーションセンター（IOC）です。",
       "realityLabel": "現実",
       "applicationLabel": "適用",
       "application1": {

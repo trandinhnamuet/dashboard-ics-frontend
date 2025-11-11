@@ -776,7 +776,7 @@
     },
     "applications": {
       "title": "Ứng dụng chi tiết của Smart Dashboard trong thực tế",
-      "description": "Tại Việt Nam và trên thế giới, Smart Dashboard được triển khai như một \"bộ não số\" để giải quyết các thách thức trên, với mô hình nổi bật là các <span className=\"font-semibold text-blue-700\">Trung tâm Điều hành Thông minh (IOC)</span>.",
+      "description": "Tại Việt Nam và trên thế giới, Smart Dashboard được triển khai như một \"bộ não số\" để giải quyết các thách thức trên, với mô hình nổi bật là các Trung tâm Điều hành Thông minh (IOC).",
       "realityLabel": "Thực tế",
       "applicationLabel": "Ứng dụng",
       "application1": {

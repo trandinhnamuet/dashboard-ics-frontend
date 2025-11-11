@@ -775,7 +775,7 @@
     },
     "applications": {
       "title": "Detailed Applications of Smart Dashboard in Practice",
-      "description": "In Vietnam and globally, Smart Dashboard is implemented as a \"digital brain\" to address these challenges, with a prominent model being <span className=\"font-semibold text-blue-700\">Intelligent Operations Centers (IOC)</span>.",
+      "description": "In Vietnam and globally, Smart Dashboard is implemented as a \"digital brain\" to address these challenges, with a prominent model being Intelligent Operations Centers (IOC).",
       "realityLabel": "Reality",
       "applicationLabel": "Application",
       "application1": {

@@ -775,7 +775,7 @@
     },
     "applications": {
       "title": "智能仪表板在实践中的详细应用",
-      "description": "在越南和全球，智能仪表板作为“数字大脑”被实施，以应对上述挑战，突出的模型是<span className=\"font-semibold text-blue-700\">智能运营中心（IOC）</span>。",
+      "description": "在越南和全球，智能仪表板作为“数字大脑”被实施，以应对上述挑战，突出的模型是智能运营中心（IOC）。",
       "realityLabel": "现实",
       "applicationLabel": "应用",
       "application1": {
