@@ -775,7 +775,7 @@
     },
     "applications": {
       "title": "스마트 대시보드의 실제 적용 사례",
-      "description": "베트남 및 전 세계에서 스마트 대시보드는 위의 도전 과제를 해결하기 위한 \"디지털 두뇌\"로 구현되며, 대표적인 모델은 <span className=\"font-semibold text-blue-700\">지능형 운영 센터(IOC)</span>입니다.",
+      "description": "베트남 및 전 세계에서 스마트 대시보드는 위의 도전 과제를 해결하기 위한 \"디지털 두뇌\"로 구현되며, 대표적인 모델은 지능형 운영 센터(IOC)입니다.",
       "realityLabel": "현실",
       "applicationLabel": "적용",
       "application1": {
