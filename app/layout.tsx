@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: 'Smart Dashboard Vietnam',
   description: 'Giải pháp Smart Dashboard hàng đầu tại Việt Nam',
   generator: 'Next.js',
+  icons: {
+    icon: '/smartdashboard-nobackground.png',
+  },
   openGraph: {
     title: 'Smart Dashboard Vietnam',
     description: 'Giải pháp Smart Dashboard hàng đầu tại Việt Nam',
