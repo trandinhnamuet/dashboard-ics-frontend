@@ -6,12 +6,6 @@ import zh from './zh.json'
 import ja from './ja.json'
 import ko from './ko.json'
 
-// SSR: Luôn dùng 'vi' khi render server, chỉ đổi sau khi client mount
-const isClient = typeof window !== 'undefined'
-
-// Khởi tạo i18n
-// Luôn dùng 'vi' khi SSR, chỉ đổi sau khi client mount
-// (Tránh mismatch giữa server và client)
 i18n
   .use(initReactI18next)
   .init({
@@ -22,25 +16,17 @@ i18n
       ko: { translation: ko },
       ja: { translation: ja },
     },
-    lng: 'vi', // SSR luôn là 'vi'
+    lng: 'vi',
     fallbackLng: 'vi',
     interpolation: {
-      escapeValue: false // React đã escape HTML
+      escapeValue: false
     },
     debug: process.env.NODE_ENV === 'development'
   })
 
-// Sau khi client mount, đổi sang ngôn ngữ đã lưu (nếu có)
-if (isClient) {
-  const savedLang = localStorage.getItem('preferred-language')
-  if (savedLang && ['vi', 'en', 'zh', 'ja', 'ko'].includes(savedLang) && savedLang !== i18n.language) {
-    i18n.changeLanguage(savedLang)
-  }
-}
-
-// Lưu ngôn ngữ vào localStorage khi thay đổi
+// Persist language selection — runs only on client, safe to call after hydration
 i18n.on('languageChanged', (lng: string) => {
-  if (isClient) {
+  if (typeof window !== 'undefined') {
     localStorage.setItem('preferred-language', lng)
   }
 })

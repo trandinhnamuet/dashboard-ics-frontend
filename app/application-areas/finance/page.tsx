@@ -346,11 +346,11 @@ export default function FinancePage() {
               
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Cột ảnh bên trái */}
-                <div className="flex justify-center">
-                  <Image 
-                    src="/application-areas/5.png" 
-                    alt={t("finance.strategicBenefits.imageAlt")} 
-                    className="max-w-lg h-auto rounded-lg shadow-lg"
+                <div className="flex justify-center w-full min-w-0">
+                  <Image
+                    src="/application-areas/5.png"
+                    alt={t("finance.strategicBenefits.imageAlt")}
+                    className="w-full max-w-lg h-auto rounded-lg shadow-lg object-contain"
                   />
                 </div>
                 {/* Cột các card bên phải */}

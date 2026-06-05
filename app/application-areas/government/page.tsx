@@ -435,11 +435,11 @@ export default function GovernmentPage() {
               </p>
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Cột ảnh bên trái */}
-                <div className="flex justify-center">
-                  <img 
-                    src="/application-areas/5.png" 
-                    alt={t("government.strategicBenefits.imageAlt")} 
-                    className="max-w-lg h-auto rounded-lg shadow-lg"
+                <div className="flex justify-center w-full min-w-0">
+                  <img
+                    src="/application-areas/5.png"
+                    alt={t("government.strategicBenefits.imageAlt")}
+                    className="w-full max-w-lg h-auto rounded-lg shadow-lg object-contain"
                   />
                 </div>
                 {/* Cột các card bên phải */}
