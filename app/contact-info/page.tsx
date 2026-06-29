@@ -56,7 +56,7 @@ export default function ContactPage() {
           <div className="grid xl:grid-cols-3 grid-cols-1 gap-8">
             {/* Company Info */}
             <AnimatedSection delay={0.1}>
-              <a href="https://icss.com.vn/" target="_blank" rel="noopener noreferrer" className="block">
+              <a href="https://ics.vn/" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm dark:bg-gray-900/80 dark:shadow-blue-900 cursor-pointer hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
                 <CardHeader className="pb-4">
                   <div className="flex items-center space-x-3">
@@ -89,7 +89,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <motion.a
-                  href="https://icss.com.vn/"
+                  href="https://ics.vn/"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
@@ -101,7 +101,7 @@ export default function ContactPage() {
                   {/* Shimmer overlay */}
                   <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 pointer-events-none" />
                   <Globe className="h-4 w-4 group-hover:rotate-[360deg] transition-transform duration-500" />
-                  Visit icss.com.vn
+                  Visit ics.vn
                   <span className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-blue-200">→</span>
                 </motion.a>
               </CardContent>

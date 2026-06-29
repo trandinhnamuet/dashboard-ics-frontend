@@ -123,7 +123,7 @@
     "companyFull": "国際サイバーセキュリティ株式会社 - ICS",
     "office": "オフィス：ハノイ市ディンコン大金ニュータウンTT3-5",
     "phone": "電話：0931.487.231   -   ホットライン：0707.806.860",
-    "email": "メール：info@icss.com.vn   -   www.icss.com.vn",
+    "email": "メール：contact@ics.vn   -   www.ics.vn",
     "newsletterTitle": "ニュースレターを購読",
     "newsletterPlaceholder": "あなたのメールアドレス",
     "newsletterButton": "購読",
@@ -1192,9 +1192,9 @@
       "phoneHotline": "電話およびホットライン",
       "phoneNumber": "0931.487.231",
       "emailLabel": "メール",
-      "email": "info@icss.com.vn",
+      "email": "contact@ics.vn",
       "websiteLabel": "ウェブサイト",
-      "website": "www.icss.com.vn"
+      "website": "www.ics.vn"
     },
     "mapSection": {
       "title": "地図上の位置",
